@@ -1,4 +1,4 @@
 #!/bin/bash
 
 npm install -g ijavascript
-ijsinstall --install=global
+ijsinstall --install=local
