@@ -104,5 +104,5 @@ For readability, CLI JSON keeps object structure indented while rendering arrays
 - Response-analysis control symbols are case-sensitive: accepted values are `"X"` (never asked) and `"i"` (incomplete).
 
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/wagner/wagner-binder.ipynb%3Fkernel_name%3Djavascript)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/wagner/wagner_binder.ipynb%3Fkernel_name%3Djavascript)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/HEAD/collection/wagner/wagner_colab.ipynb)
