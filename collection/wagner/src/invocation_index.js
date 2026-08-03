@@ -371,33 +371,55 @@ function finalize(state, directlyAnsweredQuestions, entailedQuestions) {
   };
 }
 
-// module.exports = {
-//   QUESTIONS,
-//   TERM_DEFINITIONS,
-//   runQuestionnaire
-// };
+const readline = require('node:readline');
+const { stdin, stdout } = require('node:process');
 
-const readline = require('node:readline/promises');
-const { stdin: input, stdout: output } = require('node:process');
-// const { runQuestionnaire } = require('./src/index');
+async function promptLine(promptText) {
+  if (globalThis.$$ && typeof globalThis.$$.input === 'function') {
+    return globalThis.$$.input({ prompt: promptText });
+  }
 
-async function main() {
-  const rl = readline.createInterface({ input, output });
-
-  try {
-    const result = await runQuestionnaire(async (question) => {
-      const answer = await rl.question(`${question.id} ${question.text} (y/n): `);
-      const normalized = String(answer).trim().toLowerCase();
-      return normalized === 'y' || normalized === 'yes';
+  return new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: stdin,
+      output: stdout
     });
 
-    output.write(`${JSON.stringify(result, null, 2)}\n`);
-  } finally {
-    rl.close();
+    rl.question(promptText, (answer) => {
+      rl.close();
+      resolve(answer);
+    });
+  });
+}
+
+async function askYesNo(question) {
+  console.log(`\n${question.id}: ${question.text}`);
+
+  const definitionEntries = Object.entries(question.definitions || {});
+  if (definitionEntries.length > 0) {
+    console.log('Definitions:');
+    for (const [term, info] of definitionEntries) {
+      console.log(`- ${term}: ${info.definition}`);
+    }
+  }
+
+  while (true) {
+    const raw = await promptLine('Your answer [y/n]: ');
+    const value = String(raw || '').trim().toLowerCase();
+    if (value === 'y' || value === 'yes') {
+      return true;
+    }
+    if (value === 'n' || value === 'no') {
+      return false;
+    }
+    console.log("Please answer with 'y'/'yes' or 'n'/'no'.");
   }
 }
 
-main().catch((error) => {
-  process.stderr.write(`${error?.message || String(error)}\n`);
-  process.exitCode = 1;
-});
+(async () => {
+  console.log('Starting interactive Wagner questionnaire from embedded index.js logic...');
+  const outcome = await runQuestionnaire(askYesNo);
+
+  console.log('\nQuestionnaire outcome:');
+  console.log(JSON.stringify(outcome, null, 2));
+})();
