@@ -1,0 +1,177 @@
+{
+    "@context": "https://kgrid.org/koio/2.1/context.jsonld",
+    "@id": "https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0",
+    "versionInfo": "2.1",
+    "@type": "KnowledgeObject",
+    "dc:title": "Multiple Imputation in the Presence of High-dimensional Data",
+    "dc:identifier": [
+        "placeholder#SOME_OTHER_ID",
+        "https://github.com/kgrid-lab/ICPSR-ex1-MIHD"
+    ],
+    "dc:version": "1.0",
+    "dc:date": "2026-08-03",
+    "dc:source": [],
+    "dc:isReferencedBy": [],
+    "dc:description": "Questionnaire, CKS-derived response model, and response analysis",
+    "schema:creator": [
+        {
+            "@id": "https://kgrid.org",
+            "@type": "schema:Organization",
+            "schema:name": "Knowledge Systems Lab",
+            "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical Schooll",
+            "schema:email": "kgrid-developers@umich.edu"
+        }
+    ],
+    "koio:hasKnowledge": [
+        {
+            "@id": "Questionnaire_Logic",
+            "dc:title": "Questionnaire Logic",
+            "dc:identifier": "1",
+            "dc:version": "",
+            "dc:date": "",
+            "dc:description":"",
+            "dc:purpose": "Guides the end user through required adaptive Yes/No data collection and prevents an unworkable response set.",
+            "@type": "koio:Knowledge",
+            "implementedBy": {
+                "@id": "src/index.js",
+                "@type": [
+                    "Script",
+                    "Functions",
+                    "JavaScript code",
+                    "Functions Script",
+                    "Function description"
+                ]
+            }
+        },
+        {
+            "@id": "Wagner_Scorer",
+            "dc:title": "Questionnaire Response Analysis",
+            "dc:identifier": "2",
+            "dc:version": "",
+            "dc:date": "",
+            "dc:description":"",
+            "dc:purpose": "Validates and analyzes any received response set, whether or not it came from the protected questionnaire interface.",
+            "@type": "koio:Knowledge",
+            "implementedBy": {
+                "@id": "src/scorer.js",
+                "@type": [
+                    "Script",
+                    "Functions",
+                    "JavaScript code",
+                    "Functions Script",
+                    "Function description"
+                ]
+            }
+        }
+    ],
+    "koio:hasService": [
+        {
+            "@id": "CLI_Service",
+            "@type": [
+                "Service",
+                "cli"
+            ],
+            "dc:description": "cli service",
+            "hasInterface": "bin/wagner.js",
+            "dependsOn": [
+                "Questionnaire-Logic, Wagner-Scorer"
+            ]
+        },
+        {
+            "@id": "Service_for_Questionnaire",
+            "@type": [
+                "Service",
+                "library"
+            ],
+            "dc:description": "Way of invoking the runQuestionnaire software function",
+            "hasInterface": "src/index.js",
+            "dependsOn": [
+                "Questionnaire-Logic"
+            ]
+        },
+        {
+            "@id": "Service_for_Scorer",
+            "@type": [
+                "Service",
+                "library"
+            ],
+            "dc:description": "Way of invoking the analyzeQuestionnaireResponse software function",
+            "hasInterface": "src/scorer.js",
+            "dependsOn": [
+                "Wagner-Scorer"
+            ]
+        }
+    ],
+    "koio:hasTest": [
+        {
+            "@id": "Questionnaire_Test",
+            "@type": "koio:Test",
+            "dc:title": "Questionnaire Test",
+            "dc:description": "A test to confirm knowledge and services work",
+            "implementedBy": {
+                "@id": "test/questionnaire.test.js",
+                "@type": [
+                    "Script",
+                    "Functions",
+                    "JavaScript code",
+                    "Functions Script",
+                    "Function description"
+                ]
+            }
+        },
+        {
+            "@id": "Scorer_Test",
+            "@type": "koio:Test",
+            "dc:title": "Scorer Test",
+            "dc:description": "A test to confirm knowledge and services work",
+            "implementedBy": {
+                "@id": "test/scorer.test.js",
+                "@type": [
+                    "Script",
+                    "Functions",
+                    "JavaScript code",
+                    "Functions Script",
+                    "Function description"
+                ]
+            }
+        }
+    ],
+    "koio:hasDocumentation": [
+        {
+            "@id": "kgrid.org_Meggitt_Wagner_Questionnaire_CKS_Version_1_0.docx",
+            "@type": [
+                "InformationArtifact",
+                "Specification Document"
+            ],
+            "dc:title": "Meggitt–Wagner Classification of Diabetic Foot Lesions",
+            "dc:description": "Questionnaire Logic, Response Model, and Response Analysis Computable Knowledge Specification"
+        },
+        {
+            "@id": "README.md",
+            "@type": [
+                "InformationArtifact",
+                "Markdown Document"
+            ],
+            "dc:title": "Wagner Classification",
+            "dc:description": "Technical documentation."
+        },
+        {
+            "@id": "wagner-binder.ipynb",
+            "@type": [
+                "Educational Example",
+                "Jupyter Notebook"
+            ],
+            "dc:title": "Wagner Questionnaire Demo",
+            "dc:description": "A Binder Jupyter Notebook for viewing how to compute with the Wagner Questionnaire"
+        },
+        {
+            "@id": "wagner-colab.ipynb",
+            "@type": [
+                "Educational Example",
+                "Jupyter Notebook"
+            ],
+            "dc:title": "Wagner CLI on Google Colab",
+            "dc:description": "A Google Colab Jupyter Notebook for viewing how to compute with the Wagner Questionnaire"
+        }
+    ]
+}

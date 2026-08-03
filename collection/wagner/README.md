@@ -1,4 +1,4 @@
-# Wagner Classification (Questionnaire Logic)
+# Wagner Classification 
 
 Adaptive Yes/No questionnaire logic for Section 3 of the Wagner Classification questionnaire.
 
@@ -10,21 +10,28 @@ npm install @wagner/classification
 
 ## Exports
 
-- `QUESTIONS`: ordered list of questions (`Q01` to `Q10`)
-- `TERM_DEFINITIONS`: Appendix A working definitions keyed by term
-- `runQuestionnaire(askYesNo)`: adaptive engine
-- `analyzeQuestionnaireResponse(payload)`: independent response-analysis scorer
-- `ANALYSIS_STATUS`: Section 6 analysis statuses
-- `GRADE_LABEL_BY_SCORE`: score-to-label mapping
+- Questionnaire module (`@wagner/classification`):
+  - `QUESTIONS`: ordered list of questions (`Q01` to `Q10`)
+  - `TERM_DEFINITIONS`: Appendix A working definitions keyed by term
+  - `runQuestionnaire(askYesNo)`: adaptive engine
+  - Optional equivalent subpath import: `@wagner/classification/questionnaire`
+- Scorer module (`@wagner/classification/scorer`):
+  - `analyzeQuestionnaireResponse(payload)`: independent response-analysis scorer
+  - `ANALYSIS_STATUS`: Section 6 analysis statuses
+  - `GRADE_LABEL_BY_SCORE`: score-to-label mapping
 
 ## Usage
 
 ```js
 const {
   QUESTIONS,
-  runQuestionnaire,
-  analyzeQuestionnaireResponse
+  runQuestionnaire
 } = require('@wagner/classification');
+// Optional equivalent:
+// const { QUESTIONS, runQuestionnaire } = require('@wagner/classification/questionnaire');
+const {
+  analyzeQuestionnaireResponse
+} = require('@wagner/classification/scorer');
 
 async function askYesNo(question) {
   // Replace with your UI/CLI collection logic.

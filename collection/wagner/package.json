@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Adaptive Wagner Classification questionnaire logic (Section 3)",
   "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./questionnaire": "./src/index.js",
+    "./scorer": "./src/scorer.js"
+  },
   "bin": {
     "wagner": "bin/wagner.js"
   },

@@ -3,11 +3,8 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const {
-  runQuestionnaire,
-  analyzeQuestionnaireResponse,
-  ANALYSIS_STATUS
-} = require('../src/index');
+const { runQuestionnaire } = require('../src/index');
+const { analyzeQuestionnaireResponse, ANALYSIS_STATUS } = require('../src/scorer');
 
 const QUESTION_IDS = [
   'Q01',

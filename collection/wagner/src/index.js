@@ -188,11 +188,6 @@ const RESPONSE_MODEL_IRI =
   'https://kgrid.org/cks/meggitt-wagner/response-models/1.0';
 const QUESTION_SET_IRI =
   'https://kgrid.org/cks/meggitt-wagner/question-sets/mw-qs-02/versions/1.0';
-const {
-  ANALYSIS_STATUS,
-  GRADE_LABEL_BY_SCORE,
-  analyzeQuestionnaireResponse
-} = require('./scorer');
 
 /**
  * Run adaptive Wagner questionnaire.
@@ -379,8 +374,5 @@ function finalize(state, directlyAnsweredQuestions, entailedQuestions) {
 module.exports = {
   QUESTIONS,
   TERM_DEFINITIONS,
-  runQuestionnaire,
-  ANALYSIS_STATUS,
-  GRADE_LABEL_BY_SCORE,
-  analyzeQuestionnaireResponse
+  runQuestionnaire
 };
