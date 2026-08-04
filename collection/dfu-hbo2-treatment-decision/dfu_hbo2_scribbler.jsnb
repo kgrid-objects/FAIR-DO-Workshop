@@ -24,7 +24,7 @@
     },
     {
       "type": "code",
-      "code": "(async () => {\n  try {\n    if (typeof globalThis.evaluateInputObject !== 'function') {\n      throw new Error('evaluateInputObject is not loaded. Run block 2 first.');\n    }\n\n    const completedResult = globalThis.evaluateInputObject({\n      dfu_confirmed: 'true',\n      wagner_grade: 3,\n      acute_surgical_intervention: 'false',\n      not_healed_after_30_days: 'true'\n    });\n\n    const text = JSON.stringify(completedResult, null, 2);\n    globalThis.scrib.show('<h3>Completed-result example:</h3>');\n    globalThis.scrib.show('<pre>' + text + '</pre>');\n  } catch (err) {\n    const msg = String((err && err.stack) || err);\n    globalThis.scrib.show('<pre style=\"color:#b00020\">' + msg.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>');\n  }\n})();",
+      "code": "(async () => {\n  const completedResult = globalThis.evaluateInputObject({\n      dfu_confirmed: 'true',\n      wagner_grade: 3,\n      acute_surgical_intervention: 'false',\n      not_healed_after_30_days: 'true'\n    });\n\n    const text = JSON.stringify(completedResult, null, 2);\n    globalThis.scrib.show('<h3>Completed-result example:</h3>');\n    globalThis.scrib.show('<pre>' + text + '</pre>');\n  \n})();",
       "status": "",
       "output": ""
     }
