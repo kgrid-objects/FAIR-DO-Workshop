@@ -189,6 +189,51 @@ const RESPONSE_MODEL_IRI =
 const QUESTION_SET_IRI =
   'https://kgrid.org/cks/meggitt-wagner/question-sets/mw-qs-02/versions/1.0';
 
+const readline = require('node:readline');
+const { stdin, stdout } = require('node:process');
+
+async function promptLine(promptText) {
+  if (globalThis.$$ && typeof globalThis.$$.input === 'function') {
+    return globalThis.$$.input({ prompt: promptText });
+  }
+
+  return new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: stdin,
+      output: stdout
+    });
+
+    rl.question(promptText, (answer) => {
+      rl.close();
+      resolve(answer);
+    });
+  });
+}
+
+async function askYesNo(question) {
+  console.log(`\n${question.id}: ${question.text}`);
+
+  const definitionEntries = Object.entries(question.definitions || {});
+  if (definitionEntries.length > 0) {
+    console.log('Definitions:');
+    for (const [term, info] of definitionEntries) {
+      console.log(`- ${term}: ${info.definition}`);
+    }
+  }
+
+  while (true) {
+    const raw = await promptLine('Your answer [y/n]: ');
+    const value = String(raw || '').trim().toLowerCase();
+    if (value === 'y' || value === 'yes') {
+      return true;
+    }
+    if (value === 'n' || value === 'no') {
+      return false;
+    }
+    console.log("Please answer with 'y'/'yes' or 'n'/'no'.");
+  }
+}
+
 /**
  * Run adaptive Wagner questionnaire.
  *
@@ -196,7 +241,7 @@ const QUESTION_SET_IRI =
  *   id: string,
  *   text: string,
  *   definitions: Record<string, {definition: string, term_iri: string}>
- * }) => (boolean|Promise<boolean>)} askYesNo
+ * }) => (boolean|Promise<boolean>)} [askYesNoFn]
  * @returns {Promise<{
  *   specification_iri: string,
  *   response_model_iri: string,
@@ -207,8 +252,8 @@ const QUESTION_SET_IRI =
  *   entailed_questions: string[]
  * }>}
  */
-async function runQuestionnaire(askYesNo) {
-  if (typeof askYesNo !== 'function') {
+async function runQuestionnaire(askYesNoFn = askYesNo) {
+  if (typeof askYesNoFn !== 'function') {
     throw new TypeError('askYesNo must be a function that returns true/false.');
   }
 
@@ -230,7 +275,7 @@ async function runQuestionnaire(askYesNo) {
       throw new Error(`Unknown question id: ${questionId}`);
     }
 
-    const raw = await askYesNo(buildQuestionPayload(questionId));
+    const raw = await askYesNoFn(buildQuestionPayload(questionId));
     if (typeof raw !== 'boolean') {
       throw new TypeError(`Answer for ${questionId} must be boolean.`);
     }
@@ -374,5 +419,6 @@ function finalize(state, directlyAnsweredQuestions, entailedQuestions) {
 module.exports = {
   QUESTIONS,
   TERM_DEFINITIONS,
+  askYesNo,
   runQuestionnaire
 };
