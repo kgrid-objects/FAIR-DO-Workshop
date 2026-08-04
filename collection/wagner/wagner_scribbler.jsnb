@@ -24,7 +24,7 @@
     },
     {
       "type": "code",
-      "code": "(async () => {\n     globalThis.scrib.show('<p>Starting interactive Wagner questionnaire from embedded index.js logic...</p>');\n   const outcome = await globalThis.runQuestionnaire();\n    const text = JSON.stringify(outcome, null, 2);\n\n     globalThis.scrib.show('<h3>Questionnaire outcome:</h3>');\n      globalThis.scrib.show('<pre>' + text + '</pre>');\n   }\n})();",
+      "code": "(async () => {\n     globalThis.scrib.show('<p>Starting interactive Wagner questionnaire from embedded index.js logic...</p>');\n   const outcome = await globalThis.runQuestionnaire();\n    const text = JSON.stringify(outcome, null, 2);\n\n     globalThis.scrib.show('<h3>Questionnaire outcome:</h3>');\n      globalThis.scrib.show('<pre>' + text + '</pre>');\n   })();",
       "status": "",
       "output": ""
     }
