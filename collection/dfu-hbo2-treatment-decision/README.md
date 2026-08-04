@@ -104,3 +104,10 @@ npm run cli -- --fixture '{\"kind\":\"absent\"}'
 ```bash
 npm run cli -- --file input.json
 ```
+
+## Notebooks
+
+Try this package here:
+
+- Binder (JavaScript): https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/dfu-hbo2-treatment-decision/dfu_hbo2_binder.ipynb%3Fkernel_name%3Djavascript
+- Colab: https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/HEAD/collection/dfu-hbo2-treatment-decision/dfu_hbo2_colab.ipynb
