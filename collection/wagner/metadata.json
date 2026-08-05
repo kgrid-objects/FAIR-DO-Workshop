@@ -39,7 +39,22 @@
                     "Function",
                     "JavaScript"
                 ]
-            }
+            },
+            "koio:hasTest": [
+                {
+                    "@id": "Questionnaire_Test",
+                    "@type": "koio:Test",
+                    "dc:title": "Questionnaire Test",
+                    "dc:description": "A test to confirm knowledge and services work",
+                    "implementedBy": {
+                        "@id": "test/questionnaire.test.js",
+                        "@type": [
+                            "Implementation",
+                            "JavaScript"
+                        ]
+                    }
+                }
+            ]
         },
         {
             "@id": "Wagner_Scorer",
@@ -57,7 +72,22 @@
                     "Function",
                     "JavaScript"
                 ]
-            }
+            },
+            "koio:hasTest": [
+                {
+                    "@id": "Scorer_Test",
+                    "@type": "koio:Test",
+                    "dc:title": "Scorer Test",
+                    "dc:description": "A test to confirm knowledge and services work",
+                    "implementedBy": {
+                        "@id": "test/scorer.test.js",
+                        "@type": [
+                            "Implementation",
+                            "JavaScript"
+                        ]
+                    }
+                }
+            ]
         }
     ],
     "koio:hasService": [
@@ -68,7 +98,7 @@
                 "cli"
             ],
             "dc:description": "cli service",
-            "hasInterface": "",
+            "hasInterface": "bin/wagner.js",
             "implementedBy": {
                 "@id": "bin/wagner.js",
                 "@type": [
@@ -77,7 +107,8 @@
                 ]
             },
             "dependsOn": [
-                "Questionnaire-Logic, Wagner-Scorer"
+                "Questionnaire_Logic",
+                "Wagner_Scorer"
             ]
         },
         {
@@ -87,7 +118,7 @@
                 "library"
             ],
             "dc:description": "Way of invoking the runQuestionnaire software function",
-            "hasInterface": "",
+            "hasInterface": "src/index.js",
             "implementedBy": {
                 "@id": "src/index.js",
                 "@type": [
@@ -96,7 +127,7 @@
                 ]
             },
             "dependsOn": [
-                "Questionnaire-Logic"
+                "Questionnaire_Logic"
             ]
         },
         {
@@ -106,7 +137,7 @@
                 "library"
             ],
             "dc:description": "Way of invoking the analyzeQuestionnaireResponse software function",
-            "hasInterface": "",
+            "hasInterface": "src/scorer.js",
             "implementedBy": {
                 "@id": "src/scorer.js",
                 "@type": [
@@ -115,36 +146,8 @@
                 ]
             },
             "dependsOn": [
-                "Wagner-Scorer"
+                "Wagner_Scorer"
             ]
-        }
-    ],
-    "koio:hasTest": [
-        {
-            "@id": "Questionnaire_Test",
-            "@type": "koio:Test",
-            "dc:title": "Questionnaire Test",
-            "dc:description": "A test to confirm knowledge and services work",
-            "implementedBy": {
-                "@id": "test/questionnaire.test.js",
-                "@type": [
-                    "Implementation",
-                    "JavaScript"
-                ]
-            }
-        },
-        {
-            "@id": "Scorer_Test",
-            "@type": "koio:Test",
-            "dc:title": "Scorer Test",
-            "dc:description": "A test to confirm knowledge and services work",
-            "implementedBy": {
-                "@id": "test/scorer.test.js",
-                "@type": [
-                    "Implementation",
-                    "JavaScript"
-                ]
-            }
         }
     ],
     "koio:hasDocumentation": [

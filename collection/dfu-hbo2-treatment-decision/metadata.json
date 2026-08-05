@@ -50,7 +50,7 @@
                 "cli"
             ],
             "dc:description": "CLI invocation for DFU HBO2 decision evaluation",
-            "hasInterface": "",
+            "hasInterface": "bin/dfu-hbo2.js",
             "implementedBy": {
                 "@id": "bin/dfu-hbo2.js",
                 "@type": [
@@ -69,7 +69,7 @@
                 "library"
             ],
             "dc:description": "Way of invoking the DFU HBO2 Decision Logic",
-            "hasInterface": "",
+            "hasInterface": "src/decision.js",
             "implementedBy": {
                 "@id": "src/decision.js",
                 "@type": [
@@ -94,7 +94,27 @@
                     "Implementation",
                     "JavaScript"
                 ]
-            }
+            },
+            "koio:hasDocumentation": [
+                {
+                    "@id": "UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_1_0.json",
+                    "@type": [
+                        "InformationArtifact",
+                        "Test Vector Document"
+                    ],
+                    "dc:title": "Canonical Test Vectors for DFU HBO2 Decision Logic",
+                    "dc:description": "Canonical test vectors for the DFU HBO2 decision logic, including input and expected output."
+                },
+                {
+                    "@id": "UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_Schema_1_0.json",
+                    "@type": [
+                        "InformationArtifact",
+                        "Test Vector Schema Document"
+                    ],
+                    "dc:title": "Canonical Test Vectors Schema for DFU HBO2 Decision Logic",
+                    "dc:description": "Schema for the canonical test vectors of the DFU HBO2 decision logic, including input and expected output."
+                }
+            ]
         }
     ],
     "koio:hasDocumentation": [
@@ -146,6 +166,5 @@
             "dc:title": "DFU HBO2 Scribbler Notebook Demo",
             "dc:description": "A Scribbler notebook for computing with the DFU HBO2 package."
         }
-
     ]
 }
