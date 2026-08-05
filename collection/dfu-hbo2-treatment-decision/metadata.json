@@ -1,0 +1,151 @@
+{
+    "@context": "https://kgrid.org/koio/2.1/context.jsonld",
+    "@id": "https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0",
+    "versionInfo": "2.1",
+    "@type": "KnowledgeObject",
+    "dc:title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers",
+    "dc:identifier": [
+        "placeholder#SOME_OTHER_ID",
+        "https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0"
+    ],
+    "dc:version": "1.0",
+    "dc:date": "2026-08-05",
+    "dc:source": [],
+    "dc:isReferencedBy": [],
+    "dc:description": "Decision logic, input validation contract, unified result mapping, and canonical conformance tests for UHMS DFU HBO2 guidance.",
+    "schema:creator": [
+        {
+            "@id": "https://kgrid.org",
+            "@type": "schema:Organization",
+            "schema:name": "Knowledge Systems Lab",
+            "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+            "schema:email": "kgrid-developers@umich.edu"
+        }
+    ],
+    "koio:hasKnowledge": [
+        {
+            "@id": "DFU_HBO2_Decision_Logic",
+            "dc:title": "DFU HBO2 Decision Logic",
+            "dc:identifier": "1",
+            "dc:version": "",
+            "dc:date": "",
+            "dc:description": "",
+            "dc:purpose": "",
+            "@type": "koio:Knowledge",
+            "implementedBy": {
+                "@id": "src/decision.js",
+                "@type": [
+                    "Implementation",
+                    "Function",
+                    "JavaScript"
+                ]
+            }
+        }
+    ],
+    "koio:hasService": [
+        {
+            "@id": "CLI_Service",
+            "@type": [
+                "Service",
+                "cli"
+            ],
+            "dc:description": "CLI invocation for DFU HBO2 decision evaluation",
+            "hasInterface": "",
+            "implementedBy": {
+                "@id": "bin/dfu-hbo2.js",
+                "@type": [
+                    "Implementation",
+                    "JavaScript"
+                ]
+            },
+            "dependsOn": [
+                "DFU_HBO2_Decision_Logic"
+            ]
+        },
+        {
+            "@id": "Library_Service",
+            "@type": [
+                "Service",
+                "library"
+            ],
+            "dc:description": "Way of invoking the DFU HBO2 Decision Logic",
+            "hasInterface": "",
+            "implementedBy": {
+                "@id": "src/decision.js",
+                "@type": [
+                    "Implementation",
+                    "JavaScript"
+                ]
+            },
+            "dependsOn": [
+                "DFU_HBO2_Decision_Logic"
+            ]
+        }
+    ],
+    "koio:hasTest": [
+        {
+            "@id": "Decision_Logic_Test",
+            "@type": "koio:Test",
+            "dc:title": "Decision Logic Test",
+            "dc:description": "Executes all 51 canonical vectors with deep equality assertions.",
+            "implementedBy": {
+                "@id": "test/decision.test.js",
+                "@type": [
+                    "Implementation",
+                    "JavaScript"
+                ]
+            }
+        }
+    ],
+    "koio:hasDocumentation": [
+        {
+            "@id": "UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx",
+            "@type": [
+                "InformationArtifact",
+                "Specification Document"
+            ],
+            "dc:title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers",
+            "dc:description": "Decision logic, input model, output contract, and conformance tests."
+        },
+        {
+            "@id": "README.md",
+            "@type": [
+                "InformationArtifact",
+                "Markdown Document"
+            ],
+            "dc:title": "DFU HBO2 Treatment Decision",
+            "dc:description": "Technical package documentation."
+        },
+        {
+            "@id": "dfu_hbo2_binder.ipynb",
+            "@type": [
+                "InformationArtifact",
+                "Jupyter Notebook",
+                "Binder Notebook"
+            ],
+            "dc:title": "DFU HBO2 Binder Jupyter Notebook Demo",
+            "dc:description": "A Binder notebook for computing with the DFU HBO2 package."
+        },
+        {
+            "@id": "dfu_hbo2_colab.ipynb",
+            "@type": [
+                "InformationArtifact",
+                "Jupyter Notebook",
+                "Google Colab Notebook"
+            ],
+            "dc:title": "DFU HBO2 Google Colab Jupyter Notebook Demo",
+            "dc:description": "A Colab notebook for computing with the DFU HBO2 package."
+        },
+        {
+            "@id": "dfu_hbo2_scribbler.jsnb",
+            "@type": [
+                "InformationArtifact",
+                "Jupyter Notebook",
+                "Scribbler Notebook"
+            ],
+            "dc:title": "DFU HBO2 Scribbler Notebook Demo",
+            "dc:description": "A Scribbler notebook for computing with the DFU HBO2 package."
+        }
+
+    ]
+}

@@ -1,0 +1,673 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meggitt-Wagner Classification of Diabetic Foot Lesions</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            width: 100%;
+        }
+        .left-column {
+            width: 70%;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Right Column */
+        .right-column {
+            width: 30%;
+            background-color: #e9e9e9;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .metadata {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .metadata p {
+            margin: 5px 0;
+        }
+        .doc-section, .test-section {
+            
+            right: 20px;
+            color: black;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+        .doc-section {
+            top: 20px;
+            background-color: #97c8ed;
+        }
+        .doc-section h3 {
+            margin-top: 0;
+        }
+        .doc-section a {
+            text-decoration: underline;
+        }
+        .doc-section p {
+            margin-top: 5px;
+        }
+        
+        .test-section {
+            
+            background-color: #96d6b7;
+        }
+        .test-section h3 {
+            margin-top: 0;
+        }
+        
+        .test-section a {
+            text-decoration: underline;
+        }
+        
+        .test-section p {
+            margin-top: 5px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="left-column">
+            <div class="metadata" id="metadata">
+            <h1>Meggitt-Wagner Classification of Diabetic Foot Lesions</h1>
+            <p>Questionnaire, CKS-derived response model, and response analysis</p>
+            <hr>
+            <p><strong>ID:</strong> <a href="https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0" target='_blank'> 
+                https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0
+            </a></p>
+            <p><strong>Information page metadata:</strong> <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/metadata.json" target='_blank'> 
+                metadata.json 
+            </a></p>
+            
+            
+            
+                <strong>Identifier:</strong>
+                                 
+                                     
+                    placeholder#SOME_OTHER_ID,       
+                                     
+                    https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0      
+                
+            
+            
+            
+            
+            <p><strong>Type:</strong> <a href="https://kgrid.org/koio#KnowledgeObject" target='_blank'>KnowledgeObject</a></p>
+            <p><strong>Version:</strong> 1.0</p>
+            <p><strong>Date:</strong> 2026-08-03</p>
+            
+            
+            
+            <hr>
+            
+            
+            
+                <h2>Creator</h2>
+                 
+                <ul>  
+                 
+                    <li>
+                        <h3> 
+                             Knowledge Systems Lab</h3>
+                        <p><strong>Affiliation:</strong> Knowledge Systems Lab, University of Michigan Medical School</p>
+                        
+                        
+                            <p><strong>Email:</strong> 
+                                <a href="mailto:kgrid-developers@umich.edu" target='_blank'>
+                                    kgrid-developers@umich.edu
+                                </a>
+                            </p>
+                        
+                        <p><strong>Website:</strong> 
+                            <a href="https://kgrid.org" target='_blank'>
+                                https://kgrid.org
+                            </a>
+                        </p>
+                    </li>
+                   
+                </ul>
+            
+            
+            
+            
+            
+                              
+            
+                </p><b>Is referenced by:</b></p>
+                   
+                <ul>                 
+                   
+                </ul>
+            
+
+            
+                <hr>
+                <h2>Knowledge</h2>
+                
+                    
+                    
+                    
+                    <a id="Questionnaire_Logic"></a>
+                    </p>
+                        <p><h3> Questionnaire Logic</h3></p>
+                         
+                    <p><strong>ID:</strong> 
+                        Questionnaire_Logic
+                    </p>
+
+                    <p><strong>Type:</strong> 
+                            <a href="https://kgrid.org/koio#Knowledge" target='_blank'>
+                                Knowledge
+                            </a>
+                    </p>
+                    
+                        <p><strong>Description:</strong> </p>
+                    
+                    
+                    
+                        <p><strong>Date:</strong> 
+                            
+                        </p>
+                    
+                    
+                    
+                                
+                                      
+                    
+                    
+                                       
+                    
+                        
+                        <p><strong>Implemented by:</strong> 
+                        <ul>
+                        
+                            <li>
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/src/index.js" target='_blank'>
+                                index.js
+                            </a><br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="https://w3id.org/function/ontology#Function" target='_blank'>Function</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>)
+                            </li>
+                        
+                        </ul>
+                        </p>
+                                      
+                                        
+                    
+                    
+                                       
+                
+                    
+                    
+                    
+                    <a id="Wagner_Scorer"></a>
+                    </p>
+                        <p><h3> Questionnaire Response Analysis</h3></p>
+                         
+                    <p><strong>ID:</strong> 
+                        Wagner_Scorer
+                    </p>
+
+                    <p><strong>Type:</strong> 
+                            <a href="https://kgrid.org/koio#Knowledge" target='_blank'>
+                                Knowledge
+                            </a>
+                    </p>
+                    
+                        <p><strong>Description:</strong> </p>
+                    
+                    
+                    
+                        <p><strong>Date:</strong> 
+                            
+                        </p>
+                    
+                    
+                    
+                                
+                                      
+                    
+                    
+                                       
+                    
+                        
+                        <p><strong>Implemented by:</strong> 
+                        <ul>
+                        
+                            <li>
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/src/scorer.js" target='_blank'>
+                                scorer.js
+                            </a><br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="https://w3id.org/function/ontology#Function" target='_blank'>Function</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>)
+                            </li>
+                        
+                        </ul>
+                        </p>
+                                      
+                                        
+                    
+                    
+                                       
+                
+            
+
+            
+            <hr>
+            <h2>Services</h2>
+            
+            
+
+                <p><h3> CLI_Service</h3></p>
+                <p><strong>Type:</strong> 
+                        <a href="https://kgrid.org/koio#Service" target='_blank'>
+                            Service
+                        </a>
+                </p>
+                <p><strong>Depends on:</strong> 
+                
+                
+                
+                    
+                    <a href="#Questionnaire-Logic, Wagner-Scorer">Questionnaire-Logic, Wagner-Scorer</a>
+                
+                </p>
+                
+                        <p><strong>Has interface:</strong> 
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/metadata.json" target='_blank'>
+                                https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/metadata.json
+                            </a>
+                        </p>
+                 
+                
+                
+                    <p><strong>Implemented by:</strong> 
+                    <ul>
+                        
+                            <li>
+                            
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/bin/wagner.js" target='_blank'>
+                                    wagner.js
+                                </a>                                 
+                              <br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>) 
+                            </li>
+                              
+                        </ul>            
+                    </p>
+                
+            
+
+                <p><h3> Service_for_Questionnaire</h3></p>
+                <p><strong>Type:</strong> 
+                        <a href="https://kgrid.org/koio#Service" target='_blank'>
+                            Service
+                        </a>
+                </p>
+                <p><strong>Depends on:</strong> 
+                
+                
+                
+                    
+                    <a href="#Questionnaire-Logic">Questionnaire-Logic</a>
+                
+                </p>
+                
+                        <p><strong>Has interface:</strong> 
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/metadata.json" target='_blank'>
+                                https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/metadata.json
+                            </a>
+                        </p>
+                 
+                
+                
+                    <p><strong>Implemented by:</strong> 
+                    <ul>
+                        
+                            <li>
+                            
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/src/index.js" target='_blank'>
+                                    index.js
+                                </a>                                 
+                              <br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>) 
+                            </li>
+                              
+                        </ul>            
+                    </p>
+                
+            
+
+                <p><h3> Service_for_Scorer</h3></p>
+                <p><strong>Type:</strong> 
+                        <a href="https://kgrid.org/koio#Service" target='_blank'>
+                            Service
+                        </a>
+                </p>
+                <p><strong>Depends on:</strong> 
+                
+                
+                
+                    
+                    <a href="#Wagner-Scorer">Wagner-Scorer</a>
+                
+                </p>
+                
+                        <p><strong>Has interface:</strong> 
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/metadata.json" target='_blank'>
+                                https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/metadata.json
+                            </a>
+                        </p>
+                 
+                
+                
+                    <p><strong>Implemented by:</strong> 
+                    <ul>
+                        
+                            <li>
+                            
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/src/scorer.js" target='_blank'>
+                                    scorer.js
+                                </a>                                 
+                              <br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>) 
+                            </li>
+                              
+                        </ul>            
+                    </p>
+                
+            
+            
+        </div>            
+        </div>
+        <div class="right-column">
+            <div class="doc-section" id="doc-section">
+            
+                <h2>Documentation</h2>
+                <ul>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/kgrid.org_Meggitt_Wagner_Questionnaire_CKS_Version_1_0.docx" target='_blank'>Meggitt-Wagner Classification of Diabetic Foot Lesions</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+
+                        </h3>
+                        <p>Questionnaire Logic, Response Model, and Response Analysis Computable Knowledge Specification</p>
+                        
+                            <p><strong>Document of:</strong> Meggitt-Wagner Classification of Diabetic Foot Lesions (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/Specification Document" target='_blank'>
+                                    Specification Document
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/README.md" target='_blank'>Wagner Classification</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+
+                        </h3>
+                        <p>Technical documentation.</p>
+                        
+                            <p><strong>Document of:</strong> Meggitt-Wagner Classification of Diabetic Foot Lesions (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/Markdown Document" target='_blank'>
+                                    Markdown Document
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/wagner_binder.ipynb" target='_blank'>Wagner Questionnaire Binder Jupyter Notebook Demo</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                                <a href="https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/wagner/wagner_binder.ipynb%3Fkernel_name%3Djavascript"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img src="https://mybinder.org/badge_logo.svg" alt="Binder">
+                                </a>
+                            
+                            
+                        
+
+                        </h3>
+                        <p>A Binder Jupyter Notebook for viewing how to compute with the Wagner Questionnaire</p>
+                        
+                            <p><strong>Document of:</strong> Meggitt-Wagner Classification of Diabetic Foot Lesions (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/Jupyter Notebook" target='_blank'>
+                                    Jupyter Notebook
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/Binder Notebook" target='_blank'>
+                                    Binder Notebook
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/wagner_colab.ipynb" target='_blank'>Wagner Questionnaire Google Colab Jupyter Notebook Demo</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+                            
+                                <a href="https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/wagner_colab.ipynb" target="_blank" rel="noopener noreferrer"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a>
+                            
+                            
+                            
+                        
+
+                        </h3>
+                        <p>A Google Colab Jupyter Notebook for viewing how to compute with the Wagner Questionnaire</p>
+                        
+                            <p><strong>Document of:</strong> Meggitt-Wagner Classification of Diabetic Foot Lesions (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/Jupyter Notebook" target='_blank'>
+                                    Jupyter Notebook
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/Google Colab Notebook" target='_blank'>
+                                    Google Colab Notebook
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/wagner_scribbler.jsnb" target='_blank'>Wagner Scribbler Notebook Demo</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                                <a href="https://app.scribbler.live/?jsnb=https%3A%2F%2Fraw.githubusercontent.com%2Fkgrid-objects%2FFAIR-DO-Workshop%2FHEAD%2Fcollection%2Fwagner%2Fwagner_scribbler.jsnb" target="_blank" rel="noopener noreferrer"> <img src="https://img.shields.io/badge/Open%20In-Scribbler-2F9E44?logo=javascript&logoColor=white" alt=Open In Scribbler"> </a>
+                            
+                        
+
+                        </h3>
+                        <p>A Scribbler notebook for viewing how to compute with the Wagner Questionnaire</p>
+                        
+                            <p><strong>Document of:</strong> Meggitt-Wagner Classification of Diabetic Foot Lesions (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/Jupyter Notebook" target='_blank'>
+                                    Jupyter Notebook
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/Scribbler Notebook" target='_blank'>
+                                    Scribbler Notebook
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                </ul>
+            
+        </div>
+
+            <div class="test-section" id="test-section">
+            
+                <h2>Tests</h2>
+                <ul>
+                
+                    <li>
+                        <h3><a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/test/questionnaire.test.js" target='_blank'>Questionnaire Test</a></h3>
+                        <p>A test to confirm knowledge and services work</p>
+                        
+                            <p><strong>Test of:</strong> Meggitt-Wagner Classification of Diabetic Foot Lesions (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>
+                                    Implementation
+                                </a>, 
+                          
+                                <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>
+                                    JavaScript
+                                </a>
+                        
+                    </li>
+                
+                    <li>
+                        <h3><a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/test/scorer.test.js" target='_blank'>Scorer Test</a></h3>
+                        <p>A test to confirm knowledge and services work</p>
+                        
+                            <p><strong>Test of:</strong> Meggitt-Wagner Classification of Diabetic Foot Lesions (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>
+                                    Implementation
+                                </a>, 
+                          
+                                <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>
+                                    JavaScript
+                                </a>
+                        
+                    </li>
+                
+                </ul>
+            
+            </div>
+        </div>
+        </div>
+    </body>
+    </html>
+    

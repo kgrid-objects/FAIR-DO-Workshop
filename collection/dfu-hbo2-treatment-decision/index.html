@@ -1,0 +1,560 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            width: 100%;
+        }
+        .left-column {
+            width: 70%;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Right Column */
+        .right-column {
+            width: 30%;
+            background-color: #e9e9e9;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .metadata {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .metadata p {
+            margin: 5px 0;
+        }
+        .doc-section, .test-section {
+            
+            right: 20px;
+            color: black;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+        .doc-section {
+            top: 20px;
+            background-color: #97c8ed;
+        }
+        .doc-section h3 {
+            margin-top: 0;
+        }
+        .doc-section a {
+            text-decoration: underline;
+        }
+        .doc-section p {
+            margin-top: 5px;
+        }
+        
+        .test-section {
+            
+            background-color: #96d6b7;
+        }
+        .test-section h3 {
+            margin-top: 0;
+        }
+        
+        .test-section a {
+            text-decoration: underline;
+        }
+        
+        .test-section p {
+            margin-top: 5px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="left-column">
+            <div class="metadata" id="metadata">
+            <h1>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers</h1>
+            <p>Decision logic, input validation contract, unified result mapping, and canonical conformance tests for UHMS DFU HBO2 guidance.</p>
+            <hr>
+            <p><strong>ID:</strong> <a href="https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0" target='_blank'> 
+                https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0
+            </a></p>
+            <p><strong>Information page metadata:</strong> <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/metadata.json" target='_blank'> 
+                metadata.json 
+            </a></p>
+            
+            
+            
+                <strong>Identifier:</strong>
+                                 
+                                     
+                    placeholder#SOME_OTHER_ID,       
+                                     
+                    https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0      
+                
+            
+            
+            
+            
+            <p><strong>Type:</strong> <a href="https://kgrid.org/koio#KnowledgeObject" target='_blank'>KnowledgeObject</a></p>
+            <p><strong>Version:</strong> 1.0</p>
+            <p><strong>Date:</strong> 2026-08-05</p>
+            
+            
+            
+            <hr>
+            
+            
+            
+                <h2>Creator</h2>
+                 
+                <ul>  
+                 
+                    <li>
+                        <h3> 
+                             Knowledge Systems Lab</h3>
+                        <p><strong>Affiliation:</strong> Knowledge Systems Lab, University of Michigan Medical School</p>
+                        
+                        
+                            <p><strong>Email:</strong> 
+                                <a href="mailto:kgrid-developers@umich.edu" target='_blank'>
+                                    kgrid-developers@umich.edu
+                                </a>
+                            </p>
+                        
+                        <p><strong>Website:</strong> 
+                            <a href="https://kgrid.org" target='_blank'>
+                                https://kgrid.org
+                            </a>
+                        </p>
+                    </li>
+                   
+                </ul>
+            
+            
+            
+            
+            
+                              
+            
+                </p><b>Is referenced by:</b></p>
+                   
+                <ul>                 
+                   
+                </ul>
+            
+
+            
+                <hr>
+                <h2>Knowledge</h2>
+                
+                    
+                    
+                    
+                    <a id="DFU_HBO2_Decision_Logic"></a>
+                    </p>
+                        <p><h3> DFU HBO2 Decision Logic</h3></p>
+                         
+                    <p><strong>ID:</strong> 
+                        DFU_HBO2_Decision_Logic
+                    </p>
+
+                    <p><strong>Type:</strong> 
+                            <a href="https://kgrid.org/koio#Knowledge" target='_blank'>
+                                Knowledge
+                            </a>
+                    </p>
+                    
+                        <p><strong>Description:</strong> </p>
+                    
+                    
+                    
+                        <p><strong>Date:</strong> 
+                            
+                        </p>
+                    
+                    
+                    
+                                
+                                      
+                    
+                    
+                                       
+                    
+                        
+                        <p><strong>Implemented by:</strong> 
+                        <ul>
+                        
+                            <li>
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/src/decision.js" target='_blank'>
+                                decision.js
+                            </a><br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="https://w3id.org/function/ontology#Function" target='_blank'>Function</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>)
+                            </li>
+                        
+                        </ul>
+                        </p>
+                                      
+                                        
+                    
+                    
+                                       
+                
+            
+
+            
+            <hr>
+            <h2>Services</h2>
+            
+            
+
+                <p><h3> CLI_Service</h3></p>
+                <p><strong>Type:</strong> 
+                        <a href="https://kgrid.org/koio#Service" target='_blank'>
+                            Service
+                        </a>
+                </p>
+                <p><strong>Depends on:</strong> 
+                
+                
+                
+                    
+                    <a href="#DFU_HBO2_Decision_Logic">DFU_HBO2_Decision_Logic</a>
+                
+                </p>
+                
+                        <p><strong>Has interface:</strong> 
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/metadata.json" target='_blank'>
+                                https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/metadata.json
+                            </a>
+                        </p>
+                 
+                
+                
+                    <p><strong>Implemented by:</strong> 
+                    <ul>
+                        
+                            <li>
+                            
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/bin/dfu-hbo2.js" target='_blank'>
+                                    dfu-hbo2.js
+                                </a>                                 
+                              <br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>) 
+                            </li>
+                              
+                        </ul>            
+                    </p>
+                
+            
+
+                <p><h3> Library_Service</h3></p>
+                <p><strong>Type:</strong> 
+                        <a href="https://kgrid.org/koio#Service" target='_blank'>
+                            Service
+                        </a>
+                </p>
+                <p><strong>Depends on:</strong> 
+                
+                
+                
+                    
+                    <a href="#DFU_HBO2_Decision_Logic">DFU_HBO2_Decision_Logic</a>
+                
+                </p>
+                
+                        <p><strong>Has interface:</strong> 
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/metadata.json" target='_blank'>
+                                https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/metadata.json
+                            </a>
+                        </p>
+                 
+                
+                
+                    <p><strong>Implemented by:</strong> 
+                    <ul>
+                        
+                            <li>
+                            
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/src/decision.js" target='_blank'>
+                                    decision.js
+                                </a>                                 
+                              <br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>) 
+                            </li>
+                              
+                        </ul>            
+                    </p>
+                
+            
+            
+        </div>            
+        </div>
+        <div class="right-column">
+            <div class="doc-section" id="doc-section">
+            
+                <h2>Documentation</h2>
+                <ul>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx" target='_blank'>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+
+                        </h3>
+                        <p>Decision logic, input model, output contract, and conformance tests.</p>
+                        
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Specification Document" target='_blank'>
+                                    Specification Document
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/README.md" target='_blank'>DFU HBO2 Treatment Decision</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+
+                        </h3>
+                        <p>Technical package documentation.</p>
+                        
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Markdown Document" target='_blank'>
+                                    Markdown Document
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_binder.ipynb" target='_blank'>DFU HBO2 Binder Jupyter Notebook Demo</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                                <a href="https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/dfu-hbo2-treatment-decision/dfu_hbo2_binder.ipynb%3Fkernel_name%3Djavascript"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img src="https://mybinder.org/badge_logo.svg" alt="Binder">
+                                </a>
+                            
+                            
+                        
+
+                        </h3>
+                        <p>A Binder notebook for computing with the DFU HBO2 package.</p>
+                        
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Jupyter Notebook" target='_blank'>
+                                    Jupyter Notebook
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Binder Notebook" target='_blank'>
+                                    Binder Notebook
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_colab.ipynb" target='_blank'>DFU HBO2 Google Colab Jupyter Notebook Demo</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+                            
+                                <a href="https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_colab.ipynb" target="_blank" rel="noopener noreferrer"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a>
+                            
+                            
+                            
+                        
+
+                        </h3>
+                        <p>A Colab notebook for computing with the DFU HBO2 package.</p>
+                        
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Jupyter Notebook" target='_blank'>
+                                    Jupyter Notebook
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Google Colab Notebook" target='_blank'>
+                                    Google Colab Notebook
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                    <li>
+                        
+                        
+                        <h3>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_scribbler.jsnb" target='_blank'>DFU HBO2 Scribbler Notebook Demo</a>
+                        <br/>
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                        
+                            
+                            
+                            
+                                <a href="https://app.scribbler.live/?jsnb=https%3A%2F%2Fraw.githubusercontent.com%2Fkgrid-objects%2FFAIR-DO-Workshop%2FHEAD%2Fcollection%2Fdfu-hbo2-treatment-decision%2Fdfu_hbo2_scribbler.jsnb" target="_blank" rel="noopener noreferrer"> <img src="https://img.shields.io/badge/Open%20In-Scribbler-2F9E44?logo=javascript&logoColor=white" alt=Open In Scribbler"> </a>
+                            
+                        
+
+                        </h3>
+                        <p>A Scribbler notebook for computing with the DFU HBO2 package.</p>
+                        
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
+                                    InformationArtifact
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Jupyter Notebook" target='_blank'>
+                                    Jupyter Notebook
+                                </a>, 
+                          
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Scribbler Notebook" target='_blank'>
+                                    Scribbler Notebook
+                                </a>
+                        
+                        <br/><br/>
+                    </li>
+                
+                </ul>
+            
+        </div>
+
+            <div class="test-section" id="test-section">
+            
+                <h2>Tests</h2>
+                <ul>
+                
+                    <li>
+                        <h3><a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/test/decision.test.js" target='_blank'>Decision Logic Test</a></h3>
+                        <p>Executes all 51 canonical vectors with deep equality assertions.</p>
+                        
+                            <p><strong>Test of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>
+                                    Implementation
+                                </a>, 
+                          
+                                <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>
+                                    JavaScript
+                                </a>
+                        
+                    </li>
+                
+                </ul>
+            
+            </div>
+        </div>
+        </div>
+    </body>
+    </html>
+    

@@ -3,7 +3,7 @@
     "@id": "https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0",
     "versionInfo": "2.1",
     "@type": "KnowledgeObject",
-    "dc:title": "Multiple Imputation in the Presence of High-dimensional Data",
+    "dc:title": "Meggitt-Wagner Classification of Diabetic Foot Lesions",
     "dc:identifier": [
         "placeholder#SOME_OTHER_ID",
         "https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0"
@@ -18,7 +18,7 @@
             "@id": "https://kgrid.org",
             "@type": "schema:Organization",
             "schema:name": "Knowledge Systems Lab",
-            "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical Schooll",
+            "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
             "schema:email": "kgrid-developers@umich.edu"
         }
     ],
@@ -29,17 +29,15 @@
             "dc:identifier": "1",
             "dc:version": "",
             "dc:date": "",
-            "dc:description":"",
+            "dc:description": "",
             "dc:purpose": "Guides the end user through required adaptive Yes/No data collection and prevents an unworkable response set.",
             "@type": "koio:Knowledge",
             "implementedBy": {
                 "@id": "src/index.js",
                 "@type": [
-                    "Script",
-                    "Functions",
-                    "JavaScript code",
-                    "Functions Script",
-                    "Function description"
+                    "Implementation",
+                    "Function",
+                    "JavaScript"
                 ]
             }
         },
@@ -49,17 +47,15 @@
             "dc:identifier": "2",
             "dc:version": "",
             "dc:date": "",
-            "dc:description":"",
+            "dc:description": "",
             "dc:purpose": "Validates and analyzes any received response set, whether or not it came from the protected questionnaire interface.",
             "@type": "koio:Knowledge",
             "implementedBy": {
                 "@id": "src/scorer.js",
                 "@type": [
-                    "Script",
-                    "Functions",
-                    "JavaScript code",
-                    "Functions Script",
-                    "Function description"
+                    "Implementation",
+                    "Function",
+                    "JavaScript"
                 ]
             }
         }
@@ -72,7 +68,14 @@
                 "cli"
             ],
             "dc:description": "cli service",
-            "hasInterface": "bin/wagner.js",
+            "hasInterface": "",
+            "implementedBy": {
+                "@id": "bin/wagner.js",
+                "@type": [
+                    "Implementation",
+                    "JavaScript"
+                ]
+            },
             "dependsOn": [
                 "Questionnaire-Logic, Wagner-Scorer"
             ]
@@ -84,7 +87,14 @@
                 "library"
             ],
             "dc:description": "Way of invoking the runQuestionnaire software function",
-            "hasInterface": "src/index.js",
+            "hasInterface": "",
+            "implementedBy": {
+                "@id": "src/index.js",
+                "@type": [
+                    "Implementation",
+                    "JavaScript"
+                ]
+            },
             "dependsOn": [
                 "Questionnaire-Logic"
             ]
@@ -96,7 +106,14 @@
                 "library"
             ],
             "dc:description": "Way of invoking the analyzeQuestionnaireResponse software function",
-            "hasInterface": "src/scorer.js",
+            "hasInterface": "",
+            "implementedBy": {
+                "@id": "src/scorer.js",
+                "@type": [
+                    "Implementation",
+                    "JavaScript"
+                ]
+            },
             "dependsOn": [
                 "Wagner-Scorer"
             ]
@@ -111,11 +128,8 @@
             "implementedBy": {
                 "@id": "test/questionnaire.test.js",
                 "@type": [
-                    "Script",
-                    "Functions",
-                    "JavaScript code",
-                    "Functions Script",
-                    "Function description"
+                    "Implementation",
+                    "JavaScript"
                 ]
             }
         },
@@ -127,11 +141,8 @@
             "implementedBy": {
                 "@id": "test/scorer.test.js",
                 "@type": [
-                    "Script",
-                    "Functions",
-                    "JavaScript code",
-                    "Functions Script",
-                    "Function description"
+                    "Implementation",
+                    "JavaScript"
                 ]
             }
         }
@@ -156,24 +167,34 @@
             "dc:description": "Technical documentation."
         },
         {
-            "@id": "wagner-binder.ipynb",
+            "@id": "wagner_binder.ipynb",
             "@type": [
-                "Educational Example",
+                "InformationArtifact",
                 "Jupyter Notebook",
                 "Binder Notebook"
             ],
-            "dc:title": "Wagner Questionnaire Demo",
+            "dc:title": "Wagner Questionnaire Binder Jupyter Notebook Demo",
             "dc:description": "A Binder Jupyter Notebook for viewing how to compute with the Wagner Questionnaire"
         },
         {
-            "@id": "wagner-colab.ipynb",
+            "@id": "wagner_colab.ipynb",
             "@type": [
-                "Educational Example",
+                "InformationArtifact",
                 "Jupyter Notebook",
                 "Google Colab Notebook"
             ],
-            "dc:title": "Wagner CLI on Google Colab",
+            "dc:title": "Wagner Questionnaire Google Colab Jupyter Notebook Demo",
             "dc:description": "A Google Colab Jupyter Notebook for viewing how to compute with the Wagner Questionnaire"
+        },
+        {
+            "@id": "wagner_scribbler.jsnb",
+            "@type": [
+                "InformationArtifact",
+                "Jupyter Notebook",
+                "Scribbler Notebook"
+            ],
+            "dc:title": "Wagner Scribbler Notebook Demo",
+            "dc:description": "A Scribbler notebook for viewing how to compute with the Wagner Questionnaire"
         }
     ]
 }
