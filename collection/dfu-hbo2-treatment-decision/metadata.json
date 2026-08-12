@@ -1,16 +1,20 @@
 {
     "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0",
+    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision",
     "versionInfo": "2.1",
     "@type": "KnowledgeObject",
-    "dc:title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers",
+    "dc:title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object",
     "dc:identifier": [
-        "placeholder#SOME_OTHER_ID",
-        "https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0"
+        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision"
     ],
     "dc:version": "1.0",
     "dc:date": "2026-08-05",
-    "dc:source": [],
+    "dc:source": [
+        {
+            "@id": "https://pubmed.ncbi.nlm.nih.gov/26152105/",
+            "dc:bibliographicCitation": "Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. Figure 6, 'Algorithm for the use of HBO2.'"
+        }
+    ],
     "dc:isReferencedBy": [],
     "dc:description": "Decision logic, input validation contract, unified result mapping, and canonical conformance tests for UHMS DFU HBO2 guidance.",
     "schema:creator": [
@@ -27,9 +31,9 @@
             "@id": "DFU_HBO2_Decision_Logic",
             "dc:title": "DFU HBO2 Decision Logic",
             "dc:identifier": "1",
-            "dc:version": "",
-            "dc:date": "",
-            "dc:description": "",
+            "dc:version": "1.0",
+            "dc:date": "2026-08-05",
+            "dc:description": "Deterministic decision logic that validates diabetic foot ulcer case inputs and produces standardized recommendation, out-of-scope, or error outcomes for hyperbaric oxygen treatment decision workflows.",
             "dc:purpose": "",
             "@type": "koio:Knowledge",
             "implementedBy": {
@@ -49,7 +53,7 @@
                 "Service",
                 "cli"
             ],
-            "dc:description": "CLI invocation for DFU HBO2 decision evaluation",
+            "dc:description": "command-line interface that parses invocation modes and input formats, runs the DFU HBO2 decision logic, and prints the resulting recommendation or validation error as formatted JSON.",
             "hasInterface": "bin/dfu-hbo2.js",
             "implementedBy": {
                 "@id": "bin/dfu-hbo2.js",
@@ -63,7 +67,7 @@
             ]
         },
         {
-            "@id": "Library_Service",
+            "@id": "Service_for_Decision_Logic",
             "@type": [
                 "Service",
                 "library"
@@ -87,7 +91,7 @@
             "@id": "Decision_Logic_Test",
             "@type": "koio:Test",
             "dc:title": "Decision Logic Test",
-            "dc:description": "Executes all 51 canonical vectors with deep equality assertions.",
+            "dc:description": "Loads the canonical DFU HBO2 test-vector dataset, verifies there are exactly 51 vectors, and runs one assertion-driven test per vector to confirm evaluateFixture returns the expected result for each case.",
             "implementedBy": {
                 "@id": "test/decision.test.js",
                 "@type": [
@@ -165,6 +169,15 @@
             ],
             "dc:title": "DFU HBO2 Scribbler Notebook Demo",
             "dc:description": "A Scribbler notebook for computing with the DFU HBO2 package."
+        },
+        {
+            "@id": "index.html",
+            "@type": [
+                "InformationArtifact",
+                "Information Page"
+            ],
+            "dc:title": "DFU HBO2 Treatment Decision Information Page",
+            "dc:description": "An information page for viewing the contents of the DFU HBO2 Treatment Decision Knowledge Object"
         }
     ]
 }

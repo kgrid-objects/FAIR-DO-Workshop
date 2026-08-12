@@ -11,11 +11,17 @@
     "dc:version": "1.0",
     "dc:date": "2026-08-03",
     "dc:source": [
-        "https://iwgdfguidelines.org/wp-content/uploads/2021/01/Monteiro-Soares_et_al-2020-IWGDF-classification-guideline.pdf",
-        "https://journals.sagepub.com/doi/pdf/10.1177/107110078100200202?casa_token=h7WVAeQnTBYAAAAA:9311kCjKiHb-MryHmhbclBrXDccBeYSqnNasKmADww_bu_YSS1D9vSRQa6a-GnIsNqtVFTE_zG8q-g"
+        {
+            "@id": "https://iwgdfguidelines.org/wp-content/uploads/2021/01/Monteiro-Soares_et_al-2020-IWGDF-classification-guideline.pdf",
+            "dc:bibliographicCitation": "Monteiro-Soares M, et al. IWGDF Guideline on the Classification of Diabetic Foot Ulcers, 2019."
+        },
+        {
+            "@id": "https://journals.sagepub.com/doi/pdf/10.1177/107110078100200202?casa_token=h7WVAeQnTBYAAAAA:9311kCjKiHb-MryHmhbclBrXDccBeYSqnNasKmADww_bu_YSS1D9vSRQa6a-GnIsNqtVFTE_zG8q-g",
+            "dc:bibliographicCitation": "Wagner Jr FW. The dysvascular foot: a system for diagnosis and treatment. Foot & ankle. 1981 Sep;2(2):64-122."
+        }
     ],
     "dc:isReferencedBy": [],
-    "dc:description": "This demonstration-only CKS classifies one diabetic foot lesion or assessment site, at one assessment event, as Wagner score 0-5. It specifies classification—not treatment, prognosis, amputation risk, or hyperbaric-oxygen eligibility.",
+    "dc:description": "This knowledge object classifies one diabetic foot lesion or assessment site, at one assessment event, as Wagner score 0-5. It specifies classification-not treatment, prognosis, amputation risk, or hyperbaric-oxygen eligibility.",
     "schema:creator": [
         {
             "@id": "https://kgrid.org",
@@ -169,7 +175,7 @@
                 "InformationArtifact",
                 "Summary"
             ],
-            "dc:title": "Meggitt–Wagner CKS Summary",
+            "dc:title": "Meggitt-Wagner CKS Summary",
             "dc:description": "A one-page clinical knowledge summary for the Meggitt–Wagner CKS"
         },
         {

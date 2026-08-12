@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers</title>
+        <title>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object</title>
         <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap');
 
@@ -164,13 +164,15 @@
             background: #fcfdfe;
             border: 1px solid var(--line);
             border-radius: 10px;
-            padding: 14px 250px;
-            overflow-x: auto;
+            padding: 12px 12px 18px 12px;
+            max-height: 300px;
+            overflow: hidden;
         }
 
         .graph-panel .mermaid svg {
             font-size: 8px;
-            max-width: 58%;
+            max-width: 100%;
+            width: auto;
             height: auto;
             display: block;
             margin: 0 auto;
@@ -183,6 +185,51 @@
             margin: 0 0 12px 0;
             padding: 0;
             list-style: none;
+        }
+
+        .graph-node-legend {
+            flex-wrap: nowrap;
+            gap: 6px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding-bottom: 2px;
+        }
+
+        .graph-node-legend .graph-legend-item {
+            padding: 5px 9px 5px 7px;
+            font-size: 0.78rem;
+        }
+
+        .graph-node-legend .count {
+            font-size: 0.74rem;
+        }
+
+        .graph-legend-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .graph-legend-group {
+            flex: 1 1 360px;
+            min-width: 280px;
+        }
+
+        .graph-legend-group-title {
+            margin: 0;
+            font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+            font-weight: 700;
+            font-size: 0.86rem;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .graph-legend-inline-title {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 2px;
         }
 
         .graph-legend-item {
@@ -285,14 +332,6 @@
             display: inline-flex;
             align-items: center;
             line-height: 1;
-        }
-
-        .graph-edge-legend-title {
-            margin: 10px 0 6px 0;
-            font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-            font-weight: 700;
-            font-size: 0.86rem;
-            color: var(--muted);
         }
 
         .legend-arrow {
@@ -522,75 +561,78 @@
     </head>
     <body>
         <section class="page-hero">
-            <h1>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers</h1>
+            <h1>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object</h1>
         </section>
-        <details class="graph-panel" id="relationshipGraph">
+        <details class="graph-panel" id="relationshipGraph" open>
             <summary>
                 <span class="graph-summary-title">Relationship Graph</span>
                 <div class="stat-grid graph-summary-stats">
-                    <div class="stat-pill">Knowledge: 1</div>
+                    <div class="stat-pill">Computable Knowledge: 1</div>
                     <div class="stat-pill">Services: 2</div>
                     <div class="stat-pill">Documentation: 7</div>
                     <div class="stat-pill">Tests: 1</div>
                 </div>
             </summary>
-            <p>Knowledge object as the root with connected knowledge, services, tests, and documentation based on metadata location.</p>
-            <ul class="graph-legend">
-                <li>
-                    <label class="graph-legend-item">
-                        <input type="checkbox" data-node-type="ko" checked>
-                        <span>Knowledge Object</span>
-                        <span class="count">(1)</span>
-                    </label>
-                </li>
-                <li>
-                    <label class="graph-legend-item">
-                        <input type="checkbox" data-node-type="knowledge" checked>
-                        <span>Knowledge</span>
-                        <span class="count">(1)</span>
-                    </label>
-                </li>
-                <li>
-                    <label class="graph-legend-item">
-                        <input type="checkbox" data-node-type="service" checked>
-                        <span>Service</span>
-                        <span class="count">(2)</span>
-                    </label>
-                </li>
-                <li>
-                    <label class="graph-legend-item">
-                        <input type="checkbox" data-node-type="test" checked>
-                        <span>Test</span>
-                        <span class="count">(1)</span>
-                    </label>
-                </li>
-                <li>
-                    <label class="graph-legend-item">
-                        <input type="checkbox" data-node-type="doc" checked>
-                        <span>Documentation</span>
-                        <span class="count">(7)</span>
-                    </label>
-                </li>
-            </ul>
-            <p class="graph-edge-legend-title">Relationship Arrows</p>
-            <ul class="graph-legend graph-edge-legend">
-                <li>
-                    <label class="graph-legend-item">
-                        <input type="checkbox" data-edge-type="has" checked>
-                        <span class="legend-arrow legend-arrow-has"></span>
-                        <span>has</span>
-                        <span class="count">(11)</span>
-                    </label>
-                </li>
-                <li>
-                    <label class="graph-legend-item">
-                        <input type="checkbox" data-edge-type="depends">
-                        <span class="legend-arrow legend-arrow-depends"></span>
-                        <span>depends on</span>
-                        <span class="count">(2)</span>
-                    </label>
-                </li>
-            </ul>
+            <div class="graph-legend-layout">
+                <div class="graph-legend-group">
+                    <ul class="graph-legend graph-node-legend">
+                        <li class="graph-legend-inline-title">
+                            <span class="graph-legend-group-title">Nodes:</span>
+                        </li>
+                        <li>
+                            <label class="graph-legend-item">
+                                <input type="checkbox" data-node-type="knowledge" checked>
+                                <span>Computable Knowledge</span>
+                                <span class="count">(1)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="graph-legend-item">
+                                <input type="checkbox" data-node-type="service" checked>
+                                <span>Service</span>
+                                <span class="count">(2)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="graph-legend-item">
+                                <input type="checkbox" data-node-type="test" checked>
+                                <span>Test</span>
+                                <span class="count">(1)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="graph-legend-item">
+                                <input type="checkbox" data-node-type="doc" checked>
+                                <span>Documentation</span>
+                                <span class="count">(7)</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="graph-legend-group">
+                    <ul class="graph-legend graph-edge-legend">
+                        <li class="graph-legend-inline-title">
+                            <span class="graph-legend-group-title">Relationship Arrows:</span>
+                        </li>
+                        <li>
+                            <label class="graph-legend-item">
+                                <input type="checkbox" data-edge-type="has" checked>
+                                <span class="legend-arrow legend-arrow-has"></span>
+                                <span>has</span>
+                                <span class="count">(11)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="graph-legend-item">
+                                <input type="checkbox" data-edge-type="depends">
+                                <span class="legend-arrow legend-arrow-depends"></span>
+                                <span>depends on</span>
+                                <span class="count">(2)</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="mermaid" id="graphMermaid"></div>
         </details>
         <div class="container">
@@ -599,8 +641,8 @@
             <h2 class="metadata-title">Overview</h2>
             <p>Decision logic, input validation contract, unified result mapping, and canonical conformance tests for UHMS DFU HBO2 guidance.</p>
             <hr>
-            <p><strong>ID:</strong> <a href="https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0" target='_blank'> 
-                https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0
+            <p><strong>ID:</strong> <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision" target='_blank'> 
+                https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision
             </a></p>
             <p><strong>Information page metadata:</strong> <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/metadata.json" target='_blank'> 
                 metadata.json 
@@ -611,9 +653,7 @@
                 <strong>Identifier:</strong>
                                  
                                      
-                    placeholder#SOME_OTHER_ID,       
-                                     
-                    https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0      
+                    https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision      
                 
             
             
@@ -625,15 +665,29 @@
             
             
             
+                              
+            
+                </p><b>Source:</b></p>
+                   
+                <ul>                 
+                 
+                    <li>     
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/26152105/" target='_blank'>
+                        Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. Figure 6, 'Algorithm for the use of HBO2.'
+                    </a>
+                    </li>
+                   
+                </ul>
+            
             
                               
-                        
-                            </p><b>Is referenced by:</b></p>
-                               
-                            <ul>                 
-                               
-                            </ul>
-                        
+            
+                </p><b>Is referenced by:</b></p>
+                   
+                <ul>                 
+                   
+                </ul>
+            
             <hr>
             
             
@@ -665,7 +719,7 @@
             
             
                        
-            
+            <br/>
 
             
                 <hr>
@@ -674,6 +728,7 @@
                     
                     
                     
+                    <a id="graph-knowledge-1"></a>
                     <a id="DFU_HBO2_Decision_Logic"></a>
                     </p>
                         <p><h3> DFU HBO2 Decision Logic</h3></p>
@@ -722,7 +777,8 @@
                                         
                     
                     
-                                       
+                          
+                    <br/>             
                 
             
 
@@ -732,7 +788,12 @@
             
             
 
+                <a id="graph-service-1"></a>
+
                 <p><h3> CLI_Service</h3></p>
+                
+                    <p><strong>Description:</strong> CLI invocation for DFU HBO2 decision evaluation</p>
+                
                 <p><strong>Type:</strong> 
                         <a href="https://kgrid.org/koio#Service" target='_blank'>
                             Service
@@ -771,9 +832,15 @@
                         </ul>            
                     </p>
                 
+                <br/>
             
 
+                <a id="graph-service-2"></a>
+
                 <p><h3> Library_Service</h3></p>
+                
+                    <p><strong>Description:</strong> Way of invoking the DFU HBO2 Decision Logic</p>
+                
                 <p><strong>Type:</strong> 
                         <a href="https://kgrid.org/koio#Service" target='_blank'>
                             Service
@@ -812,6 +879,7 @@
                         </ul>            
                     </p>
                 
+                <br/>
             
             
         </div>            
@@ -841,7 +909,7 @@
                         </h3>
                         <p>Decision logic, input model, output contract, and conformance tests.</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -876,7 +944,7 @@
                         </h3>
                         <p>Technical package documentation.</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -920,7 +988,7 @@
                         </h3>
                         <p>A Binder notebook for computing with the DFU HBO2 package.</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -965,7 +1033,7 @@
                         </h3>
                         <p>A Colab notebook for computing with the DFU HBO2 package.</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -1010,7 +1078,7 @@
                         </h3>
                         <p>A Scribbler notebook for computing with the DFU HBO2 package.</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -1109,11 +1177,12 @@
                 <h2 class="section-emphasis section-test">Tests</h2>
                 <ul>
                 
+                    <a id="graph-test-1"></a>
                     <li>
                         <h3><a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/test/decision.test.js" target='_blank'>Decision Logic Test</a></h3>
                         <p>Executes all 51 canonical vectors with deep equality assertions.</p>
                         
-                            <p><strong>Test of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers (koio#KnowledgeObject) </p>
+                            <p><strong>Test of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -1136,7 +1205,7 @@
         <script type="module">
             import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 
-            const graphData = {"nodes": [{"id": "N1", "label": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers", "type": "ko"}, {"id": "N2", "label": "DFU HBO2 Decision Logic", "type": "knowledge"}, {"id": "N3", "label": "CLI_Service", "type": "service"}, {"id": "N4", "label": "Library_Service", "type": "service"}, {"id": "N5", "label": "Decision Logic Test", "type": "test"}, {"id": "N6", "label": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers", "type": "doc"}, {"id": "N7", "label": "DFU HBO2 Treatment Decision", "type": "doc"}, {"id": "N8", "label": "DFU HBO2 Binder Jupyter Notebook Demo", "type": "doc"}, {"id": "N9", "label": "DFU HBO2 Google Colab Jupyter Notebook Demo", "type": "doc"}, {"id": "N10", "label": "DFU HBO2 Scribbler Notebook Demo", "type": "doc"}, {"id": "N11", "label": "Canonical Test Vectors for DFU HBO2 Decision Logic", "type": "doc"}, {"id": "N12", "label": "Canonical Test Vectors Schema for DFU HBO2 Decision Logic", "type": "doc"}], "edges": [{"source": "N1", "target": "N10", "type": "has"}, {"source": "N1", "target": "N2", "type": "has"}, {"source": "N1", "target": "N3", "type": "has"}, {"source": "N1", "target": "N4", "type": "has"}, {"source": "N1", "target": "N5", "type": "has"}, {"source": "N1", "target": "N6", "type": "has"}, {"source": "N1", "target": "N7", "type": "has"}, {"source": "N1", "target": "N8", "type": "has"}, {"source": "N1", "target": "N9", "type": "has"}, {"source": "N3", "target": "N2", "type": "depends"}, {"source": "N4", "target": "N2", "type": "depends"}, {"source": "N5", "target": "N11", "type": "has"}, {"source": "N5", "target": "N12", "type": "has"}], "counts": {"ko": 1, "knowledge": 1, "service": 2, "test": 1, "doc": 7}, "edge_counts": {"has": 11, "depends": 2}};
+            const graphData = {"nodes": [{"id": "N1", "label": "Clinical Practice Guideline Alg...", "full_label": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object", "type": "ko", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision"}, {"id": "N2", "label": "DFU HBO2 Decision Logic", "full_label": "DFU HBO2 Decision Logic", "type": "knowledge", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/src/decision.js"}, {"id": "N3", "label": "CLI_Service", "full_label": "CLI_Service", "type": "service", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/bin/dfu-hbo2.js"}, {"id": "N4", "label": "Library_Service", "full_label": "Library_Service", "type": "service", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/src/decision.js"}, {"id": "N5", "label": "Decision Logic Test", "full_label": "Decision Logic Test", "type": "test", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/test/decision.test.js"}, {"id": "N6", "label": "Clinical Practice Guideline Alg...", "full_label": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx"}, {"id": "N7", "label": "DFU HBO2 Treatment Decision", "full_label": "DFU HBO2 Treatment Decision", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/README.md"}, {"id": "N8", "label": "DFU HBO2 Binder Jupyter Noteboo...", "full_label": "DFU HBO2 Binder Jupyter Notebook Demo", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_binder.ipynb"}, {"id": "N9", "label": "DFU HBO2 Google Colab Jupyter N...", "full_label": "DFU HBO2 Google Colab Jupyter Notebook Demo", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_colab.ipynb"}, {"id": "N10", "label": "DFU HBO2 Scribbler Notebook Demo", "full_label": "DFU HBO2 Scribbler Notebook Demo", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_scribbler.jsnb"}, {"id": "N11", "label": "Canonical Test Vectors for DFU...", "full_label": "Canonical Test Vectors for DFU HBO2 Decision Logic", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_1_0.json"}, {"id": "N12", "label": "Canonical Test Vectors Schema f...", "full_label": "Canonical Test Vectors Schema for DFU HBO2 Decision Logic", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_Schema_1_0.json"}], "edges": [{"source": "N1", "target": "N10", "type": "has"}, {"source": "N1", "target": "N2", "type": "has"}, {"source": "N1", "target": "N3", "type": "has"}, {"source": "N1", "target": "N4", "type": "has"}, {"source": "N1", "target": "N5", "type": "has"}, {"source": "N1", "target": "N6", "type": "has"}, {"source": "N1", "target": "N7", "type": "has"}, {"source": "N1", "target": "N8", "type": "has"}, {"source": "N1", "target": "N9", "type": "has"}, {"source": "N3", "target": "N2", "type": "depends"}, {"source": "N4", "target": "N2", "type": "depends"}, {"source": "N5", "target": "N11", "type": "has"}, {"source": "N5", "target": "N12", "type": "has"}], "counts": {"ko": 1, "knowledge": 1, "service": 2, "test": 1, "doc": 7}, "edge_counts": {"has": 11, "depends": 2}};
             const graphPanel = document.getElementById("relationshipGraph");
             const graphTarget = document.getElementById("graphMermaid");
             const legendCheckboxes = document.querySelectorAll(".graph-legend input[type='checkbox']");
@@ -1158,6 +1227,7 @@
                         .filter((box) => box.checked)
                         .map((box) => box.getAttribute("data-node-type"))
                 );
+                activeTypes.add("ko");
 
                 const activeEdgeTypes = new Set(
                     Array.from(edgeTypeCheckboxes)
@@ -1174,7 +1244,7 @@
                         activeEdgeTypes.has(edge.type)
                 );
 
-                const lines = ["graph LR", ...classDefs];
+                const lines = ["graph TB", ...classDefs];
 
                 if (visibleNodes.length === 0) {
                     lines.push('EMPTY["No node types selected"]');
@@ -1205,6 +1275,67 @@
                 return lines.join("\n");
             }
 
+            function wireGraphNodeLinks() {
+                const svg = graphTarget.querySelector("svg");
+                if (!svg) {
+                    return;
+                }
+
+                for (const node of graphData.nodes) {
+                    // Mermaid renders flowchart nodes with IDs like flowchart-N1-0.
+                    const nodeElement = svg.querySelector(`g.node[id*="-${node.id}-"]`);
+                    if (!nodeElement) {
+                        continue;
+                    }
+
+                    const fullLabel = node.full_label || node.label;
+                    const titleText = node.link ? `${fullLabel}
+Open artifact` : fullLabel;
+                    let titleEl = nodeElement.querySelector("title");
+                    if (!titleEl) {
+                        titleEl = document.createElementNS("http://www.w3.org/2000/svg", "title");
+                        nodeElement.prepend(titleEl);
+                    }
+                    titleEl.textContent = titleText;
+
+                    if (node.link) {
+                        nodeElement.style.cursor = "pointer";
+                        nodeElement.addEventListener("click", () => {
+                            window.open(node.link, "_blank", "noopener,noreferrer");
+                        });
+                    }
+                }
+            }
+
+            function fitGraphToContainer() {
+                const svg = graphTarget.querySelector("svg");
+                if (!svg) {
+                    return;
+                }
+
+                const box = svg.viewBox && svg.viewBox.baseVal;
+                const naturalWidth = box && box.width ? box.width : svg.getBBox().width;
+                const naturalHeight = box && box.height ? box.height : svg.getBBox().height;
+                if (!naturalWidth || !naturalHeight) {
+                    return;
+                }
+
+                const styles = getComputedStyle(graphTarget);
+                const maxHeight = parseFloat(styles.maxHeight) || naturalHeight;
+                const paddingX = (parseFloat(styles.paddingLeft) || 0) + (parseFloat(styles.paddingRight) || 0);
+                const paddingY = (parseFloat(styles.paddingTop) || 0) + (parseFloat(styles.paddingBottom) || 0);
+                const availableWidth = Math.max(1, graphTarget.clientWidth - paddingX);
+                const availableHeight = Math.max(1, maxHeight - paddingY);
+                const innerMargin = 10;
+                const widthScale = Math.max(0.01, (availableWidth - innerMargin * 2) / naturalWidth);
+                const heightScale = Math.max(0.01, (availableHeight - innerMargin * 2) / naturalHeight);
+                const scale = Math.min(1, widthScale, heightScale);
+
+                svg.style.maxWidth = "none";
+                svg.style.width = `${naturalWidth * scale}px`;
+                svg.style.height = `${naturalHeight * scale}px`;
+            }
+
             async function renderRelationshipGraph() {
                 if (!graphPanel.open) {
                     return;
@@ -1214,13 +1345,16 @@
                 const renderId = `relationship-graph-${Date.now()}`;
                 const { svg } = await mermaid.render(renderId, definition);
                 graphTarget.innerHTML = svg;
+                fitGraphToContainer();
+                requestAnimationFrame(fitGraphToContainer);
+                wireGraphNodeLinks();
             }
 
             mermaid.initialize({
                 startOnLoad: false,
                 theme: "neutral",
                 securityLevel: "loose",
-                flowchart: { curve: "catmullRom", nodeSpacing: 10, rankSpacing: 100, padding: 5 }
+                flowchart: { curve: "catmullRom", nodeSpacing: 10, rankSpacing: 100, padding: 5, useMaxWidth: false }
             });
 
             graphPanel.addEventListener("toggle", () => {
@@ -1231,6 +1365,14 @@
 
             for (const box of legendCheckboxes) {
                 box.addEventListener("change", renderRelationshipGraph);
+            }
+
+            window.addEventListener("resize", () => {
+                fitGraphToContainer();
+            });
+
+            if (graphPanel.open) {
+                renderRelationshipGraph();
             }
         </script>
     </body>
