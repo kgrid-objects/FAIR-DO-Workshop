@@ -5,6 +5,7 @@
     "@type": "KnowledgeObject",
     "dc:title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object",
     "dc:identifier": [
+        "workshop-ko-2",
         "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision"
     ],
     "dc:version": "1.0",
