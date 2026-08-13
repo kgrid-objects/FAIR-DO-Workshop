@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object</title>
+        <title>DFU HBOT Bounded Regimen and Execution Burden</title>
         <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap');
 
@@ -561,16 +561,16 @@
     </head>
     <body>
         <section class="page-hero">
-            <h1>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object</h1>
+            <h1>DFU HBOT Bounded Regimen and Execution Burden</h1>
         </section>
         <details class="graph-panel" id="relationshipGraph" open>
             <summary>
                 <span class="graph-summary-title">Relationship Graph</span>
                 <div class="stat-grid graph-summary-stats">
-                    <div class="stat-pill">Computable Knowledge: 1</div>
-                    <div class="stat-pill">Services: 2</div>
-                    <div class="stat-pill">Documentation: 9</div>
-                    <div class="stat-pill">Tests: 1</div>
+                    <div class="stat-pill">Computable Knowledge: 3</div>
+                    <div class="stat-pill">Services: 4</div>
+                    <div class="stat-pill">Documentation: 8</div>
+                    <div class="stat-pill">Tests: 3</div>
                 </div>
             </summary>
             <div class="graph-legend-layout">
@@ -583,28 +583,28 @@
                             <label class="graph-legend-item">
                                 <input type="checkbox" data-node-type="knowledge" checked>
                                 <span>Computable Knowledge</span>
-                                <span class="count">(1)</span>
+                                <span class="count">(3)</span>
                             </label>
                         </li>
                         <li>
                             <label class="graph-legend-item">
                                 <input type="checkbox" data-node-type="service" checked>
                                 <span>Service</span>
-                                <span class="count">(2)</span>
+                                <span class="count">(4)</span>
                             </label>
                         </li>
                         <li>
                             <label class="graph-legend-item">
                                 <input type="checkbox" data-node-type="test" checked>
                                 <span>Test</span>
-                                <span class="count">(1)</span>
+                                <span class="count">(3)</span>
                             </label>
                         </li>
                         <li>
                             <label class="graph-legend-item">
                                 <input type="checkbox" data-node-type="doc" checked>
                                 <span>Documentation</span>
-                                <span class="count">(9)</span>
+                                <span class="count">(8)</span>
                             </label>
                         </li>
                     </ul>
@@ -619,7 +619,7 @@
                                 <input type="checkbox" data-edge-type="has" checked>
                                 <span class="legend-arrow legend-arrow-has"></span>
                                 <span>has</span>
-                                <span class="count">(13)</span>
+                                <span class="count">(18)</span>
                             </label>
                         </li>
                         <li>
@@ -627,7 +627,7 @@
                                 <input type="checkbox" data-edge-type="depends">
                                 <span class="legend-arrow legend-arrow-depends"></span>
                                 <span>depends on</span>
-                                <span class="count">(2)</span>
+                                <span class="count">(6)</span>
                             </label>
                         </li>
                     </ul>
@@ -639,12 +639,12 @@
         <div class="left-column">
             <div class="metadata" id="metadata">
             <h2 class="metadata-title">Overview</h2>
-            <p>This knowledge object converts four supplied facts about one candidate diabetic foot ulcer into one guideline-branch result for adjunctive hyperbaric oxygen therapy (HBO2). It implements Figure 6 of the 2015 UHMS guideline; it does not diagnose a DFU, calculate Wagner grade, prescribe an HBO2 protocol, or determine coverage.</p>
+            <p>This knowledge object estimates the execution burden of a contemplated outpatient HBOT course. It combines a fixed population-level regimen range with one selected facility, patient-reported travel distance and duration, and reported weekday-attendance difficulty.</p>
             <hr>
-            <p><strong>ID:</strong> <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision" target='_blank'> 
-                https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision
+            <p><strong>ID:</strong> <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden" target='_blank'> 
+                https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden
             </a></p>
-            <p><strong>Information page metadata:</strong> <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/metadata.json" target='_blank'> 
+            <p><strong>Information page metadata:</strong> <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/metadata.json" target='_blank'> 
                 metadata.json 
             </a></p>
             
@@ -653,9 +653,9 @@
                 <strong>Identifier:</strong>
                                  
                                      
-                    workshop-ko-2,       
+                    workshop-ko-3,       
                                      
-                    https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision      
+                    https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden      
                 
             
             
@@ -663,7 +663,7 @@
             
             <p><strong>Type:</strong> <a href="https://kgrid.org/koio#KnowledgeObject" target='_blank'>KnowledgeObject</a></p>
             <p><strong>Version:</strong> 1.0</p>
-            <p><strong>Date:</strong> 2026-08-05</p>
+            <p><strong>Date:</strong> 2026-08-12</p>
             
             
             
@@ -674,8 +674,20 @@
                 <ul>                 
                  
                     <li>     
+                    <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/1E41C3D7-66F4-C168-3A91-D951BE77CBAF.pdf" target='_blank'>
+                        Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. UHMS DFU guideline.
+                    </a>
+                    </li>
+                 
+                    <li>     
                     <a href="https://pubmed.ncbi.nlm.nih.gov/26152105/" target='_blank'>
-                        Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. Figure 6, 'Algorithm for the use of HBO2.'
+                        Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. UHMS DFU guideline.
+                    </a>
+                    </li>
+                 
+                    <li>     
+                    <a href="https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-Guidelines-2023.pdf" target='_blank'>
+                        International Working Group on the Diabetic Foot. Guidelines on interventions to enhance healing of foot ulcers in people with diabetes: IWGDF 2023 update. Recommendation 12 and rationale.
                     </a>
                     </li>
                    
@@ -731,12 +743,12 @@
                     
                     
                     <a id="graph-knowledge-1"></a>
-                    <a id="DFU_HBO2_Decision_Logic"></a>
+                    <a id="Regimen_Range"></a>
                     </p>
-                        <p><h3> DFU HBO2 Decision Logic</h3></p>
+                        <p><h3> Regimen Range</h3></p>
                          
                     <p><strong>ID:</strong> 
-                        DFU_HBO2_Decision_Logic
+                        Regimen_Range
                     </p>
 
                     <p><strong>Type:</strong> 
@@ -745,12 +757,12 @@
                             </a>
                     </p>
                     
-                        <p><strong>Description:</strong> Deterministic decision logic that validates diabetic foot ulcer case inputs and produces standardized recommendation, out-of-scope, or error outcomes for hyperbaric oxygen treatment decision.</p>
+                        <p><strong>Description:</strong> Return the governed Fixed Regimen Range Response containing the shorter and longer general scenarios</p>
                     
                     
                     
                         <p><strong>Date:</strong> 
-                            2026-08-05
+                            2026-08-12
                         </p>
                     
                     
@@ -766,8 +778,118 @@
                         <ul>
                         
                             <li>
-                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/src/decision.js" target='_blank'>
-                                decision.js
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/regimen-range.js" target='_blank'>
+                                regimen-range.js
+                            </a><br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="https://w3id.org/function/ontology#Function" target='_blank'>Function</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>)
+                            </li>
+                        
+                        </ul>
+                        </p>
+                                      
+                                        
+                    
+                    
+                          
+                    <br/>             
+                
+                    
+                    
+                    
+                    <a id="graph-knowledge-2"></a>
+                    <a id="Burden_Questionnaire_Logic"></a>
+                    </p>
+                        <p><h3> Burden Questionnaire Logic</h3></p>
+                         
+                    <p><strong>ID:</strong> 
+                        Burden_Questionnaire_Logic
+                    </p>
+
+                    <p><strong>Type:</strong> 
+                            <a href="https://kgrid.org/koio#Knowledge" target='_blank'>
+                                Knowledge
+                            </a>
+                    </p>
+                    
+                        <p><strong>Description:</strong> Burden Questionnaire Logic interactively collects and confirms the patient's selected treatment location, travel distance and time, and expected weekday-attendance difficulty.</p>
+                    
+                    
+                    
+                        <p><strong>Date:</strong> 
+                            2026-08-12
+                        </p>
+                    
+                    
+                    
+                                
+                                      
+                    
+                    
+                                       
+                    
+                        
+                        <p><strong>Implemented by:</strong> 
+                        <ul>
+                        
+                            <li>
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/questionnaire-logic.js" target='_blank'>
+                                questionnaire-logic.js
+                            </a><br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="https://w3id.org/function/ontology#Function" target='_blank'>Function</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>)
+                            </li>
+                        
+                        </ul>
+                        </p>
+                                      
+                                        
+                    
+                    
+                          
+                    <br/>             
+                
+                    
+                    
+                    
+                    <a id="graph-knowledge-3"></a>
+                    <a id="Burden_Response_Analysis"></a>
+                    </p>
+                        <p><h3> Burden Response Analysis</h3></p>
+                         
+                    <p><strong>ID:</strong> 
+                        Burden_Response_Analysis
+                    </p>
+
+                    <p><strong>Type:</strong> 
+                            <a href="https://kgrid.org/koio#Knowledge" target='_blank'>
+                                Knowledge
+                            </a>
+                    </p>
+                    
+                        <p><strong>Description:</strong> Burden Response Analysis computes the execution burden of a contemplated outpatient HBOT course by combining the fixed population-level regimen envelope with one selected facility, patient-reported travel, and reported weekday-attendance difficulty.</p>
+                    
+                    
+                    
+                        <p><strong>Date:</strong> 
+                            2026-08-12
+                        </p>
+                    
+                    
+                    
+                                
+                                      
+                    
+                    
+                                       
+                    
+                        
+                        <p><strong>Implemented by:</strong> 
+                        <ul>
+                        
+                            <li>
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/burden-response-analysis.js" target='_blank'>
+                                burden-response-analysis.js
                             </a><br/>(type: 
                                 
                                 <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="https://w3id.org/function/ontology#Function" target='_blank'>Function</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>)
@@ -794,7 +916,7 @@
 
                 <p><h3> CLI_Service</h3></p>
                 
-                    <p><strong>Description:</strong> command-line interface that parses invocation modes and input formats, runs the DFU HBO2 treatment decision logic, and prints the resulting recommendation or validation error as formatted JSON.</p>
+                    <p><strong>Description:</strong> interactively collects the four required HBOT burden questionnaire inputs, generates the fixed regimen range artifact, runs the burden analysis, and prints all three spec-aligned JSON outputs.</p>
                 
                 <p><strong>Type:</strong> 
                         <a href="https://kgrid.org/koio#Service" target='_blank'>
@@ -806,13 +928,19 @@
                 
                 
                     
-                    <a href="#DFU_HBO2_Decision_Logic">DFU_HBO2_Decision_Logic</a>
+                    <a href="#Regimen_Range">Regimen_Range</a>, 
+                
+                    
+                    <a href="#Burden_Questionnaire_Logic">Burden_Questionnaire_Logic</a>, 
+                
+                    
+                    <a href="#Burden_Response_Analysis">Burden_Response_Analysis</a>
                 
                 </p>
                 
                         <p><strong>Has interface:</strong> 
-                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/bin/dfu-hbo2.js" target='_blank'>
-                                dfu-hbo2.js
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx" target='_blank'>
+                                DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx
                             </a>
                         </p>
                  
@@ -823,8 +951,8 @@
                         
                             <li>
                             
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/bin/dfu-hbo2.js" target='_blank'>
-                                    dfu-hbo2.js
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/bin/dfu-hbot-burden.js" target='_blank'>
+                                    dfu-hbot-burden.js
                                 </a>                                 
                               <br/>(type: 
                                 
@@ -839,9 +967,9 @@
 
                 <a id="graph-service-2"></a>
 
-                <p><h3> Service_for_Decision_Logic</h3></p>
+                <p><h3> Service_for_Regimen_Range</h3></p>
                 
-                    <p><strong>Description:</strong> Way of invoking the DFU HBO2 treatment decision logic</p>
+                    <p><strong>Description:</strong> Way of invoking the generateRegimenRange software function</p>
                 
                 <p><strong>Type:</strong> 
                         <a href="https://kgrid.org/koio#Service" target='_blank'>
@@ -853,13 +981,13 @@
                 
                 
                     
-                    <a href="#DFU_HBO2_Decision_Logic">DFU_HBO2_Decision_Logic</a>
+                    <a href="#Regimen_Range">Regimen_Range</a>
                 
                 </p>
                 
                         <p><strong>Has interface:</strong> 
-                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/src/decision.js" target='_blank'>
-                                decision.js
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx" target='_blank'>
+                                DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx
                             </a>
                         </p>
                  
@@ -870,8 +998,102 @@
                         
                             <li>
                             
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/src/decision.js" target='_blank'>
-                                    decision.js
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/regimen-range.js" target='_blank'>
+                                    regimen-range.js
+                                </a>                                 
+                              <br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>) 
+                            </li>
+                              
+                        </ul>            
+                    </p>
+                
+                <br/>
+            
+
+                <a id="graph-service-3"></a>
+
+                <p><h3> Service_for_Burden_Questionnaire_Logic</h3></p>
+                
+                    <p><strong>Description:</strong> Way of invoking the collectBurdenQuestionnaireResponse software function</p>
+                
+                <p><strong>Type:</strong> 
+                        <a href="https://kgrid.org/koio#Service" target='_blank'>
+                            Service
+                        </a>
+                </p>
+                <p><strong>Depends on:</strong> 
+                
+                
+                
+                    
+                    <a href="#Burden_Questionnaire_Logic">Burden_Questionnaire_Logic</a>
+                
+                </p>
+                
+                        <p><strong>Has interface:</strong> 
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx" target='_blank'>
+                                DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx
+                            </a>
+                        </p>
+                 
+                
+                
+                    <p><strong>Implemented by:</strong> 
+                    <ul>
+                        
+                            <li>
+                            
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/burden-questionnaire-logic.js" target='_blank'>
+                                    burden-questionnaire-logic.js
+                                </a>                                 
+                              <br/>(type: 
+                                
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>Implementation</a>, <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>JavaScript</a>) 
+                            </li>
+                              
+                        </ul>            
+                    </p>
+                
+                <br/>
+            
+
+                <a id="graph-service-4"></a>
+
+                <p><h3> Service_for_Burden_Response_Analysis</h3></p>
+                
+                    <p><strong>Description:</strong> Way of invoking the analyzeBurdenResponse software function</p>
+                
+                <p><strong>Type:</strong> 
+                        <a href="https://kgrid.org/koio#Service" target='_blank'>
+                            Service
+                        </a>
+                </p>
+                <p><strong>Depends on:</strong> 
+                
+                
+                
+                    
+                    <a href="#Burden_Response_Analysis">Burden_Response_Analysis</a>
+                
+                </p>
+                
+                        <p><strong>Has interface:</strong> 
+                            <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx" target='_blank'>
+                                DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx
+                            </a>
+                        </p>
+                 
+                
+                
+                    <p><strong>Implemented by:</strong> 
+                    <ul>
+                        
+                            <li>
+                            
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/burden-response-analysis.js" target='_blank'>
+                                    burden-response-analysis.js
                                 </a>                                 
                               <br/>(type: 
                                 
@@ -896,7 +1118,7 @@
                         
                         
                         <h3>
-                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx" target='_blank'>Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers</a>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx" target='_blank'>DFU HBOT Bounded Regimen and Execution Burden</a>
                         <br/>
                         
                             
@@ -909,9 +1131,9 @@
                         
 
                         </h3>
-                        <p>This demonstration-only CKS converts four supplied facts about one candidate diabetic foot ulcer into one guideline-branch result for adjunctive hyperbaric oxygen therapy (HBO2). It implements Figure 6 of the 2015 UHMS guideline; it does not diagnose a DFU, calculate Wagner grade, prescribe an HBO2 protocol, or determine coverage.</p>
+                        <p>Interactive burden questionnaire, general DFU regimen knowledge, objective-burden calculations, reported weekday-attendance feasibility, five-level execution-burden logic, output contracts, and conformance tests</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -920,7 +1142,7 @@
                                     InformationArtifact
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Specification Document" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Specification Document" target='_blank'>
                                     Specification Document
                                 </a>
                         
@@ -931,7 +1153,7 @@
                         
                         
                         <h3>
-                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_DFU_HBO2_CKS_One-Page_Clinical-Knowledge_Summary.docx" target='_blank'>UHMS DFU HBO2 CKS Summary</a>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Summary_Version_1_0.docx" target='_blank'>DFU HBOT Bounded Regimen and Execution Burden CKS Summary</a>
                         <br/>
                         
                             
@@ -944,9 +1166,9 @@
                         
 
                         </h3>
-                        <p>A one-page clinical knowledge summary for the UHMS DFU HBO2 CKS</p>
+                        <p>A one-page clinical knowledge summary for the DFU HBOT Bounded Regimen and Execution Burden CKS</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -955,7 +1177,7 @@
                                     InformationArtifact
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Summary" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Summary" target='_blank'>
                                     Summary
                                 </a>
                         
@@ -966,7 +1188,7 @@
                         
                         
                         <h3>
-                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/README.md" target='_blank'>DFU HBO2 Treatment Decision</a>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/README.md" target='_blank'>DFU HBOT Bounded Regimen and Execution Burden README</a>
                         <br/>
                         
                             
@@ -979,9 +1201,9 @@
                         
 
                         </h3>
-                        <p>Technical package documentation.</p>
+                        <p>Technical documentation.</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -990,7 +1212,7 @@
                                     InformationArtifact
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Markdown Document" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Markdown Document" target='_blank'>
                                     Markdown Document
                                 </a>
                         
@@ -1001,7 +1223,7 @@
                         
                         
                         <h3>
-                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_binder.ipynb" target='_blank'>DFU HBO2 Binder Jupyter Notebook Demo</a>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/dfu-hbot_binder.ipynb" target='_blank'>DFU HBOT Bounded Regimen and Execution Burden Binder Jupyter Notebook Demo</a>
                         <br/>
                         
                             
@@ -1014,7 +1236,7 @@
                         
                             
                             
-                                <a href="https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/dfu-hbo2-treatment-decision/dfu_hbo2_binder.ipynb%3Fkernel_name%3Djavascript"
+                                <a href="https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/dfu-hbot-bounded-regimen-and-execution-burden/dfu-hbot_binder.ipynb%3Fkernel_name%3Djavascript"
                                     target="_blank" rel="noopener noreferrer">
                                     <img src="https://mybinder.org/badge_logo.svg" alt="Binder">
                                 </a>
@@ -1023,9 +1245,9 @@
                         
 
                         </h3>
-                        <p>A Binder notebook for computing with the DFU HBO2 package.</p>
+                        <p>A Binder Jupyter Notebook for viewing how to compute with the DFU HBOT Bounded Regimen and Execution Burden</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -1034,11 +1256,11 @@
                                     InformationArtifact
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Jupyter Notebook" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Jupyter Notebook" target='_blank'>
                                     Jupyter Notebook
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Binder Notebook" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Binder Notebook" target='_blank'>
                                     Binder Notebook
                                 </a>
                         
@@ -1049,7 +1271,7 @@
                         
                         
                         <h3>
-                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_colab.ipynb" target='_blank'>DFU HBO2 Google Colab Jupyter Notebook Demo</a>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/dfu-hbot_colab.ipynb" target='_blank'>DFU HBOT Bounded Regimen and Execution Burden Google Colab Jupyter Notebook Demo</a>
                         <br/>
                         
                             
@@ -1061,16 +1283,16 @@
                             
                         
                             
-                                <a href="https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_colab.ipynb" target="_blank" rel="noopener noreferrer"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a>
+                                <a href="https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/dfu-hbot_colab.ipynb" target="_blank" rel="noopener noreferrer"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"> </a>
                             
                             
                             
                         
 
                         </h3>
-                        <p>A Colab notebook for computing with the DFU HBO2 package.</p>
+                        <p>A Google Colab Jupyter Notebook for viewing how to compute with the DFU HBOT Bounded Regimen and Execution Burden</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -1079,11 +1301,11 @@
                                     InformationArtifact
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Jupyter Notebook" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Jupyter Notebook" target='_blank'>
                                     Jupyter Notebook
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Google Colab Notebook" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Google Colab Notebook" target='_blank'>
                                     Google Colab Notebook
                                 </a>
                         
@@ -1094,7 +1316,7 @@
                         
                         
                         <h3>
-                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_scribbler.jsnb" target='_blank'>DFU HBO2 Scribbler Notebook Demo</a>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/dfu-hbot_scribbler.jsnb" target='_blank'>DFU HBOT Bounded Regimen and Execution Burden Scribbler Notebook Demo</a>
                         <br/>
                         
                             
@@ -1108,14 +1330,14 @@
                             
                             
                             
-                                <a href="https://app.scribbler.live/?jsnb=https%3A%2F%2Fraw.githubusercontent.com%2Fkgrid-objects%2FFAIR-DO-Workshop%2FHEAD%2Fcollection%2Fdfu-hbo2-treatment-decision%2Fdfu_hbo2_scribbler.jsnb" target="_blank" rel="noopener noreferrer"> <img src="https://img.shields.io/badge/Open%20In-Scribbler-2F9E44?logo=javascript&logoColor=white" alt="Open In Scribbler"> </a>
+                                <a href="https://app.scribbler.live/?jsnb=https%3A%2F%2Fraw.githubusercontent.com%2Fkgrid-objects%2FFAIR-DO-Workshop%2FHEAD%2Fcollection%2Fdfu-hbot-bounded-regimen-and-execution-burden%2Fdfu-hbot_scribbler.jsnb" target="_blank" rel="noopener noreferrer"> <img src="https://img.shields.io/badge/Open%20In-Scribbler-2F9E44?logo=javascript&logoColor=white" alt="Open In Scribbler"> </a>
                             
                         
 
                         </h3>
-                        <p>A Scribbler notebook for computing with the DFU HBO2 package.</p>
+                        <p>A Scribbler notebook for viewing how to compute with the DFU HBOT Bounded Regimen and Execution Burden</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -1124,11 +1346,11 @@
                                     InformationArtifact
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Jupyter Notebook" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Jupyter Notebook" target='_blank'>
                                     Jupyter Notebook
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Scribbler Notebook" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Scribbler Notebook" target='_blank'>
                                     Scribbler Notebook
                                 </a>
                         
@@ -1139,7 +1361,7 @@
                         
                         
                         <h3>
-                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/index.html" target='_blank'>DFU HBO2 Treatment Decision Information Page</a>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/index.html" target='_blank'>DFU HBOT Bounded Regimen and Execution Burden Information Page</a>
                         <br/>
                         
                             
@@ -1152,9 +1374,9 @@
                         
 
                         </h3>
-                        <p>An information page for viewing the contents of the DFU HBO2 Treatment Decision Knowledge Object</p>
+                        <p>An information page for viewing the contents of the DFU HBOT Bounded Regimen and Execution Burden Knowledge Object</p>
                         
-                            <p><strong>Document of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
+                            <p><strong>Document of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -1163,7 +1385,7 @@
                                     InformationArtifact
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Information Page" target='_blank'>
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Information Page" target='_blank'>
                                     Information Page
                                 </a>
                         
@@ -1174,7 +1396,7 @@
                         
                         
                         <h3>
-                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_1_0.json" target='_blank'>Canonical Test Vectors for DFU HBO2 Decision Logic</a>
+                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/spec/DFU_HBOT_CKS_Conformance_Fixtures_1_0" target='_blank'>DFU HBOT Bounded Regimen and Execution Burden Conformance Fixtures</a>
                         <br/>
                         
                             
@@ -1187,44 +1409,9 @@
                         
 
                         </h3>
-                        <p>Canonical test vectors for the DFU HBO2 decision logic, including input and expected output.</p>
+                        <p>A collection of conformance fixtures for the DFU HBOT Bounded Regimen and Execution Burden Knowledge Object</p>
                         
-                            <p><strong>Document of:</strong> Decision Logic Test (koio#Test) </p>
-                        
-                        <p><strong>Type:</strong> 
-                        
-                          
-                                <a href="https://kgrid.org/koio#InformationArtifact" target='_blank'>
-                                    InformationArtifact
-                                </a>, 
-                          
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Test Vector Document" target='_blank'>
-                                    Test Vector Document
-                                </a>
-                        
-                        <br/><br/>
-                    </li>
-                
-                    <li>
-                        
-                        
-                        <h3>
-                        <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_Schema_1_0.json" target='_blank'>Canonical Test Vectors Schema for DFU HBO2 Decision Logic</a>
-                        <br/>
-                        
-                            
-                            
-                            
-                        
-                            
-                            
-                            
-                        
-
-                        </h3>
-                        <p>Schema for the canonical test vectors of the DFU HBO2 decision logic, including input and expected output.</p>
-                        
-                            <p><strong>Document of:</strong> Decision Logic Test (koio#Test) </p>
+                            <p><strong>Document of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -1233,8 +1420,8 @@
                                     InformationArtifact
                                 </a>, 
                           
-                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/Test Vector Schema Document" target='_blank'>
-                                    Test Vector Schema Document
+                                <a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/Conformance Fixture Bundle" target='_blank'>
+                                    Conformance Fixture Bundle
                                 </a>
                         
                         <br/><br/>
@@ -1251,10 +1438,50 @@
                 
                     <a id="graph-test-1"></a>
                     <li>
-                        <h3><a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/test/decision.test.js" target='_blank'>Decision Logic Test</a></h3>
-                        <p>Loads the canonical DFU HBO2 test-vector dataset, verifies there are exactly 51 vectors, and runs one assertion-driven test per vector to confirm evaluateFixture returns the expected result for each case.</p>
+                        <h3><a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/test/architecture.test.js" target='_blank'>DFU HBOT Architecture Test</a></h3>
+                        <p>This software behavior test file validates the package's end-to-end architecture by checking fixed regimen output, questionnaire completion, successful burden analysis behavior, and representative error paths for invalid request type and unresolved provider location.</p>
                         
-                            <p><strong>Test of:</strong> Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object (koio#KnowledgeObject) </p>
+                            <p><strong>Test of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>
+                                    Implementation
+                                </a>, 
+                          
+                                <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>
+                                    JavaScript
+                                </a>
+                        
+                    </li>
+                
+                    <a id="graph-test-2"></a>
+                    <li>
+                        <h3><a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/test/conformance.test.js" target='_blank'>DFU HBOT Conformance Test</a></h3>
+                        <p>This software schema test file verifies schema conformance across regimen-range requests/responses, completed questionnaire payloads, analysis request and completed result objects, and the ERR-07 error-result contract for missing required analysis input.</p>
+                        
+                            <p><strong>Test of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
+                        
+                        <p><strong>Type:</strong> 
+                        
+                          
+                                <a href="https://kgrid.org/koio#Implementation" target='_blank'>
+                                    Implementation
+                                </a>, 
+                          
+                                <a href="http://www.ebi.ac.uk/swo/SWO_0000108" target='_blank'>
+                                    JavaScript
+                                </a>
+                        
+                    </li>
+                
+                    <a id="graph-test-3"></a>
+                    <li>
+                        <h3><a href="https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/script/spec-audit.js" target='_blank'>Spec Conformance Fixture Audit Runner</a></h3>
+                        <p>This script executes the full DFU HBOT conformance fixture bundle across regimen-range, questionnaire, provider-roster, burden-analysis, and audit/replay scenarios, then performs exact expected-vs-actual structural JSON comparisons and reports pass/fail (with strict nonzero exit on mismatch).</p>
+                        
+                            <p><strong>Test of:</strong> DFU HBOT Bounded Regimen and Execution Burden (koio#KnowledgeObject) </p>
                         
                         <p><strong>Type:</strong> 
                         
@@ -1277,7 +1504,7 @@
         <script type="module">
             import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 
-            const graphData = {"nodes": [{"id": "N1", "label": "Clinical Practice Guideline Alg...", "full_label": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object", "type": "ko", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision"}, {"id": "N2", "label": "DFU HBO2 Decision Logic", "full_label": "DFU HBO2 Decision Logic", "type": "knowledge", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/src/decision.js"}, {"id": "N3", "label": "CLI_Service", "full_label": "CLI_Service", "type": "service", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/bin/dfu-hbo2.js"}, {"id": "N4", "label": "Service_for_Decision_Logic", "full_label": "Service_for_Decision_Logic", "type": "service", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/src/decision.js"}, {"id": "N5", "label": "Decision Logic Test", "full_label": "Decision Logic Test", "type": "test", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/test/decision.test.js"}, {"id": "N6", "label": "Clinical Practice Guideline Alg...", "full_label": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx"}, {"id": "N7", "label": "UHMS DFU HBO2 CKS Summary", "full_label": "UHMS DFU HBO2 CKS Summary", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_DFU_HBO2_CKS_One-Page_Clinical-Knowledge_Summary.docx"}, {"id": "N8", "label": "DFU HBO2 Treatment Decision", "full_label": "DFU HBO2 Treatment Decision", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/README.md"}, {"id": "N9", "label": "DFU HBO2 Binder Jupyter Noteboo...", "full_label": "DFU HBO2 Binder Jupyter Notebook Demo", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_binder.ipynb"}, {"id": "N10", "label": "DFU HBO2 Google Colab Jupyter N...", "full_label": "DFU HBO2 Google Colab Jupyter Notebook Demo", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_colab.ipynb"}, {"id": "N11", "label": "DFU HBO2 Scribbler Notebook Demo", "full_label": "DFU HBO2 Scribbler Notebook Demo", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/dfu_hbo2_scribbler.jsnb"}, {"id": "N12", "label": "DFU HBO2 Treatment Decision Inf...", "full_label": "DFU HBO2 Treatment Decision Information Page", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/index.html"}, {"id": "N13", "label": "Canonical Test Vectors for DFU...", "full_label": "Canonical Test Vectors for DFU HBO2 Decision Logic", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_1_0.json"}, {"id": "N14", "label": "Canonical Test Vectors Schema f...", "full_label": "Canonical Test Vectors Schema for DFU HBO2 Decision Logic", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbo2-treatment-decision/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_Schema_1_0.json"}], "edges": [{"source": "N1", "target": "N10", "type": "has"}, {"source": "N1", "target": "N11", "type": "has"}, {"source": "N1", "target": "N12", "type": "has"}, {"source": "N1", "target": "N2", "type": "has"}, {"source": "N1", "target": "N3", "type": "has"}, {"source": "N1", "target": "N4", "type": "has"}, {"source": "N1", "target": "N5", "type": "has"}, {"source": "N1", "target": "N6", "type": "has"}, {"source": "N1", "target": "N7", "type": "has"}, {"source": "N1", "target": "N8", "type": "has"}, {"source": "N1", "target": "N9", "type": "has"}, {"source": "N3", "target": "N2", "type": "depends"}, {"source": "N4", "target": "N2", "type": "depends"}, {"source": "N5", "target": "N13", "type": "has"}, {"source": "N5", "target": "N14", "type": "has"}], "counts": {"ko": 1, "knowledge": 1, "service": 2, "test": 1, "doc": 9}, "edge_counts": {"has": 13, "depends": 2}};
+            const graphData = {"nodes": [{"id": "N1", "label": "DFU HBOT Bounded Regimen and Ex...", "full_label": "DFU HBOT Bounded Regimen and Execution Burden", "type": "ko", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden"}, {"id": "N2", "label": "Regimen Range", "full_label": "Regimen Range", "type": "knowledge", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/regimen-range.js"}, {"id": "N3", "label": "Burden Questionnaire Logic", "full_label": "Burden Questionnaire Logic", "type": "knowledge", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/questionnaire-logic.js"}, {"id": "N4", "label": "Burden Response Analysis", "full_label": "Burden Response Analysis", "type": "knowledge", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/burden-response-analysis.js"}, {"id": "N5", "label": "CLI_Service", "full_label": "CLI_Service", "type": "service", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/bin/dfu-hbot-burden.js"}, {"id": "N6", "label": "Service_for_Regimen_Range", "full_label": "Service_for_Regimen_Range", "type": "service", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/regimen-range.js"}, {"id": "N7", "label": "Service_for_Burden_Questionnair...", "full_label": "Service_for_Burden_Questionnaire_Logic", "type": "service", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/burden-questionnaire-logic.js"}, {"id": "N8", "label": "Service_for_Burden_Response_Ana...", "full_label": "Service_for_Burden_Response_Analysis", "type": "service", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/src/burden-response-analysis.js"}, {"id": "N9", "label": "DFU HBOT Architecture Test", "full_label": "DFU HBOT Architecture Test", "type": "test", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/test/architecture.test.js"}, {"id": "N10", "label": "DFU HBOT Conformance Test", "full_label": "DFU HBOT Conformance Test", "type": "test", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/test/conformance.test.js"}, {"id": "N11", "label": "Spec Conformance Fixture Audit...", "full_label": "Spec Conformance Fixture Audit Runner", "type": "test", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/script/spec-audit.js"}, {"id": "N12", "label": "DFU HBOT Bounded Regimen and Ex...", "full_label": "DFU HBOT Bounded Regimen and Execution Burden", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx"}, {"id": "N13", "label": "DFU HBOT Bounded Regimen and Ex...", "full_label": "DFU HBOT Bounded Regimen and Execution Burden CKS Summary", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Summary_Version_1_0.docx"}, {"id": "N14", "label": "DFU HBOT Bounded Regimen and Ex...", "full_label": "DFU HBOT Bounded Regimen and Execution Burden README", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/README.md"}, {"id": "N15", "label": "DFU HBOT Bounded Regimen and Ex...", "full_label": "DFU HBOT Bounded Regimen and Execution Burden Binder Jupyter Notebook Demo", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/dfu-hbot_binder.ipynb"}, {"id": "N16", "label": "DFU HBOT Bounded Regimen and Ex...", "full_label": "DFU HBOT Bounded Regimen and Execution Burden Google Colab Jupyter Notebook Demo", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/dfu-hbot_colab.ipynb"}, {"id": "N17", "label": "DFU HBOT Bounded Regimen and Ex...", "full_label": "DFU HBOT Bounded Regimen and Execution Burden Scribbler Notebook Demo", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/dfu-hbot_scribbler.jsnb"}, {"id": "N18", "label": "DFU HBOT Bounded Regimen and Ex...", "full_label": "DFU HBOT Bounded Regimen and Execution Burden Information Page", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/index.html"}, {"id": "N19", "label": "DFU HBOT Bounded Regimen and Ex...", "full_label": "DFU HBOT Bounded Regimen and Execution Burden Conformance Fixtures", "type": "doc", "link": "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/spec/DFU_HBOT_CKS_Conformance_Fixtures_1_0"}], "edges": [{"source": "N1", "target": "N10", "type": "has"}, {"source": "N1", "target": "N11", "type": "has"}, {"source": "N1", "target": "N12", "type": "has"}, {"source": "N1", "target": "N13", "type": "has"}, {"source": "N1", "target": "N14", "type": "has"}, {"source": "N1", "target": "N15", "type": "has"}, {"source": "N1", "target": "N16", "type": "has"}, {"source": "N1", "target": "N17", "type": "has"}, {"source": "N1", "target": "N18", "type": "has"}, {"source": "N1", "target": "N19", "type": "has"}, {"source": "N1", "target": "N2", "type": "has"}, {"source": "N1", "target": "N3", "type": "has"}, {"source": "N1", "target": "N4", "type": "has"}, {"source": "N1", "target": "N5", "type": "has"}, {"source": "N1", "target": "N6", "type": "has"}, {"source": "N1", "target": "N7", "type": "has"}, {"source": "N1", "target": "N8", "type": "has"}, {"source": "N1", "target": "N9", "type": "has"}, {"source": "N5", "target": "N2", "type": "depends"}, {"source": "N5", "target": "N3", "type": "depends"}, {"source": "N5", "target": "N4", "type": "depends"}, {"source": "N6", "target": "N2", "type": "depends"}, {"source": "N7", "target": "N3", "type": "depends"}, {"source": "N8", "target": "N4", "type": "depends"}], "counts": {"ko": 1, "knowledge": 3, "service": 4, "test": 3, "doc": 8}, "edge_counts": {"has": 18, "depends": 6}};
             const graphPanel = document.getElementById("relationshipGraph");
             const graphTarget = document.getElementById("graphMermaid");
             const legendCheckboxes = document.querySelectorAll(".graph-legend input[type='checkbox']");

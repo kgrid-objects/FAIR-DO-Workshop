@@ -17,7 +17,7 @@
         }
     ],
     "dc:isReferencedBy": [],
-    "dc:description": "Decision logic, input validation contract, unified result mapping, and canonical conformance tests for UHMS DFU HBO2 guidance.",
+    "dc:description": "This knowledge object converts four supplied facts about one candidate diabetic foot ulcer into one guideline-branch result for adjunctive hyperbaric oxygen therapy (HBO2). It implements Figure 6 of the 2015 UHMS guideline; it does not diagnose a DFU, calculate Wagner grade, prescribe an HBO2 protocol, or determine coverage.",
     "schema:creator": [
         {
             "@id": "https://kgrid.org",
@@ -34,7 +34,7 @@
             "dc:identifier": "1",
             "dc:version": "1.0",
             "dc:date": "2026-08-05",
-            "dc:description": "Deterministic decision logic that validates diabetic foot ulcer case inputs and produces standardized recommendation, out-of-scope, or error outcomes for hyperbaric oxygen treatment decision workflows.",
+            "dc:description": "Deterministic decision logic that validates diabetic foot ulcer case inputs and produces standardized recommendation, out-of-scope, or error outcomes for hyperbaric oxygen treatment decision.",
             "dc:purpose": "",
             "@type": "koio:Knowledge",
             "implementedBy": {
@@ -54,7 +54,7 @@
                 "Service",
                 "cli"
             ],
-            "dc:description": "command-line interface that parses invocation modes and input formats, runs the DFU HBO2 decision logic, and prints the resulting recommendation or validation error as formatted JSON.",
+            "dc:description": "command-line interface that parses invocation modes and input formats, runs the DFU HBO2 treatment decision logic, and prints the resulting recommendation or validation error as formatted JSON.",
             "hasInterface": "bin/dfu-hbo2.js",
             "implementedBy": {
                 "@id": "bin/dfu-hbo2.js",
@@ -73,7 +73,7 @@
                 "Service",
                 "library"
             ],
-            "dc:description": "Way of invoking the DFU HBO2 Decision Logic",
+            "dc:description": "Way of invoking the DFU HBO2 treatment decision logic",
             "hasInterface": "src/decision.js",
             "implementedBy": {
                 "@id": "src/decision.js",
@@ -130,7 +130,16 @@
                 "Specification Document"
             ],
             "dc:title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers",
-            "dc:description": "Decision logic, input model, output contract, and conformance tests."
+            "dc:description": "This demonstration-only CKS converts four supplied facts about one candidate diabetic foot ulcer into one guideline-branch result for adjunctive hyperbaric oxygen therapy (HBO2). It implements Figure 6 of the 2015 UHMS guideline; it does not diagnose a DFU, calculate Wagner grade, prescribe an HBO2 protocol, or determine coverage."
+        },
+        {
+            "@id": "UHMS_DFU_HBO2_CKS_One-Page_Clinical-Knowledge_Summary.docx",
+            "@type": [
+                "InformationArtifact",
+                "Summary"
+            ],
+            "dc:title": "UHMS DFU HBO2 CKS Summary",
+            "dc:description": "A one-page clinical knowledge summary for the UHMS DFU HBO2 CKS"
         },
         {
             "@id": "README.md",
