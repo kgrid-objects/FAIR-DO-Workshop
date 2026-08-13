@@ -1,5 +1,8 @@
 'use strict';
 
+const readline = require('node:readline');
+const { stdin, stdout } = require('node:process');
+
 const SPECIFICATION_IRI = 'https://kgrid.org/cks/dfu-hbot-burden/versions/cks-1.0';
 const RESPONSE_MODEL_IRI = 'https://kgrid.org/cks/dfu-hbot-burden/response-models/1.0';
 const QUESTION_SET_IRI =
@@ -107,26 +110,79 @@ function createCompletedQuestionnaireResponse(responseProjection) {
   return response;
 }
 
-async function runBurdenQuestionnaire(askQuestionFn) {
-  if (typeof askQuestionFn !== 'function') {
-    throw new TypeError('runBurdenQuestionnaire requires an askQuestionFn function.');
-  }
+function createDefaultPrompter() {
+  const rl = readline.createInterface({
+    input: stdin,
+    output: stdout
+  });
 
-  const answers = {};
-  for (const question of QUESTIONS) {
-    const payload = buildQuestionPayload(question.id);
-    const raw = await askQuestionFn(payload);
-    answers[question.id] = raw;
-  }
+  const askLine = (prompt) =>
+    new Promise((resolve) => {
+      rl.question(prompt, resolve);
+    });
 
-  const responseProjection = {
-    hyperbaric_oxygen_therapy_location: normalizeProviderIri(answers.Q01),
-    one_way_miles: normalizeNumber(answers.Q02, 0, 1000, 'Q02 one_way_miles'),
-    one_way_travel_minutes: normalizeNumber(answers.Q03, 0, 1440, 'Q03 one_way_travel_minutes'),
-    weekday_attendance_difficulty: normalizeDifficulty(answers.Q04)
+  const askQuestion = async (question) => {
+    while (true) {
+      stdout.write(`\n${question.id}: ${question.text}\n`);
+      const raw = await askLine(`${question.prompt} `);
+      const value = String(raw || '').trim();
+
+      if (value.length === 0) {
+        stdout.write('Please provide a value.\n');
+        continue;
+      }
+
+      if (question.id === 'Q02' || question.id === 'Q03') {
+        const numeric = Number(value);
+        if (!Number.isFinite(numeric)) {
+          stdout.write('Please enter a numeric value.\n');
+          continue;
+        }
+        return numeric;
+      }
+
+      return value;
+    }
   };
 
-  return createCompletedQuestionnaireResponse(responseProjection);
+  const close = () => rl.close();
+
+  return { askQuestion, close };
+}
+
+async function runBurdenQuestionnaire(askQuestionFn) {
+  let ask = askQuestionFn;
+  let close = null;
+
+  if (ask === undefined) {
+    const prompter = createDefaultPrompter();
+    ask = prompter.askQuestion;
+    close = prompter.close;
+  } else if (typeof ask !== 'function') {
+    throw new TypeError('runBurdenQuestionnaire requires an askQuestionFn function when provided.');
+  }
+
+  try {
+    const answers = {};
+    for (const question of QUESTIONS) {
+      const payload = buildQuestionPayload(question.id);
+      const raw = await ask(payload);
+      answers[question.id] = raw;
+    }
+
+    const responseProjection = {
+      hyperbaric_oxygen_therapy_location: normalizeProviderIri(answers.Q01),
+      one_way_miles: normalizeNumber(answers.Q02, 0, 1000, 'Q02 one_way_miles'),
+      one_way_travel_minutes: normalizeNumber(answers.Q03, 0, 1440, 'Q03 one_way_travel_minutes'),
+      weekday_attendance_difficulty: normalizeDifficulty(answers.Q04)
+    };
+
+    return createCompletedQuestionnaireResponse(responseProjection);
+  } finally {
+    if (close) {
+      close();
+    }
+  }
 }
 
 function questionnaireResponseFromObject(responseProjection) {

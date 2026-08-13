@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-const readline = require('node:readline');
-const { stdin, stdout, stderr } = require('node:process');
+const { stdout, stderr } = require('node:process');
 
 const {
   showRegimenRange,
@@ -36,49 +35,7 @@ function formatJsonCompactArrays(value, indentSize = 2, depth = 0) {
   return JSON.stringify(value);
 }
 
-function createPrompter() {
-  const rl = readline.createInterface({
-    input: stdin,
-    output: stdout
-  });
-
-  const askLine = (prompt) =>
-    new Promise((resolve) => {
-      rl.question(prompt, resolve);
-    });
-
-  const askQuestion = async (question) => {
-    while (true) {
-      stdout.write(`\n${question.id}: ${question.text}\n`);
-      const raw = await askLine(`${question.prompt} `);
-      const value = String(raw || '').trim();
-
-      if (value.length === 0) {
-        stdout.write('Please provide a value.\n');
-        continue;
-      }
-
-      if (question.id === 'Q02' || question.id === 'Q03') {
-        const numeric = Number(value);
-        if (!Number.isFinite(numeric)) {
-          stdout.write('Please enter a numeric value.\n');
-          continue;
-        }
-        return numeric;
-      }
-
-      return value;
-    }
-  };
-
-  const close = () => rl.close();
-
-  return { askQuestion, close };
-}
-
 async function main() {
-  const { askQuestion, close } = createPrompter();
-
   try {
     stdout.write('DFU HBOT bounded regimen and execution burden CLI\n\n');
 
@@ -86,7 +43,7 @@ async function main() {
       request_type: 'show_regimen_range'
     });
 
-    const questionnaireResponse = await runBurdenQuestionnaire(askQuestion);
+    const questionnaireResponse = await runBurdenQuestionnaire();
 
     const analysisResult = calculateBurdenRange({
       request_type: 'calculate_burden_range',
@@ -105,10 +62,8 @@ async function main() {
     stdout.write('\nBurden Analysis Result\n');
     stdout.write(formatJsonCompactArrays(analysisResult) + '\n');
 
-    close();
     process.exitCode = 0;
   } catch (error) {
-    close();
     stderr.write((error && error.message ? error.message : String(error)) + '\n');
     process.exitCode = 1;
   }
