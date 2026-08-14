@@ -111,15 +111,24 @@ function createCompletedQuestionnaireResponse(responseProjection) {
 }
 
 function createDefaultPrompter() {
-  const rl = readline.createInterface({
-    input: stdin,
-    output: stdout
-  });
+  let rl = null;
 
-  const askLine = (prompt) =>
-    new Promise((resolve) => {
+  const askLine = (prompt) => {
+    if (globalThis.$$ && typeof globalThis.$$.input === 'function') {
+      return globalThis.$$.input({ prompt });
+    }
+
+    if (!rl) {
+      rl = readline.createInterface({
+        input: stdin,
+        output: stdout
+      });
+    }
+
+    return new Promise((resolve) => {
       rl.question(prompt, resolve);
     });
+  };
 
   const askQuestion = async (question) => {
     while (true) {
@@ -145,7 +154,11 @@ function createDefaultPrompter() {
     }
   };
 
-  const close = () => rl.close();
+  const close = () => {
+    if (rl) {
+      rl.close();
+    }
+  };
 
   return { askQuestion, close };
 }
