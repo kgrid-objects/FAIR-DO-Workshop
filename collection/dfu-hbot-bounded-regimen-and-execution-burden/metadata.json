@@ -120,7 +120,7 @@
                 "library"
             ],
             "dc:description": "Way of invoking the generateRegimenRange software function",
-            "hasInterface": "DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
+            "hasInterface": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
             "implementedBy": {
                 "@id": "src/regimen-range.js",
                 "@type": [
@@ -139,9 +139,9 @@
                 "library"
             ],
             "dc:description": "Way of invoking the collectBurdenQuestionnaireResponse software function",
-            "hasInterface": "DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
+            "hasInterface": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
             "implementedBy": {
-                "@id": "src/burden-questionnaire-logic.js",
+                "@id": "src/questionnaire-logic.js",
                 "@type": [
                     "Implementation",
                     "JavaScript"
@@ -158,7 +158,7 @@
                 "library"
             ],
             "dc:description": "Way of invoking the analyzeBurdenResponse software function",
-            "hasInterface": "DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
+            "hasInterface": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
             "implementedBy": {
                 "@id": "src/burden-response-analysis.js",
                 "@type": [
@@ -204,7 +204,7 @@
             "dc:title": "Spec Conformance Fixture Audit Runner",
             "dc:description": "This script executes the full DFU HBOT conformance fixture bundle across regimen-range, questionnaire, provider-roster, burden-analysis, and audit/replay scenarios, then performs exact expected-vs-actual structural JSON comparisons and reports pass/fail (with strict nonzero exit on mismatch).",
             "implementedBy": {
-                "@id": "script/spec-audit.js",
+                "@id": "scripts/spec-audit.js",
                 "@type": [
                     "Implementation",
                     "JavaScript"
@@ -214,7 +214,7 @@
     ],
     "koio:hasDocumentation": [
         {
-            "@id": "DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
+            "@id": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
             "@type": [
                 "InformationArtifact",
                 "Specification Document"
@@ -223,7 +223,7 @@
             "dc:description": "Interactive burden questionnaire, general DFU regimen knowledge, objective-burden calculations, reported weekday-attendance feasibility, five-level execution-burden logic, output contracts, and conformance tests"
         },
         {
-            "@id": "DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Summary_Version_1_0.docx",
+            "@id": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_One-Page_Summary.docx",
             "@type": [
                 "InformationArtifact",
                 "Summary"

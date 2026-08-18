@@ -102,7 +102,7 @@
             },
             "koio:hasDocumentation": [
                 {
-                    "@id": "UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_1_0.json",
+                    "@id": "test/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_1_0.json",
                     "@type": [
                         "InformationArtifact",
                         "Test Vector Document"
@@ -111,7 +111,7 @@
                     "dc:description": "Canonical test vectors for the DFU HBO2 decision logic, including input and expected output."
                 },
                 {
-                    "@id": "UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_Schema_1_0.json",
+                    "@id": "test/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_Schema_1_0.json",
                     "@type": [
                         "InformationArtifact",
                         "Test Vector Schema Document"

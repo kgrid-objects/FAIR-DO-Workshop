@@ -12,12 +12,16 @@
     "dc:date": "2026-08-18",
     "dc:source": [
         {
+            "@id": "https://onlinelibrary.wiley.com/doi/10.1111/wrr.13019",
+            "dc:bibliographicCitation": "WILEY-Margolis DJ, Mitra N, Malay DS, Mirza ZK, Lantis JC, Lev-Tov HA, Kirsner RS, Thom SR. Further evidence that wound size and duration are strong prognostic markers of diabetic foot ulcer healing. Wound Repair and Regeneration. 2022;30(4):487-490. doi:10.1111/wrr.13019."
+        },
+        {
             "@id": "https://pubmed.ncbi.nlm.nih.gov/35470507/",
-            "dc:bibliographicCitation": "Margolis DJ, Mitra N, Malay DS, Mirza ZK, Lantis JC, Lev-Tov HA, Kirsner RS, Thom SR. Further evidence that wound size and duration are strong prognostic markers of diabetic foot ulcer healing. Wound Repair and Regeneration. 2022;30(4):487-490. doi:10.1111/wrr.13019."
+            "dc:bibliographicCitation": "PUBMED-Margolis DJ, Mitra N, Malay DS, Mirza ZK, Lantis JC, Lev-Tov HA, Kirsner RS, Thom SR. Further evidence that wound size and duration are strong prognostic markers of diabetic foot ulcer healing. Wound Repair and Regeneration. 2022;30(4):487-490. doi:10.1111/wrr.13019."
         }
     ],
     "dc:isReferencedBy": [],
-    "dc:description": "This knowledge object estimates the model-based probability that one diabetic foot ulcer will heal by 16 weeks, using only wound area and wound duration measured at the first clinical visit. It is a categorical pretreatment prognosis—not a continuous individualized risk equation, treatment-effect estimate, HBOT eligibility decision, or treatment recommendation.",
+    "dc:description": "This knowledge object estimates the model-based probability that one diabetic foot ulcer will heal by 16 weeks, using only wound area and wound duration measured at the first clinical visit. It is a categorical pretreatment prognosis; not a continuous individualized risk equation, treatment-effect estimate, HBOT eligibility decision, or treatment recommendation.",
     "schema:creator": [
         {
             "@id": "https://kgrid.org",
@@ -29,12 +33,12 @@
     ],
     "koio:hasKnowledge": [
         {
-            "@id": "margolis_dfu_prognostic_Logic",
-            "dc:title": "Margolis DFU Prognostic Logic",
+            "@id": "margolis_dfu_prognostic_Lookup",
+            "dc:title": "Margolis DFU Prognostic Lookup",
             "dc:identifier": "1",
             "dc:version": "1.0",
             "dc:date": "2026-08-18",
-            "dc:description": "Logic for determining the prognostic state of a diabetic foot ulcer based on initial clinical measurements.",
+            "dc:description": "Lookup for determining the prognostic state of a diabetic foot ulcer based on initial clinical measurements.",
             "dc:purpose": "",
             "@type": "koio:Knowledge",
             "implementedBy": {
@@ -54,7 +58,7 @@
                 "Service",
                 "cli"
             ],
-            "dc:description": "command-line interface that determines the prognostic state of a diabetic foot ulcer based on initial clinical measurements.",
+            "dc:description": "command-line interface that determines a categorical prognosis for healing of a diabetic foot ulcer based on initial clinical measurements.",
             "hasInterface": "README.md",
             "implementedBy": {
                 "@id": "bin/margolis-dfu-prognostic.js",
@@ -64,16 +68,16 @@
                 ]
             },
             "dependsOn": [
-                "margolis_dfu_prognostic_Logic"
+                "margolis_dfu_prognostic_Lookup"
             ]
         },
         {
-            "@id": "Service_for_Prognostic_Logic",
+            "@id": "Service_for_Prognostic_Lookup",
             "@type": [
                 "Service",
                 "library"
             ],
-            "dc:description": "Way of invoking the Margolis DFU prognostic logic",
+            "dc:description": "Way of invoking the Margolis DFU prognostic lookup",
             "hasInterface": "spec/Margolis_2022_DFU_Prognostic_CKS-1_0.docx",
             "implementedBy": {
                 "@id": "src/prognosis.js",
@@ -83,16 +87,16 @@
                 ]
             },
             "dependsOn": [
-                "margolis_dfu_prognostic_Logic"
+                "margolis_dfu_prognostic_Lookup"
             ]
         }
     ],
     "koio:hasTest": [
         {
-            "@id": "margolis_dfu_prognostic_Logic_Test",
+            "@id": "margolis_dfu_prognostic_Lookup_Test",
             "@type": "koio:Test",
             "dc:title": "Margolis DFU Prognostic Canonical Conformance Tests",
-            "dc:description": "This suite validates evaluator outputs against the canonical fixtures and skips only known fixture-spec contradictions.",
+            "dc:description": "This suite of tests verifies prognostic lookup outputs against the canonical fixtures.",
             "implementedBy": {
                 "@id": "test/conformance.test.js",
                 "@type": [
@@ -113,7 +117,7 @@
             "dc:description": "This demonstration-only CKS converts clinical measurements into a prognostic assessment for diabetic foot ulcer healing by 16 weeks."
         },
         {
-            "@id": "spec/Meggitt-Wagner_CKS_One-Page_Clinical-Knowledge_Summary.docx",
+            "@id": "spec/Margolis_DFU_Prognostic_CKS_One-Page_Summary.docx",
             "@type": [
                 "InformationArtifact",
                 "Summary"
