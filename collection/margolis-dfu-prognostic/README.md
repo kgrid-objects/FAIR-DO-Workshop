@@ -80,7 +80,7 @@ node bin/margolis-dfu-prognostic.js --input '{\"wound_area\":{\"value\":1,\"ucum
 From the repository root:
 
 ```bash
-node collection/margolis-dfu-prognostic/bin/margolis-dfu-prognostic.js --input '{"wound_area":{"value":1,"ucum_code":"cm2"},"wound_duration":{"value":56,"ucum_code":"d"}}'
+node collection/margolis-dfu-prognostic/bin/margolis-dfu-prognostic.js --input '{\"wound_area\":{\"value\":1,\"ucum_code\":\"cm2\"},\"wound_duration\":{\"value\":56,\"ucum_code\":\"d\"}}'
 ```
 
 Or using a JSON file:
