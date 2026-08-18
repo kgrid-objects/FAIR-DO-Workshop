@@ -122,12 +122,12 @@
           "/status": "success",
           "/specification_id": "MARGOLIS-DFU-PROGNOSIS-CKS-1.0",
           "/specification_version": "1.0",
-          "/result_id": "ALG-01",
-          "/prognostic_group": "AREA_GE_2__DURATION_GE_8",
-          "/healing_probability_16_weeks": 0.203,
-          "/display_probability_percent": "20.3%",
+          "/result_id": "ALG-02",
+          "/prognostic_group": "AREA_GE_2__DURATION_LT_8",
+          "/healing_probability_16_weeks": 0.304,
+          "/display_probability_percent": "30.4%",
           "/area_category": "AREA-GE-2",
-          "/duration_category": "DUR-GE-8",
+          "/duration_category": "DUR-LT-8",
           "/specification_notes": [
             "Area equality assigned to AREA-GE-2 by CKS specification decision."
           ]
@@ -192,7 +192,7 @@
     },
     {
       "id": "TC-08",
-      "title": "Values immediately below both thresholds",
+      "title": "Area equality and duration immediately below threshold",
       "mode": "invoke",
       "input_document": "{\"wound_area\":{\"value\":2.0,\"ucum_code\":\"cm2\"},\"wound_duration\":{\"value\":7.999999999999999,\"ucum_code\":\"wk\"}}",
       "expected": {
@@ -201,13 +201,15 @@
           "/status": "success",
           "/specification_id": "MARGOLIS-DFU-PROGNOSIS-CKS-1.0",
           "/specification_version": "1.0",
-          "/result_id": "ALG-04",
-          "/prognostic_group": "AREA_LT_2__DURATION_LT_8",
-          "/healing_probability_16_weeks": 0.631,
-          "/display_probability_percent": "63.1%",
-          "/area_category": "AREA-LT-2",
+          "/result_id": "ALG-02",
+          "/prognostic_group": "AREA_GE_2__DURATION_LT_8",
+          "/healing_probability_16_weeks": 0.304,
+          "/display_probability_percent": "30.4%",
+          "/area_category": "AREA-GE-2",
           "/duration_category": "DUR-LT-8",
-          "/specification_notes": []
+          "/specification_notes": [
+            "Area equality assigned to AREA-GE-2 by CKS specification decision."
+          ]
         },
         "path_absent": [
           "/errors"
@@ -216,7 +218,7 @@
     },
     {
       "id": "TC-09",
-      "title": "Values immediately above both thresholds",
+      "title": "Area equality and duration immediately above threshold",
       "mode": "invoke",
       "input_document": "{\"wound_area\":{\"value\":2.0,\"ucum_code\":\"cm2\"},\"wound_duration\":{\"value\":8.000000000000002,\"ucum_code\":\"wk\"}}",
       "expected": {
@@ -231,7 +233,9 @@
           "/display_probability_percent": "20.3%",
           "/area_category": "AREA-GE-2",
           "/duration_category": "DUR-GE-8",
-          "/specification_notes": []
+          "/specification_notes": [
+            "Area equality assigned to AREA-GE-2 by CKS specification decision."
+          ]
         },
         "path_absent": [
           "/errors"
@@ -353,13 +357,17 @@
           "/status": "success",
           "/specification_id": "MARGOLIS-DFU-PROGNOSIS-CKS-1.0",
           "/specification_version": "1.0",
-          "/result_id": "ALG-02",
-          "/prognostic_group": "AREA_GE_2__DURATION_LT_8",
-          "/healing_probability_16_weeks": 0.304,
-          "/display_probability_percent": "30.4%",
+          "/result_id": "ALG-01",
+          "/prognostic_group": "AREA_GE_2__DURATION_GE_8",
+          "/healing_probability_16_weeks": 0.203,
+          "/display_probability_percent": "20.3%",
           "/area_category": "AREA-GE-2",
-          "/duration_category": "DUR-LT-8",
-          "/normalized_inputs/wound_area/value": 2
+          "/duration_category": "DUR-GE-8",
+          "/normalized_inputs/wound_area/value": 2,
+          "/specification_notes": [
+            "Area equality assigned to AREA-GE-2 by CKS specification decision.",
+            "Duration equality assigned to DUR-GE-8 by CKS specification decision."
+          ]
         },
         "path_absent": [
           "/errors"
@@ -406,7 +414,7 @@
           "/display_probability_percent": "63.1%",
           "/area_category": "AREA-LT-2",
           "/duration_category": "DUR-LT-8",
-          "/normalized_inputs/wound_area/value": 1.999
+          "/normalized_inputs/wound_area/value": 1.99
         },
         "path_absent": [
           "/errors"

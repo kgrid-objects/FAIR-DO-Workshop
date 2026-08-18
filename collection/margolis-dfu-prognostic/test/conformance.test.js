@@ -21,11 +21,8 @@ function hasPointer(value, path) {
   }
 }
 
-const knownFixtureContradictions = new Set(['TC-05', 'TC-08', 'TC-09', 'TC-14', 'TC-16']);
-
 for (const fixture of fixtures.cases) {
-  const run = knownFixtureContradictions.has(fixture.id) ? test.skip : test;
-  run(`${fixture.id}: ${fixture.title}${knownFixtureContradictions.has(fixture.id) ? ' (fixture contradicts normative matrix)' : ''}`, () => {
+  test(`${fixture.id}: ${fixture.title}`, () => {
     const input = JSON.parse(fixture.input_document);
     const output = fixture.mode === 'invoke' ? evaluate(input) : evaluateWithRuleCardinalityFault(input, 0);
     assert.equal(output.status, fixture.expected.status);

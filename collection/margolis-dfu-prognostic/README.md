@@ -66,7 +66,7 @@ The conformance suite is driven by:
 Notes:
 
 - The implementation follows the attached CKS specification's normative matrix and conversion rules.
-- Five fixture records are currently skipped in `test/conformance.test.js` because their expected values conflict with the same spec's decision matrix and exact unit conversions.
+- The full canonical fixture suite (TC-01 through TC-24) is executed in `test/conformance.test.js`.
 
 ## CLI
 

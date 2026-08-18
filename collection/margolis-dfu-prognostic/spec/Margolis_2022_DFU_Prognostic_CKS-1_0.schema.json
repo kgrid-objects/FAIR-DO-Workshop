@@ -157,9 +157,6 @@
       "oneOf": [
         {
           "properties": {
-            "unit_code": {
-              "const": "cm2"
-            },
             "comparison_value": {
               "type": "number",
               "exclusiveMaximum": 2
@@ -172,14 +169,14 @@
             },
             "category": {
               "const": "AREA-LT-2"
+            },
+            "ucum_code": {
+              "const": "cm2"
             }
           }
         },
         {
           "properties": {
-            "unit_code": {
-              "const": "cm2"
-            },
             "comparison_value": {
               "type": "number",
               "minimum": 2
@@ -192,14 +189,14 @@
             },
             "category": {
               "const": "AREA-GE-2"
+            },
+            "ucum_code": {
+              "const": "cm2"
             }
           }
         },
         {
           "properties": {
-            "unit_code": {
-              "const": "mm2"
-            },
             "comparison_value": {
               "type": "number",
               "exclusiveMaximum": 200
@@ -212,14 +209,14 @@
             },
             "category": {
               "const": "AREA-LT-2"
+            },
+            "ucum_code": {
+              "const": "mm2"
             }
           }
         },
         {
           "properties": {
-            "unit_code": {
-              "const": "mm2"
-            },
             "comparison_value": {
               "type": "number",
               "minimum": 200
@@ -232,6 +229,9 @@
             },
             "category": {
               "const": "AREA-GE-2"
+            },
+            "ucum_code": {
+              "const": "mm2"
             }
           }
         }
@@ -298,9 +298,6 @@
       "oneOf": [
         {
           "properties": {
-            "unit_code": {
-              "const": "wk"
-            },
             "comparison_value": {
               "type": "number",
               "minimum": 0,
@@ -314,14 +311,14 @@
             },
             "category": {
               "const": "DUR-LT-8"
+            },
+            "ucum_code": {
+              "const": "wk"
             }
           }
         },
         {
           "properties": {
-            "unit_code": {
-              "const": "wk"
-            },
             "comparison_value": {
               "type": "number",
               "minimum": 8
@@ -334,14 +331,14 @@
             },
             "category": {
               "const": "DUR-GE-8"
+            },
+            "ucum_code": {
+              "const": "wk"
             }
           }
         },
         {
           "properties": {
-            "unit_code": {
-              "const": "d"
-            },
             "comparison_value": {
               "type": "number",
               "minimum": 0,
@@ -355,14 +352,14 @@
             },
             "category": {
               "const": "DUR-LT-8"
+            },
+            "ucum_code": {
+              "const": "d"
             }
           }
         },
         {
           "properties": {
-            "unit_code": {
-              "const": "d"
-            },
             "comparison_value": {
               "type": "number",
               "minimum": 56
@@ -375,6 +372,9 @@
             },
             "category": {
               "const": "DUR-GE-8"
+            },
+            "ucum_code": {
+              "const": "d"
             }
           }
         }
