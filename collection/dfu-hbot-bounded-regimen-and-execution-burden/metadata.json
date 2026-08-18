@@ -99,7 +99,7 @@
                 "cli"
             ],
             "dc:description": "interactively collects the four required HBOT burden questionnaire inputs, generates the fixed regimen range artifact, runs the burden analysis, and prints all three spec-aligned JSON outputs.",
-            "hasInterface": "DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
+            "hasInterface": "README.md",
             "implementedBy": {
                 "@id": "bin/dfu-hbot-burden.js",
                 "@type": [

@@ -107,7 +107,7 @@
                 "cli"
             ],
             "dc:description": "command-line program that interactively asks the Wagner questionnaire yes/no questions (with related term definitions), then prints both the questionnaire outcome and its computed analysis as formatted JSON.",
-            "hasInterface": "kgrid.org_Meggitt_Wagner_Questionnaire_CKS_Version_1_0.docx",
+            "hasInterface": "README.md",
             "implementedBy": {
                 "@id": "bin/wagner.js",
                 "@type": [
