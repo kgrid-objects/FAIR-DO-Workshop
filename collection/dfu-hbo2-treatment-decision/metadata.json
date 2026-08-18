@@ -55,7 +55,7 @@
                 "cli"
             ],
             "dc:description": "command-line interface that parses invocation modes and input formats, runs the DFU HBO2 treatment decision logic, and prints the resulting recommendation or validation error as formatted JSON.",
-            "hasInterface": "readme.md",
+            "hasInterface": "README.md",
             "implementedBy": {
                 "@id": "bin/dfu-hbo2.js",
                 "@type": [
