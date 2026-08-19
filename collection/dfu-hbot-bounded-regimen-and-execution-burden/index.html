@@ -188,12 +188,14 @@
         }
 
         .graph-node-legend {
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             gap: 6px;
             overflow-x: auto;
             overflow-y: hidden;
             padding-bottom: 2px;
         }
+
+        
 
         .graph-node-legend .graph-legend-item {
             padding: 5px 9px 5px 7px;
@@ -213,8 +215,12 @@
         }
 
         .graph-legend-group {
-            flex: 1 1 360px;
+            flex: 1 1 0px;
             min-width: 280px;
+        }
+        
+        .graph-legend-group.graph-legend-nodes {
+            flex: 1.5 1 0;
         }
 
         .graph-legend-group-title {
@@ -574,7 +580,7 @@
                 </div>
             </summary>
             <div class="graph-legend-layout">
-                <div class="graph-legend-group">
+                <div class="graph-legend-group graph-legend-nodes">
                     <ul class="graph-legend graph-node-legend">
                         <li class="graph-legend-inline-title">
                             <span class="graph-legend-group-title">Nodes:</span>
