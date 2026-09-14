@@ -9,7 +9,7 @@
     "./scorer": "./src/scorer.js"
   },
   "bin": {
-    "wagner": "bin/wagner.js"
+    "wagner": "src/cli/wagner.js"
   },
   "type": "commonjs",
   "scripts": {

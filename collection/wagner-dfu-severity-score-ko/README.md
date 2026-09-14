@@ -4,8 +4,16 @@ Adaptive Yes/No questionnaire logic for Section 3 of the Wagner Classification q
 
 ## Install
 
+This package is currently maintained in this repository and is not published to the npm registry. From this directory, install it locally with:
+
 ```bash
-npm install @wagner/classification
+npm install .
+```
+
+From another local project, install it by providing the path to this directory:
+
+```bash
+npm install ../path/to/wagner-dfu-severity-score-ko
 ```
 
 ## Exports
@@ -80,10 +88,10 @@ Run directly from your project:
 npx wagner
 ```
 
-Or after global install:
+Or, for local development, link the package globally:
 
 ```bash
-npm install -g @wagner/classification
+npm link
 wagner
 ```
 
@@ -107,6 +115,6 @@ For readability, CLI JSON keeps object structure indented while rendering arrays
 
 Try this package here:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/wagner/wagner_binder.ipynb%3Fkernel_name%3Djavascript)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/HEAD/collection/wagner/wagner_colab.ipynb)
-[![Open In Scribbler](https://img.shields.io/badge/Open%20In-Scribbler-2F9E44?logo=javascript&logoColor=white)](https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/wagner/wagner_scribbler.jsnb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/wagner-dfu-severity-score-ko/auxiliary/aux-notebook/wagner_binder.ipynb%3Fkernel_name%3Djavascript)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/HEAD/collection/wagner-dfu-severity-score-ko/auxiliary/aux-notebook/wagner_colab.ipynb)
+[![Open In Scribbler](https://img.shields.io/badge/Open%20In-Scribbler-2F9E44?logo=javascript&logoColor=white)](https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/wagner-dfu-severity-score-ko/auxiliary/aux-notebook/wagner_scribbler.jsnb)

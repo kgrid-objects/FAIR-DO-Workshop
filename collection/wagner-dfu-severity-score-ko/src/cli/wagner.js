@@ -3,8 +3,8 @@
 
 const readline = require('node:readline');
 const { stdin, stdout, stderr } = require('node:process');
-const { runQuestionnaire } = require('../src/index');
-const { analyzeQuestionnaireResponse } = require('../src/scorer');
+const { runQuestionnaire } = require('../index');
+const { analyzeQuestionnaireResponse } = require('../scorer');
 
 function formatJsonCompactArrays(value, indentSize = 2, depth = 0) {
   if (Array.isArray(value)) {

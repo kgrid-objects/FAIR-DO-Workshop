@@ -5,7 +5,7 @@
             "name": "Debug Wagner CLI",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/wagner.js",
+            "program": "${workspaceFolder}/src/cli/wagner.js",
             "console": "integratedTerminal",
             "skipFiles": [
                 "<node_internals>/**"

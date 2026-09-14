@@ -89,7 +89,7 @@
         <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection> ;
 
     schema:subjectOf
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner/metadata.json> .
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner-dfu-severity-score-ko/metadata.json> .
 
 
 # Controlled UMLS term descriptions
