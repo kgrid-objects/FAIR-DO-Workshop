@@ -29,7 +29,7 @@ for (const vector of vectorFile.vectors) {
 const runtimeSchemaPath = path.join(
   __dirname,
   '..',
-  'DFU_HBO2_Treatment_Decision_Schema_Bundle_1_0.json'
+  'specs/DFU_HBO2_Treatment_Decision_Schema_Bundle_1_0.json'
 );
 const testVectorSchemaPath = path.join(
   __dirname,

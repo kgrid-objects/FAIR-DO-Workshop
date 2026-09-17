@@ -8,7 +8,7 @@ const {
   evaluateInputObject,
   evaluateSerializedInput,
   evaluateFixture
-} = require('../src/decision');
+} = require('../decision');
 
 function printHelp() {
   const helpText = [

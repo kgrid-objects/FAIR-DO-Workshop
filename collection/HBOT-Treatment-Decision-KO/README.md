@@ -60,7 +60,7 @@ npm test
 ```
 
 The test suite runs all canonical vectors from:
-- `UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_1_0.json`
+- `test/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_1_0.json`
 
 It also validates the runtime input and result profiles, confirms coverage of completed, out-of-scope, and error results, and verifies that the runtime and test-vector schemas remain separate artifacts.
 
@@ -69,14 +69,14 @@ It also validates the runtime input and result profiles, confirms coverage of co
 From this package directory:
 
 ```bash
-cd collection/dfu-hbo2-treatment-decision
-node bin/dfu-hbo2.js --help
+cd collection/HBOT-Treatment-Decision-KO
+node src/cli/dfu-hbo2.js --help
 ```
 
 From the repository root:
 
 ```bash
-node collection/dfu-hbo2-treatment-decision/bin/dfu-hbo2.js --help
+node collection/HBOT-Treatment-Decision-KO/src/cli/dfu-hbo2.js --help
 ```
 
 Or with npm executable resolution:
@@ -92,7 +92,7 @@ npm run cli -- --help
 ```
 
 ```bash
-node bin/dfu-hbo2.js --help
+node src/cli/dfu-hbo2.js --help
 ```
 
 Examples:
@@ -125,6 +125,6 @@ npm run cli -- --file input.json
 
 Try this package here:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/dfu-hbo2-treatment-decision/dfu_hbo2_binder.ipynb%3Fkernel_name%3Djavascript)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/HEAD/collection/dfu-hbo2-treatment-decision/dfu_hbo2_colab.ipynb)
-[![Open In Scribbler](https://img.shields.io/badge/Open%20In-Scribbler-2F9E44?logo=javascript&logoColor=white)](https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/dfu-hbo2-treatment-decision/dfu_hbo2_scribbler.jsnb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/collection/HBOT-Treatment-Decision-KO/auxiliary/aux-notebook/dfu_hbo2_binder.ipynb%3Fkernel_name%3Djavascript)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/HEAD/collection/HBOT-Treatment-Decision-KO/auxiliary/aux-notebook/dfu_hbo2_colab.ipynb)
+[![Open In Scribbler](https://img.shields.io/badge/Open%20In-Scribbler-2F9E44?logo=javascript&logoColor=white)](https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/HBOT-Treatment-Decision-KO/auxiliary/aux-notebook/dfu_hbo2_scribbler.jsnb)

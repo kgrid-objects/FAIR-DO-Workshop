@@ -8,12 +8,12 @@
     "./decision": "./src/decision.js"
   },
   "bin": {
-    "dfu-hbo2": "bin/dfu-hbo2.js"
+    "dfu-hbo2": "src/cli/dfu-hbo2.js"
   },
   "type": "commonjs",
   "scripts": {
     "test": "node --test",
-    "cli": "node bin/dfu-hbo2.js"
+    "cli": "node src/cli/dfu-hbo2.js"
   },
   "keywords": [
     "dfu",

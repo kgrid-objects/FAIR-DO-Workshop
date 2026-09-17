@@ -1,12 +1,12 @@
 {
     "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision",
+    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO",
     "versionInfo": "2.1",
     "@type": "KnowledgeObject",
     "dc:title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object",
     "dc:identifier": [
         "workshop-ko-2",
-        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbo2-treatment-decision"
+        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO"
     ],
     "dc:version": "1.0",
     "dc:date": "2026-08-05",
@@ -57,7 +57,7 @@
             "dc:description": "command-line interface that parses invocation modes and input formats, runs the DFU HBO2 treatment decision logic, and prints the resulting recommendation or validation error as formatted JSON.",
             "hasInterface": "README.md",
             "implementedBy": {
-                "@id": "bin/dfu-hbo2.js",
+                "@id": "src/cli/dfu-hbo2.js",
                 "@type": [
                     "Implementation",
                     "JavaScript"
@@ -74,7 +74,7 @@
                 "library"
             ],
             "dc:description": "Way of invoking the DFU HBO2 treatment decision logic",
-            "hasInterface": "UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx",
+            "hasInterface": "specs/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx",
             "implementedBy": {
                 "@id": "src/decision.js",
                 "@type": [
@@ -124,7 +124,7 @@
     ],
     "koio:hasDocumentation": [
         {
-            "@id": "UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx",
+            "@id": "specs/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx",
             "@type": [
                 "InformationArtifact",
                 "Specification Document"
@@ -133,7 +133,7 @@
             "dc:description": "This demonstration-only CKS converts four supplied facts about one candidate diabetic foot ulcer into one guideline-branch result for adjunctive hyperbaric oxygen therapy (HBO2). It implements Figure 6 of the 2015 UHMS guideline; it does not diagnose a DFU, calculate Wagner grade, prescribe an HBO2 protocol, or determine coverage."
         },
         {
-            "@id": "UHMS_DFU_HBO2_CKS_One-Page_Clinical-Knowledge_Summary.docx",
+            "@id": "specs/UHMS_DFU_HBO2_CKS_One-Page_Clinical-Knowledge_Summary.docx",
             "@type": [
                 "InformationArtifact",
                 "Summary"
@@ -151,7 +151,7 @@
             "dc:description": "Technical package documentation."
         },
         {
-            "@id": "DFU_HBO2_Treatment_Decision_Schema_Bundle_1_0.json",
+            "@id": "specs/DFU_HBO2_Treatment_Decision_Schema_Bundle_1_0.json",
             "@type": [
                 "InformationArtifact",
                 "JSON Schema Document",
@@ -162,7 +162,7 @@
             "dc:description": "Normative JSON Schema Draft 7 bundle containing separately addressable complete input and unified result profiles for evaluateInputObject."
         },
         {
-            "@id": "interoperability.metadata.txt",
+            "@id": "auxiliary/aux-extra-metadata/interoperability.metadata.txt",
             "@type": [
                 "InformationArtifact",
                 "Interoperability Metadata"
@@ -171,7 +171,7 @@
             "dc:description": "Three-facet interoperability profile binding semantics, complete exchanged-object profiles, and the normative object-level invocation interface."
         },
         {
-            "@id": "dfu_hbo2_binder.ipynb",
+            "@id": "auxiliary/aux-notebook/dfu_hbo2_binder.ipynb",
             "@type": [
                 "InformationArtifact",
                 "Jupyter Notebook",
@@ -181,7 +181,7 @@
             "dc:description": "A Binder notebook for computing with the DFU HBO2 package."
         },
         {
-            "@id": "dfu_hbo2_colab.ipynb",
+            "@id": "auxiliary/aux-notebook/dfu_hbo2_colab.ipynb",
             "@type": [
                 "InformationArtifact",
                 "Jupyter Notebook",
@@ -191,7 +191,7 @@
             "dc:description": "A Colab notebook for computing with the DFU HBO2 package."
         },
         {
-            "@id": "dfu_hbo2_scribbler.jsnb",
+            "@id": "auxiliary/aux-notebook/dfu_hbo2_scribbler.jsnb",
             "@type": [
                 "InformationArtifact",
                 "Jupyter Notebook",
