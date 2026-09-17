@@ -17,6 +17,9 @@
     schema:version
         "1.0" ;
 
+    schema:url
+    <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO> ;
+
     # 2. Description
     schema:abstract
         "This demonstration-only clinical knowledge summary classifies one diabetic foot lesion or assessment site, at one assessment event, as Wagner score 0-5. It specifies classification—not treatment, prognosis, amputation risk, or hyperbaric-oxygen eligibility." ;
