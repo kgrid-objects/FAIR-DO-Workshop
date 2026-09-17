@@ -1,7 +1,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     schema:name "DFU HBOT Bounded Regimen and Execution Burden" ;
@@ -24,7 +24,7 @@
 
     schema:isPartOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection> ;
 
-    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/metadata.json> ;
+    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/HBOT-Regimen-Burden-KO/metadata.json> ;
 
     schema:keywords "diabetic foot ulcer" ;
 

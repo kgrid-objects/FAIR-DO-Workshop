@@ -1,18 +1,18 @@
 {
     "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden",
+    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO",
     "versionInfo": "2.1",
     "@type": "KnowledgeObject",
     "dc:title": "DFU HBOT Bounded Regimen and Execution Burden",
     "dc:identifier": [
         "workshop-ko-3",
-        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden"
+        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO"
     ],
     "dc:version": "1.0",
     "dc:date": "2026-08-12",
     "dc:source": [
         {
-            "@id": "1E41C3D7-66F4-C168-3A91-D951BE77CBAF.pdf",
+            "@id": "specs/1E41C3D7-66F4-C168-3A91-D951BE77CBAF.pdf",
             "dc:bibliographicCitation": "Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. UHMS DFU guideline."
         },
         {
@@ -101,7 +101,7 @@
             "dc:description": "interactively collects the four required HBOT burden questionnaire inputs, generates the fixed regimen range artifact, runs the burden analysis, and prints all three spec-aligned JSON outputs.",
             "hasInterface": "README.md",
             "implementedBy": {
-                "@id": "bin/dfu-hbot-burden.js",
+                "@id": "src/cli/dfu-hbot-burden.js",
                 "@type": [
                     "Implementation",
                     "JavaScript"
@@ -120,7 +120,7 @@
                 "library"
             ],
             "dc:description": "Way of invoking the generateRegimenRange software function",
-            "hasInterface": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
+            "hasInterface": "specs/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
             "implementedBy": {
                 "@id": "src/regimen-range.js",
                 "@type": [
@@ -139,7 +139,7 @@
                 "library"
             ],
             "dc:description": "Way of invoking the collectBurdenQuestionnaireResponse software function",
-            "hasInterface": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
+            "hasInterface": "specs/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
             "implementedBy": {
                 "@id": "src/questionnaire-logic.js",
                 "@type": [
@@ -158,7 +158,7 @@
                 "library"
             ],
             "dc:description": "Way of invoking the analyzeBurdenResponse software function",
-            "hasInterface": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
+            "hasInterface": "specs/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
             "implementedBy": {
                 "@id": "src/burden-response-analysis.js",
                 "@type": [
@@ -204,7 +204,7 @@
             "dc:title": "Spec Conformance Fixture Audit Runner",
             "dc:description": "This script executes the full DFU HBOT conformance fixture bundle across regimen-range, questionnaire, provider-roster, burden-analysis, and audit/replay scenarios, then performs exact expected-vs-actual structural JSON comparisons and reports pass/fail (with strict nonzero exit on mismatch).",
             "implementedBy": {
-                "@id": "scripts/spec-audit.js",
+                "@id": "test/spec-audit.js",
                 "@type": [
                     "Implementation",
                     "JavaScript"
@@ -214,7 +214,7 @@
     ],
     "koio:hasDocumentation": [
         {
-            "@id": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
+            "@id": "specs/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx",
             "@type": [
                 "InformationArtifact",
                 "Specification Document"
@@ -223,7 +223,7 @@
             "dc:description": "Interactive burden questionnaire, general DFU regimen knowledge, objective-burden calculations, reported weekday-attendance feasibility, five-level execution-burden logic, output contracts, and conformance tests"
         },
         {
-            "@id": "spec/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_One-Page_Summary.docx",
+            "@id": "specs/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_One-Page_Summary.docx",
             "@type": [
                 "InformationArtifact",
                 "Summary"
@@ -241,7 +241,7 @@
             "dc:description": "Technical documentation."
         },
         {
-            "@id": "dfu-hbot_binder.ipynb",
+            "@id": "auxiliary/aux-notebook/dfu-hbot_binder.ipynb",
             "@type": [
                 "InformationArtifact",
                 "Jupyter Notebook",
@@ -251,7 +251,7 @@
             "dc:description": "A Binder Jupyter Notebook for viewing how to compute with the DFU HBOT Bounded Regimen and Execution Burden"
         },
         {
-            "@id": "dfu-hbot_colab.ipynb",
+            "@id": "auxiliary/aux-notebook/dfu-hbot_colab.ipynb",
             "@type": [
                 "InformationArtifact",
                 "Jupyter Notebook",
@@ -261,7 +261,7 @@
             "dc:description": "A Google Colab Jupyter Notebook for viewing how to compute with the DFU HBOT Bounded Regimen and Execution Burden"
         },
         {
-            "@id": "dfu-hbot_scribbler.jsnb",
+            "@id": "auxiliary/aux-notebook/dfu-hbot_scribbler.jsnb",
             "@type": [
                 "InformationArtifact",
                 "Jupyter Notebook",
@@ -280,7 +280,7 @@
             "dc:description": "An information page for viewing the contents of the DFU HBOT Bounded Regimen and Execution Burden Knowledge Object"
         },
         {
-            "@id": "spec/DFU_HBOT_CKS_Conformance_Fixtures_1_0",
+            "@id": "specs/DFU_HBOT_CKS_Conformance_Fixtures_1_0",
             "@type": [
                 "InformationArtifact",
                 "Conformance Fixture Bundle"

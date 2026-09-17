@@ -5,8 +5,8 @@ const crypto = require('node:crypto');
 const { showRegimenRange, SPECIFICATION_IRI } = require('./regimen-range');
 const { PROVIDER_ROSTER_VERSION_IRI, RESPONSE_MODEL_IRI } = require('./questionnaire-logic');
 const { validateByDef, assertByDef } = require('./schema-validation');
-const providerRosterSnapshot = require('../spec/DFU_HBOT_Provider_Roster_Snapshot_Version_1_0.json');
-const dependencyManifest = require('../spec/DFU_HBOT_CKS_Identifier_and_Dependency_Manifest_1_0.json');
+const providerRosterSnapshot = require('../specs/DFU_HBOT_Provider_Roster_Snapshot_Version_1_0.json');
+const dependencyManifest = require('../specs/DFU_HBOT_CKS_Identifier_and_Dependency_Manifest_1_0.json');
 
 const RESULT_MODEL_IRI = 'https://kgrid.org/cks/dfu-hbot-burden/output-models/1.0';
 const SCHEMA_BUNDLE_IRI = 'https://kgrid.org/cks/dfu-hbot-burden/schema-bundles/versions/1.0';

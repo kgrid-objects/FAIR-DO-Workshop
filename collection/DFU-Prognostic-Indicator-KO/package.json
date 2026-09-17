@@ -8,12 +8,12 @@
     "./prognosis": "./src/prognosis.js"
   },
   "bin": {
-    "margolis-dfu-prognostic": "bin/margolis-dfu-prognostic.js"
+    "margolis-dfu-prognostic": "src/cli/margolis-dfu-prognostic.js"
   },
   "type": "commonjs",
   "scripts": {
     "test": "node --test",
-    "cli": "node bin/margolis-dfu-prognostic.js"
+    "cli": "node src/cli/margolis-dfu-prognostic.js"
   },
   "keywords": ["diabetic-foot", "prognosis", "healing", "clinical-decision-support"],
   "license": "MIT"

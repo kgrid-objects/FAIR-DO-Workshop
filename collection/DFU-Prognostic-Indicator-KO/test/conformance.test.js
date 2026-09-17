@@ -2,7 +2,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const fixtures = require('../spec/Margolis_2022_DFU_Prognostic_CKS-1_0.fixtures.json');
+const fixtures = require('../specs/Margolis_2022_DFU_Prognostic_CKS-1_0.fixtures.json');
 const { evaluate, evaluateWithRuleCardinalityFault } = require('../src');
 
 function pointer(value, path) {

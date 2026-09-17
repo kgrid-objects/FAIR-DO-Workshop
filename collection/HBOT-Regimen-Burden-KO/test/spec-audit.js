@@ -7,9 +7,9 @@ const crypto = require('node:crypto');
 
 const { showRegimenRange, calculateBurdenRange, questionnaireResponseFromObject } = require('../src');
 const { validateByDef } = require('../src/schema-validation');
-const providerRosterSnapshot = require('../spec/DFU_HBOT_Provider_Roster_Snapshot_Version_1_0.json');
+const providerRosterSnapshot = require('../specs/DFU_HBOT_Provider_Roster_Snapshot_Version_1_0.json');
 
-const SPEC_DIR = path.resolve(__dirname, '../spec/DFU_HBOT_CKS_Conformance_Fixtures_1_0');
+const SPEC_DIR = path.resolve(__dirname, '../specs/DFU_HBOT_CKS_Conformance_Fixtures_1_0');
 const MANIFEST_PATH = path.join(SPEC_DIR, 'manifest.json');
 
 function readJson(filePath) {

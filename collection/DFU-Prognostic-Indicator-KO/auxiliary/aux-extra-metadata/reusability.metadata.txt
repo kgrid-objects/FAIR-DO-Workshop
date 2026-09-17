@@ -1,7 +1,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/margolis-dfu-prognostic>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     # 1. Purpose
@@ -10,7 +10,7 @@
 
     # 2. Scope
     schema:usageInfo
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/margolis-dfu-prognostic#scope> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#scope> ;
 
     # 3. License
     schema:license
@@ -18,13 +18,13 @@
 
     # 4. Provenance
     prov:has_provenance
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/margolis-dfu-prognostic#provenance> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#provenance> ;
 
     # 5. Tests
     schema:hasPart
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/margolis-dfu-prognostic/test/conformance.test.js>,
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/margolis-dfu-prognostic/spec/Margolis_2022_DFU_Prognostic_CKS-1_0.fixtures.json>,
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/margolis-dfu-prognostic/spec/Margolis_2022_DFU_Prognostic_CKS-1_0.fixtures.schema.json> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/DFU-Prognostic-Indicator-KO/test/conformance.test.js>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/DFU-Prognostic-Indicator-KO/specs/Margolis_2022_DFU_Prognostic_CKS-1_0.fixtures.json>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/DFU-Prognostic-Indicator-KO/specs/Margolis_2022_DFU_Prognostic_CKS-1_0.fixtures.schema.json> ;
 
     # 6. Evidence
     schema:citation
@@ -38,12 +38,12 @@
     schema:version
         "1.0" .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/margolis-dfu-prognostic#scope>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#scope>
     a schema:CreativeWork ;
     schema:description
         "Applies to one already established diabetic foot ulcer assessed at one designated first clinical visit, using source-faithful wound area and wound duration for the same ulcer and assessment. It produces a categorical group-level prognosis rather than a continuous individualized risk equation. It does not diagnose a diabetic foot ulcer, perform wound measurement, determine healing, estimate treatment effect or HBOT response, establish treatment eligibility, recommend treatment, or incorporate predictors beyond area and duration. Use beyond populations and care settings supported by the source requires separate validation and production governance." .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/margolis-dfu-prognostic#provenance>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#provenance>
     a prov:Entity ;
     prov:wasAttributedTo <https://kgrid.org> ;
     prov:wasDerivedFrom <https://doi.org/10.1111/wrr.13019> ;

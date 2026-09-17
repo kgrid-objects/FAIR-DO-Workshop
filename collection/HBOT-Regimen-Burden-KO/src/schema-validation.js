@@ -3,7 +3,7 @@
 const Ajv2020 = require('ajv/dist/2020');
 const addFormats = require('ajv-formats');
 
-const schema = require('../spec/DFU_HBOT_Burden_CKS_Version_1_0.schema.json');
+const schema = require('../specs/DFU_HBOT_Burden_CKS_Version_1_0.schema.json');
 
 const ajv = new Ajv2020({
   strict: false,

@@ -2,7 +2,7 @@
 'use strict';
 
 const fs = require('node:fs');
-const { evaluate } = require('../src');
+const { evaluate } = require('..');
 
 const args = process.argv.slice(2);
 if (args.length !== 2 || !['--input', '--file'].includes(args[0])) {

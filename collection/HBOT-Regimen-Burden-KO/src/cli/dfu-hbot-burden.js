@@ -7,7 +7,7 @@ const {
   showRegimenRange,
   runBurdenQuestionnaire,
   calculateBurdenRange
-} = require('../src');
+} = require('..');
 
 function formatJsonCompactArrays(value, indentSize = 2, depth = 0) {
   if (Array.isArray(value)) {

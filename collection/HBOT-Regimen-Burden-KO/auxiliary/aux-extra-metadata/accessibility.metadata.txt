@@ -1,7 +1,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     # Access instance 1 — Public web access
@@ -13,7 +13,7 @@
                 [
                     a schema:EntryPoint ;
                     schema:urlTemplate
-                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden" ;
+                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO" ;
                     schema:description
                         "Public access; no authentication or payment required." ;
                     schema:name "HTTPS"

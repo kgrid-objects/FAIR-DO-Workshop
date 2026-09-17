@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "commonjs",
   "bin": {
-    "dfu-hbot-burden": "bin/dfu-hbot-burden.js"
+    "dfu-hbot-burden": "src/cli/dfu-hbot-burden.js"
   },
   "exports": {
     ".": "./src/index.js",
@@ -19,8 +19,8 @@
   },
   "scripts": {
     "test": "node --test",
-    "spec:audit": "node scripts/spec-audit.js",
-    "spec:audit:strict": "node scripts/spec-audit.js --strict"
+    "spec:audit": "node test/spec-audit.js",
+    "spec:audit:strict": "node test/spec-audit.js --strict"
   },
   "keywords": [
     "dfu",

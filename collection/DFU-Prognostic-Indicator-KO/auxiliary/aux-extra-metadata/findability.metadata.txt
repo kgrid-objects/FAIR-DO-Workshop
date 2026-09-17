@@ -1,7 +1,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/margolis-dfu-prognostic>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     schema:name "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks" ;
@@ -26,7 +26,7 @@
 
     schema:isPartOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection> ;
 
-    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/margolis-dfu-prognostic/metadata.json> ;
+    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/DFU-Prognostic-Indicator-KO/metadata.json> ;
 
     schema:keywords "diabetic foot ulcer" ;
 

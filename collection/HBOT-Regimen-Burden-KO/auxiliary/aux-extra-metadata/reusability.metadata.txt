@@ -1,7 +1,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     # 1. Purpose
@@ -10,7 +10,7 @@
 
     # 2. Scope
     schema:usageInfo
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden#scope> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#scope> ;
 
     # 3. License
     schema:license
@@ -18,13 +18,13 @@
 
     # 4. Provenance
     prov:has_provenance
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden#provenance> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#provenance> ;
 
     # 5. Tests
     schema:hasPart
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/test/architecture.test.js>,
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/test/conformance.test.js>,
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/dfu-hbot-bounded-regimen-and-execution-burden/scripts/spec-audit.js> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/HBOT-Regimen-Burden-KO/test/architecture.test.js>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/HBOT-Regimen-Burden-KO/test/conformance.test.js>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/HBOT-Regimen-Burden-KO/test/spec-audit.js> ;
 
     # 6. Evidence
     schema:citation
@@ -40,12 +40,12 @@
     schema:version
         "1.0" .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden#scope>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#scope>
     a schema:CreativeWork ;
     schema:description
         "Applies to planning repeated outpatient HBOT attendance for one patient, one confirmed diabetes-related foot ulcer, one contemplated course, one selected treatment location, and one assessment time. It returns fixed 30- and 40-episode planning scenarios, a confirmed four-field questionnaire response, and bounded travel, facility-time, total-time, and ordinal execution-burden results. It does not determine HBOT eligibility, contraindications, dose, protocol, treatment response, stopping rules, individualized regimen, clinical outcome, adherence, exact financial burden, facility quality, or payment authorization, and it requires separate clinical processes and production governance." .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/dfu-hbot-bounded-regimen-and-execution-burden#provenance>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#provenance>
     a prov:Entity ;
     prov:wasAttributedTo <https://kgrid.org> ;
     schema:datePublished "2026-08-12" ;
