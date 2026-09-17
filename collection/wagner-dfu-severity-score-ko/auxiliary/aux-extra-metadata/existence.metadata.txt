@@ -23,7 +23,7 @@
 
 <#metadata-existence>
     a koer:MetadataComponent ;
-    koer:filePath "existence.metadata.txt" ;
+    koer:filePath "auxiliary/aux-extra-metadata/existence.metadata.txt" ;
     dcterms:type "existence" .
 
 <#metadata-core>
@@ -33,20 +33,20 @@
 
 <#metadata-accessibility>
     a koer:MetadataComponent ;
-    koer:filePath "accessibility.metadata.txt" ;
+    koer:filePath "auxiliary/aux-extra-metadata/accessibility.metadata.txt" ;
     dcterms:type "accessibility" .
 
 <#metadata-findability>
     a koer:MetadataComponent ;
-    koer:filePath "findability.metadata.txt" ;
+    koer:filePath "auxiliary/aux-extra-metadata/findability.metadata.txt" ;
     dcterms:type "findability" .
 
 <#metadata-interoperability>
     a koer:MetadataComponent ;
-    koer:filePath "interoperability.metadata.txt" ;
+    koer:filePath "auxiliary/aux-extra-metadata/interoperability.metadata.txt" ;
     dcterms:type "interoperability" .
 
 <#metadata-reusability>
     a koer:MetadataComponent ;
-    koer:filePath "reusability.metadata.txt" ;
+    koer:filePath "auxiliary/aux-extra-metadata/reusability.metadata.txt" ;
     dcterms:type "reusability" .

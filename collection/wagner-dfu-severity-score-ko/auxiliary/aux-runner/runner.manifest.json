@@ -2,5 +2,5 @@
   "runnerVersion": "1.0",
   "knowledgeObjectId": "workshop-ko-1",
   "knowledgeObjectVersion": "1.0",
-  "bundle": "runner/runner.bundle.js"
+  "bundle": "auxiliary/aux-runner/runner.bundle.js"
 }
