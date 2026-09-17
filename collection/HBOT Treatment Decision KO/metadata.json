@@ -151,6 +151,26 @@
             "dc:description": "Technical package documentation."
         },
         {
+            "@id": "DFU_HBO2_Treatment_Decision_Schema_Bundle_1_0.json",
+            "@type": [
+                "InformationArtifact",
+                "JSON Schema Document",
+                "Conformance Artifact"
+            ],
+            "dc:title": "DFU HBO2 Treatment Decision Runtime Schema Bundle Version 1.0",
+            "dc:identifier": "https://kgrid.org/cks/dfu-hbo2-treatment-decision/schema-bundles/versions/1.0",
+            "dc:description": "Normative JSON Schema Draft 7 bundle containing separately addressable complete input and unified result profiles for evaluateInputObject."
+        },
+        {
+            "@id": "interoperability.metadata.txt",
+            "@type": [
+                "InformationArtifact",
+                "Interoperability Metadata"
+            ],
+            "dc:title": "DFU HBO2 Treatment Decision Interoperability Metadata",
+            "dc:description": "Three-facet interoperability profile binding semantics, complete exchanged-object profiles, and the normative object-level invocation interface."
+        },
+        {
             "@id": "dfu_hbo2_binder.ipynb",
             "@type": [
                 "InformationArtifact",

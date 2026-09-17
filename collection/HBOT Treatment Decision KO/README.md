@@ -14,6 +14,20 @@ npm install @kgrid/dfu-hbo2-treatment-decision
 - `evaluateSerializedInput(rawJsonText)`
 - `evaluateFixture(inputFixture)`
 
+## Interoperability profile (CKS Version 1.0)
+
+The normative object-level interoperability boundary is the exported JavaScript function `evaluateInputObject`, identified by `urn:javascript:function:evaluateInputObject`. It accepts the complete native input object and returns the complete unified nine-field result object. `evaluateSerializedInput` is a serialized-text adapter with parsing and duplicate-property responsibilities; `evaluateFixture` is a testing interface; and the CLI modes are presentation adapters.
+
+- Input semantic model: `https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0/input-model`
+- Unified result semantic model: `https://kgrid.org/cks/dfu-hbo2-treatment-decision/output-models/1.0`
+- Runtime schema bundle: `https://kgrid.org/cks/dfu-hbo2-treatment-decision/schema-bundles/versions/1.0`
+- Complete invocation-input profile: `https://kgrid.org/cks/dfu-hbo2-treatment-decision/schema-bundles/versions/1.0#input`
+- Complete unified-result profile: `https://kgrid.org/cks/dfu-hbo2-treatment-decision/schema-bundles/versions/1.0#result`
+
+The semantic-model IRIs identify meaning; the schema-fragment IRIs identify complete exchanged-object representations. The runtime schema bundle is separate from the canonical test-vector schema.
+
+This amendment remains CKS Version 1.0. It makes the already-published runtime contracts separately addressable and machine-readable without changing clinical logic, validation precedence, mappings, implementation behavior, or test vectors.
+
 ## Usage
 
 ```js
@@ -47,6 +61,8 @@ npm test
 
 The test suite runs all canonical vectors from:
 - `UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Canonical_Test_Vectors_1_0.json`
+
+It also validates the runtime input and result profiles, confirms coverage of completed, out-of-scope, and error results, and verifies that the runtime and test-vector schemas remain separate artifacts.
 
 ## CLI
 
