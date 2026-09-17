@@ -1,7 +1,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/wagner-dfu-severity-score-ko>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO>
     a schema:CreativeWork, prov:Entity ;
 
     # 1. Purpose
@@ -10,7 +10,7 @@
 
     # 2. Scope
     schema:usageInfo
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/wagner-dfu-severity-score-ko#scope> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO#scope> ;
 
     # 3. License
     schema:license
@@ -18,12 +18,12 @@
 
     # 4. Provenance
     prov:has_provenance
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/wagner-dfu-severity-score-ko#provenance> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO#provenance> ;
 
     # 5. Tests
     schema:hasPart
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner-dfu-severity-score-ko/test/questionnaire.test.js>,
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/wagner-dfu-severity-score-ko/test/scorer.test.js> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO/test/questionnaire.test.js>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO/test/scorer.test.js> ;
 
     # 6. Evidence
     schema:citation
@@ -37,12 +37,12 @@
     schema:version
         "1.0" .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/wagner-dfu-severity-score-ko#scope>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO#scope>
     a schema:CreativeWork ;
     schema:description
         "For demonstration and educational use only. Each response must concern exactly one diabetic foot lesion or specifically identified assessment site, on the same affected foot, at the same assessment event. The CKS supports demonstrations in clinical decision support, quality improvement, and research, but is not production-ready or validated for real-world use. Its output is a Wagner classification only and must not by itself be used for treatment, prognosis, triage, amputation-risk estimation, complete infection or perfusion assessment, or hyperbaric-oxygen eligibility. The supplied text and logic are English-only, and the CKS does not support scoring directly from an image." .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/wagner-dfu-severity-score-ko#provenance>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO#provenance>
     a prov:Entity ;
     prov:wasAttributedTo <https://kgrid.org> ;
     schema:datePublished "2026-08-03" ;

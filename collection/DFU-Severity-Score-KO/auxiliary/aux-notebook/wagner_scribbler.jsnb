@@ -8,7 +8,7 @@
   },
   "jsnbversion": "v0.1",
   "run_on_load": false,
-  "source": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/HEAD/collection/wagner-dfu-severity-score-ko/auxiliary/aux-notebook",
+  "source": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/HEAD/collection/DFU-Severity-Score-KO/auxiliary/aux-notebook",
   "cells": [
     {
       "type": "html",

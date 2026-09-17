@@ -8,9 +8,9 @@
 <urn:uuid:4be7dcb2-66f3-4dab-878c-a186578cabe0>
     a koer:KnowledgeObjectExistenceRecord ;
     koer:recordsKnowledgeObject
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/wagner-dfu-severity-score-ko> .
+        <hhttps://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/wagner-dfu-severity-score-ko>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO>
     a koer:KnowledgeObject ;
     dcterms:title "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object" ;
     koer:hasMetadataComponent

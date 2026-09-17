@@ -1,7 +1,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/wagner-dfu-severity-score-ko>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     # ========================================================
@@ -21,7 +21,7 @@
 
                     # 1. Access route
                     schema:urlTemplate
-                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/wagner-dfu-severity-score-ko" ;
+                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO" ;
 
                     # 2. Access conditions
                     schema:description
