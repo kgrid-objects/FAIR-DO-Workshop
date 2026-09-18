@@ -33,7 +33,7 @@
 
 <#metadata-accessibility>
     a koer:MetadataComponent ;
-    koer:filePath "auxiliary/aux-extra-metadata/accessibility.metadata.txt" ;
+    koer:filePath "auxiliary/aux-extra-metadata/access.metadata.txt" ;
     dcterms:type "accessibility" .
 
 <#metadata-findability>
