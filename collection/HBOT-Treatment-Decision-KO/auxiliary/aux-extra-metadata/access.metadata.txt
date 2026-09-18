@@ -1,10 +1,10 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
-    # Access instance 1 — Public web access
+    # Access instance 1 — KO-derived repository access
     schema:potentialAction
         [
             a schema:ViewAction ;
@@ -13,14 +13,14 @@
                 [
                     a schema:EntryPoint ;
                     schema:urlTemplate
-                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO" ;
+                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO" ;
                     schema:description
                         "Public access; no authentication or payment required." ;
                     schema:name "HTTPS"
                 ]
         ] ;
 
-    # Access instance 2 — FDO Bench retrieval
+    # Access instance 2 — Mandatory FDO Bench retrieval
     schema:potentialAction
         [
             a schema:DownloadAction ;
@@ -28,15 +28,33 @@
             schema:target
                 [
                     a schema:EntryPoint ;
-                    schema:identifier "HBOT Regimen Burden KO" ;
+                    schema:identifier "HBOT Treatment Decision KO" ;
                     schema:description
                         "Available from the knowledge object embedded in FDO Bench; password authentication is required; no payment required." ;
-                    schema:name "FDO Bench KO Access API 1.0" ;
+                    schema:name
+                        "FDO Bench KO Access API 1.0" ;
                     schema:contentType "application/zip" ;
                     schema:actionApplication
                         [
                             a schema:SoftwareApplication ;
                             schema:name "FDO Bench"
                         ]
+                ]
+        ] ;
+
+    # Access instance 3 — Existence metadata
+    schema:potentialAction
+        [
+            a schema:ViewAction ;
+            schema:name "View existence metadata" ;
+            schema:target
+                [
+                    a schema:EntryPoint ;
+                    schema:urlTemplate
+                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/HBOT-Treatment-Decision-KO/auxiliary/aux-extra-metadata/existence.metadata.txt" ;
+                    schema:description
+                        "Public access; no authentication or payment required." ;
+                    schema:name "HTTPS" ;
+                    schema:contentType "text/turtle"
                 ]
         ] .

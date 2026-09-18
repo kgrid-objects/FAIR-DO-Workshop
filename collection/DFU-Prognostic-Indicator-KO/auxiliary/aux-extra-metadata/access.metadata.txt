@@ -39,4 +39,21 @@
                             schema:name "FDO Bench"
                         ]
                 ]
+        ] ;
+
+    # Access instance 3 — Existence metadata
+    schema:potentialAction
+        [
+            a schema:ViewAction ;
+            schema:name "View existence metadata" ;
+            schema:target
+                [
+                    a schema:EntryPoint ;
+                    schema:urlTemplate
+                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/DFU-Prognostic-Indicator-KO/auxiliary/aux-extra-metadata/existence.metadata.txt" ;
+                    schema:description
+                        "Public access; no authentication or payment required." ;
+                    schema:name "HTTPS" ;
+                    schema:contentType "text/turtle"
+                ]
         ] .

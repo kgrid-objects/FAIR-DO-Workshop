@@ -69,4 +69,36 @@
                             schema:name "FDO Bench"
                         ]
                 ]
+        ] ;
+
+    # ========================================================
+    # Access instance 3 — Existence metadata
+    # ========================================================
+
+    schema:potentialAction
+        [
+            a schema:ViewAction ;
+
+            schema:name
+                "View existence metadata" ;
+
+            schema:target
+                [
+                    a schema:EntryPoint ;
+
+                    # 1. Access route
+                    schema:urlTemplate
+                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/DFU-Severity-Score-KO/auxiliary/aux-extra-metadata/existence.metadata.txt" ;
+
+                    # 2. Access conditions
+                    schema:description
+                        "Public access; no authentication or payment required." ;
+
+                    # 3. Access protocol
+                    schema:name
+                        "HTTPS" ;
+
+                    schema:contentType
+                        "text/turtle"
+                ]
         ] .
