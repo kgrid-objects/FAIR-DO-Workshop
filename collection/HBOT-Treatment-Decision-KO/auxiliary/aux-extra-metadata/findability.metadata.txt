@@ -1,20 +1,27 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dc:     <http://purl.org/dc/terms/> .
 
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
-    schema:name "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object" ;
+    schema:name "HBOT-Treatment-Decision-KO" ;
+
+    dc:title "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object" ;
 
     schema:identifier "workshop-ko-2" ;
 
     schema:version "1.0" ;
 
+    schema:alternateName "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers" ;
+
+    schema:alternateName "UHMS DFU HBO2 CKS" ;
+
     schema:abstract "A clinical guideline-based knowledge object that converts four supplied facts about one candidate diabetic foot ulcer into one guideline-branch result for adjunctive hyperbaric oxygen therapy." ;
 
-    schema:alternateName "DFU HBO2 Treatment Decision" ;
-
     schema:about <http://id.nlm.nih.gov/mesh/D017719> ;
+
+    schema:about <http://id.nlm.nih.gov/mesh/D016523> ;
 
     schema:about <http://id.nlm.nih.gov/mesh/D006931> ;
 
@@ -32,15 +39,25 @@
 
     schema:keywords "hyperbaric oxygen therapy" ;
 
+    schema:keywords "HBOT" ;
+
     schema:keywords "HBO2" ;
 
     schema:keywords "clinical practice guideline" ;
 
     schema:keywords "treatment decision" ;
 
-    schema:keywords "Wagner grade" ;
+    schema:keywords "UHMS Figure 6" ;
 
     schema:keywords "Undersea and Hyperbaric Medical Society Guideline Figure 6" ;
+
+    schema:keywords "Wagner grade" ;
+
+    schema:keywords "adjunctive hyperbaric oxygen" ;
+
+    schema:keywords "postoperative diabetic foot ulcer" ;
+
+    schema:keywords "30-day nonhealing" ;
 
     schema:additionalProperty [
         a schema:PropertyValue ;
@@ -96,6 +113,37 @@
         schema:value "Four guideline-branch outcomes, one out-of-scope result, and deterministic validation-error results"
     ] .
 
+<http://id.nlm.nih.gov/mesh/D017719>
+    a schema:DefinedTerm ;
+    schema:name "Diabetic Foot" ;
+    schema:termCode "D017719" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D016523>
+    a schema:DefinedTerm ;
+    schema:name "Foot Ulcer" ;
+    schema:termCode "D016523" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D006931>
+    a schema:DefinedTerm ;
+    schema:name "Hyperbaric Oxygenation" ;
+    schema:termCode "D006931" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D017410>
+    a schema:DefinedTerm ;
+    schema:name "Practice Guidelines as Topic" ;
+    schema:termCode "D017410" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D020000>
+    a schema:DefinedTerm ;
+    schema:name "Decision Support Systems, Clinical" ;
+    schema:termCode "D020000" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+# Maximal Findability Profile
 # Identification, description, subject, type, technical characteristics, and indexing only.
 # Purpose, scope, inputs, outputs, access, licensing, provenance, tests, and evidence belong to other FAIR profiles.
 # These are profile conventions and do not redefine Schema.org or PROV-O.

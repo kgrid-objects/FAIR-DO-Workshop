@@ -1,10 +1,13 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dc:     <http://purl.org/dc/terms/> .
 
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
-    schema:name "DFU HBOT Bounded Regimen and Execution Burden" ;
+    schema:name "HBOT-Regimen-Burden-KO" ;
+
+    dc:title "DFU HBOT Bounded Regimen and Execution Burden" ;
 
     schema:identifier "workshop-ko-3" ;
 
@@ -13,6 +16,8 @@
     schema:abstract "A knowledge object that estimates the execution burden of a contemplated outpatient hyperbaric oxygen therapy course by combining a fixed population-level regimen range with a selected facility, patient-reported travel, and reported weekday-attendance difficulty." ;
 
     schema:about <http://id.nlm.nih.gov/mesh/D017719> ;
+
+    schema:about <http://id.nlm.nih.gov/mesh/D016523> ;
 
     schema:about <http://id.nlm.nih.gov/mesh/D006931> ;
 
@@ -32,6 +37,8 @@
 
     schema:keywords "HBOT" ;
 
+    schema:keywords "HBO2" ;
+
     schema:keywords "treatment burden" ;
 
     schema:keywords "execution burden" ;
@@ -41,6 +48,16 @@
     schema:keywords "weekday attendance" ;
 
     schema:keywords "regimen planning" ;
+
+    schema:keywords "outpatient HBOT" ;
+
+    schema:keywords "HBOT regimen burden" ;
+
+    schema:keywords "patient-reported travel time" ;
+
+    schema:keywords "weekday attendance difficulty" ;
+
+    schema:keywords "hyperbaric oxygen treatment course" ;
 
     schema:additionalProperty [
         a schema:PropertyValue ;
@@ -108,7 +125,37 @@
         schema:value "Five-level ordinal execution-burden scale: low, moderate, high, very high, and extreme"
     ] .
 
-# Findability Profile
+<http://id.nlm.nih.gov/mesh/D017719>
+    a schema:DefinedTerm ;
+    schema:name "Diabetic Foot" ;
+    schema:termCode "D017719" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D016523>
+    a schema:DefinedTerm ;
+    schema:name "Foot Ulcer" ;
+    schema:termCode "D016523" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D006931>
+    a schema:DefinedTerm ;
+    schema:name "Hyperbaric Oxygenation" ;
+    schema:termCode "D006931" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D014195>
+    a schema:DefinedTerm ;
+    schema:name "Travel" ;
+    schema:termCode "D014195" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D011795>
+    a schema:DefinedTerm ;
+    schema:name "Surveys and Questionnaires" ;
+    schema:termCode "D011795" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+# Maximal Findability Profile
 # Identification, description, subject, type, technical characteristics, and indexing only.
 # Purpose, scope, inputs, outputs, access, licensing, provenance, tests, and evidence belong to other FAIR profiles.
 # These are profile conventions and do not redefine Schema.org or PROV-O.
