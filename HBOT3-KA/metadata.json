@@ -65,5 +65,85 @@
         "@type": ["Implementation", "JavaScript"]
       }
     }
+  ],
+  "koio:hasTest": [
+    {
+      "@id": "Canonical_Fixtures_Test",
+      "@type": "koio:Test",
+      "dc:title": "Canonical Fixtures Test",
+      "dc:description": "Loads the published HBOT_Treatment_Target_KA_Canonical_Fixtures_1_0 suite, verifies there are exactly 65 fixtures, and runs one assertion-driven test per fixture confirming the gate-mapping and twelve-cell synthesis logic produces the expected status, target classification, reason code, gate result, and synthesis rule.",
+      "implementedBy": {
+        "@id": "test/canonical-fixtures.test.js",
+        "@type": [
+          "Implementation",
+          "JavaScript"
+        ]
+      },
+      "koio:hasDocumentation": [
+        {
+          "@id": "specs/HBOT_Treatment_Target_KA_Canonical_Fixtures_1_0/canonical-fixtures.json",
+          "@type": [
+            "InformationArtifact",
+            "Test Vector Document"
+          ],
+          "dc:title": "Canonical Fixtures for HBOT Treatment Target KA",
+          "dc:description": "The 65 published canonical orchestration fixtures, including given dependency-engagement/gate/projection conditions and expected KA results."
+        },
+        {
+          "@id": "specs/HBOT_Treatment_Target_KA_Canonical_Fixtures_1_0/canonical-fixture-schema.json",
+          "@type": [
+            "InformationArtifact",
+            "Test Vector Schema Document"
+          ],
+          "dc:title": "Canonical Fixtures Schema for HBOT Treatment Target KA",
+          "dc:description": "Schema for the canonical fixture suite, including fixture category, polarity, given conditions, and expected result."
+        }
+      ]
+    },
+    {
+      "@id": "Orchestrator_End_to_End_Test",
+      "@type": "koio:Test",
+      "dc:title": "Orchestrator End-to-End Test",
+      "dc:description": "Exercises end-to-end orchestration through the real constituent KOs (with scripted answers standing in for interactive questionnaire collection), covering a supported-synthesis case, an HBOT-not-supported case, an out-of-scope case, malformed-input and subject-coherence failures, a rejected pre-supplied questionnaire artifact, and an interactive-collection invocation failure.",
+      "implementedBy": {
+        "@id": "test/orchestrator.test.js",
+        "@type": [
+          "Implementation",
+          "JavaScript"
+        ]
+      }
+    }
+  ],
+  "koio:hasDocumentation": [
+    {
+      "@id": "auxiliary/aux-notebook/hbot_treatment_target_ka_binder.ipynb",
+      "@type": [
+        "InformationArtifact",
+        "Jupyter Notebook",
+        "Binder Notebook"
+      ],
+      "dc:title": "HBOT Treatment Target KA Binder Jupyter Notebook Demo",
+      "dc:description": "A Binder notebook demonstrating the HBOT Treatment Target Knowledge Assembly through a simplified in-notebook reimplementation of its four constituent computations plus the KA-owned gate mapping and synthesis matrix."
+    },
+    {
+      "@id": "auxiliary/aux-notebook/hbot_treatment_target_ka_colab.ipynb",
+      "@type": [
+        "InformationArtifact",
+        "Jupyter Notebook",
+        "Google Colab Notebook"
+      ],
+      "dc:title": "HBOT Treatment Target KA Google Colab Jupyter Notebook Demo",
+      "dc:description": "A Colab notebook that clones the repository and runs the real, governed KA implementation from src/orchestrator.js against the four constituent KOs, using scripted answers in place of live interactive questionnaire prompts."
+    },
+    {
+      "@id": "auxiliary/aux-notebook/hbot_treatment_target_ka_scribbler.jsnb",
+      "@type": [
+        "InformationArtifact",
+        "Jupyter Notebook",
+        "Scribbler Notebook"
+      ],
+      "dc:title": "HBOT Treatment Target KA Scribbler Notebook Demo",
+      "dc:description": "A Scribbler notebook demonstrating the HBOT Treatment Target Knowledge Assembly entirely in-browser through a simplified in-notebook reimplementation of its four constituent computations plus the KA-owned gate mapping and synthesis matrix."
+    }
   ]
 }
