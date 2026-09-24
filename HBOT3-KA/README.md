@@ -58,6 +58,14 @@ npm run cli -- --file test/request.json
 
 `test/request.json` is a ready-to-use sample envelope (subject binding, HBOT case assertions, and Margolis first-visit assessment). The request file never contains `wagner_response_artifact`/`burden_questionnaire_artifact`; the CLI always prompts interactively on stdin/stdout through the Wagner and Burden KOs' own questionnaire runners.
 
+## Notebooks
+
+Try this package here:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kgrid-objects/FAIR-DO-Workshop/HEAD?urlpath=lab/tree/HBOT3-KA/auxiliary/aux-notebook/hbot_treatment_target_ka_binder.ipynb%3Fkernel_name%3Djavascript)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kgrid-objects/FAIR-DO-Workshop/blob/HEAD/HBOT3-KA/auxiliary/aux-notebook/hbot_treatment_target_ka_colab.ipynb)
+[![Open In Scribbler](https://img.shields.io/badge/Open%20In-Scribbler-2F9E44?logo=javascript&logoColor=white)](https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/HBOT3-KA/auxiliary/aux-notebook/hbot_treatment_target_ka_scribbler.jsnb)
+
 ## Architecture
 
 
