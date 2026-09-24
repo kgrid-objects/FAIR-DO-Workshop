@@ -4,7 +4,7 @@
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
-    schema:name "DFU Prognostic Indicator KO" ;
+    schema:name "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks" ;
 
     schema:identifier "workshop-ko-4" ;
 

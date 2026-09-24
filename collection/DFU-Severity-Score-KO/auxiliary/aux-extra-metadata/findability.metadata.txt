@@ -1,22 +1,15 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix dc:     <http://purl.org/dc/terms/> .
 
 <https://kgrid.org/kos/wagner/versions/ko-1.0>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     # 1. Identification
     schema:name
-        "DFU Severity Score KO" ;
-
-    dc:title
         "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object" ;
 
     schema:alternateName
-        "Wagner Classification",
-        "Meggitt-Wagner Classification",
-        "Wagner Grading System",
-        "Wagner Grade" ;
+        "Wagner Classification" ;
 
     schema:identifier
         "workshop-ko-1" ;
@@ -25,7 +18,7 @@
         "1.0" ;
 
     schema:url
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO> ;
+    <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO> ;
 
     # 2. Description
     schema:abstract
@@ -38,34 +31,20 @@
         <https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0/terms/at-risk-site>,
         <https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0/terms/gangrene>,
         <https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0/terms/osteomyelitis>,
-        <https://uts.nlm.nih.gov/uts/umls/concept/C0011849>,
-        <https://uts.nlm.nih.gov/uts/umls/concept/C0342257>,
-        <https://uts.nlm.nih.gov/uts/umls/concept/C0011882>,
-        <https://uts.nlm.nih.gov/uts/umls/concept/C0206172>,
+        <https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0011849>,
+        <https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0342257>,
+        <https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0011882>,
+        <https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0206172>,
         <http://id.nlm.nih.gov/mesh/D003920>,
         <http://id.nlm.nih.gov/mesh/D048909>,
         <http://id.nlm.nih.gov/mesh/D003929>,
-        <http://id.nlm.nih.gov/mesh/D017719>,
-        <http://id.nlm.nih.gov/mesh/D016523>,
-        <http://id.nlm.nih.gov/mesh/D005734>,
-        <http://id.nlm.nih.gov/mesh/D010019> ;
+        <http://id.nlm.nih.gov/mesh/D017719> ;
 
     schema:keywords
         "diabetic foot",
         "diabetic foot lesion",
         "Meggitt-Wagner classification",
-        "Meggitt-Wagner grading",
         "Wagner score",
-        "Wagner grade 0-5",
-        "Wagner grading system",
-        "diabetic foot ulcer classification",
-        "diabetic foot severity",
-        "foot ulcer grading",
-        "superficial ulcer",
-        "deep ulcer",
-        "localized gangrene",
-        "extensive gangrene",
-        "osteomyelitis",
         "adaptive questionnaire",
         "clinical knowledge summary" ;
 
@@ -117,25 +96,25 @@
 
 
 # Controlled UMLS term descriptions
-<https://uts.nlm.nih.gov/uts/umls/concept/C0011849>
+<https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0011849>
     a schema:DefinedTerm ;
     schema:name "Diabetes mellitus" ;
     schema:termCode "C0011849" ;
     schema:inDefinedTermSet <https://uts.nlm.nih.gov/uts/umls/home> .
 
-<https://uts.nlm.nih.gov/uts/umls/concept/C0342257>
+<https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0342257>
     a schema:DefinedTerm ;
     schema:name "Complication due to diabetes mellitus" ;
     schema:termCode "C0342257" ;
     schema:inDefinedTermSet <https://uts.nlm.nih.gov/uts/umls/home> .
 
-<https://uts.nlm.nih.gov/uts/umls/concept/C0011882>
+<https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0011882>
     a schema:DefinedTerm ;
     schema:name "Diabetic neuropathy" ;
     schema:termCode "C0011882" ;
     schema:inDefinedTermSet <https://uts.nlm.nih.gov/uts/umls/home> .
 
-<https://uts.nlm.nih.gov/uts/umls/concept/C0206172>
+<https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C0206172>
     a schema:DefinedTerm ;
     schema:name "Diabetic foot" ;
     schema:termCode "C0206172" ;
@@ -165,24 +144,6 @@
     a schema:DefinedTerm ;
     schema:name "Diabetic Foot" ;
     schema:termCode "D017719" ;
-    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
-
-<http://id.nlm.nih.gov/mesh/D016523>
-    a schema:DefinedTerm ;
-    schema:name "Foot Ulcer" ;
-    schema:termCode "D016523" ;
-    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
-
-<http://id.nlm.nih.gov/mesh/D005734>
-    a schema:DefinedTerm ;
-    schema:name "Gangrene" ;
-    schema:termCode "D005734" ;
-    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
-
-<http://id.nlm.nih.gov/mesh/D010019>
-    a schema:DefinedTerm ;
-    schema:name "Osteomyelitis" ;
-    schema:termCode "D010019" ;
     schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
 
 
