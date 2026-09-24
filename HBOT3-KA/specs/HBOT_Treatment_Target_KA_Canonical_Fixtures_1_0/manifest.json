@@ -1,0 +1,33 @@
+{
+  "package_id": "HBOT-TREATMENT-TARGET-KA-CANONICAL-FIXTURES",
+  "package_version": "1.0",
+  "cks_status": "CKS Version 1.0",
+  "cks_version_iri": "https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0",
+  "files": [
+    {
+      "path": "TEST_REPORT.json",
+      "bytes": 24804,
+      "sha256": "672fc8a6403f47f77f65b5b51902433cd55c37966bda5be2385a1d3c317fa440"
+    },
+    {
+      "path": "canonical-fixture-schema.json",
+      "bytes": 1909,
+      "sha256": "73c9dea3a21b61ac1e7b2f548cb29ba578346d54700d4c7f0df6cb1219ccc8ae"
+    },
+    {
+      "path": "canonical-fixtures.json",
+      "bytes": 110701,
+      "sha256": "4b5e98e71c59ff2252e87f1b519e19fefe989c56e3a8d4c71982a385fce12a28"
+    },
+    {
+      "path": "coverage-summary.json",
+      "bytes": 489,
+      "sha256": "9f57043d1066af4d66077a10d230cf56a5c06aaa35527a5a124c0c327d361582"
+    },
+    {
+      "path": "run_fixtures.py",
+      "bytes": 5468,
+      "sha256": "304fd03e34ec40cdfbeaa6152cf42bd3921849c4dc26ea9090a79d3ed9c07345"
+    }
+  ]
+}

@@ -1,0 +1,3658 @@
+{
+  "suite_id": "HBOT-TREATMENT-TARGET-KA-CANONICAL-FIXTURES",
+  "suite_version": "1.0",
+  "cks_status": "CKS Version 1.0",
+  "cks_version_iri": "https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0",
+  "fixtures": [
+    {
+      "fixture_id": "MATRIX-POS-01",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-VU-L-01",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "ON_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-VU-L-01",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-01",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-VU-L-01",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-02",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-VU-M-02",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "MIDDLE_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "ON_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-VU-M-02",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-02",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-VU-M-02",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "MIDDLE_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-HBOT-DECISION"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-03",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-VU-H-03",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "HIGHER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "NEAR_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-VU-H-03",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-03",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-VU-H-03",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "HIGHER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-BURDEN"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-04",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-U-L-04",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "ON_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-U-L-04",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-04",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-U-L-04",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-MARGOLIS"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-05",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-U-M-05",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "MIDDLE_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "NEAR_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-U-M-05",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-05",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-U-M-05",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "MIDDLE_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-06",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-U-H-06",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "HIGHER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "NEAR_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-U-H-06",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-06",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-U-H-06",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "HIGHER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-HBOT-DECISION"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-07",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-I-L-07",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "INTERMEDIATE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "NEAR_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-I-L-07",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-07",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-I-L-07",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "INTERMEDIATE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-BURDEN"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-08",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-I-M-08",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "INTERMEDIATE_PROGNOSIS_BAND",
+        "burden_projection": "MIDDLE_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "NEAR_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-I-M-08",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-08",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-I-M-08",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "INTERMEDIATE_PROGNOSIS_BAND",
+        "burden_projection": "MIDDLE_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-MARGOLIS"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-09",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-I-H-09",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "INTERMEDIATE_PROGNOSIS_BAND",
+        "burden_projection": "HIGHER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "OUTER_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-I-H-09",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-09",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-I-H-09",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "INTERMEDIATE_PROGNOSIS_BAND",
+        "burden_projection": "HIGHER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-10",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-RF-L-10",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "RELATIVELY_FAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "NEAR_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-RF-L-10",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-10",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-RF-L-10",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "RELATIVELY_FAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-HBOT-DECISION"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-11",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-RF-M-11",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "RELATIVELY_FAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "MIDDLE_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "OUTER_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-RF-M-11",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-11",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-RF-M-11",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "RELATIVELY_FAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "MIDDLE_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-BURDEN"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "MATRIX-POS-12",
+      "category": "matrix_cell_positive",
+      "polarity": "positive",
+      "cks_requirements": [
+        "SYN-RF-H-12",
+        "INV-01",
+        "INV-23"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "RELATIVELY_FAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "HIGHER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "OUTER_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-RF-H-12",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "MATRIX-NEG-12",
+      "category": "matrix_cell_negative",
+      "polarity": "negative",
+      "cks_requirements": [
+        "SYN-RF-H-12",
+        "INV-01",
+        "INV-21",
+        "INV-37"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "RELATIVELY_FAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "HIGHER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-MARGOLIS"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "GATE-OUTPUT-01",
+      "category": "gate_outcome",
+      "polarity": "positive",
+      "cks_requirements": [
+        "DEC-GATE-06A",
+        "INV-19",
+        "INV-20"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-01",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "OFF_TARGET",
+        "reason_code": "KA-RESULT-HBOT-NOT-SUPPORTED",
+        "gate_result": "NOT_SUPPORTED",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "GATE-OUTPUT-02",
+      "category": "gate_outcome",
+      "polarity": "positive",
+      "cks_requirements": [
+        "DEC-GATE-06A",
+        "INV-19",
+        "INV-20"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "ON_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-VU-L-01",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "GATE-OUTPUT-03",
+      "category": "gate_outcome",
+      "polarity": "positive",
+      "cks_requirements": [
+        "DEC-GATE-06A",
+        "INV-19",
+        "INV-20"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-03",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "completed",
+        "target_classification": "ON_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": "SYN-VU-L-01",
+        "completed_classification_permitted": true,
+        "diagnostics_include": []
+      }
+    },
+    {
+      "fixture_id": "GATE-OUTPUT-04",
+      "category": "gate_outcome",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-GATE-06A",
+        "INV-19",
+        "INV-20"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-04",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-INDET-HBOT-INSUFFICIENT-DECISION",
+        "gate_result": "INSUFFICIENT_DECISION",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-INDET-HBOT-INSUFFICIENT-DECISION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "GATE-OUT-OF-SCOPE",
+      "category": "gate_outcome",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-GATE-06A",
+        "INV-19",
+        "INV-20"
+      ],
+      "given": {
+        "hbot_native_result": "OUT-OF-SCOPE",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-INDET-HBOT-OUT-OF-SCOPE",
+        "gate_result": "OUT_OF_SCOPE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-INDET-HBOT-OUT-OF-SCOPE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "GATE-UNDEFINED",
+      "category": "gate_outcome",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-GATE-06A",
+        "INV-19",
+        "INV-20"
+      ],
+      "given": {
+        "hbot_native_result": "UNRECOGNIZED-NATIVE-RESULT",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": []
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-GATE-UNDEFINED",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-GATE-UNDEFINED"
+        ]
+      }
+    },
+    {
+      "fixture_id": "FAIL-INPUT",
+      "category": "dependency_or_assembly_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-FAIL-12A",
+        "INV-12",
+        "INV-30"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "input_validation",
+            "role": null
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-INPUT-VALIDATION",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-INPUT-VALIDATION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "FAIL-UNAVAILABLE",
+      "category": "dependency_or_assembly_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-FAIL-12A",
+        "INV-12",
+        "INV-30"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "not_attempted",
+            "engagement_mode": "not_applicable",
+            "validation_status": "not_validated"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "dependency_unavailable",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-DEPENDENCY-UNAVAILABLE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-DEPENDENCY-UNAVAILABLE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "FAIL-IDENTITY",
+      "category": "dependency_or_assembly_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-FAIL-12A",
+        "INV-12",
+        "INV-30"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "identity_mismatch",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-DEPENDENCY-IDENTITY",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-DEPENDENCY-IDENTITY"
+        ]
+      }
+    },
+    {
+      "fixture_id": "FAIL-INVOCATION",
+      "category": "dependency_or_assembly_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-FAIL-12A",
+        "INV-12",
+        "INV-30"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "invocation_failure",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "not_validated"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "invocation_failure",
+            "role": "DEP-MARGOLIS"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-INVOCATION",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-INVOCATION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "FAIL-NATIVE",
+      "category": "dependency_or_assembly_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-FAIL-12A",
+        "INV-12",
+        "INV-30"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "native_failure",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "not_validated"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "native_failure",
+            "role": "DEP-BURDEN"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-CONSTITUENT-RESULT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-CONSTITUENT-RESULT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "FAIL-OUTPUT-CONTRACT",
+      "category": "dependency_or_assembly_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-FAIL-12A",
+        "INV-12",
+        "INV-30"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-HBOT-DECISION"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "FAIL-TRANSFORMATION",
+      "category": "dependency_or_assembly_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-FAIL-12A",
+        "INV-12",
+        "INV-30"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "transformation_failure",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-TRANSFORMATION",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-TRANSFORMATION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "FAIL-JOIN",
+      "category": "dependency_or_assembly_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-FAIL-12A",
+        "INV-12",
+        "INV-30"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "join_incomplete",
+            "role": null
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-JOIN-INCOMPLETE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-JOIN-INCOMPLETE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "FAIL-RESULT-CONSTRUCTION",
+      "category": "dependency_or_assembly_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-FAIL-12A",
+        "INV-12",
+        "INV-30"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "result_construction",
+            "role": null
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-RESULT-CONSTRUCTION",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-RESULT-CONSTRUCTION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "VERSION-MISMATCH-01",
+      "category": "version_mismatch",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-VERS-16A",
+        "INV-41"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "version_mismatch",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-DEPENDENCY-VERSION",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-DEPENDENCY-VERSION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "VERSION-MISMATCH-02",
+      "category": "version_mismatch",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-VERS-16A",
+        "INV-41"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "version_mismatch",
+            "role": "DEP-HBOT-DECISION"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-DEPENDENCY-VERSION",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-DEPENDENCY-VERSION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "VERSION-MISMATCH-03",
+      "category": "version_mismatch",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-VERS-16A",
+        "INV-41"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "version_mismatch",
+            "role": "DEP-BURDEN"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-DEPENDENCY-VERSION",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-DEPENDENCY-VERSION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "VERSION-MISMATCH-04",
+      "category": "version_mismatch",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-VERS-16A",
+        "INV-41"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "version_mismatch",
+            "role": "DEP-MARGOLIS"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-DEPENDENCY-VERSION",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-DEPENDENCY-VERSION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "SUBJECT-MISMATCH-01",
+      "category": "subject_incoherence",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-IN-13A",
+        "INV-33"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "subject_incoherence",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-SUBJECT-COHERENCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-SUBJECT-COHERENCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "SUBJECT-MISMATCH-02",
+      "category": "subject_incoherence",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-IN-13A",
+        "INV-33"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "subject_incoherence",
+            "role": "DEP-HBOT-DECISION"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-SUBJECT-COHERENCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-SUBJECT-COHERENCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "SUBJECT-MISMATCH-03",
+      "category": "subject_incoherence",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-IN-13A",
+        "INV-33"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "subject_incoherence",
+            "role": "DEP-BURDEN"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-SUBJECT-COHERENCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-SUBJECT-COHERENCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "SUBJECT-MISMATCH-04",
+      "category": "subject_incoherence",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-IN-13A",
+        "INV-33"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "subject_incoherence",
+            "role": "DEP-MARGOLIS"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-SUBJECT-COHERENCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-SUBJECT-COHERENCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-01",
+      "category": "temporal_incoherence",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-TIME-17A",
+        "INV-46"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "temporal_incoherence",
+            "detail": "future_dated"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-TEMPORAL-COHERENCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-TEMPORAL-COHERENCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-02",
+      "category": "temporal_incoherence",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-TIME-17A",
+        "INV-46"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "temporal_incoherence",
+            "detail": "expired"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-TEMPORAL-COHERENCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-TEMPORAL-COHERENCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-03",
+      "category": "temporal_incoherence",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-TIME-17A",
+        "INV-46"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "temporal_incoherence",
+            "detail": "superseded"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-TEMPORAL-COHERENCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-TEMPORAL-COHERENCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-04",
+      "category": "temporal_incoherence",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-TIME-17A",
+        "INV-46"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "temporal_incoherence",
+            "detail": "stale_unattested"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-TEMPORAL-COHERENCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-TEMPORAL-COHERENCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-05",
+      "category": "temporal_incoherence",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-TIME-17A",
+        "INV-46"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "temporal_incoherence",
+            "detail": "execution_time_mismatch"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-TEMPORAL-COHERENCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-TEMPORAL-COHERENCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "PROVENANCE-FAIL-01",
+      "category": "provenance_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-PROV-18A",
+        "INV-48",
+        "INV-49"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "provenance_failure",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-PROVENANCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-PROVENANCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "PROVENANCE-FAIL-02",
+      "category": "provenance_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-PROV-18A",
+        "INV-48",
+        "INV-49"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "provenance_failure",
+            "role": "DEP-HBOT-DECISION"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-PROVENANCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-PROVENANCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "PROVENANCE-FAIL-03",
+      "category": "provenance_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-PROV-18A",
+        "INV-48",
+        "INV-49"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "provenance_failure",
+            "role": "DEP-BURDEN"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-PROVENANCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-PROVENANCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "PROVENANCE-FAIL-04",
+      "category": "provenance_failure",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-PROV-18A",
+        "INV-48",
+        "INV-49"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "provenance_failure",
+            "role": "DEP-MARGOLIS"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-PROVENANCE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-PROVENANCE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "SYNTH-UNKNOWN",
+      "category": "undefined_or_disputed_synthesis",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-SYN-08A",
+        "INV-23",
+        "INV-24"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "UNKNOWN_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "synthesis_unknown_projection"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-SYNTHESIS-UNKNOWN-PROJECTION",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-SYNTHESIS-UNKNOWN-PROJECTION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "SYNTH-NONCONFORMING",
+      "category": "undefined_or_disputed_synthesis",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-SYN-08A",
+        "INV-23",
+        "INV-24"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": null,
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "synthesis_nonconforming"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-SYNTHESIS-COMBINATION-NONCONFORMING",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-SYNTHESIS-COMBINATION-NONCONFORMING"
+        ]
+      }
+    },
+    {
+      "fixture_id": "SYNTH-UNDEFINED",
+      "category": "undefined_or_disputed_synthesis",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-SYN-08A",
+        "INV-23",
+        "INV-24"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "UNASSIGNED_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "synthesis_undefined"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-SYNTHESIS-COMBINATION-UNDEFINED",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-SYNTHESIS-COMBINATION-UNDEFINED"
+        ]
+      }
+    },
+    {
+      "fixture_id": "SYNTH-DISPUTED",
+      "category": "undefined_or_disputed_synthesis",
+      "polarity": "negative",
+      "cks_requirements": [
+        "DEC-SYN-08A",
+        "INV-23",
+        "INV-24"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "MIDDLE_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "synthesis_disputed"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-SYNTHESIS-COMBINATION-DISPUTED",
+        "gate_result": "SUPPORTED",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-SYNTHESIS-COMBINATION-DISPUTED"
+        ]
+      }
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-WAGNER",
+      "category": "four_engagement_proof",
+      "polarity": "negative",
+      "cks_requirements": [
+        "INV-01",
+        "INV-18",
+        "INV-37",
+        "INV-47"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_invalid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "invalid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "output_contract",
+            "role": "DEP-WAGNER"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-OUTPUT-CONTRACT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-OUTPUT-CONTRACT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-HBOT",
+      "category": "four_engagement_proof",
+      "polarity": "negative",
+      "cks_requirements": [
+        "INV-01",
+        "INV-18",
+        "INV-37",
+        "INV-47"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "not_attempted",
+            "engagement_mode": "not_applicable",
+            "validation_status": "not_validated"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "dependency_unavailable",
+            "role": "DEP-HBOT-DECISION"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-DEPENDENCY-UNAVAILABLE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-DEPENDENCY-UNAVAILABLE"
+        ]
+      }
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-BURDEN",
+      "category": "four_engagement_proof",
+      "polarity": "negative",
+      "cks_requirements": [
+        "INV-01",
+        "INV-18",
+        "INV-37",
+        "INV-47"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "invocation_failure",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "not_validated"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "invocation_failure",
+            "role": "DEP-BURDEN"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-INVOCATION",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-INVOCATION"
+        ]
+      }
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-MARGOLIS",
+      "category": "four_engagement_proof",
+      "polarity": "negative",
+      "cks_requirements": [
+        "INV-01",
+        "INV-18",
+        "INV-37",
+        "INV-47"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "native_failure",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "not_validated"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "native_failure",
+            "role": "DEP-MARGOLIS"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-CONSTITUENT-RESULT",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-CONSTITUENT-RESULT"
+        ]
+      }
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-CACHED",
+      "category": "four_engagement_proof",
+      "polarity": "negative",
+      "cks_requirements": [
+        "INV-01",
+        "INV-18",
+        "INV-37",
+        "INV-47"
+      ],
+      "given": {
+        "hbot_native_result": "OUTPUT-02",
+        "prognosis_projection": "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+        "burden_projection": "LOWER_BURDEN_BAND",
+        "dependency_engagements": [
+          {
+            "role": "DEP-WAGNER",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-HBOT-DECISION",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-BURDEN",
+            "state": "completed_valid",
+            "engagement_mode": "fresh_invocation",
+            "validation_status": "valid"
+          },
+          {
+            "role": "DEP-MARGOLIS",
+            "state": "completed_valid",
+            "engagement_mode": "cached_replay",
+            "validation_status": "valid"
+          }
+        ],
+        "injected_conditions": [
+          {
+            "code": "cached_engagement",
+            "role": "DEP-MARGOLIS"
+          }
+        ]
+      },
+      "expect": {
+        "status": "indeterminate",
+        "target_classification": "INDETERMINATE",
+        "reason_code": "KA-ERR-JOIN-INCOMPLETE",
+        "gate_result": "NOT_EVALUABLE",
+        "synthesis_rule_id": null,
+        "completed_classification_permitted": false,
+        "diagnostics_include": [
+          "KA-ERR-JOIN-INCOMPLETE"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "total_fixtures": 65,
+  "by_category": {
+    "matrix_cell_positive": 12,
+    "matrix_cell_negative": 12,
+    "gate_outcome": 6,
+    "dependency_or_assembly_failure": 9,
+    "version_mismatch": 4,
+    "subject_incoherence": 4,
+    "temporal_incoherence": 5,
+    "provenance_failure": 4,
+    "undefined_or_disputed_synthesis": 4,
+    "four_engagement_proof": 5
+  },
+  "matrix_positive": 12,
+  "matrix_negative": 12,
+  "all_completed_results_require_four_valid_fresh_engagements": true
+}

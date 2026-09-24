@@ -1,0 +1,126 @@
+{
+  "manifestType": "HBOTTreatmentTargetKADependencyManifest",
+  "manifestVersion": "1.2",
+  "generatedAt": "2026-09-22",
+  "kaSpecificationIri": "https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0",
+  "bindingPolicy": "main-branch-locator-with-exact-version-and-checksum-verification",
+  "repository": {
+    "url": "https://github.com/kgrid-objects/FAIR-DO-Workshop",
+    "archiveCommit": "b078c423e5453e184bd5d3ced24a37eac8df4b2a",
+    "publishedBranchLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main",
+    "observedCommit": "b078c423e5453e184bd5d3ced24a37eac8df4b2a",
+    "archiveLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/archive/b078c423e5453e184bd5d3ced24a37eac8df4b2a.tar.gz",
+    "observedArchiveSha256": "72d89d6489b9afe563da8aef9c145e049e80e370d0d49711a63f721aa7296aa5",
+    "observedArchiveByteSize": 5709182
+  },
+  "suppliedBundleEvidence": {
+    "fileName": "KOWorkbenchToolf 44.zip",
+    "sha256": "29030d203768c6eaf407edc6bbfe1ba08f04fd7ea09c4e4cec46facd3b2d41f6",
+    "byteSize": 6095787,
+    "comparison": "Normative specifications and executable source files match the bound repository commit. The supplied bundle contains ancillary presentation or metadata differences in generated index pages, selected notebooks, and the Wagner findability metadata; these files are not invocation inputs and are not substituted for the immutable published binding."
+  },
+  "packageChecksumMethod": "For each dependency, canonicalTarSha256 is SHA-256 over a deterministic uncompressed tar produced by git archive --format=tar --prefix=<packageName>/ <commit>:collection/<packageName>. gitTreeOid is the repository tree object identifier. Both values bind the complete published package tree at the immutable commit.",
+  "dependencies": [
+    {
+      "dependencyRole": "DEP-WAGNER",
+      "cksVersionIri": "https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0",
+      "knowledgeObjectIdentifier": "workshop-ko-1",
+      "npmPackageIdentity": "@wagner/classification@1.0.0",
+      "knowledgeObjectVersion": "1.0",
+      "packagePath": "collection/DFU-Severity-Score-KO",
+      "publishedPackageLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO",
+      "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/main/collection/DFU-Severity-Score-KO/metadata.json",
+      "metadataSha256": "65737e673c350d209efbe5e12157fba56ec2b24bd5b277b1fc8a4de8d584c265",
+      "packageJsonSha256": "cc9b8857a7250f1a44bd1ec0992e8b64418f386bd2756180ac04b959163bb14b",
+      "gitTreeOid": "f2aa6d49b303180b2f0e20abddb712adfd978ca6",
+      "canonicalTarSha256": "a9373a429bab4c463dc07223646bc11bd7b0015e22bf25f3212ce4c914bb88cb",
+      "canonicalTarByteSize": 1259520,
+      "fileCount": 50,
+      "versionEvidence": ["metadata.json dc:version = 1.0", "package.json version = 1.0.0", "knowledge entries dc:version = 1.0", "specs/kgrid.org_Meggitt_Wagner_Questionnaire_CKS_Version_1_0.docx"],
+      "bindingStatus": "closed"
+    },
+    {
+      "dependencyRole": "DEP-HBOT-DECISION",
+      "cksVersionIri": "https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0",
+      "knowledgeObjectIdentifier": "workshop-ko-2",
+      "npmPackageIdentity": "@kgrid/dfu-hbo2-treatment-decision@1.0.0",
+      "knowledgeObjectVersion": "1.0",
+      "packagePath": "collection/HBOT-Treatment-Decision-KO",
+      "publishedPackageLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO",
+      "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/main/collection/HBOT-Treatment-Decision-KO/metadata.json",
+      "metadataSha256": "c718a7001fe7dd49eb5d102a2bfedaf47bf64e079e622cd208a846e03ec9ffcc",
+      "packageJsonSha256": "d53bf04f5767eef97e2180daaf83fe6c1a7f5ae7a4b0296dea4853dd16331a8a",
+      "gitTreeOid": "9573c066280254106edfb9b2d12876660f52f9d5",
+      "canonicalTarSha256": "fadffd30018996ba84e6c97c80e1917cbdd5b68da375cd876986e9c3c33bc067",
+      "canonicalTarByteSize": 829440,
+      "fileCount": 25,
+      "versionEvidence": ["metadata.json dc:version = 1.0", "package.json version = 1.0.0", "knowledge entry dc:version = 1.0", "specs/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx"],
+      "bindingStatus": "closed"
+    },
+    {
+      "dependencyRole": "DEP-BURDEN",
+      "cksVersionIri": "https://kgrid.org/cks/dfu-hbot-burden/versions/cks-1.0",
+      "knowledgeObjectIdentifier": "workshop-ko-3",
+      "npmPackageIdentity": "@dfu-hbot/bounded-regimen-and-execution-burden@1.0.0",
+      "knowledgeObjectVersion": "1.0",
+      "packagePath": "collection/HBOT-Regimen-Burden-KO",
+      "publishedPackageLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO",
+      "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/main/collection/HBOT-Regimen-Burden-KO/metadata.json",
+      "metadataSha256": "bcd6fc8e01abe0e729908cbef50945ff4954bd1d0b9e57f63861636e5803bc86",
+      "packageJsonSha256": "0cb02fd0de59ac5d1ae2b187fc736566802309e5cd1e77feb946b06894d2db66",
+      "gitTreeOid": "921d9378f182e3f3395797cda314ceb30bcfddf7",
+      "canonicalTarSha256": "455a0250c9fa496906ece8f739dc5968a3fa2719fb5a59e611c93709420d8af8",
+      "canonicalTarByteSize": 5601280,
+      "fileCount": 149,
+      "versionEvidence": ["metadata.json dc:version = 1.0", "package.json version = 1.0.0", "three knowledge entries dc:version = 1.0", "specs/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx"],
+      "bindingStatus": "closed"
+    },
+    {
+      "dependencyRole": "DEP-MARGOLIS",
+      "cksVersionIri": "https://kgrid.org/cks/margolis-dfu-prognosis/versions/1.0",
+      "knowledgeObjectIdentifier": "workshop-ko-4",
+      "npmPackageIdentity": "@kgrid/margolis-dfu-prognostic@1.0.0",
+      "knowledgeObjectVersion": "1.0",
+      "packagePath": "collection/DFU-Prognostic-Indicator-KO",
+      "publishedPackageLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO",
+      "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/main/collection/DFU-Prognostic-Indicator-KO/metadata.json",
+      "metadataSha256": "2539a73d51cb2ed6493ead45831a5e7cb2ee3b73d91bb5294f3271869673b7ee",
+      "packageJsonSha256": "d33a7305a8aa4bb40a0aaef20d9125c68b029e2813bcbf84688652a031c4ea57",
+      "gitTreeOid": "43e2643c4e4e9127df2f4283781f050c00f26cb7",
+      "canonicalTarSha256": "471f78190245d03da7fc49affd1b4df851c15837d1d305d7c7a8b759642a524b",
+      "canonicalTarByteSize": 686080,
+      "fileCount": 25,
+      "versionEvidence": ["metadata.json dc:version = 1.0", "package.json version = 1.0.0", "knowledge entry dc:version = 1.0", "specs/Margolis_2022_DFU_Prognostic_CKS-1_0.docx"],
+      "bindingStatus": "closed"
+    }
+  ],
+  "compatibilityGovernance": {
+    "decisionId": "DEC-VERS-16A",
+    "candidateDispositions": [
+      "compatible_no_ka_semantic_change",
+      "compatible_with_ka_revision",
+      "breaking_new_ka_version_required",
+      "not_admitted"
+    ],
+    "requiredEvidence": [
+      "immutable candidate package locator and checksums",
+      "CKS, metadata, knowledge-entry, package, and realization version evidence",
+      "file-level and semantic change report",
+      "interface, vocabulary, semantic, validation, failure, provenance, and conformance comparison",
+      "KA routing, transformation, synthesis, diagnostics, provenance, and authority-boundary impact assessment",
+      "anti-duplication and non-substitution evidence",
+      "complete regression and differential test report",
+      "reviewer identities, disposition, rationale, residual risks, and migration conditions"
+    ],
+    "approval": {
+      "requiredAuthority": "Knowledge Systems Lab, University of Michigan, through a specifically identified release approver",
+      "separationOfDuties": "technical compatibility reviewer may not be the sole release approver",
+      "clinicalCoreview": "required for changes to clinical meaning, thresholds, validation, output semantics, or interpretation",
+      "technicalCoreview": "required for changes to schemas, executable interfaces, security-relevant packaging, or provenance",
+      "currentConstraint": "No later version may be admitted without the evidence, separated review, explicit approval, manifest replacement, and regression gate required by DEC-VERS-16A."
+    },
+    "regressionPolicy": "All required constituent, end-to-end, synthesis-cell, failure, safeguard, output, provenance, determinism, and differential tests must pass. Failed, skipped, quarantined, or unexplained tests block admission.",
+    "publicationPolicy": "Admission requires an atomic publication of a newly versioned manifest, evidence and approval records, regression report, candidate bindings, effective date, superseded binding, and any required KA specification or result-model revision. Prior releases remain retrievable; rollback restores one complete approved release without mixing bindings."
+  },
+  "conformanceRule": "CKS Version 1.0 retrieves each package through the published main-branch locator. A runtime satisfies the dependency binding only when the dependency role, CKS version IRI, package identity and version, package path, Git tree object identifier, and canonical package checksum match this manifest. If main moves and any bound identity or checksum changes, engagement fails until a governed manifest update admitted under DEC-VERS-16A replaces this manifest. Later versions, locally edited folders, and semantically similar packages do not satisfy the binding."
+}
