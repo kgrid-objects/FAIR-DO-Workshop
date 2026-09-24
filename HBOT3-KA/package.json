@@ -1,0 +1,32 @@
+{
+  "name": "@kgrid/hbot-treatment-target-ka",
+  "version": "1.0.0",
+  "description": "HBOT Treatment Target Knowledge Assembly: orchestrates the Wagner, HBOT Decision, Burden, and Margolis constituent Knowledge Objects into one governed target-classification result.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": "./src/index.js",
+    "./orchestrator": "./src/orchestrator.js"
+  },
+  "bin": {
+    "hbot-treatment-target-ka": "src/cli/hbot-treatment-target.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "cli": "node src/cli/hbot-treatment-target.js"
+  },
+  "dependencies": {
+    "@wagner/classification": "file:../collection/DFU-Severity-Score-KO",
+    "@kgrid/dfu-hbo2-treatment-decision": "file:../collection/HBOT-Treatment-Decision-KO",
+    "@dfu-hbot/bounded-regimen-and-execution-burden": "file:../collection/HBOT-Regimen-Burden-KO",
+    "@kgrid/margolis-dfu-prognostic": "file:../collection/DFU-Prognostic-Indicator-KO"
+  },
+  "keywords": [
+    "dfu",
+    "hbot",
+    "knowledge-assembly",
+    "orchestration",
+    "clinical-decision-support"
+  ],
+  "license": "MIT"
+}

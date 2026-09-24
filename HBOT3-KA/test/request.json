@@ -1,0 +1,80 @@
+{
+  "request_id": "req-sample-001",
+  "requested_at": "2026-09-24T12:00:00Z",
+  "index_time": "2026-09-24T10:00:00Z",
+  "subject_binding": {
+    "subject_identifier": { "system": "https://example.org/mrn", "value": "MRN-001" },
+    "ulcer_identifier": { "system": "https://example.org/ulcer", "value": "ULCER-001" },
+    "care_episode_identifier": { "system": "https://example.org/episode", "value": "EPISODE-001" },
+    "source_evidence": {
+      "source_record_iri": "https://example.org/records/subject-binding-001",
+      "source_system_iri": "https://example.org/systems/ehr",
+      "recorded_at": "2026-09-18T09:00:00Z",
+      "effective_at": "2026-09-18T09:00:00Z",
+      "valid_until": null,
+      "author_or_respondent_iri": "https://example.org/practitioners/dr-smith",
+      "author_or_respondent_role": "attending_physician",
+      "record_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "hbot_case_assertions": {
+    "dfu_confirmed": {
+      "value": true,
+      "source_evidence": {
+        "source_record_iri": "https://example.org/records/dfu-confirmed-001",
+        "source_system_iri": "https://example.org/systems/ehr",
+        "recorded_at": "2026-09-18T09:00:00Z",
+        "effective_at": "2026-09-18T09:00:00Z",
+        "valid_until": null,
+        "author_or_respondent_iri": "https://example.org/practitioners/dr-smith",
+        "author_or_respondent_role": "attending_physician",
+        "record_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000001"
+      }
+    },
+    "acute_surgical_intervention": {
+      "value": true,
+      "source_evidence": {
+        "source_record_iri": "https://example.org/records/surgical-001",
+        "source_system_iri": "https://example.org/systems/ehr",
+        "recorded_at": "2026-09-18T09:00:00Z",
+        "effective_at": "2026-09-18T09:00:00Z",
+        "valid_until": null,
+        "author_or_respondent_iri": "https://example.org/practitioners/dr-jones",
+        "author_or_respondent_role": "surgical_service",
+        "record_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000002"
+      }
+    },
+    "not_healed_after_30_days": {
+      "value": false,
+      "source_evidence": {
+        "source_record_iri": "https://example.org/records/wound-care-001",
+        "source_system_iri": "https://example.org/systems/ehr",
+        "recorded_at": "2026-09-18T09:00:00Z",
+        "effective_at": "2026-09-18T09:00:00Z",
+        "valid_until": null,
+        "author_or_respondent_iri": "https://example.org/practitioners/nurse-lee",
+        "author_or_respondent_role": "wound_care_nurse",
+        "record_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000003"
+      }
+    }
+  },
+  "margolis_first_visit_assessment": {
+    "wound_area": { "value": 1, "ucum_code": "cm2" },
+    "wound_duration": { "value": 4, "ucum_code": "wk" },
+    "first_visit_at": "2026-09-10T09:00:00Z",
+    "first_visit_attested": true,
+    "measurement_method": "clinician_ruler_measurement",
+    "subject_identifier": { "system": "https://example.org/mrn", "value": "MRN-001" },
+    "ulcer_identifier": { "system": "https://example.org/ulcer", "value": "ULCER-001" },
+    "source_evidence": {
+      "source_record_iri": "https://example.org/records/first-visit-001",
+      "source_system_iri": "https://example.org/systems/ehr",
+      "recorded_at": "2026-09-10T09:00:00Z",
+      "effective_at": "2026-09-10T09:00:00Z",
+      "valid_until": null,
+      "author_or_respondent_iri": "https://example.org/practitioners/dr-smith",
+      "author_or_respondent_role": "attending_physician",
+      "record_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000004"
+    }
+  }
+}

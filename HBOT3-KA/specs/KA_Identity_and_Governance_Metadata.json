@@ -1,0 +1,19 @@
+{
+  "specification_family_iri": "https://kgrid.org/cks/hbot-treatment-target-ka",
+  "canonical_ka_version_iri": "https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0",
+  "result_instance_iri_pattern": "https://kgrid.org/cks/hbot-treatment-target-ka/result-instances/{lowercase UUIDv4}",
+  "result_model_iri": "https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0",
+  "steward": "Knowledge Systems Lab, University of Michigan",
+  "release_authority": "Knowledge Systems Lab, University of Michigan",
+  "review_status": "Final Version 1.0; implementation-ready specification; not clinically validated or approved for clinical use",
+  "governance_process": {
+    "change_control": "Record and impact-classify every proposed change; released content is not modified in place.",
+    "review_dossier": "Preserve the proposal, rationale, sources, dependency evidence, compatibility impact, risks, affected requirements, and exact artifact fingerprints.",
+    "required_review": "Require an identified technical reviewer and, when clinical meaning may change, an identified qualified clinical-domain reviewer.",
+    "regression_gate": "Require the complete canonical fixture suite and every affected schema, dependency, provenance, replay, and presentation test to pass without waiver, skip, quarantine, or unexplained difference.",
+    "approval": "Require a specifically identified release approver acting for the release authority; the technical reviewer cannot be the sole final approver.",
+    "publication": "Publish the immutable new specification version, manifests, evidence, approval record, fingerprints, effective date, and supersession relationship atomically; preserve prior versions.",
+    "rollback": "Restore a complete previously approved release and record the reason; never mix versions.",
+    "periodic_review": "Review dependency currency and continuing fitness before every release and at an interval documented in the applicable release record."
+  }
+}

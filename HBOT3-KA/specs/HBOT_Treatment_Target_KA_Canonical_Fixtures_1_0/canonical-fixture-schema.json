@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kgrid.org/cks/hbot-treatment-target-ka/fixtures/schema/1.0",
+  "title": "HBOT Treatment Target KA canonical fixture suite 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "suite_id",
+    "suite_version",
+    "cks_status",
+    "cks_version_iri",
+    "fixtures"
+  ],
+  "properties": {
+    "suite_id": {
+      "const": "HBOT-TREATMENT-TARGET-KA-CANONICAL-FIXTURES"
+    },
+    "suite_version": {
+      "const": "1.0"
+    },
+    "cks_status": {
+      "const": "CKS Version 1.0"
+    },
+    "cks_version_iri": {
+      "const": "https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0"
+    },
+    "fixtures": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "fixture_id",
+          "category",
+          "polarity",
+          "cks_requirements",
+          "given",
+          "expect"
+        ],
+        "properties": {
+          "fixture_id": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "polarity": {
+            "enum": [
+              "positive",
+              "negative"
+            ]
+          },
+          "cks_requirements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "given": {
+            "type": "object"
+          },
+          "expect": {
+            "type": "object",
+            "required": [
+              "status",
+              "target_classification",
+              "reason_code",
+              "gate_result",
+              "synthesis_rule_id",
+              "completed_classification_permitted",
+              "diagnostics_include"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

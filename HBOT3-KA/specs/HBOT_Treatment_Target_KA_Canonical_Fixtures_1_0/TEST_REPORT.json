@@ -1,0 +1,1179 @@
+{
+  "suite_id": "HBOT-TREATMENT-TARGET-KA-CANONICAL-FIXTURES",
+  "suite_version": "1.0",
+  "total": 65,
+  "passed": 65,
+  "failed": 0,
+  "results": [
+    {
+      "fixture_id": "MATRIX-POS-01",
+      "passed": true,
+      "expected": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-L-01"
+      ],
+      "actual": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-L-01"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-01",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-02",
+      "passed": true,
+      "expected": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-M-02"
+      ],
+      "actual": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-M-02"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-02",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-03",
+      "passed": true,
+      "expected": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-H-03"
+      ],
+      "actual": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-H-03"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-03",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-04",
+      "passed": true,
+      "expected": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-U-L-04"
+      ],
+      "actual": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-U-L-04"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-04",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-05",
+      "passed": true,
+      "expected": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-U-M-05"
+      ],
+      "actual": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-U-M-05"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-05",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-06",
+      "passed": true,
+      "expected": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-U-H-06"
+      ],
+      "actual": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-U-H-06"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-06",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-07",
+      "passed": true,
+      "expected": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-I-L-07"
+      ],
+      "actual": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-I-L-07"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-07",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-08",
+      "passed": true,
+      "expected": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-I-M-08"
+      ],
+      "actual": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-I-M-08"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-08",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-09",
+      "passed": true,
+      "expected": [
+        "completed",
+        "OUTER_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-I-H-09"
+      ],
+      "actual": [
+        "completed",
+        "OUTER_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-I-H-09"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-09",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-10",
+      "passed": true,
+      "expected": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-RF-L-10"
+      ],
+      "actual": [
+        "completed",
+        "NEAR_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-RF-L-10"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-10",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-11",
+      "passed": true,
+      "expected": [
+        "completed",
+        "OUTER_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-RF-M-11"
+      ],
+      "actual": [
+        "completed",
+        "OUTER_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-RF-M-11"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-11",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-POS-12",
+      "passed": true,
+      "expected": [
+        "completed",
+        "OUTER_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-RF-H-12"
+      ],
+      "actual": [
+        "completed",
+        "OUTER_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-RF-H-12"
+      ]
+    },
+    {
+      "fixture_id": "MATRIX-NEG-12",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "GATE-OUTPUT-01",
+      "passed": true,
+      "expected": [
+        "completed",
+        "OFF_TARGET",
+        "KA-RESULT-HBOT-NOT-SUPPORTED",
+        "NOT_SUPPORTED",
+        null
+      ],
+      "actual": [
+        "completed",
+        "OFF_TARGET",
+        "KA-RESULT-HBOT-NOT-SUPPORTED",
+        "NOT_SUPPORTED",
+        null
+      ]
+    },
+    {
+      "fixture_id": "GATE-OUTPUT-02",
+      "passed": true,
+      "expected": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-L-01"
+      ],
+      "actual": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-L-01"
+      ]
+    },
+    {
+      "fixture_id": "GATE-OUTPUT-03",
+      "passed": true,
+      "expected": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-L-01"
+      ],
+      "actual": [
+        "completed",
+        "ON_TARGET",
+        "KA-RESULT-SUPPORTED-SYNTHESIS",
+        "SUPPORTED",
+        "SYN-VU-L-01"
+      ]
+    },
+    {
+      "fixture_id": "GATE-OUTPUT-04",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-INDET-HBOT-INSUFFICIENT-DECISION",
+        "INSUFFICIENT_DECISION",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-INDET-HBOT-INSUFFICIENT-DECISION",
+        "INSUFFICIENT_DECISION",
+        null
+      ]
+    },
+    {
+      "fixture_id": "GATE-OUT-OF-SCOPE",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-INDET-HBOT-OUT-OF-SCOPE",
+        "OUT_OF_SCOPE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-INDET-HBOT-OUT-OF-SCOPE",
+        "OUT_OF_SCOPE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "GATE-UNDEFINED",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-GATE-UNDEFINED",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-GATE-UNDEFINED",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "FAIL-INPUT",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-INPUT-VALIDATION",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-INPUT-VALIDATION",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "FAIL-UNAVAILABLE",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-UNAVAILABLE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-UNAVAILABLE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "FAIL-IDENTITY",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-IDENTITY",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-IDENTITY",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "FAIL-INVOCATION",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-INVOCATION",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-INVOCATION",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "FAIL-NATIVE",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-CONSTITUENT-RESULT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-CONSTITUENT-RESULT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "FAIL-OUTPUT-CONTRACT",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "FAIL-TRANSFORMATION",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TRANSFORMATION",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TRANSFORMATION",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "FAIL-JOIN",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-JOIN-INCOMPLETE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-JOIN-INCOMPLETE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "FAIL-RESULT-CONSTRUCTION",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-RESULT-CONSTRUCTION",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-RESULT-CONSTRUCTION",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "VERSION-MISMATCH-01",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-VERSION",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-VERSION",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "VERSION-MISMATCH-02",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-VERSION",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-VERSION",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "VERSION-MISMATCH-03",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-VERSION",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-VERSION",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "VERSION-MISMATCH-04",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-VERSION",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-VERSION",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "SUBJECT-MISMATCH-01",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SUBJECT-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SUBJECT-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "SUBJECT-MISMATCH-02",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SUBJECT-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SUBJECT-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "SUBJECT-MISMATCH-03",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SUBJECT-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SUBJECT-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "SUBJECT-MISMATCH-04",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SUBJECT-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SUBJECT-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-01",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-02",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-03",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-04",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "TIME-INCOHERENCE-05",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-TEMPORAL-COHERENCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "PROVENANCE-FAIL-01",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-PROVENANCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-PROVENANCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "PROVENANCE-FAIL-02",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-PROVENANCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-PROVENANCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "PROVENANCE-FAIL-03",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-PROVENANCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-PROVENANCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "PROVENANCE-FAIL-04",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-PROVENANCE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-PROVENANCE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "SYNTH-UNKNOWN",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SYNTHESIS-UNKNOWN-PROJECTION",
+        "SUPPORTED",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SYNTHESIS-UNKNOWN-PROJECTION",
+        "SUPPORTED",
+        null
+      ]
+    },
+    {
+      "fixture_id": "SYNTH-NONCONFORMING",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SYNTHESIS-COMBINATION-NONCONFORMING",
+        "SUPPORTED",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SYNTHESIS-COMBINATION-NONCONFORMING",
+        "SUPPORTED",
+        null
+      ]
+    },
+    {
+      "fixture_id": "SYNTH-UNDEFINED",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SYNTHESIS-COMBINATION-UNDEFINED",
+        "SUPPORTED",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SYNTHESIS-COMBINATION-UNDEFINED",
+        "SUPPORTED",
+        null
+      ]
+    },
+    {
+      "fixture_id": "SYNTH-DISPUTED",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SYNTHESIS-COMBINATION-DISPUTED",
+        "SUPPORTED",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-SYNTHESIS-COMBINATION-DISPUTED",
+        "SUPPORTED",
+        null
+      ]
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-WAGNER",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-OUTPUT-CONTRACT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-HBOT",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-UNAVAILABLE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-DEPENDENCY-UNAVAILABLE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-BURDEN",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-INVOCATION",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-INVOCATION",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-MARGOLIS",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-CONSTITUENT-RESULT",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-CONSTITUENT-RESULT",
+        "NOT_EVALUABLE",
+        null
+      ]
+    },
+    {
+      "fixture_id": "ENGAGEMENT-PROOF-CACHED",
+      "passed": true,
+      "expected": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-JOIN-INCOMPLETE",
+        "NOT_EVALUABLE",
+        null
+      ],
+      "actual": [
+        "indeterminate",
+        "INDETERMINATE",
+        "KA-ERR-JOIN-INCOMPLETE",
+        "NOT_EVALUABLE",
+        null
+      ]
+    }
+  ]
+}

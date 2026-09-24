@@ -1,0 +1,149 @@
+{
+  "@context": "https://kgrid.org/koio/2.1/context.jsonld",
+  "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA",
+  "versionInfo": "2.1",
+  "@type": "KnowledgeObject",
+  "dc:title": "HBOT Treatment Target Knowledge Assembly",
+  "dc:identifier": [
+    "workshop-ka-1",
+    "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA"
+  ],
+  "dc:version": "1.0",
+  "dc:date": "2026-09-23",
+  "dc:source": [
+    {
+      "@id": "https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0",
+      "dc:bibliographicCitation": "HBOT Treatment Target Knowledge Assembly, Computable Knowledge Specification Version 1.0."
+    }
+  ],
+  "dc:isReferencedBy": [],
+  "dc:description": "This Knowledge Assembly orchestrates four constituent Knowledge Objects (Meggitt-Wagner Classification, UHMS Figure 6 HBOT Decision, DFU HBOT Bounded Regimen and Execution Burden, and Margolis 2022 DFU Prognostic Model) to produce one governed HBOT Treatment Target Classification. It routes validated constituent outputs through declared transformations, applies the sole HBOT clinical-indication gate, and, when supported, applies an approved twelve-cell prognosis-by-burden synthesis matrix. It does not diagnose, calculate Wagner grade, decide HBOT indication, calculate burden, or calculate prognosis itself; those computations remain exclusively owned by the constituent KOs.",
+  "schema:creator": [
+    {
+      "@id": "https://kgrid.org",
+      "@type": "schema:Organization",
+      "schema:name": "Knowledge Systems Lab",
+      "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+      "schema:email": "kgrid-developers@umich.edu"
+    }
+  ],
+  "koio:hasKnowledge": [
+    {
+      "@id": "HBOT_Treatment_Target_KA_Orchestration_Logic",
+      "dc:title": "HBOT Treatment Target KA Orchestration Logic",
+      "dc:identifier": "1",
+      "dc:version": "1.0",
+      "dc:date": "2026-09-23",
+      "dc:description": "Deterministic orchestration logic that validates the KA input contract, engages the four constituent KOs, routes results through declared transformations, applies HBOT gate mapping and supported-case synthesis, and constructs the closed canonical result with full provenance.",
+      "dc:purpose": "",
+      "@type": "koio:Knowledge",
+      "implementedBy": {
+        "@id": "src/orchestrator.js",
+        "@type": ["Implementation", "Function", "JavaScript"]
+      }
+    }
+  ],
+  "koio:hasService": [
+    {
+      "@id": "CLI_Service",
+      "@type": ["Service", "cli"],
+      "dc:description": "command-line interface that reads a KA request JSON object, executes the knowledge assembly, and prints the canonical result as formatted JSON.",
+      "hasInterface": "README.md",
+      "implementedBy": {
+        "@id": "src/cli/hbot-treatment-target.js",
+        "@type": ["Implementation", "JavaScript"]
+      },
+      "dependsOn": ["HBOT_Treatment_Target_KA_Orchestration_Logic"]
+    },
+    {
+      "@id": "Service_for_Orchestration_Logic",
+      "@type": ["Service", "library"],
+      "dc:description": "Way of invoking the HBOT Treatment Target KA orchestration logic",
+      "hasInterface": "specs/HBOT_Treatment_Target_KA_CKS_Version_1_0.docx",
+      "implementedBy": {
+        "@id": "src/orchestrator.js",
+        "@type": ["Implementation", "JavaScript"]
+      }
+    }
+  ],
+  "koio:hasTest": [
+    {
+      "@id": "Canonical_Fixtures_Test",
+      "@type": "koio:Test",
+      "dc:title": "Canonical Fixtures Test",
+      "dc:description": "Loads the published HBOT_Treatment_Target_KA_Canonical_Fixtures_1_0 suite, verifies there are exactly 65 fixtures, and runs one assertion-driven test per fixture confirming the gate-mapping and twelve-cell synthesis logic produces the expected status, target classification, reason code, gate result, and synthesis rule.",
+      "implementedBy": {
+        "@id": "test/canonical-fixtures.test.js",
+        "@type": [
+          "Implementation",
+          "JavaScript"
+        ]
+      },
+      "koio:hasDocumentation": [
+        {
+          "@id": "specs/HBOT_Treatment_Target_KA_Canonical_Fixtures_1_0/canonical-fixtures.json",
+          "@type": [
+            "InformationArtifact",
+            "Test Vector Document"
+          ],
+          "dc:title": "Canonical Fixtures for HBOT Treatment Target KA",
+          "dc:description": "The 65 published canonical orchestration fixtures, including given dependency-engagement/gate/projection conditions and expected KA results."
+        },
+        {
+          "@id": "specs/HBOT_Treatment_Target_KA_Canonical_Fixtures_1_0/canonical-fixture-schema.json",
+          "@type": [
+            "InformationArtifact",
+            "Test Vector Schema Document"
+          ],
+          "dc:title": "Canonical Fixtures Schema for HBOT Treatment Target KA",
+          "dc:description": "Schema for the canonical fixture suite, including fixture category, polarity, given conditions, and expected result."
+        }
+      ]
+    },
+    {
+      "@id": "Orchestrator_End_to_End_Test",
+      "@type": "koio:Test",
+      "dc:title": "Orchestrator End-to-End Test",
+      "dc:description": "Exercises end-to-end orchestration through the real constituent KOs (with scripted answers standing in for interactive questionnaire collection), covering a supported-synthesis case, an HBOT-not-supported case, an out-of-scope case, malformed-input and subject-coherence failures, a rejected pre-supplied questionnaire artifact, and an interactive-collection invocation failure.",
+      "implementedBy": {
+        "@id": "test/orchestrator.test.js",
+        "@type": [
+          "Implementation",
+          "JavaScript"
+        ]
+      }
+    }
+  ],
+  "koio:hasDocumentation": [
+    {
+      "@id": "auxiliary/aux-notebook/hbot_treatment_target_ka_binder.ipynb",
+      "@type": [
+        "InformationArtifact",
+        "Jupyter Notebook",
+        "Binder Notebook"
+      ],
+      "dc:title": "HBOT Treatment Target KA Binder Jupyter Notebook Demo",
+      "dc:description": "A Binder notebook demonstrating the HBOT Treatment Target Knowledge Assembly through a simplified in-notebook reimplementation of its four constituent computations plus the KA-owned gate mapping and synthesis matrix."
+    },
+    {
+      "@id": "auxiliary/aux-notebook/hbot_treatment_target_ka_colab.ipynb",
+      "@type": [
+        "InformationArtifact",
+        "Jupyter Notebook",
+        "Google Colab Notebook"
+      ],
+      "dc:title": "HBOT Treatment Target KA Google Colab Jupyter Notebook Demo",
+      "dc:description": "A Colab notebook that clones the repository and runs the real, governed KA implementation from src/orchestrator.js against the four constituent KOs, using scripted answers in place of live interactive questionnaire prompts."
+    },
+    {
+      "@id": "auxiliary/aux-notebook/hbot_treatment_target_ka_scribbler.jsnb",
+      "@type": [
+        "InformationArtifact",
+        "Jupyter Notebook",
+        "Scribbler Notebook"
+      ],
+      "dc:title": "HBOT Treatment Target KA Scribbler Notebook Demo",
+      "dc:description": "A Scribbler notebook demonstrating the HBOT Treatment Target Knowledge Assembly entirely in-browser through a simplified in-notebook reimplementation of its four constituent computations plus the KA-owned gate mapping and synthesis matrix."
+    }
+  ]
+}
