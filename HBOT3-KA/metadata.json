@@ -41,6 +41,22 @@
         "@id": "src/orchestrator.js",
         "@type": ["Implementation", "Function", "JavaScript"]
       }
+    },
+    {
+      "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO",
+      "@type": "koio:Knowledge"
+    },
+    {
+      "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO",
+      "@type": "koio:Knowledge"
+    },
+    {
+      "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO",
+      "@type": "koio:Knowledge"
+    },
+    {
+      "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO",
+      "@type": "koio:Knowledge"
     }
   ],
   "koio:hasService": [
@@ -123,7 +139,7 @@
         "Binder Notebook"
       ],
       "dc:title": "HBOT Treatment Target KA Binder Jupyter Notebook Demo",
-      "dc:description": "A Binder notebook demonstrating the HBOT Treatment Target Knowledge Assembly through a simplified in-notebook reimplementation of its four constituent computations plus the KA-owned gate mapping and synthesis matrix."
+      "dc:description": "A Binder notebook that installs the Burden KO's ajv/ajv-formats dependency at runtime and runs the real, governed KA implementation from src/orchestrator.js against the four constituent KOs, using this Jupyter kernel's native interactive-input mechanism for live questionnaire prompts."
     },
     {
       "@id": "auxiliary/aux-notebook/hbot_treatment_target_ka_colab.ipynb",
@@ -134,16 +150,6 @@
       ],
       "dc:title": "HBOT Treatment Target KA Google Colab Jupyter Notebook Demo",
       "dc:description": "A Colab notebook that clones the repository and runs the real, governed KA implementation from src/orchestrator.js against the four constituent KOs, using scripted answers in place of live interactive questionnaire prompts."
-    },
-    {
-      "@id": "auxiliary/aux-notebook/hbot_treatment_target_ka_scribbler.jsnb",
-      "@type": [
-        "InformationArtifact",
-        "Jupyter Notebook",
-        "Scribbler Notebook"
-      ],
-      "dc:title": "HBOT Treatment Target KA Scribbler Notebook Demo",
-      "dc:description": "A Scribbler notebook demonstrating the HBOT Treatment Target Knowledge Assembly entirely in-browser through a simplified in-notebook reimplementation of its four constituent computations plus the KA-owned gate mapping and synthesis matrix."
     }
   ]
 }
