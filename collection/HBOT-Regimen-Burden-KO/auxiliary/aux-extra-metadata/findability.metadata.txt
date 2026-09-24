@@ -5,7 +5,7 @@
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
-    schema:name "HBOT-Regimen-Burden-KO" ;
+    schema:name "HBOT Regimen Burden KO" ;
 
     dc:title "DFU HBOT Bounded Regimen and Execution Burden" ;
 

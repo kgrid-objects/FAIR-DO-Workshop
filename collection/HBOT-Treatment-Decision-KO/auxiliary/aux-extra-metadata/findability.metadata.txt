@@ -5,7 +5,7 @@
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
-    schema:name "HBOT-Treatment-Decision-KO" ;
+    schema:name "HBOT Treatment Decision KO" ;
 
     dc:title "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object" ;
 
