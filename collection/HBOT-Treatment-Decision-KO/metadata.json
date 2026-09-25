@@ -177,7 +177,7 @@
                 "Jupyter Notebook",
                 "Binder Notebook"
             ],
-            "dc:title": "DFU HBO2 Binder Jupyter Notebook Demo",
+            "dc:title": "DFU HBO2 KO Binder Jupyter Notebook Demo",
             "dc:description": "A Binder notebook for computing with the DFU HBO2 package."
         },
         {
@@ -187,18 +187,26 @@
                 "Jupyter Notebook",
                 "Google Colab Notebook"
             ],
-            "dc:title": "DFU HBO2 Google Colab Jupyter Notebook Demo",
+            "dc:title": "DFU HBO2 KO Google Colab Jupyter Notebook Demo",
             "dc:description": "A Colab notebook for computing with the DFU HBO2 package."
         },
         {
             "@id": "auxiliary/aux-notebook/dfu_hbo2_scribbler.jsnb",
             "@type": [
-                "InformationArtifact",
-                "Jupyter Notebook",
-                "Scribbler Notebook"
+              "InformationArtifact",
+              "Jupyter Notebook",
+              "Scribbler Notebook"
             ],
-            "dc:title": "DFU HBO2 Scribbler Notebook Demo",
-            "dc:description": "A Scribbler notebook for computing with the DFU HBO2 package."
+            "dc:title": "DFU HBO2 KO Scribbler Notebook Demo",
+            "dc:description": "A Scribbler notebook for computing with the DFU HBO2 package.",
+            "schema:potentialAction": {
+              "@type": "schema:ViewAction",
+              "schema:name": "Open in Scribbler",
+              "schema:target": {
+                "@type": "schema:EntryPoint",
+                "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/HBOT-Treatment-Decision-KO/auxiliary/aux-notebook/dfu_hbo2_scribbler.jsnb"
+              }
+            }
         },
         {
             "@id": "index.html",

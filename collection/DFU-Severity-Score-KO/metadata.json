@@ -204,18 +204,26 @@
                 "Jupyter Notebook",
                 "Google Colab Notebook"
             ],
-            "dc:title": "Wagner Questionnaire Google Colab Jupyter Notebook Demo",
+            "dc:title": "Wagner Score KO Questionnaire Google Colab Jupyter Notebook Demo",
             "dc:description": "A Google Colab Jupyter Notebook for viewing how to compute with the Wagner Questionnaire"
         },
         {
             "@id": "auxiliary/aux-notebook/wagner_scribbler.jsnb",
             "@type": [
-                "InformationArtifact",
-                "Jupyter Notebook",
-                "Scribbler Notebook"
+               "InformationArtifact",
+               "Jupyter Notebook",
+               "Scribbler Notebook"
             ],
-            "dc:title": "Wagner Scribbler Notebook Demo",
-            "dc:description": "A Scribbler notebook for viewing how to compute with the Wagner Questionnaire"
+            "dc:title": "Wagner Score KO Scribbler Notebook Demo",
+            "dc:description": "A Scribbler notebook for viewing how to compute with the Wagner Questionnaire",
+            "schema:potentialAction": {
+                "@type": "schema:ViewAction",
+                "schema:name": "Open in Scribbler",
+                "schema:target": {
+                   "@type": "schema:EntryPoint",
+                    "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/DFU-Severity-Score-KO/auxiliary/aux-notebook/wagner_scribbler.jsnb"
+             }
+            }
         },
         {
             "@id": "index.html",

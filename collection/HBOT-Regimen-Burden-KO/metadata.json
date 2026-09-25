@@ -263,12 +263,20 @@
         {
             "@id": "auxiliary/aux-notebook/dfu-hbot_scribbler.jsnb",
             "@type": [
-                "InformationArtifact",
-                "Jupyter Notebook",
-                "Scribbler Notebook"
+              "InformationArtifact",
+              "Jupyter Notebook",
+              "Scribbler Notebook"
             ],
             "dc:title": "DFU HBOT Bounded Regimen and Execution Burden Scribbler Notebook Demo",
-            "dc:description": "A Scribbler notebook for viewing how to compute with the DFU HBOT Bounded Regimen and Execution Burden"
+            "dc:description": "A Scribbler notebook for viewing how to compute with the DFU HBOT Bounded Regimen and Execution Burden",
+            "schema:potentialAction": {
+              "@type": "schema:ViewAction",
+              "schema:name": "Open in Scribbler",
+              "schema:target": {
+                "@type": "schema:EntryPoint",
+                "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/HBOT-Regimen-Burden-KO/auxiliary/aux-notebook/dfu-hbot_scribbler.jsnb"
+              }
+            }
         },
         {
             "@id": "index.html",
