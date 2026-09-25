@@ -6,7 +6,10 @@
 
     # 1. Identification
     schema:name
-        "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object" ;
+        "DFU Severity Score KO" ;
+
+    dc:title
+         "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object" ;
 
     schema:alternateName
         "Wagner Classification" ;
