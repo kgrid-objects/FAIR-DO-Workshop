@@ -62,6 +62,8 @@ npm run cli -- --file test/request.json --preparation path/to/preparation.json
 
 `test/request.json` is a partial sample for the preparation interface, not a complete Section 2.5 core request. The preparation JSON supplies `collectionMetadata` for missing artifacts and/or `artifactPayloads` for supplied ones. The CLI only prompts for a missing questionnaire after the required provenance metadata is provided.
 
+Five complete, fictional teaching cases live in `auxiliary/aux-teaching/cases/`, in presentation order. Cases 1–3 demonstrate `ON_TARGET`, `NEAR_TARGET`, and `OUTER_TARGET`; cases 4–5 demonstrate an unsupported decision gate and an out-of-scope input. Each JSON file keeps its title, teaching note, and computed expected outcome outside the closed `request`; `artifact_payloads` supplies the two matching questionnaire responses by locator. Run the KA with `executeKnowledgeAssembly(caseRecord.request, { artifactPayloads: caseRecord.artifact_payloads })`. These are instructional data, not patient records. `auxiliary/aux-teaching/generate-cases.js` documents their construction; `test/teaching-cases.test.js` checks that every stored case remains executable and produces its declared outcome.
+
 ## Notebooks
 
 Try this package here:

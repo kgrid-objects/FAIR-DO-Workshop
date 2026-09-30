@@ -1,0 +1,238 @@
+{
+  "id": "case-2",
+  "title": "Near target",
+  "teaching_note": "Near target illustrates a distinct KA classification or gate outcome using one fictional patient–ulcer pair.",
+  "expected": {
+    "target_classification": "NEAR_TARGET",
+    "gate_result": "SUPPORTED",
+    "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS"
+  },
+  "request": {
+    "request_id": "teaching-case-2",
+    "requested_at": "2026-09-24T12:00:00Z",
+    "index_time": "2026-09-24T10:00:00Z",
+    "subject_binding": {
+      "subject_identifier": {
+        "system": "https://example.org/mrn",
+        "value": "SUBJECT-case-2"
+      },
+      "ulcer_identifier": {
+        "system": "https://example.org/ulcer",
+        "value": "ULCER-case-2"
+      },
+      "care_episode_identifier": {
+        "system": "https://example.org/episode",
+        "value": "EPISODE-case-2"
+      },
+      "source_evidence": {
+        "source_record_iri": "urn:teaching:case-2:subject-binding",
+        "source_system_iri": "urn:teaching:fictional-records",
+        "recorded_at": "2026-09-20T09:00:00Z",
+        "effective_at": "2026-09-20T09:00:00Z",
+        "valid_until": null,
+        "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+        "author_or_respondent_role": "fictional_case_author",
+        "record_fingerprint": "sha256:f5c4840d10097081f7c5775df882b2c002e99d604754abc28f6b2b3155f17280"
+      }
+    },
+    "hbot_case_assertions": {
+      "dfu_confirmed": {
+        "value": true,
+        "source_evidence": {
+          "source_record_iri": "urn:teaching:case-2:dfu_confirmed",
+          "source_system_iri": "urn:teaching:fictional-records",
+          "recorded_at": "2026-09-20T09:00:00Z",
+          "effective_at": "2026-09-20T09:00:00Z",
+          "valid_until": null,
+          "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+          "author_or_respondent_role": "fictional_case_author",
+          "record_fingerprint": "sha256:4c1ebdda96ae47f51cf764ee80be8ebb841a9017736b3be40b49efb5096b1c17"
+        }
+      },
+      "acute_surgical_intervention": {
+        "value": true,
+        "source_evidence": {
+          "source_record_iri": "urn:teaching:case-2:acute_surgical_intervention",
+          "source_system_iri": "urn:teaching:fictional-records",
+          "recorded_at": "2026-09-20T09:00:00Z",
+          "effective_at": "2026-09-20T09:00:00Z",
+          "valid_until": null,
+          "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+          "author_or_respondent_role": "fictional_case_author",
+          "record_fingerprint": "sha256:5068f344ad58702f9eb13da6cbf8ded9ada0aa4864bf5eae945cca0a0fb9d2a7"
+        }
+      },
+      "not_healed_after_30_days": {
+        "value": false,
+        "source_evidence": {
+          "source_record_iri": "urn:teaching:case-2:not_healed_after_30_days",
+          "source_system_iri": "urn:teaching:fictional-records",
+          "recorded_at": "2026-09-20T09:00:00Z",
+          "effective_at": "2026-09-20T09:00:00Z",
+          "valid_until": null,
+          "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+          "author_or_respondent_role": "fictional_case_author",
+          "record_fingerprint": "sha256:663d0f49a2a0169162e6b895b427aed3b7f58df6723d53c6f681a2913f1db2f0"
+        }
+      }
+    },
+    "margolis_first_visit_assessment": {
+      "wound_area": {
+        "value": 1,
+        "unit": "cm2",
+        "source_evidence": {
+          "source_record_iri": "urn:teaching:case-2:wound_area",
+          "source_system_iri": "urn:teaching:fictional-records",
+          "recorded_at": "2026-09-20T09:00:00Z",
+          "effective_at": "2026-09-20T09:00:00Z",
+          "valid_until": null,
+          "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+          "author_or_respondent_role": "fictional_case_author",
+          "record_fingerprint": "sha256:5bbabf47c515aba413f076a1cf8a02bfbcda54d9f9b3431a53ed1c276d198e6d"
+        }
+      },
+      "wound_duration": {
+        "value": 4,
+        "unit": "wk",
+        "source_evidence": {
+          "source_record_iri": "urn:teaching:case-2:wound_duration",
+          "source_system_iri": "urn:teaching:fictional-records",
+          "recorded_at": "2026-09-20T09:00:00Z",
+          "effective_at": "2026-09-20T09:00:00Z",
+          "valid_until": null,
+          "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+          "author_or_respondent_role": "fictional_case_author",
+          "record_fingerprint": "sha256:3980ee8bd9b72aa559f3c02d88f9ef9cf5605d948afcd9bbeb43993222b7807e"
+        }
+      },
+      "assessment_time": "2026-09-10T09:00:00Z",
+      "source_evidence": {
+        "source_record_iri": "urn:teaching:case-2:first-visit",
+        "source_system_iri": "urn:teaching:fictional-records",
+        "recorded_at": "2026-09-20T09:00:00Z",
+        "effective_at": "2026-09-20T09:00:00Z",
+        "valid_until": null,
+        "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+        "author_or_respondent_role": "fictional_case_author",
+        "record_fingerprint": "sha256:ab7c821a2920a87832724baae961f817cd98b4c52efed3187301612ea96f0126"
+      }
+    },
+    "wagner_response_artifact": {
+      "artifact_locator": "urn:teaching:case-2:wagner-response",
+      "media_type": "application/json",
+      "response_fingerprint": "sha256:a2e93383f5b0a63997d301ee5d03d6a49d8ae744e82ad806f3e7e790b6561716",
+      "completed_at": "2026-09-20T09:30:00Z",
+      "source_evidence": {
+        "source_record_iri": "urn:teaching:case-2:wagner-response",
+        "source_system_iri": "urn:teaching:fictional-records",
+        "recorded_at": "2026-09-20T09:00:00Z",
+        "effective_at": "2026-09-20T09:00:00Z",
+        "valid_until": null,
+        "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+        "author_or_respondent_role": "fictional_case_author",
+        "record_fingerprint": "sha256:3f4dd98f0f1fe489b6adff70e574f8b6f1e765e569fe6779a9467ded947cce90"
+      }
+    },
+    "burden_questionnaire_artifact": {
+      "artifact_locator": "urn:teaching:case-2:burden-response",
+      "media_type": "application/json",
+      "response_fingerprint": "sha256:325343e01265eb49de78fb1d430d63ca3c03b5b6745d52653b7bb836b55ac7df",
+      "confirmed_at": "2026-09-20T09:30:00Z",
+      "treatment_plan_identifier": {
+        "system": "urn:teaching:treatment-plan",
+        "value": "PLAN-case-2"
+      },
+      "treatment_location": "https://kgrid.org/cks/dfu-hbot-burden/providers/e-001",
+      "source_evidence": {
+        "source_record_iri": "urn:teaching:case-2:burden-response",
+        "source_system_iri": "urn:teaching:fictional-records",
+        "recorded_at": "2026-09-20T09:00:00Z",
+        "effective_at": "2026-09-20T09:00:00Z",
+        "valid_until": null,
+        "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+        "author_or_respondent_role": "fictional_case_author",
+        "record_fingerprint": "sha256:272effebf12fb3196469e2649006e6146e865b73f3c6833fc9c3c0a43f9a9fc2"
+      }
+    }
+  },
+  "artifact_payloads": {
+    "urn:teaching:case-2:wagner-response": {
+      "response": {
+        "specification_iri": "https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0",
+        "response_model_iri": "https://kgrid.org/cks/meggitt-wagner/response-models/1.0",
+        "question_set_iri": "https://kgrid.org/cks/meggitt-wagner/question-sets/mw-qs-02/versions/1.0",
+        "question_ids": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10"
+        ],
+        "responses": [
+          "0",
+          "0",
+          "1",
+          "X",
+          "X",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "directly_answered_questions": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q06",
+          "Q07"
+        ],
+        "entailed_questions": [
+          "Q08",
+          "Q09",
+          "Q10"
+        ]
+      },
+      "subject_identifier": {
+        "system": "https://example.org/mrn",
+        "value": "SUBJECT-case-2"
+      },
+      "ulcer_identifier": {
+        "system": "https://example.org/ulcer",
+        "value": "ULCER-case-2"
+      }
+    },
+    "urn:teaching:case-2:burden-response": {
+      "response": {
+        "specification_iri": "https://kgrid.org/cks/dfu-hbot-burden/versions/cks-1.0",
+        "questionnaire_status": "completed",
+        "response_model_iri": "https://kgrid.org/cks/dfu-hbot-burden/response-models/1.0",
+        "provider_roster_version_iri": "https://kgrid.org/cks/dfu-hbot-burden/provider-rosters/appendix-e/versions/1.0",
+        "response_projection": {
+          "hyperbaric_oxygen_therapy_location": "https://kgrid.org/cks/dfu-hbot-burden/providers/e-001",
+          "one_way_miles": 5,
+          "one_way_travel_minutes": 10,
+          "weekday_attendance_difficulty": "none"
+        },
+        "confirmed": true
+      },
+      "subject_identifier": {
+        "system": "https://example.org/mrn",
+        "value": "SUBJECT-case-2"
+      },
+      "ulcer_identifier": {
+        "system": "https://example.org/ulcer",
+        "value": "ULCER-case-2"
+      },
+      "treatment_plan_identifier": {
+        "system": "urn:teaching:treatment-plan",
+        "value": "PLAN-case-2"
+      }
+    }
+  }
+}
