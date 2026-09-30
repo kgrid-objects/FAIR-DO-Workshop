@@ -59,27 +59,13 @@
     }
   },
   "margolis_first_visit_assessment": {
-    "wound_area": { "value": 1, "unit": "cm2", "source_evidence": {
-      "source_record_iri": "https://example.org/records/first-visit-001",
-      "source_system_iri": "https://example.org/systems/ehr",
-      "recorded_at": "2026-09-10T09:00:00Z",
-      "effective_at": "2026-09-10T09:00:00Z",
-      "valid_until": null,
-      "author_or_respondent_iri": "https://example.org/practitioners/dr-smith",
-      "author_or_respondent_role": "attending_physician",
-      "record_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000004"
-    } },
-    "wound_duration": { "value": 4, "unit": "wk", "source_evidence": {
-      "source_record_iri": "https://example.org/records/first-visit-001",
-      "source_system_iri": "https://example.org/systems/ehr",
-      "recorded_at": "2026-09-10T09:00:00Z",
-      "effective_at": "2026-09-10T09:00:00Z",
-      "valid_until": null,
-      "author_or_respondent_iri": "https://example.org/practitioners/dr-smith",
-      "author_or_respondent_role": "attending_physician",
-      "record_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000004"
-    } },
-    "assessment_time": "2026-09-10T09:00:00Z",
+    "wound_area": { "value": 1, "ucum_code": "cm2" },
+    "wound_duration": { "value": 4, "ucum_code": "wk" },
+    "first_visit_at": "2026-09-10T09:00:00Z",
+    "measurement_method": "Clinician-authored first-visit wound assessment",
+    "first_visit_attested": true,
+    "subject_identifier": { "system": "https://example.org/mrn", "value": "MRN-001" },
+    "ulcer_identifier": { "system": "https://example.org/ulcer", "value": "ULCER-001" },
     "source_evidence": {
       "source_record_iri": "https://example.org/records/first-visit-001",
       "source_system_iri": "https://example.org/systems/ehr",

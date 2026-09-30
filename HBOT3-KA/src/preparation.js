@@ -2,138 +2,151 @@
 
 const { wagnerQuestionnaire, questionnaireLogic } = require('./dependency-packages');
 const { fingerprintJson } = require('./fingerprint');
-const { validateInputContract } = require('./input-validation');
+const { validateInputContract, validateSourceEvidence } = require('./input-validation');
 
-function sameIdentifier(a, b) {
-  return a && b && a.system === b.system && a.value === b.value;
+const same = (a, b) => a && b && a.system === b.system && a.value === b.value;
+const WAGNER_NATIVE_FIELDS = ['specification_iri', 'response_model_iri', 'question_set_iri',
+  'question_ids', 'responses', 'directly_answered_questions', 'entailed_questions'];
+const WAGNER_IDENTITY = {
+  specification_iri: 'https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0',
+  response_model_iri: 'https://kgrid.org/cks/meggitt-wagner/response-models/1.0',
+  question_set_iri: 'https://kgrid.org/cks/meggitt-wagner/question-sets/mw-qs-02/versions/1.0'
+};
+
+function wagnerNative(artifact) {
+  return Object.fromEntries(WAGNER_NATIVE_FIELDS.map((field) => [field, artifact[field]]));
+}
+function burdenNative(artifact) {
+  return {
+    specification_iri: artifact.specification_iri,
+    questionnaire_status: 'completed',
+    response_model_iri: artifact.response_model_iri,
+    provider_roster_version_iri: artifact.provider_roster_version_iri,
+    response_projection: {
+      hyperbaric_oxygen_therapy_location: artifact.hyperbaric_oxygen_therapy_location,
+      one_way_miles: artifact.one_way_miles,
+      one_way_travel_minutes: artifact.one_way_travel_minutes,
+      weekday_attendance_difficulty: artifact.weekday_attendance_difficulty
+    },
+    confirmed: true
+  };
 }
 
-function preparedArtifact(kind, response, request, metadata) {
-  const timeField = kind === 'wagner' ? 'completed_at' : 'confirmed_at';
-  if (!metadata || !metadata.artifact_locator || !metadata.source_evidence || !metadata[timeField]) {
-    throw new TypeError(`${kind} collection requires an artifact locator, ${timeField}, and attributable source evidence.`);
+function collectedWagner(response, request, metadata) {
+  if (!metadata?.source_artifact_iri || !metadata?.completed_at || !metadata?.source_evidence) {
+    throw new TypeError('Wagner collection needs source_artifact_iri, completed_at, and source_evidence.');
   }
-  const descriptor = {
-    artifact_locator: metadata.artifact_locator,
-    media_type: 'application/json',
-    response_fingerprint: fingerprintJson(response),
-    ...(kind === 'wagner'
-      ? { completed_at: metadata.completed_at }
-      : {
-          confirmed_at: metadata.confirmed_at,
-          treatment_plan_identifier: metadata.treatment_plan_identifier,
-          treatment_location: response.response_projection.hyperbaric_oxygen_therapy_location
-        }),
-    source_evidence: metadata.source_evidence
-  };
-  const payload = {
-    response,
+  return {
+    ...wagnerNative(response),
+    completed_at: metadata.completed_at,
     subject_identifier: request.subject_binding.subject_identifier,
     ulcer_identifier: request.subject_binding.ulcer_identifier,
-    ...(kind === 'burden' ? { treatment_plan_identifier: metadata.treatment_plan_identifier } : {})
+    source_artifact_iri: metadata.source_artifact_iri,
+    artifact_fingerprint: fingerprintJson(response),
+    source_evidence: metadata.source_evidence
   };
-  return { descriptor, payload };
+}
+function collectedBurden(response, request, metadata) {
+  if (!metadata?.source_artifact_iri || !metadata?.completed_at || !metadata?.source_evidence ||
+      !metadata?.treatment_plan_identifier) {
+    throw new TypeError('Burden collection needs source_artifact_iri, completed_at, treatment_plan_identifier, and source_evidence.');
+  }
+  return {
+    specification_iri: response.specification_iri,
+    response_model_iri: response.response_model_iri,
+    provider_roster_version_iri: response.provider_roster_version_iri,
+    confirmation_status: 'confirmed',
+    ...response.response_projection,
+    completed_at: metadata.completed_at,
+    subject_identifier: request.subject_binding.subject_identifier,
+    treatment_plan_identifier: metadata.treatment_plan_identifier,
+    source_artifact_iri: metadata.source_artifact_iri,
+    artifact_fingerprint: fingerprintJson(response),
+    source_evidence: metadata.source_evidence
+  };
 }
 
-// Preparation is the only interface where either artifact may be absent.
-// It never fabricates source evidence, identifiers, or questionnaire answers.
+// Only preparation permits absent questionnaire artifacts. The core does not.
 async function prepareKnowledgeAssemblyRequest(input, options = {}) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) throw new TypeError('KA preparation input must be an object.');
-  const request = { ...input };
-  const artifactPayloads = { ...(options.artifactPayloads || {}) };
-  const sourceModes = {};
-
+  const request = { ...input }, sourceModes = {};
   if (!request.wagner_response_artifact) {
-    if (!request.subject_binding?.subject_identifier || !request.subject_binding?.ulcer_identifier) {
-      throw new TypeError('Subject and ulcer identifiers are required before questionnaire collection.');
-    }
-    if (!options.collectionMetadata?.wagner?.artifact_locator || !options.collectionMetadata?.wagner?.completed_at ||
-        !options.collectionMetadata?.wagner?.source_evidence) {
-      throw new TypeError('Wagner collection requires an artifact locator, completed_at, and attributable source evidence.');
-    }
+    if (!request.subject_binding?.subject_identifier || !request.subject_binding?.ulcer_identifier) throw new TypeError('Subject and ulcer identifiers are needed before collection.');
+    if (!options.collectionMetadata?.wagner) throw new TypeError('Wagner collection metadata is required.');
     const response = await wagnerQuestionnaire.runQuestionnaire(options.wagnerAskYesNo);
-    const prepared = preparedArtifact('wagner', response, request, options.collectionMetadata?.wagner);
-    request.wagner_response_artifact = prepared.descriptor;
-    artifactPayloads[prepared.descriptor.artifact_locator] = prepared.payload;
+    request.wagner_response_artifact = collectedWagner(response, request, options.collectionMetadata.wagner);
     sourceModes.wagner = 'collected';
-  } else {
-    sourceModes.wagner = 'supplied';
-  }
-
+  } else sourceModes.wagner = 'supplied';
   if (!request.burden_questionnaire_artifact) {
-    if (!request.subject_binding?.subject_identifier || !request.subject_binding?.ulcer_identifier) {
-      throw new TypeError('Subject and ulcer identifiers are required before questionnaire collection.');
-    }
-    if (!options.collectionMetadata?.burden?.artifact_locator || !options.collectionMetadata?.burden?.confirmed_at ||
-        !options.collectionMetadata?.burden?.source_evidence ||
-        !options.collectionMetadata?.burden?.treatment_plan_identifier) {
-      throw new TypeError('Burden collection requires an artifact locator, treatment-plan identifier, and attributable source evidence.');
-    }
+    if (!request.subject_binding?.subject_identifier) throw new TypeError('Subject identifier is needed before collection.');
+    if (!options.collectionMetadata?.burden) throw new TypeError('Burden collection metadata is required.');
     const response = await questionnaireLogic.runBurdenQuestionnaire(options.burdenAskQuestion);
-    const prepared = preparedArtifact('burden', response, request, options.collectionMetadata?.burden);
-    request.burden_questionnaire_artifact = prepared.descriptor;
-    artifactPayloads[prepared.descriptor.artifact_locator] = prepared.payload;
+    request.burden_questionnaire_artifact = collectedBurden(response, request, options.collectionMetadata.burden);
     sourceModes.burden = 'collected';
-  } else {
-    sourceModes.burden = 'supplied';
-  }
-
-  if (request.wagner_response_artifact.artifact_locator === request.burden_questionnaire_artifact.artifact_locator) {
-    throw new TypeError('Wagner and Burden response artifacts require distinct locators.');
-  }
-
+  } else sourceModes.burden = 'supplied';
   const contract = validateInputContract(request);
   if (!contract.valid) throw new TypeError(`Prepared KA request is invalid: ${contract.problems.map((p) => `${p.field}: ${p.message}`).join(' | ')}`);
-  return { request, artifactPayloads, sourceModes };
+  return { request, sourceModes };
 }
 
-async function resolveArtifact(descriptor, kind, request, options) {
-  const payload = options.artifactPayloads?.[descriptor.artifact_locator] ??
-    (options.resolveArtifact ? await options.resolveArtifact(descriptor, kind) : undefined);
-  if (!payload || typeof payload !== 'object' || !payload.response) {
-    throw new TypeError(`${kind} response artifact cannot be resolved; no automatic network retrieval is permitted.`);
+function resolveKnowledgeAssemblyArtifacts(request, options = {}) {
+  const wagner = request.wagner_response_artifact;
+  const burden = request.burden_questionnaire_artifact;
+  const wagnerResponse = wagnerNative(wagner);
+  const burdenResponse = burdenNative(burden);
+  for (const [field, expected] of Object.entries(WAGNER_IDENTITY)) {
+    if (wagner[field] !== expected) {
+      const error = new TypeError(`Wagner ${field} is not the bound version.`);
+      error.reasonCode = 'KA-ERR-DEPENDENCY-VERSION';
+      throw error;
+    }
   }
-  if (!sameIdentifier(payload.subject_identifier, request.subject_binding.subject_identifier) ||
-      !sameIdentifier(payload.ulcer_identifier, request.subject_binding.ulcer_identifier)) {
-    const error = new TypeError(`${kind} response artifact does not match the request subject and ulcer.`);
+  for (const [field, expected] of Object.entries({
+    specification_iri: questionnaireLogic.SPECIFICATION_IRI,
+    response_model_iri: questionnaireLogic.RESPONSE_MODEL_IRI,
+    provider_roster_version_iri: questionnaireLogic.PROVIDER_ROSTER_VERSION_IRI
+  })) {
+    if (burden[field] !== expected) {
+      const error = new TypeError(`Burden ${field} is not the bound version.`);
+      error.reasonCode = 'KA-ERR-DEPENDENCY-VERSION';
+      throw error;
+    }
+  }
+  if (fingerprintJson(wagnerResponse) !== wagner.artifact_fingerprint ||
+      fingerprintJson(burdenResponse) !== burden.artifact_fingerprint) {
+    throw new TypeError('A questionnaire artifact does not match its declared fingerprint.');
+  }
+  const plan = options.planBinding;
+  const evidenceProblems = [];
+  validateSourceEvidence(plan?.source_evidence, 'planBinding.source_evidence', evidenceProblems);
+  if (evidenceProblems.length || !same(plan?.treatment_plan_identifier, burden.treatment_plan_identifier)) {
+    throw new TypeError('Attributable treatment-plan binding is required for the Burden artifact.');
+  }
+  const planEvidence = plan.source_evidence;
+  const index = Date.parse(request.index_time), requested = Date.parse(request.requested_at);
+  if (Date.parse(planEvidence.recorded_at) > requested || Date.parse(planEvidence.effective_at) > index ||
+      Date.parse(planEvidence.effective_at) > Date.parse(planEvidence.recorded_at) ||
+      (planEvidence.valid_until && Date.parse(planEvidence.valid_until) < index)) {
+    const error = new TypeError('Treatment-plan evidence does not apply at the clinical index time.');
+    error.reasonCode = 'KA-ERR-TEMPORAL-COHERENCE';
+    throw error;
+  }
+  if (!same(plan.ulcer_identifier, request.subject_binding.ulcer_identifier)) {
+    const error = new TypeError('Treatment plan does not apply to the bound ulcer.');
     error.reasonCode = 'KA-ERR-SUBJECT-COHERENCE';
     throw error;
   }
-  if (kind === 'burden' &&
-      (!sameIdentifier(payload.treatment_plan_identifier, descriptor.treatment_plan_identifier) ||
-       payload.response?.response_projection?.hyperbaric_oxygen_therapy_location !== descriptor.treatment_location)) {
-    throw new TypeError('Burden response artifact does not match its declared plan and treatment location.');
-  }
-  if (fingerprintJson(payload.response) !== descriptor.response_fingerprint) {
-    throw new TypeError(`${kind} response fingerprint does not match the resolved artifact.`);
-  }
-  if (kind === 'wagner' &&
-      (!Array.isArray(payload.response.question_ids) || !Array.isArray(payload.response.responses) ||
-       payload.response.question_ids.length !== payload.response.responses.length)) {
-    throw new TypeError('Wagner response artifact lacks aligned question IDs and responses.');
-  }
-  if (kind === 'burden' && payload.response.confirmed !== true) {
-    throw new TypeError('Burden response artifact is not confirmed.');
-  }
-  return payload.response;
-}
-
-async function resolveKnowledgeAssemblyArtifacts(request, options) {
-  return {
-    wagner: await resolveArtifact(request.wagner_response_artifact, 'wagner', request, options),
-    burden: await resolveArtifact(request.burden_questionnaire_artifact, 'burden', request, options)
-  };
+  return { wagner: wagnerResponse, burden: burdenResponse };
 }
 
 async function prepareAndExecuteKnowledgeAssembly(input, options = {}) {
   const prepared = await prepareKnowledgeAssemblyRequest(input, options);
   const { executeKnowledgeAssembly } = require('./orchestrator');
-  const result = await executeKnowledgeAssembly(prepared.request, { ...options, artifactPayloads: prepared.artifactPayloads });
+  const result = await executeKnowledgeAssembly(prepared.request, options);
   return { result, preparation: { source_modes: prepared.sourceModes, request: prepared.request } };
 }
 
 module.exports = {
-  prepareKnowledgeAssemblyRequest,
-  prepareAndExecuteKnowledgeAssembly,
+  prepareKnowledgeAssemblyRequest, prepareAndExecuteKnowledgeAssembly,
   resolveKnowledgeAssemblyArtifacts
 };

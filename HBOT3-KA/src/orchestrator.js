@@ -11,7 +11,7 @@ const {
 const { mapGate } = require('./gate-mapping');
 const { projectPrognosis, projectBurden, lookupMatrix } = require('./synthesis');
 const { REASON_CODES, selectPrimaryDiagnostic, makeDiagnostic } = require('./errors');
-const { validateInputContract, checkSubjectCoherence } = require('./input-validation');
+const { validateInputContract, checkSubjectCoherence, checkTemporalCoherence } = require('./input-validation');
 const { buildFinalResult } = require('./result-builder');
 const { buildProvenance, makeEventRecord, urnUuid } = require('./provenance');
 const { fingerprintJson } = require('./fingerprint');
@@ -100,12 +100,30 @@ async function executeKnowledgeAssembly(request, options = {}) {
     });
   }
 
+  const temporal = checkTemporalCoherence(request, options);
+  if (!temporal.coherent) {
+    const reasonCode = REASON_CODES.TEMPORAL_COHERENCE;
+    const diagnostic = makeDiagnostic({
+      reasonCode,
+      stage: 'temporal_coherence_validation',
+      message: temporal.problems.map((p) => `${p.field}: ${p.message}`).join(' | ')
+    });
+    return finalizeIndeterminate({
+      executionId, manifest, requestedAt: request.requested_at,
+      indexTime: request.index_time, executionStartedAt, reasonCode,
+      diagnostics: [diagnostic], gateResult: 'NOT_EVALUABLE',
+      dependencyExecutionRecords: notAttemptedForAll(manifest, executionId, reasonCode),
+      transformationRecords: []
+    });
+  }
+
   let artifacts;
   try {
     artifacts = await resolveKnowledgeAssemblyArtifacts(request, options);
   } catch (error) {
-    const reasonCode = error.reasonCode === REASON_CODES.SUBJECT_COHERENCE
-      ? REASON_CODES.SUBJECT_COHERENCE : REASON_CODES.PROVENANCE;
+    const reasonCode = [REASON_CODES.SUBJECT_COHERENCE, REASON_CODES.TEMPORAL_COHERENCE,
+      REASON_CODES.DEPENDENCY_VERSION].includes(error.reasonCode)
+      ? error.reasonCode : REASON_CODES.PROVENANCE;
     const diagnostic = makeDiagnostic({
       reasonCode,
       stage: 'response_artifact_validation',
@@ -131,7 +149,7 @@ async function executeKnowledgeAssembly(request, options = {}) {
   // Collection, if needed, has already happened outside this closed core.
   const wagnerOutcome = await engageWagner({
     questionnaireResponse: artifacts.wagner,
-    artifactLocator: request.wagner_response_artifact.artifact_locator,
+    artifactLocator: request.wagner_response_artifact.source_artifact_iri,
     executionId,
     sequenceNumber: 1,
     expectedIri: entryFor('DEP-WAGNER') && entryFor('DEP-WAGNER').cksVersionIri
@@ -144,7 +162,7 @@ async function executeKnowledgeAssembly(request, options = {}) {
   });
   const burdenOutcome = await engageBurden({
     questionnaireResponse: artifacts.burden,
-    artifactLocator: request.burden_questionnaire_artifact.artifact_locator,
+    artifactLocator: request.burden_questionnaire_artifact.source_artifact_iri,
     executionId,
     sequenceNumber: 1,
     expectedIri: entryFor('DEP-BURDEN') && entryFor('DEP-BURDEN').cksVersionIri
@@ -159,6 +177,22 @@ async function executeKnowledgeAssembly(request, options = {}) {
     sequenceNumber: 2,
     expectedIri: entryFor('DEP-HBOT-DECISION') && entryFor('DEP-HBOT-DECISION').cksVersionIri
   });
+
+  // Optional teaching-case evidence from this very execution. The canonical
+  // KA result remains closed and unchanged; callers opt in to this sidecar.
+  if (options.teachingEvidence && typeof options.teachingEvidence === 'object') {
+    for (const [role, outcome] of [
+      ['wagner', wagnerOutcome],
+      ['hbot_decision', hbotOutcome],
+      ['burden', burdenOutcome],
+      ['margolis', margolisOutcome]
+    ]) {
+      options.teachingEvidence[role] = {
+        invocation_request: outcome.invocationRequest || null,
+        native_output: outcome.native || null
+      };
+    }
+  }
 
   // Section 7.3: exactly four role-indexed records in prescribed order.
   const dependencyExecutionRecords = [

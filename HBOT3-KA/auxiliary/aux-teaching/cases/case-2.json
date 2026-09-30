@@ -1,11 +1,412 @@
 {
   "id": "case-2",
-  "title": "Near target",
-  "teaching_note": "Near target illustrates a distinct KA classification or gate outcome using one fictional patient–ulcer pair.",
+  "title": "A distant facility",
+  "teaching_note": "A distant facility illustrates a distinct KA classification or gate outcome using one fictional patient–ulcer pair.",
   "expected": {
     "target_classification": "NEAR_TARGET",
     "gate_result": "SUPPORTED",
+    "synthesis_rule_id": "SYN-VU-H-03",
     "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS"
+  },
+  "semantic_trace": {
+    "trace_version": 1,
+    "ko_outputs": {
+      "wagner": {
+        "produced_by": "DEP-WAGNER",
+        "native_output": {
+          "question_ids": [
+            "Q01",
+            "Q02",
+            "Q03",
+            "Q04",
+            "Q05",
+            "Q06",
+            "Q07",
+            "Q08",
+            "Q09",
+            "Q10"
+          ],
+          "responses": [
+            "0",
+            "0",
+            "1",
+            "X",
+            "X",
+            "1",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          "analysis_status": "grade_computed",
+          "wagner_score": [
+            3
+          ],
+          "grade_label": [
+            "Deep ulcer with abscess or osteomyelitis"
+          ]
+        }
+      },
+      "hbot_decision": {
+        "produced_by": "DEP-HBOT-DECISION",
+        "native_output": {
+          "status": "completed",
+          "result_id": "OUTPUT-02",
+          "display_text": "Suggest adding HBO₂ urgently after surgery.",
+          "evidence_quality": "moderate",
+          "recommendation_strength": "conditional",
+          "rule_id": "ALG-03",
+          "error_field": null,
+          "source_reference": "Huang et al. (2015), Figure 6",
+          "warnings": {}
+        }
+      },
+      "burden": {
+        "produced_by": "DEP-BURDEN",
+        "native_output": {
+          "specification_iri": "https://kgrid.org/cks/dfu-hbot-burden/versions/cks-1.0",
+          "result_model_iri": "https://kgrid.org/cks/dfu-hbot-burden/output-models/1.0",
+          "status": "completed",
+          "result_code": "RESULT-HIGH-EXECUTION-BURDEN",
+          "objective_burden": {
+            "fixed_regimen_range_response": {
+              "specification_iri": "https://kgrid.org/cks/dfu-hbot-burden/versions/cks-1.0",
+              "response_type": "fixed_regimen_range_response",
+              "response_model_iri": "https://kgrid.org/cks/dfu-hbot-burden/response-models/1.0",
+              "status": "completed",
+              "knowledge_package_iri": "https://kgrid.org/cks/dfu-hbot-burden/knowledge-packages/general-dfu-regimen/versions/1.0",
+              "knowledge_scope": "general_not_patient_specific",
+              "indication": "diabetes_related_foot_ulcer",
+              "shorter_regimen_scenario": {
+                "episodes": 30,
+                "sessions_per_week": 5,
+                "course_weeks": 6
+              },
+              "longer_regimen_scenario": {
+                "episodes": 40,
+                "sessions_per_week": 5,
+                "course_weeks": 8
+              },
+              "combined_range": {
+                "episodes": [
+                  30,
+                  40
+                ],
+                "sessions_per_week": 5,
+                "course_weeks": [
+                  6,
+                  8
+                ]
+              },
+              "scheduled_facility_hours_per_episode": {
+                "value": 3,
+                "unit": "h"
+              },
+              "tailored_to_patient": false,
+              "display_label": "General DFU HBOT planning range: approximately 30–40 episodes, usually five per week, over approximately 6–8 weeks."
+            },
+            "hyperbaric_oxygen_therapy_location_reference": {
+              "provider_roster_version_iri": "https://kgrid.org/cks/dfu-hbot-burden/provider-rosters/appendix-e/versions/1.0",
+              "roster_record_iri": "https://kgrid.org/cks/dfu-hbot-burden/provider-rosters/appendix-e/versions/1.0/records/e-001",
+              "provider_iri": "https://kgrid.org/cks/dfu-hbot-burden/providers/e-001",
+              "compact_id": "E-001",
+              "facility_listing": "Center for Wound Care & Hyperbaric Medicine / Springhill Medical Center",
+              "jurisdiction": "Alabama",
+              "address_status": "candidate",
+              "normalized_address_candidate": "3719 Dauphin St, Mobile, Alabama 36608, United States"
+            },
+            "reported_one_way_travel": {
+              "miles": 5,
+              "minutes": 70
+            },
+            "burden_by_regimen_scenario": {
+              "shorter_regimen": {
+                "episodes": 30,
+                "course_weeks": 6,
+                "travel_hours": 70,
+                "facility_hours": 90,
+                "total_patient_hours": 160,
+                "course_miles": 300
+              },
+              "longer_regimen": {
+                "episodes": 40,
+                "course_weeks": 8,
+                "travel_hours": 94,
+                "facility_hours": 120,
+                "total_patient_hours": 214,
+                "course_miles": 400
+              }
+            },
+            "overall_burden_range": {
+              "episodes": [
+                30,
+                40
+              ],
+              "travel_hours": [
+                70,
+                94
+              ],
+              "facility_hours": [
+                90,
+                120
+              ],
+              "total_patient_hours": [
+                160,
+                214
+              ],
+              "course_miles": [
+                300,
+                400
+              ]
+            },
+            "travel_band": {
+              "value": "high",
+              "basis": "reported_one_way_minutes_doubled"
+            }
+          },
+          "weekday_attendance_feasibility": {
+            "reported_value": "none",
+            "display_text": "No weekday-attendance difficulty reported"
+          },
+          "execution_burden_level": {
+            "score": 3,
+            "category": "high_execution_burden",
+            "primary_driver": "High reported travel time (2.3 round-trip hours)",
+            "secondary_driver": "Repeated attendance (30–40 episodes; five per week)",
+            "display_text": "High execution burden"
+          },
+          "sensitivity": {
+            "longer_minus_shorter_episodes": 10,
+            "incremental_travel_hours": 23,
+            "incremental_facility_hours": 30,
+            "incremental_total_hours": 53,
+            "incremental_miles": 100,
+            "incremental_weeks": 2
+          },
+          "assumptions": [
+            {
+              "code": "ASM-01",
+              "text": "General DFU planning regimen range of 30–40 episodes at five sessions per week is used; it was not selected or calculated for the patient."
+            },
+            {
+              "code": "ASM-02",
+              "text": "A single fixed three-hour scheduled facility block per treatment episode is used as a conservative, realistic worst-case planning assumption. It is not a validated DFU-specific door-to-door elapsed-time estimate."
+            },
+            {
+              "code": "ASM-03",
+              "text": "Round trip is estimated as two times the patient-reported usual one-way miles and minutes."
+            },
+            {
+              "code": "ASM-04",
+              "text": "Reported travel values are planning estimates and are not independently verified by the engine."
+            }
+          ],
+          "evidence_sources": [],
+          "error": null,
+          "warnings": []
+        }
+      },
+      "margolis": {
+        "produced_by": "DEP-MARGOLIS",
+        "native_output": {
+          "status": "success",
+          "specification_id": "MARGOLIS-DFU-PROGNOSIS-CKS-1.0",
+          "specification_version": "1.0",
+          "result_id": "ALG-01",
+          "prognostic_group": "AREA_GE_2__DURATION_GE_8",
+          "healing_probability_16_weeks": 0.203,
+          "display_probability_percent": "20.3%",
+          "area_category": "AREA-GE-2",
+          "duration_category": "DUR-GE-8",
+          "normalized_inputs": {
+            "wound_area": {
+              "value": 4,
+              "ucum_code": "cm2"
+            },
+            "wound_duration": {
+              "exact_value": {
+                "numerator": 10,
+                "denominator": 1
+              },
+              "ucum_code": "wk"
+            }
+          },
+          "basis": [
+            {
+              "input": "wound_area",
+              "comparison_value": 4,
+              "ucum_code": "cm2",
+              "operator": ">=",
+              "threshold": 2,
+              "category": "AREA-GE-2",
+              "classification_basis": "point"
+            },
+            {
+              "input": "wound_duration",
+              "comparison_value": 10,
+              "ucum_code": "wk",
+              "operator": ">=",
+              "threshold": 8,
+              "category": "DUR-GE-8",
+              "classification_basis": "point"
+            }
+          ],
+          "source_reference": "Margolis et al. 2022, supplementary Table 3",
+          "specification_notes": []
+        }
+      }
+    },
+    "handoffs": [
+      {
+        "owned_by": "KA",
+        "from": "supplied_wagner_response",
+        "to": "DEP-WAGNER",
+        "action": "invoke",
+        "value": {
+          "question_ids": [
+            "Q01",
+            "Q02",
+            "Q03",
+            "Q04",
+            "Q05",
+            "Q06",
+            "Q07",
+            "Q08",
+            "Q09",
+            "Q10"
+          ],
+          "responses": [
+            "0",
+            "0",
+            "1",
+            "X",
+            "X",
+            "1",
+            "1",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      },
+      {
+        "owned_by": "KA",
+        "from": "margolis_first_visit_assessment",
+        "to": "DEP-MARGOLIS",
+        "action": "TX-03",
+        "value": {
+          "wound_area": {
+            "value": 4,
+            "ucum_code": "cm2"
+          },
+          "wound_duration": {
+            "value": 10,
+            "ucum_code": "wk"
+          }
+        }
+      },
+      {
+        "owned_by": "KA",
+        "from": "supplied_burden_response + fixed_regimen_range",
+        "to": "DEP-BURDEN",
+        "action": "TX-04",
+        "value": {
+          "questionnaire_response": {
+            "hyperbaric_oxygen_therapy_location": "https://kgrid.org/cks/dfu-hbot-burden/providers/e-001",
+            "one_way_miles": 5,
+            "one_way_travel_minutes": 70,
+            "weekday_attendance_difficulty": "none"
+          },
+          "fixed_regimen_range": {
+            "episodes": [
+              30,
+              40
+            ],
+            "sessions_per_week": 5,
+            "course_weeks": [
+              6,
+              8
+            ]
+          }
+        }
+      },
+      {
+        "owned_by": "KA",
+        "from": "DEP-WAGNER + hbot_case_assertions",
+        "to": "DEP-HBOT-DECISION",
+        "action": "TX-01 + TX-02",
+        "value": {
+          "dfu_confirmed": "true",
+          "wagner_grade": 3,
+          "acute_surgical_intervention": "true",
+          "not_healed_after_30_days": "false"
+        }
+      },
+      {
+        "owned_by": "KA",
+        "from": "DEP-HBOT-DECISION.result_id",
+        "to": "KA gate",
+        "action": "DEC-GATE-06A",
+        "value": "OUTPUT-02"
+      },
+      {
+        "owned_by": "KA",
+        "from": "DEP-MARGOLIS.native_output",
+        "to": "KA synthesis band",
+        "action": "DEC-SYN-03A",
+        "native_value": "AREA_GE_2__DURATION_GE_8",
+        "projected_value": "VERY_UNFAVORABLE_PROGNOSIS_BAND"
+      },
+      {
+        "owned_by": "KA",
+        "from": "DEP-BURDEN.native_output",
+        "to": "KA synthesis band",
+        "action": "DEC-SYN-02A",
+        "native_value": "high_execution_burden",
+        "projected_value": "HIGHER_BURDEN_BAND"
+      }
+    ],
+    "ka_decisions": {
+      "owned_by": "KA",
+      "mandatory_join": {
+        "outcome": "pass",
+        "dependency_states": [
+          {
+            "dependency_role": "DEP-WAGNER",
+            "state": "completed_valid"
+          },
+          {
+            "dependency_role": "DEP-HBOT-DECISION",
+            "state": "completed_valid"
+          },
+          {
+            "dependency_role": "DEP-BURDEN",
+            "state": "completed_valid"
+          },
+          {
+            "dependency_role": "DEP-MARGOLIS",
+            "state": "completed_valid"
+          }
+        ]
+      },
+      "gate": {
+        "rule_id": "DEC-GATE-06A",
+        "native_result_id": "OUTPUT-02",
+        "result": "SUPPORTED"
+      },
+      "synthesis": {
+        "rule_id": "SYN-VU-H-03",
+        "ordered_bands": [
+          "VERY_UNFAVORABLE_PROGNOSIS_BAND",
+          "HIGHER_BURDEN_BAND"
+        ],
+        "target_classification": "NEAR_TARGET"
+      },
+      "final": {
+        "target_classification": "NEAR_TARGET",
+        "reason_code": "KA-RESULT-SUPPORTED-SYNTHESIS"
+      }
+    }
   },
   "request": {
     "request_id": "teaching-case-2",
@@ -43,7 +444,7 @@
           "source_system_iri": "urn:teaching:fictional-records",
           "recorded_at": "2026-09-20T09:00:00Z",
           "effective_at": "2026-09-20T09:00:00Z",
-          "valid_until": null,
+          "valid_until": "2026-09-24T10:00:00Z",
           "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
           "author_or_respondent_role": "fictional_case_author",
           "record_fingerprint": "sha256:4c1ebdda96ae47f51cf764ee80be8ebb841a9017736b3be40b49efb5096b1c17"
@@ -56,7 +457,7 @@
           "source_system_iri": "urn:teaching:fictional-records",
           "recorded_at": "2026-09-20T09:00:00Z",
           "effective_at": "2026-09-20T09:00:00Z",
-          "valid_until": null,
+          "valid_until": "2026-09-24T10:00:00Z",
           "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
           "author_or_respondent_role": "fictional_case_author",
           "record_fingerprint": "sha256:5068f344ad58702f9eb13da6cbf8ded9ada0aa4864bf5eae945cca0a0fb9d2a7"
@@ -69,7 +470,7 @@
           "source_system_iri": "urn:teaching:fictional-records",
           "recorded_at": "2026-09-20T09:00:00Z",
           "effective_at": "2026-09-20T09:00:00Z",
-          "valid_until": null,
+          "valid_until": "2026-09-24T10:00:00Z",
           "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
           "author_or_respondent_role": "fictional_case_author",
           "record_fingerprint": "sha256:663d0f49a2a0169162e6b895b427aed3b7f58df6723d53c6f681a2913f1db2f0"
@@ -78,39 +479,29 @@
     },
     "margolis_first_visit_assessment": {
       "wound_area": {
-        "value": 1,
-        "unit": "cm2",
-        "source_evidence": {
-          "source_record_iri": "urn:teaching:case-2:wound_area",
-          "source_system_iri": "urn:teaching:fictional-records",
-          "recorded_at": "2026-09-20T09:00:00Z",
-          "effective_at": "2026-09-20T09:00:00Z",
-          "valid_until": null,
-          "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
-          "author_or_respondent_role": "fictional_case_author",
-          "record_fingerprint": "sha256:5bbabf47c515aba413f076a1cf8a02bfbcda54d9f9b3431a53ed1c276d198e6d"
-        }
+        "value": 4,
+        "ucum_code": "cm2"
       },
       "wound_duration": {
-        "value": 4,
-        "unit": "wk",
-        "source_evidence": {
-          "source_record_iri": "urn:teaching:case-2:wound_duration",
-          "source_system_iri": "urn:teaching:fictional-records",
-          "recorded_at": "2026-09-20T09:00:00Z",
-          "effective_at": "2026-09-20T09:00:00Z",
-          "valid_until": null,
-          "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
-          "author_or_respondent_role": "fictional_case_author",
-          "record_fingerprint": "sha256:3980ee8bd9b72aa559f3c02d88f9ef9cf5605d948afcd9bbeb43993222b7807e"
-        }
+        "value": 10,
+        "ucum_code": "wk"
       },
-      "assessment_time": "2026-09-10T09:00:00Z",
+      "first_visit_at": "2026-09-10T09:00:00Z",
+      "measurement_method": "Clinician-authored first-visit wound assessment",
+      "first_visit_attested": true,
+      "subject_identifier": {
+        "system": "https://example.org/mrn",
+        "value": "SUBJECT-case-2"
+      },
+      "ulcer_identifier": {
+        "system": "https://example.org/ulcer",
+        "value": "ULCER-case-2"
+      },
       "source_evidence": {
         "source_record_iri": "urn:teaching:case-2:first-visit",
         "source_system_iri": "urn:teaching:fictional-records",
-        "recorded_at": "2026-09-20T09:00:00Z",
-        "effective_at": "2026-09-20T09:00:00Z",
+        "recorded_at": "2026-09-10T09:00:00Z",
+        "effective_at": "2026-09-10T09:00:00Z",
         "valid_until": null,
         "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
         "author_or_respondent_role": "fictional_case_author",
@@ -118,10 +509,56 @@
       }
     },
     "wagner_response_artifact": {
-      "artifact_locator": "urn:teaching:case-2:wagner-response",
-      "media_type": "application/json",
-      "response_fingerprint": "sha256:a2e93383f5b0a63997d301ee5d03d6a49d8ae744e82ad806f3e7e790b6561716",
+      "specification_iri": "https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0",
+      "response_model_iri": "https://kgrid.org/cks/meggitt-wagner/response-models/1.0",
+      "question_set_iri": "https://kgrid.org/cks/meggitt-wagner/question-sets/mw-qs-02/versions/1.0",
+      "question_ids": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07",
+        "Q08",
+        "Q09",
+        "Q10"
+      ],
+      "responses": [
+        "0",
+        "0",
+        "1",
+        "X",
+        "X",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "directly_answered_questions": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q06",
+        "Q07"
+      ],
+      "entailed_questions": [
+        "Q08",
+        "Q09",
+        "Q10"
+      ],
       "completed_at": "2026-09-20T09:30:00Z",
+      "subject_identifier": {
+        "system": "https://example.org/mrn",
+        "value": "SUBJECT-case-2"
+      },
+      "ulcer_identifier": {
+        "system": "https://example.org/ulcer",
+        "value": "ULCER-case-2"
+      },
+      "source_artifact_iri": "urn:teaching:case-2:wagner-response",
+      "artifact_fingerprint": "sha256:a2e93383f5b0a63997d301ee5d03d6a49d8ae744e82ad806f3e7e790b6561716",
       "source_evidence": {
         "source_record_iri": "urn:teaching:case-2:wagner-response",
         "source_system_iri": "urn:teaching:fictional-records",
@@ -134,15 +571,25 @@
       }
     },
     "burden_questionnaire_artifact": {
-      "artifact_locator": "urn:teaching:case-2:burden-response",
-      "media_type": "application/json",
-      "response_fingerprint": "sha256:325343e01265eb49de78fb1d430d63ca3c03b5b6745d52653b7bb836b55ac7df",
-      "confirmed_at": "2026-09-20T09:30:00Z",
+      "specification_iri": "https://kgrid.org/cks/dfu-hbot-burden/versions/cks-1.0",
+      "response_model_iri": "https://kgrid.org/cks/dfu-hbot-burden/response-models/1.0",
+      "provider_roster_version_iri": "https://kgrid.org/cks/dfu-hbot-burden/provider-rosters/appendix-e/versions/1.0",
+      "confirmation_status": "confirmed",
+      "hyperbaric_oxygen_therapy_location": "https://kgrid.org/cks/dfu-hbot-burden/providers/e-001",
+      "one_way_miles": 5,
+      "one_way_travel_minutes": 70,
+      "weekday_attendance_difficulty": "none",
+      "completed_at": "2026-09-20T09:30:00Z",
+      "subject_identifier": {
+        "system": "https://example.org/mrn",
+        "value": "SUBJECT-case-2"
+      },
       "treatment_plan_identifier": {
         "system": "urn:teaching:treatment-plan",
         "value": "PLAN-case-2"
       },
-      "treatment_location": "https://kgrid.org/cks/dfu-hbot-burden/providers/e-001",
+      "source_artifact_iri": "urn:teaching:case-2:burden-response",
+      "artifact_fingerprint": "sha256:42c92b908f54d6dd7039b88f4c3a940403378dfa4882b4e6deb57f2563f8990a",
       "source_evidence": {
         "source_record_iri": "urn:teaching:case-2:burden-response",
         "source_system_iri": "urn:teaching:fictional-records",
@@ -155,84 +602,24 @@
       }
     }
   },
-  "artifact_payloads": {
-    "urn:teaching:case-2:wagner-response": {
-      "response": {
-        "specification_iri": "https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0",
-        "response_model_iri": "https://kgrid.org/cks/meggitt-wagner/response-models/1.0",
-        "question_set_iri": "https://kgrid.org/cks/meggitt-wagner/question-sets/mw-qs-02/versions/1.0",
-        "question_ids": [
-          "Q01",
-          "Q02",
-          "Q03",
-          "Q04",
-          "Q05",
-          "Q06",
-          "Q07",
-          "Q08",
-          "Q09",
-          "Q10"
-        ],
-        "responses": [
-          "0",
-          "0",
-          "1",
-          "X",
-          "X",
-          "1",
-          "1",
-          "0",
-          "0",
-          "0"
-        ],
-        "directly_answered_questions": [
-          "Q01",
-          "Q02",
-          "Q03",
-          "Q06",
-          "Q07"
-        ],
-        "entailed_questions": [
-          "Q08",
-          "Q09",
-          "Q10"
-        ]
-      },
-      "subject_identifier": {
-        "system": "https://example.org/mrn",
-        "value": "SUBJECT-case-2"
-      },
-      "ulcer_identifier": {
-        "system": "https://example.org/ulcer",
-        "value": "ULCER-case-2"
-      }
+  "plan_binding": {
+    "treatment_plan_identifier": {
+      "system": "urn:teaching:treatment-plan",
+      "value": "PLAN-case-2"
     },
-    "urn:teaching:case-2:burden-response": {
-      "response": {
-        "specification_iri": "https://kgrid.org/cks/dfu-hbot-burden/versions/cks-1.0",
-        "questionnaire_status": "completed",
-        "response_model_iri": "https://kgrid.org/cks/dfu-hbot-burden/response-models/1.0",
-        "provider_roster_version_iri": "https://kgrid.org/cks/dfu-hbot-burden/provider-rosters/appendix-e/versions/1.0",
-        "response_projection": {
-          "hyperbaric_oxygen_therapy_location": "https://kgrid.org/cks/dfu-hbot-burden/providers/e-001",
-          "one_way_miles": 5,
-          "one_way_travel_minutes": 10,
-          "weekday_attendance_difficulty": "none"
-        },
-        "confirmed": true
-      },
-      "subject_identifier": {
-        "system": "https://example.org/mrn",
-        "value": "SUBJECT-case-2"
-      },
-      "ulcer_identifier": {
-        "system": "https://example.org/ulcer",
-        "value": "ULCER-case-2"
-      },
-      "treatment_plan_identifier": {
-        "system": "urn:teaching:treatment-plan",
-        "value": "PLAN-case-2"
-      }
+    "ulcer_identifier": {
+      "system": "https://example.org/ulcer",
+      "value": "ULCER-case-2"
+    },
+    "source_evidence": {
+      "source_record_iri": "urn:teaching:case-2:plan-for-ulcer",
+      "source_system_iri": "urn:teaching:fictional-records",
+      "recorded_at": "2026-09-20T09:00:00Z",
+      "effective_at": "2026-09-20T09:00:00Z",
+      "valid_until": "2026-09-24T10:00:00Z",
+      "author_or_respondent_iri": "urn:teaching:case-2:fictional-respondent",
+      "author_or_respondent_role": "fictional_case_author",
+      "record_fingerprint": "sha256:62c6b65d1906c681e6c0023599c55278bc639ab8885ca825e76c345be8a9ca3d"
     }
   }
 }

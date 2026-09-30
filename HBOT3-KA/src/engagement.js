@@ -194,7 +194,7 @@ async function engageWagner({ questionnaireResponse, artifactLocator, executionI
           message: `Wagner returned a nonusable analysis_status: ${native.analysis_status}.`
         })
       ];
-  return { ok: usable, record, diagnostics, native };
+  return { ok: usable, record, diagnostics, native, invocationRequest: request };
 }
 
 function engageMargolis({ assessment, executionId, sequenceNumber, expectedIri }) {
@@ -307,7 +307,7 @@ function engageMargolis({ assessment, executionId, sequenceNumber, expectedIri }
           message: 'Margolis returned a native failure status.'
         })
       ];
-  return { ok: usable, record, diagnostics, native, transformation: tx03.record };
+  return { ok: usable, record, diagnostics, native, invocationRequest: request, transformation: tx03.record };
 }
 
 async function engageBurden({ questionnaireResponse, artifactLocator, executionId, sequenceNumber, expectedIri }) {
@@ -442,7 +442,7 @@ async function engageBurden({ questionnaireResponse, artifactLocator, executionI
           message: 'Burden returned a native error status.'
         })
       ];
-  return { ok: usable, record, diagnostics, native, transformation: tx04.record };
+  return { ok: usable, record, diagnostics, native, invocationRequest: tx04.request, transformation: tx04.record };
 }
 
 function engageHbotDecision({
@@ -609,6 +609,7 @@ function engageHbotDecision({
     record,
     diagnostics,
     native,
+    invocationRequest: request,
     transformations: [
       tx01.record,
       tx02Results.dfu_confirmed.record,

@@ -12,15 +12,15 @@ function printHelp() {
     'Usage:',
     '  hbot-treatment-target-ka --file <path-to-request.json>',
     '  hbot-treatment-target-ka --request <json-object-text>',
-    '  Add --preparation <path-to-preparation.json> for artifact payloads and',
-    '  provenance needed when either questionnaire must be collected.',
+    '  Add --preparation <path-to-preparation.json> for collection provenance',
+    '  and the required treatment-plan-to-ulcer binding.',
     '  hbot-treatment-target-ka --help',
     '',
     'Prepares missing questionnaire artifacts through their owning KOs,',
     'then submits a complete Section 2.5 request to the closed KA core.',
     '',
-    'A supplied artifact is never recollected. Its response payload must be',
-    'available in preparation.artifactPayloads under its artifact_locator.'
+    'A supplied artifact is never recollected. The complete CKS response',
+    'artifact is carried inline in the request.'
   ].join('\n');
   process.stdout.write(`${helpText}\n`);
 }

@@ -41,16 +41,16 @@ const { result, preparation } = await prepareAndExecuteKnowledgeAssembly({
   // Either or both Section 2.5 response artifacts may be supplied here.
 }, {
   collectionMetadata: {
-    wagner: { /* artifact_locator, completed_at, source_evidence */ },
-    burden: { /* artifact_locator, confirmed_at, treatment_plan_identifier, source_evidence */ }
+    wagner: { /* source_artifact_iri, completed_at, source_evidence */ },
+    burden: { /* source_artifact_iri, completed_at, treatment_plan_identifier, source_evidence */ }
   },
-  artifactPayloads: { /* supplied artifact locator -> response and subject/ulcer binding */ }
+  planBinding: { /* treatment_plan_identifier, ulcer_identifier, source_evidence */ }
 });
 
 console.log(result.target_classification, result.reason_code);
 ```
 
-The preparation options may include `wagnerAskYesNo` and `burdenAskQuestion` callback overrides for missing artifacts. Without overrides, the KO-owned prompters use stdin/stdout. The caller must supply attributable `collectionMetadata` for every artifact it asks the KA to collect; the runtime will not invent provenance. A supplied descriptor needs a matching payload in `artifactPayloads` (or an explicit `resolveArtifact` callback); the KA never dereferences an IRI automatically. `preparation.source_modes` reports `supplied` or `collected` for each role. Applications that already possess a complete request can call `executeKnowledgeAssembly(request, { artifactPayloads })` directly.
+The preparation options may include `wagnerAskYesNo` and `burdenAskQuestion` callback overrides for missing artifacts. Without overrides, the KO-owned prompters use stdin/stdout. The caller must supply attributable `collectionMetadata` for every artifact it asks the KA to collect; the runtime will not invent provenance. A supplied artifact is complete and inline in the closed request, not a locator-only descriptor. `preparation.source_modes` reports `supplied` or `collected` for each role. A caller must also provide an attributable `planBinding` proving that the Burden treatment plan applies to the bound ulcer. Applications already holding a complete request can call `executeKnowledgeAssembly(request, { planBinding })` directly. For a current assertion without `valid_until`, pass an explicit `currentnessAttestations` record keyed by assertion name; the core otherwise refuses to assume that the assertion remains current.
 
 See Section 2.5 of the CKS for the complete closed input contract; `hbot_case_assertions` and `margolis_first_visit_assessment` remain required direct KA inputs because neither the HBOT Decision KO nor the Margolis KO owns an interactive collection capability — those values must already be attested clinical facts (Section 2.5/2.6), not something any KO can collect from the user.
 
@@ -60,9 +60,11 @@ See Section 2.5 of the CKS for the complete closed input contract; `hbot_case_as
 npm run cli -- --file test/request.json --preparation path/to/preparation.json
 ```
 
-`test/request.json` is a partial sample for the preparation interface, not a complete Section 2.5 core request. The preparation JSON supplies `collectionMetadata` for missing artifacts and/or `artifactPayloads` for supplied ones. The CLI only prompts for a missing questionnaire after the required provenance metadata is provided.
+`test/request.json` is a partial sample for the preparation interface, not a complete Section 2.5 core request. The preparation JSON supplies `collectionMetadata` for missing artifacts and `planBinding` for the bound treatment plan. The CLI only prompts for a missing questionnaire after the required provenance metadata is provided.
 
-Five complete, fictional teaching cases live in `auxiliary/aux-teaching/cases/`, in presentation order. Cases 1–3 demonstrate `ON_TARGET`, `NEAR_TARGET`, and `OUTER_TARGET`; cases 4–5 demonstrate an unsupported decision gate and an out-of-scope input. Each JSON file keeps its title, teaching note, and computed expected outcome outside the closed `request`; `artifact_payloads` supplies the two matching questionnaire responses by locator. Run the KA with `executeKnowledgeAssembly(caseRecord.request, { artifactPayloads: caseRecord.artifact_payloads })`. These are instructional data, not patient records. `auxiliary/aux-teaching/generate-cases.js` documents their construction; `test/teaching-cases.test.js` checks that every stored case remains executable and produces its declared outcome.
+Five complete, fictional teaching cases live in `auxiliary/aux-teaching/cases/`, in presentation order. Cases 1–3 demonstrate `ON_TARGET`, `NEAR_TARGET`, and `OUTER_TARGET`; cases 4–5 demonstrate an unsupported decision gate and an out-of-scope input. Each JSON file keeps its title, teaching note, and computed expected outcome outside the closed `request`; the two complete questionnaire artifacts live inside the request as CKS 2.5 requires. Run the KA with `executeKnowledgeAssembly(caseRecord.request, { planBinding: caseRecord.plan_binding })`. These are instructional data, not patient records. `auxiliary/aux-teaching/generate-cases.js` documents their construction; `test/teaching-cases.test.js` checks that every stored case remains executable and produces its declared outcome.
+
+The independent `auxiliary/aux-teaching/accepted-three-case-baseline.v1.json` freezes the accepted inputs, one-ulcer identities, key outputs from all four constituent KOs, and KA gate/synthesis decisions for Cases 1–3. The generator does not read or rewrite this baseline. If a KO or teaching-case edit changes an accepted fact, update the versioned baseline only after deliberate review; the teaching-case tests otherwise fail.
 
 ## Notebooks
 

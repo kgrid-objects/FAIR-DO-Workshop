@@ -1,237 +1,180 @@
 'use strict';
 
-// Section 2.5 / 2.7: the core accepts a complete, closed KA envelope.
-// Optional collection belongs to the separate preparation interface.
+// Closed KA envelope from CKS 2.5; collection occurs only before this boundary.
+const TOP_LEVEL_FIELDS = ['request_id', 'requested_at', 'index_time', 'subject_binding',
+  'hbot_case_assertions', 'wagner_response_artifact', 'margolis_first_visit_assessment',
+  'burden_questionnaire_artifact'];
+const HBOT_ASSERTION_FIELDS = ['dfu_confirmed', 'acute_surgical_intervention', 'not_healed_after_30_days'];
+const EVIDENCE_FIELDS = ['source_record_iri', 'source_system_iri', 'recorded_at', 'effective_at',
+  'author_or_respondent_iri', 'author_or_respondent_role', 'record_fingerprint'];
+const WAGNER_FIELDS = ['specification_iri', 'response_model_iri', 'question_set_iri', 'question_ids',
+  'responses', 'directly_answered_questions', 'entailed_questions', 'completed_at',
+  'subject_identifier', 'ulcer_identifier', 'source_artifact_iri', 'artifact_fingerprint', 'source_evidence'];
+const BURDEN_FIELDS = ['specification_iri', 'response_model_iri', 'provider_roster_version_iri',
+  'confirmation_status', 'hyperbaric_oxygen_therapy_location', 'one_way_miles',
+  'one_way_travel_minutes', 'weekday_attendance_difficulty', 'completed_at',
+  'subject_identifier', 'treatment_plan_identifier', 'source_artifact_iri',
+  'artifact_fingerprint', 'source_evidence'];
+const MARGOLIS_FIELDS = ['wound_area', 'wound_duration', 'first_visit_at', 'measurement_method',
+  'first_visit_attested', 'subject_identifier', 'ulcer_identifier', 'source_evidence'];
+const isPlainObject = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
+const isIsoDateTime = (v) => typeof v === 'string' &&
+  /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/.test(v) &&
+  !Number.isNaN(Date.parse(v));
+const isAbsoluteIri = (v) => typeof v === 'string' && /^[a-z][a-z0-9+.-]*:[^\s]+$/i.test(v);
+const fail = (message, field) => ({ field, message });
 
-const TOP_LEVEL_FIELDS = [
-  'request_id',
-  'requested_at',
-  'index_time',
-  'subject_binding',
-  'hbot_case_assertions',
-  'wagner_response_artifact',
-  'margolis_first_visit_assessment',
-  'burden_questionnaire_artifact'
-];
-
-const HBOT_ASSERTION_FIELDS = [
-  'dfu_confirmed',
-  'acute_surgical_intervention',
-  'not_healed_after_30_days'
-];
-
-function isPlainObject(value) {
-  return value !== null && typeof value === 'object' && !Array.isArray(value);
-}
-
-function isIsoDateTime(value) {
-  if (typeof value !== 'string') return false;
-  const date = new Date(value);
-  return !Number.isNaN(date.getTime()) && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/.test(value);
-}
-
-function fail(message, path) {
-  return { field: path, message };
-}
-
-function isAbsoluteIri(value) {
-  return typeof value === 'string' && /^[a-z][a-z0-9+.-]*:[^\s]+$/i.test(value);
-}
-
-function validIdentifier(value) {
-  return isPlainObject(value) &&
-    typeof value.system === 'string' && value.system.length > 0 &&
-    typeof value.value === 'string' && value.value.length > 0;
-}
-
-function validateSourceEvidence(value, path, problems) {
-  const fields = ['source_record_iri', 'source_system_iri', 'recorded_at', 'effective_at',
-    'valid_until', 'author_or_respondent_iri', 'author_or_respondent_role', 'record_fingerprint'];
-  if (!isPlainObject(value) || fields.some((field) => !(field in value)) ||
-      Object.keys(value).some((field) => !fields.includes(field))) {
-    problems.push(fail('source_evidence must contain exactly the declared evidence fields.', path));
-    return;
+function closed(v, required, path, problems, optional = []) {
+  if (!isPlainObject(v) || required.some((k) => !(k in v)) ||
+      Object.keys(v).some((k) => !required.includes(k) && !optional.includes(k))) {
+    problems.push(fail('Missing or unknown field in closed object.', path));
+    return false;
   }
+  return true;
+}
+function identifier(v, path, problems) {
+  if (closed(v, ['system', 'value'], path, problems) &&
+      (!isAbsoluteIri(v.system) || typeof v.value !== 'string' || !v.value)) {
+    problems.push(fail('Identifier requires absolute system IRI and nonempty value.', path));
+  }
+}
+function evidence(v, path, problems) {
+  if (!closed(v, EVIDENCE_FIELDS, path, problems, ['valid_until'])) return;
   for (const field of ['source_record_iri', 'source_system_iri', 'author_or_respondent_iri']) {
-    if (!isAbsoluteIri(value[field])) {
-      problems.push(fail(`${field} must be an absolute IRI.`, `${path}.${field}`));
-    }
+    if (!isAbsoluteIri(v[field])) problems.push(fail('Absolute IRI required.', `${path}.${field}`));
   }
   for (const field of ['recorded_at', 'effective_at']) {
-    if (!isIsoDateTime(value[field])) problems.push(fail(`${field} must be a date-time.`, `${path}.${field}`));
+    if (!isIsoDateTime(v[field])) problems.push(fail('Explicit-offset date-time required.', `${path}.${field}`));
   }
-  if (value.valid_until !== null && !isIsoDateTime(value.valid_until)) {
-    problems.push(fail('valid_until must be a date-time or null.', `${path}.valid_until`));
+  if ('valid_until' in v && v.valid_until !== null && !isIsoDateTime(v.valid_until)) {
+    problems.push(fail('Date-time or null required.', `${path}.valid_until`));
   }
-  if (typeof value.author_or_respondent_role !== 'string' || !value.author_or_respondent_role) {
-    problems.push(fail('author_or_respondent_role is required.', `${path}.author_or_respondent_role`));
+  if (typeof v.author_or_respondent_role !== 'string' || !v.author_or_respondent_role) {
+    problems.push(fail('Respondent role required.', `${path}.author_or_respondent_role`));
   }
-  if (!/^sha256:[0-9a-f]{64}$/.test(value.record_fingerprint)) {
-    problems.push(fail('record_fingerprint must be SHA-256.', `${path}.record_fingerprint`));
+  if (!/^sha256:[0-9a-f]{64}$/.test(v.record_fingerprint)) {
+    problems.push(fail('SHA-256 fingerprint required.', `${path}.record_fingerprint`));
   }
 }
-
-function validateResponseArtifact(value, kind, problems) {
-  const path = `${kind}_response_artifact`;
-  const fields = kind === 'wagner'
-    ? ['artifact_locator', 'media_type', 'response_fingerprint', 'completed_at', 'source_evidence']
-    : ['artifact_locator', 'media_type', 'response_fingerprint', 'confirmed_at',
-      'treatment_plan_identifier', 'treatment_location', 'source_evidence'];
-  if (!isPlainObject(value) || fields.some((field) => !(field in value)) ||
-      Object.keys(value).some((field) => !fields.includes(field))) {
-    problems.push(fail(`${path} must contain exactly the schema-bundle fields.`, path));
-    return;
+function strings(v, path, problems) {
+  if (!Array.isArray(v) || !v.every((x) => typeof x === 'string' && x)) {
+    problems.push(fail('Array of nonempty strings required.', path));
   }
-  if (!isAbsoluteIri(value.artifact_locator)) {
-    problems.push(fail('artifact_locator must be an absolute IRI.', `${path}.artifact_locator`));
-  }
-  if (value.media_type !== 'application/json') problems.push(fail('media_type must be application/json.', `${path}.media_type`));
-  if (!/^sha256:[0-9a-f]{64}$/.test(value.response_fingerprint)) {
-    problems.push(fail('response_fingerprint must be SHA-256.', `${path}.response_fingerprint`));
-  }
-  const timeField = kind === 'wagner' ? 'completed_at' : 'confirmed_at';
-  if (!isIsoDateTime(value[timeField])) problems.push(fail(`${timeField} must be a date-time.`, `${path}.${timeField}`));
-  if (kind === 'burden') {
-    if (!validIdentifier(value.treatment_plan_identifier)) {
-      problems.push(fail('treatment_plan_identifier must contain system and value.', `${path}.treatment_plan_identifier`));
-    }
-    if (typeof value.treatment_location !== 'string' || !value.treatment_location) {
-      problems.push(fail('treatment_location is required.', `${path}.treatment_location`));
-    }
-  }
-  validateSourceEvidence(value.source_evidence, `${path}.source_evidence`, problems);
 }
-
-// Returns { valid: boolean, problems: [{field, message}] }.
+function iriFields(v, fields, path, problems) {
+  for (const field of fields) if (!isAbsoluteIri(v[field])) problems.push(fail('Absolute IRI required.', `${path}.${field}`));
+}
 function validateInputContract(request) {
   const problems = [];
-
-  if (!isPlainObject(request)) {
-    return { valid: false, problems: [fail('KA request must be a JSON object.', '$')] };
+  if (!closed(request, TOP_LEVEL_FIELDS, '$', problems)) return { valid: false, problems };
+  if (typeof request.request_id !== 'string' || !request.request_id) problems.push(fail('Request ID required.', 'request_id'));
+  for (const field of ['requested_at', 'index_time']) {
+    if (!isIsoDateTime(request[field])) problems.push(fail('Explicit-offset date-time required.', field));
   }
-
-  const unknown = Object.keys(request).filter((key) => !TOP_LEVEL_FIELDS.includes(key));
-  if (unknown.length) {
-    problems.push(fail(`Unknown top-level field(s): ${unknown.join(', ')}.`, '$'));
+  const binding = request.subject_binding;
+  if (closed(binding, ['subject_identifier', 'ulcer_identifier', 'care_episode_identifier', 'source_evidence'], 'subject_binding', problems)) {
+    for (const field of ['subject_identifier', 'ulcer_identifier', 'care_episode_identifier']) identifier(binding[field], `subject_binding.${field}`, problems);
+    evidence(binding.source_evidence, 'subject_binding.source_evidence', problems);
   }
-  for (const field of TOP_LEVEL_FIELDS) {
-    if (!(field in request) || request[field] === null || request[field] === undefined) {
-      problems.push(fail(`Required field is missing or null: ${field}.`, field));
-    }
-  }
-  if (problems.length) return { valid: false, problems };
-
-  if (!isIsoDateTime(request.requested_at)) {
-    problems.push(fail('requested_at must be a valid UTC date-time.', 'requested_at'));
-  }
-  if (!isIsoDateTime(request.index_time)) {
-    problems.push(fail('index_time must be a valid UTC date-time.', 'index_time'));
-  }
-  if (
-    isIsoDateTime(request.requested_at) &&
-    isIsoDateTime(request.index_time) &&
-    new Date(request.index_time).getTime() > new Date(request.requested_at).getTime()
-  ) {
-    problems.push(fail('index_time SHALL NOT be later than requested_at.', 'index_time'));
-  }
-
-  if (!isPlainObject(request.subject_binding)) {
-    problems.push(fail('subject_binding must be an object.', 'subject_binding'));
-  } else {
-    for (const idField of ['subject_identifier', 'ulcer_identifier', 'care_episode_identifier']) {
-      const id = request.subject_binding[idField];
-      if (!isPlainObject(id) || typeof id.system !== 'string' || typeof id.value !== 'string') {
-        problems.push(
-          fail(`subject_binding.${idField} must contain system and value.`, `subject_binding.${idField}`)
-        );
-      }
-    }
-  }
-
-  validateResponseArtifact(request.wagner_response_artifact, 'wagner', problems);
-  validateResponseArtifact(request.burden_questionnaire_artifact, 'burden', problems);
-
-  if (!isPlainObject(request.hbot_case_assertions)) {
-    problems.push(fail('hbot_case_assertions must be an object.', 'hbot_case_assertions'));
-  } else {
+  const assertions = request.hbot_case_assertions;
+  if (closed(assertions, HBOT_ASSERTION_FIELDS, 'hbot_case_assertions', problems)) {
     for (const field of HBOT_ASSERTION_FIELDS) {
-      const assertion = request.hbot_case_assertions[field];
-      if (!isPlainObject(assertion) || typeof assertion.value !== 'boolean') {
-        problems.push(
-          fail(
-            `hbot_case_assertions.${field} must be an explicit attested Boolean.`,
-            `hbot_case_assertions.${field}`
-          )
-        );
+      const path = `hbot_case_assertions.${field}`, a = assertions[field];
+      if (closed(a, ['value', 'source_evidence'], path, problems)) {
+        if (typeof a.value !== 'boolean') problems.push(fail('Explicit Boolean required.', `${path}.value`));
+        evidence(a.source_evidence, `${path}.source_evidence`, problems);
       }
     }
   }
-
-  const margolisAssessment = request.margolis_first_visit_assessment;
-  const assessmentFields = ['wound_area', 'wound_duration', 'assessment_time', 'source_evidence'];
-  if (!isPlainObject(margolisAssessment) || assessmentFields.some((field) => !(field in margolisAssessment)) ||
-      Object.keys(margolisAssessment).some((field) => !assessmentFields.includes(field))) {
-    problems.push(fail('margolis_first_visit_assessment must match the closed schema-bundle fields.', 'margolis_first_visit_assessment'));
-  } else {
-    if (!isIsoDateTime(margolisAssessment.assessment_time)) {
-      problems.push(fail('assessment_time must be a date-time.', 'margolis_first_visit_assessment.assessment_time'));
-    }
-    validateSourceEvidence(margolisAssessment.source_evidence, 'margolis_first_visit_assessment.source_evidence', problems);
-    for (const field of ['wound_area', 'wound_duration']) {
-      const quantity = margolisAssessment[field];
-      const allowedUnits = field === 'wound_area' ? ['cm2', 'mm2'] : ['wk', 'd'];
-      if (!isPlainObject(quantity) || Object.keys(quantity).some((key) => !['value', 'unit', 'source_evidence'].includes(key)) ||
-          !Number.isFinite(quantity.value) || quantity.value <= 0 || !allowedUnits.includes(quantity.unit)) {
-        problems.push(fail(`${field} needs a positive value, supported unit, and source evidence.`, `margolis_first_visit_assessment.${field}`));
-      } else {
-        validateSourceEvidence(quantity.source_evidence, `margolis_first_visit_assessment.${field}.source_evidence`, problems);
-      }
-    }
+  const w = request.wagner_response_artifact, wp = 'wagner_response_artifact';
+  if (closed(w, WAGNER_FIELDS, wp, problems)) {
+    iriFields(w, ['specification_iri', 'response_model_iri', 'question_set_iri', 'source_artifact_iri'], wp, problems);
+    for (const field of ['question_ids', 'responses', 'directly_answered_questions', 'entailed_questions']) strings(w[field], `${wp}.${field}`, problems);
+    if (Array.isArray(w.question_ids) && Array.isArray(w.responses) && w.question_ids.length !== w.responses.length) problems.push(fail('Question and response arrays must align.', `${wp}.responses`));
+    if (!isIsoDateTime(w.completed_at)) problems.push(fail('Completion time required.', `${wp}.completed_at`));
+    identifier(w.subject_identifier, `${wp}.subject_identifier`, problems);
+    identifier(w.ulcer_identifier, `${wp}.ulcer_identifier`, problems);
+    if (!/^sha256:[0-9a-f]{64}$/.test(w.artifact_fingerprint)) problems.push(fail('SHA-256 fingerprint required.', `${wp}.artifact_fingerprint`));
+    evidence(w.source_evidence, `${wp}.source_evidence`, problems);
   }
-
-  // Section 2.7.2: acceptable timing by input (basic as-of ordering).
-  if (isIsoDateTime(request.index_time)) {
-    const indexMs = new Date(request.index_time).getTime();
-    if (isIsoDateTime(margolisAssessment && margolisAssessment.assessment_time)) {
-      if (new Date(margolisAssessment.assessment_time).getTime() > indexMs) {
-        problems.push(
-          fail(
-            'margolis_first_visit_assessment.assessment_time SHALL NOT be later than index_time.',
-            'margolis_first_visit_assessment.assessment_time'
-          )
-        );
-      }
+  const m = request.margolis_first_visit_assessment, mp = 'margolis_first_visit_assessment';
+  if (closed(m, MARGOLIS_FIELDS, mp, problems)) {
+    for (const [field, units] of [['wound_area', ['cm2', 'mm2']], ['wound_duration', ['wk', 'd']]]) {
+      const q = m[field], path = `${mp}.${field}`;
+      if (closed(q, ['value', 'ucum_code'], path, problems) && (!Number.isFinite(q.value) || q.value <= 0 || !units.includes(q.ucum_code))) problems.push(fail('Positive value and accepted UCUM code required.', path));
     }
+    if (!isIsoDateTime(m.first_visit_at)) problems.push(fail('First-visit time required.', `${mp}.first_visit_at`));
+    if (typeof m.measurement_method !== 'string' || !m.measurement_method) problems.push(fail('Measurement method required.', `${mp}.measurement_method`));
+    if (m.first_visit_attested !== true) problems.push(fail('First visit must be attested.', `${mp}.first_visit_attested`));
+    identifier(m.subject_identifier, `${mp}.subject_identifier`, problems);
+    identifier(m.ulcer_identifier, `${mp}.ulcer_identifier`, problems);
+    evidence(m.source_evidence, `${mp}.source_evidence`, problems);
   }
-
+  const b = request.burden_questionnaire_artifact, bp = 'burden_questionnaire_artifact';
+  if (closed(b, BURDEN_FIELDS, bp, problems)) {
+    iriFields(b, ['specification_iri', 'response_model_iri', 'provider_roster_version_iri', 'hyperbaric_oxygen_therapy_location', 'source_artifact_iri'], bp, problems);
+    if (b.confirmation_status !== 'confirmed') problems.push(fail('Artifact must be confirmed.', `${bp}.confirmation_status`));
+    for (const field of ['one_way_miles', 'one_way_travel_minutes']) if (!Number.isFinite(b[field]) || b[field] < 0) problems.push(fail('Nonnegative number required.', `${bp}.${field}`));
+    if (!['none', 'some', 'major'].includes(b.weekday_attendance_difficulty)) problems.push(fail('Unsupported difficulty.', `${bp}.weekday_attendance_difficulty`));
+    if (!isIsoDateTime(b.completed_at)) problems.push(fail('Completion time required.', `${bp}.completed_at`));
+    identifier(b.subject_identifier, `${bp}.subject_identifier`, problems);
+    identifier(b.treatment_plan_identifier, `${bp}.treatment_plan_identifier`, problems);
+    if (!/^sha256:[0-9a-f]{64}$/.test(b.artifact_fingerprint)) problems.push(fail('SHA-256 fingerprint required.', `${bp}.artifact_fingerprint`));
+    evidence(b.source_evidence, `${bp}.source_evidence`, problems);
+  }
   return { valid: problems.length === 0, problems };
 }
-
-// Section 2.7: subject/ulcer identity coherence across engagement inputs.
 function checkSubjectCoherence(request) {
-  const problems = [];
-  const subjectId = request.subject_binding && request.subject_binding.subject_identifier;
-  const ulcerId = request.subject_binding && request.subject_binding.ulcer_identifier;
-
-  const sameId = (a, b) => a && b && a.system === b.system && a.value === b.value;
-
-  const margolisAssessment = request.margolis_first_visit_assessment || {};
-
-  if (margolisAssessment.subject_identifier && !sameId(margolisAssessment.subject_identifier, subjectId)) {
-    problems.push(fail('margolis_first_visit_assessment subject does not match subject_binding.', 'margolis_first_visit_assessment.subject_identifier'));
+  const problems = [], binding = request.subject_binding;
+  const same = (a, b) => a.system === b.system && a.value === b.value;
+  for (const [name, artifact] of [
+    ['wagner_response_artifact', request.wagner_response_artifact],
+    ['margolis_first_visit_assessment', request.margolis_first_visit_assessment],
+    ['burden_questionnaire_artifact', request.burden_questionnaire_artifact]
+  ]) {
+    if (!same(artifact.subject_identifier, binding.subject_identifier)) problems.push(fail('Subject differs from binding.', `${name}.subject_identifier`));
+    if (artifact.ulcer_identifier && !same(artifact.ulcer_identifier, binding.ulcer_identifier)) problems.push(fail('Ulcer differs from binding.', `${name}.ulcer_identifier`));
   }
-  if (margolisAssessment.ulcer_identifier && !sameId(margolisAssessment.ulcer_identifier, ulcerId)) {
-    problems.push(fail('margolis_first_visit_assessment ulcer does not match subject_binding.', 'margolis_first_visit_assessment.ulcer_identifier'));
-  }
-
   return { coherent: problems.length === 0, problems };
 }
-
-module.exports = {
-  TOP_LEVEL_FIELDS,
-  HBOT_ASSERTION_FIELDS,
-  isPlainObject,
-  isIsoDateTime,
-  validateInputContract,
-  checkSubjectCoherence
-};
+function checkTemporalCoherence(request, options = {}) {
+  const problems = [], index = Date.parse(request.index_time), requested = Date.parse(request.requested_at);
+  if (index > requested) problems.push(fail('index_time follows requested_at.', 'index_time'));
+  if (index > Date.now()) problems.push(fail('Future index_time is prohibited.', 'index_time'));
+  for (const [path, source] of [
+    ['subject_binding', request.subject_binding],
+    ...HBOT_ASSERTION_FIELDS.map((field) => [`hbot_case_assertions.${field}`, request.hbot_case_assertions[field]]),
+    ['wagner_response_artifact', request.wagner_response_artifact],
+    ['margolis_first_visit_assessment', request.margolis_first_visit_assessment],
+    ['burden_questionnaire_artifact', request.burden_questionnaire_artifact]
+  ]) {
+    const e = source.source_evidence;
+    if (Date.parse(e.recorded_at) > requested) problems.push(fail('Recorded after request.', `${path}.source_evidence.recorded_at`));
+    if (Date.parse(e.effective_at) > Date.parse(e.recorded_at)) problems.push(fail('Effective after recorded.', `${path}.source_evidence.effective_at`));
+    if (Date.parse(e.effective_at) > index) problems.push(fail('Future clinical fact.', `${path}.source_evidence.effective_at`));
+    if (e.valid_until && Date.parse(e.valid_until) < index) problems.push(fail('Evidence expired.', `${path}.source_evidence.valid_until`));
+  }
+  for (const [path, value] of [
+    ['wagner_response_artifact.completed_at', request.wagner_response_artifact.completed_at],
+    ['margolis_first_visit_assessment.first_visit_at', request.margolis_first_visit_assessment.first_visit_at],
+    ['burden_questionnaire_artifact.completed_at', request.burden_questionnaire_artifact.completed_at]
+  ]) if (Date.parse(value) > index) problems.push(fail('Input after index_time.', path));
+  if (Date.parse(request.margolis_first_visit_assessment.source_evidence.effective_at) !==
+      Date.parse(request.margolis_first_visit_assessment.first_visit_at)) {
+    problems.push(fail('Source must describe the attested first visit.', 'margolis_first_visit_assessment.source_evidence.effective_at'));
+  }
+  for (const field of HBOT_ASSERTION_FIELDS) {
+    const e = request.hbot_case_assertions[field].source_evidence;
+    const attestation = options.currentnessAttestations?.[field];
+    const explicitCurrentness = attestation?.source_record_iri === e.source_record_iri &&
+      attestation?.index_time === request.index_time &&
+      isAbsoluteIri(attestation?.attestor_iri) && isIsoDateTime(attestation?.attested_at) &&
+      Date.parse(attestation.attested_at) >= index && Date.parse(attestation.attested_at) <= requested;
+    if (!e.valid_until && !explicitCurrentness) {
+      problems.push(fail('Currentness at index_time is not attested.', `hbot_case_assertions.${field}.source_evidence.valid_until`));
+    }
+  }
+  return { coherent: problems.length === 0, problems };
+}
+module.exports = { TOP_LEVEL_FIELDS, HBOT_ASSERTION_FIELDS, isPlainObject, isIsoDateTime,
+  validateSourceEvidence: evidence, validateInputContract, checkSubjectCoherence, checkTemporalCoherence };

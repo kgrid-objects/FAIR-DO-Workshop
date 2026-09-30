@@ -6,6 +6,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const { prepareKnowledgeAssemblyRequest } = require('../../src/preparation');
 const { executeKnowledgeAssembly } = require('../../src/orchestrator');
+const { buildSemanticTrace } = require('./semantic-trace');
 
 const root = path.resolve(__dirname, '../..');
 const template = JSON.parse(fs.readFileSync(path.join(root, 'test/request.json'), 'utf8'));
@@ -13,9 +14,9 @@ const provider = 'https://kgrid.org/cks/dfu-hbot-burden/providers/e-001';
 const scoreThree = { Q01: false, Q02: false, Q06: true, Q07: true, Q03: true };
 const scoreZero = { Q01: false, Q02: false, Q06: false, Q10: true };
 const definitions = [
-  { id: 'case-1', title: 'On target', expected: 'ON_TARGET', area: 4, weeks: 10, wagner: scoreThree, minutes: 10, dfu: true },
-  { id: 'case-2', title: 'Near target', expected: 'NEAR_TARGET', area: 1, weeks: 4, wagner: scoreThree, minutes: 10, dfu: true },
-  { id: 'case-3', title: 'Outer target', expected: 'OUTER_TARGET', area: 1, weeks: 4, wagner: scoreThree, minutes: 40, dfu: true },
+  { id: 'case-1', title: 'A nearby facility', expected: 'ON_TARGET', area: 4, weeks: 10, wagner: scoreThree, minutes: 10, dfu: true },
+  { id: 'case-2', title: 'A distant facility', expected: 'NEAR_TARGET', area: 4, weeks: 10, wagner: scoreThree, minutes: 70, dfu: true },
+  { id: 'case-3', title: 'A different first visit', expected: 'OUTER_TARGET', area: 1, weeks: 4, wagner: scoreThree, minutes: 70, dfu: true },
   { id: 'case-4', title: 'Decision gate not supported', expected: 'OFF_TARGET', area: 1, weeks: 4, wagner: scoreZero, minutes: 10, dfu: true },
   { id: 'case-5', title: 'Outside the DFU scope', expected: 'INDETERMINATE', area: 1, weeks: 4, wagner: scoreThree, minutes: 10, dfu: false }
 ];
@@ -47,10 +48,16 @@ async function buildCase(definition) {
   input.hbot_case_assertions.dfu_confirmed.value = definition.dfu;
   input.margolis_first_visit_assessment.wound_area.value = definition.area;
   input.margolis_first_visit_assessment.wound_duration.value = definition.weeks;
-  for (const field of ['wound_area', 'wound_duration']) {
-    input.margolis_first_visit_assessment[field].source_evidence = evidence(id, field);
+  input.margolis_first_visit_assessment.subject_identifier = input.subject_binding.subject_identifier;
+  input.margolis_first_visit_assessment.ulcer_identifier = input.subject_binding.ulcer_identifier;
+  input.margolis_first_visit_assessment.source_evidence = {
+    ...evidence(id, 'first-visit'),
+    effective_at: input.margolis_first_visit_assessment.first_visit_at,
+    recorded_at: input.margolis_first_visit_assessment.first_visit_at
+  };
+  for (const assertion of Object.values(input.hbot_case_assertions)) {
+    assertion.source_evidence.valid_until = input.index_time;
   }
-  input.margolis_first_visit_assessment.source_evidence = evidence(id, 'first-visit');
 
   const burdenAnswers = { Q01: provider, Q02: 5, Q03: definition.minutes, Q04: 'none' };
   const prepared = await prepareKnowledgeAssemblyRequest(input, {
@@ -58,28 +65,40 @@ async function buildCase(definition) {
     burdenAskQuestion: async ({ id: questionId }) => burdenAnswers[questionId],
     collectionMetadata: {
       wagner: {
-        artifact_locator: `urn:teaching:${id}:wagner-response`,
+        source_artifact_iri: `urn:teaching:${id}:wagner-response`,
         completed_at: '2026-09-20T09:30:00Z',
         source_evidence: evidence(id, 'wagner-response')
       },
       burden: {
-        artifact_locator: `urn:teaching:${id}:burden-response`,
-        confirmed_at: '2026-09-20T09:30:00Z',
+        source_artifact_iri: `urn:teaching:${id}:burden-response`,
+        completed_at: '2026-09-20T09:30:00Z',
         treatment_plan_identifier: { system: 'urn:teaching:treatment-plan', value: `PLAN-${id}` },
         source_evidence: evidence(id, 'burden-response')
       }
     }
   });
-  const result = await executeKnowledgeAssembly(prepared.request, { artifactPayloads: prepared.artifactPayloads });
+  const planBinding = {
+    treatment_plan_identifier: prepared.request.burden_questionnaire_artifact.treatment_plan_identifier,
+    ulcer_identifier: prepared.request.subject_binding.ulcer_identifier,
+    source_evidence: { ...evidence(id, 'plan-for-ulcer'), valid_until: input.index_time }
+  };
+  const teachingEvidence = {};
+  const result = await executeKnowledgeAssembly(prepared.request, { planBinding, teachingEvidence });
   if (result.target_classification !== definition.expected) {
     throw new Error(`${id}: expected ${definition.expected}, received ${result.target_classification} (${result.reason_code})`);
   }
   return {
     id, title: definition.title,
     teaching_note: `${definition.title} illustrates a distinct KA classification or gate outcome using one fictional patient–ulcer pair.`,
-    expected: { target_classification: result.target_classification, gate_result: result.gate_result, reason_code: result.reason_code },
+    expected: {
+      target_classification: result.target_classification,
+      gate_result: result.gate_result,
+      synthesis_rule_id: result.synthesis_rule_id,
+      reason_code: result.reason_code
+    },
+    semantic_trace: buildSemanticTrace(teachingEvidence, result),
     request: prepared.request,
-    artifact_payloads: prepared.artifactPayloads
+    plan_binding: planBinding
   };
 }
 
