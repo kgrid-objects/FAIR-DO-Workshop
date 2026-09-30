@@ -1,11 +1,7 @@
 'use strict';
 
-// Section 2.5 / 2.7 (as narrowed for this implementation): closed KA
-// input-envelope validation and subject/ulcer/temporal coherence checks.
-// Wagner and Burden questionnaire answers are intentionally excluded from
-// this contract: only the Wagner and Burden KOs' own interactive
-// Questionnaire Logic capability may collect them (Section 3.1), so the KA
-// never accepts them as request fields, optional or otherwise.
+// Section 2.5 / 2.7: the core accepts a complete, closed KA envelope.
+// Optional collection belongs to the separate preparation interface.
 
 const TOP_LEVEL_FIELDS = [
   'request_id',
@@ -13,7 +9,9 @@ const TOP_LEVEL_FIELDS = [
   'index_time',
   'subject_binding',
   'hbot_case_assertions',
-  'margolis_first_visit_assessment'
+  'wagner_response_artifact',
+  'margolis_first_visit_assessment',
+  'burden_questionnaire_artifact'
 ];
 
 const HBOT_ASSERTION_FIELDS = [
@@ -29,11 +27,79 @@ function isPlainObject(value) {
 function isIsoDateTime(value) {
   if (typeof value !== 'string') return false;
   const date = new Date(value);
-  return !Number.isNaN(date.getTime()) && /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(value);
+  return !Number.isNaN(date.getTime()) && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/.test(value);
 }
 
 function fail(message, path) {
   return { field: path, message };
+}
+
+function isAbsoluteIri(value) {
+  return typeof value === 'string' && /^[a-z][a-z0-9+.-]*:[^\s]+$/i.test(value);
+}
+
+function validIdentifier(value) {
+  return isPlainObject(value) &&
+    typeof value.system === 'string' && value.system.length > 0 &&
+    typeof value.value === 'string' && value.value.length > 0;
+}
+
+function validateSourceEvidence(value, path, problems) {
+  const fields = ['source_record_iri', 'source_system_iri', 'recorded_at', 'effective_at',
+    'valid_until', 'author_or_respondent_iri', 'author_or_respondent_role', 'record_fingerprint'];
+  if (!isPlainObject(value) || fields.some((field) => !(field in value)) ||
+      Object.keys(value).some((field) => !fields.includes(field))) {
+    problems.push(fail('source_evidence must contain exactly the declared evidence fields.', path));
+    return;
+  }
+  for (const field of ['source_record_iri', 'source_system_iri', 'author_or_respondent_iri']) {
+    if (!isAbsoluteIri(value[field])) {
+      problems.push(fail(`${field} must be an absolute IRI.`, `${path}.${field}`));
+    }
+  }
+  for (const field of ['recorded_at', 'effective_at']) {
+    if (!isIsoDateTime(value[field])) problems.push(fail(`${field} must be a date-time.`, `${path}.${field}`));
+  }
+  if (value.valid_until !== null && !isIsoDateTime(value.valid_until)) {
+    problems.push(fail('valid_until must be a date-time or null.', `${path}.valid_until`));
+  }
+  if (typeof value.author_or_respondent_role !== 'string' || !value.author_or_respondent_role) {
+    problems.push(fail('author_or_respondent_role is required.', `${path}.author_or_respondent_role`));
+  }
+  if (!/^sha256:[0-9a-f]{64}$/.test(value.record_fingerprint)) {
+    problems.push(fail('record_fingerprint must be SHA-256.', `${path}.record_fingerprint`));
+  }
+}
+
+function validateResponseArtifact(value, kind, problems) {
+  const path = `${kind}_response_artifact`;
+  const fields = kind === 'wagner'
+    ? ['artifact_locator', 'media_type', 'response_fingerprint', 'completed_at', 'source_evidence']
+    : ['artifact_locator', 'media_type', 'response_fingerprint', 'confirmed_at',
+      'treatment_plan_identifier', 'treatment_location', 'source_evidence'];
+  if (!isPlainObject(value) || fields.some((field) => !(field in value)) ||
+      Object.keys(value).some((field) => !fields.includes(field))) {
+    problems.push(fail(`${path} must contain exactly the schema-bundle fields.`, path));
+    return;
+  }
+  if (!isAbsoluteIri(value.artifact_locator)) {
+    problems.push(fail('artifact_locator must be an absolute IRI.', `${path}.artifact_locator`));
+  }
+  if (value.media_type !== 'application/json') problems.push(fail('media_type must be application/json.', `${path}.media_type`));
+  if (!/^sha256:[0-9a-f]{64}$/.test(value.response_fingerprint)) {
+    problems.push(fail('response_fingerprint must be SHA-256.', `${path}.response_fingerprint`));
+  }
+  const timeField = kind === 'wagner' ? 'completed_at' : 'confirmed_at';
+  if (!isIsoDateTime(value[timeField])) problems.push(fail(`${timeField} must be a date-time.`, `${path}.${timeField}`));
+  if (kind === 'burden') {
+    if (!validIdentifier(value.treatment_plan_identifier)) {
+      problems.push(fail('treatment_plan_identifier must contain system and value.', `${path}.treatment_plan_identifier`));
+    }
+    if (typeof value.treatment_location !== 'string' || !value.treatment_location) {
+      problems.push(fail('treatment_location is required.', `${path}.treatment_location`));
+    }
+  }
+  validateSourceEvidence(value.source_evidence, `${path}.source_evidence`, problems);
 }
 
 // Returns { valid: boolean, problems: [{field, message}] }.
@@ -82,6 +148,9 @@ function validateInputContract(request) {
     }
   }
 
+  validateResponseArtifact(request.wagner_response_artifact, 'wagner', problems);
+  validateResponseArtifact(request.burden_questionnaire_artifact, 'burden', problems);
+
   if (!isPlainObject(request.hbot_case_assertions)) {
     problems.push(fail('hbot_case_assertions must be an object.', 'hbot_case_assertions'));
   } else {
@@ -99,30 +168,36 @@ function validateInputContract(request) {
   }
 
   const margolisAssessment = request.margolis_first_visit_assessment;
-  if (
-    !isPlainObject(margolisAssessment) ||
-    !isPlainObject(margolisAssessment.wound_area) ||
-    !isPlainObject(margolisAssessment.wound_duration) ||
-    !isIsoDateTime(margolisAssessment.first_visit_at) ||
-    margolisAssessment.first_visit_attested !== true
-  ) {
-    problems.push(
-      fail(
-        'margolis_first_visit_assessment must contain wound_area, wound_duration, first_visit_at, and first_visit_attested=true.',
-        'margolis_first_visit_assessment'
-      )
-    );
+  const assessmentFields = ['wound_area', 'wound_duration', 'assessment_time', 'source_evidence'];
+  if (!isPlainObject(margolisAssessment) || assessmentFields.some((field) => !(field in margolisAssessment)) ||
+      Object.keys(margolisAssessment).some((field) => !assessmentFields.includes(field))) {
+    problems.push(fail('margolis_first_visit_assessment must match the closed schema-bundle fields.', 'margolis_first_visit_assessment'));
+  } else {
+    if (!isIsoDateTime(margolisAssessment.assessment_time)) {
+      problems.push(fail('assessment_time must be a date-time.', 'margolis_first_visit_assessment.assessment_time'));
+    }
+    validateSourceEvidence(margolisAssessment.source_evidence, 'margolis_first_visit_assessment.source_evidence', problems);
+    for (const field of ['wound_area', 'wound_duration']) {
+      const quantity = margolisAssessment[field];
+      const allowedUnits = field === 'wound_area' ? ['cm2', 'mm2'] : ['wk', 'd'];
+      if (!isPlainObject(quantity) || Object.keys(quantity).some((key) => !['value', 'unit', 'source_evidence'].includes(key)) ||
+          !Number.isFinite(quantity.value) || quantity.value <= 0 || !allowedUnits.includes(quantity.unit)) {
+        problems.push(fail(`${field} needs a positive value, supported unit, and source evidence.`, `margolis_first_visit_assessment.${field}`));
+      } else {
+        validateSourceEvidence(quantity.source_evidence, `margolis_first_visit_assessment.${field}.source_evidence`, problems);
+      }
+    }
   }
 
   // Section 2.7.2: acceptable timing by input (basic as-of ordering).
   if (isIsoDateTime(request.index_time)) {
     const indexMs = new Date(request.index_time).getTime();
-    if (isIsoDateTime(margolisAssessment && margolisAssessment.first_visit_at)) {
-      if (new Date(margolisAssessment.first_visit_at).getTime() > indexMs) {
+    if (isIsoDateTime(margolisAssessment && margolisAssessment.assessment_time)) {
+      if (new Date(margolisAssessment.assessment_time).getTime() > indexMs) {
         problems.push(
           fail(
-            'margolis_first_visit_assessment.first_visit_at SHALL NOT be later than index_time.',
-            'margolis_first_visit_assessment.first_visit_at'
+            'margolis_first_visit_assessment.assessment_time SHALL NOT be later than index_time.',
+            'margolis_first_visit_assessment.assessment_time'
           )
         );
       }

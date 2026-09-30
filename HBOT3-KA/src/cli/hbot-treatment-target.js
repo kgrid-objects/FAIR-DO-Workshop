@@ -3,7 +3,7 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
-const { executeKnowledgeAssembly } = require('../orchestrator');
+const { prepareAndExecuteKnowledgeAssembly } = require('../preparation');
 
 function printHelp() {
   const helpText = [
@@ -12,15 +12,15 @@ function printHelp() {
     'Usage:',
     '  hbot-treatment-target-ka --file <path-to-request.json>',
     '  hbot-treatment-target-ka --request <json-object-text>',
+    '  Add --preparation <path-to-preparation.json> for artifact payloads and',
+    '  provenance needed when either questionnaire must be collected.',
     '  hbot-treatment-target-ka --help',
     '',
-    'Reads one KA request object conforming to CKS Version 1.0 Section 2.5',
-    'and prints the closed canonical result object (Section 7.3) as JSON.',
+    'Prepares missing questionnaire artifacts through their owning KOs,',
+    'then submits a complete Section 2.5 request to the closed KA core.',
     '',
-    'wagner_response_artifact and burden_questionnaire_artifact are not part',
-    'of the input contract: this CLI always prompts interactively on',
-    'stdin/stdout through the Wagner and Burden KOs\' own questionnaire',
-    'runners to collect them.'
+    'A supplied artifact is never recollected. Its response payload must be',
+    'available in preparation.artifactPayloads under its artifact_locator.'
   ].join('\n');
   process.stdout.write(`${helpText}\n`);
 }
@@ -36,6 +36,9 @@ function parseArgs(argv) {
       i += 1;
     } else if (token === '--request') {
       args.request = argv[i + 1];
+      i += 1;
+    } else if (token === '--preparation') {
+      args.preparation = argv[i + 1];
       i += 1;
     }
   }
@@ -66,7 +69,10 @@ async function main() {
     return;
   }
 
-  const result = await executeKnowledgeAssembly(request);
+  const preparation = args.preparation
+    ? JSON.parse(fs.readFileSync(path.resolve(args.preparation), 'utf8'))
+    : {};
+  const { result } = await prepareAndExecuteKnowledgeAssembly(request, preparation);
   process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
 }
 

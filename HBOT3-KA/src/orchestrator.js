@@ -15,6 +15,7 @@ const { validateInputContract, checkSubjectCoherence } = require('./input-valida
 const { buildFinalResult } = require('./result-builder');
 const { buildProvenance, makeEventRecord, urnUuid } = require('./provenance');
 const { fingerprintJson } = require('./fingerprint');
+const { resolveKnowledgeAssemblyArtifacts } = require('./preparation');
 
 const DEPENDENCY_ROLE_ORDER = ['DEP-WAGNER', 'DEP-HBOT-DECISION', 'DEP-BURDEN', 'DEP-MARGOLIS'];
 
@@ -99,16 +100,38 @@ async function executeKnowledgeAssembly(request, options = {}) {
     });
   }
 
+  let artifacts;
+  try {
+    artifacts = await resolveKnowledgeAssemblyArtifacts(request, options);
+  } catch (error) {
+    const reasonCode = error.reasonCode === REASON_CODES.SUBJECT_COHERENCE
+      ? REASON_CODES.SUBJECT_COHERENCE : REASON_CODES.PROVENANCE;
+    const diagnostic = makeDiagnostic({
+      reasonCode,
+      stage: 'response_artifact_validation',
+      message: error.message
+    });
+    return finalizeIndeterminate({
+      executionId,
+      manifest,
+      requestedAt: request.requested_at,
+      indexTime: request.index_time,
+      executionStartedAt,
+      reasonCode,
+      diagnostics: [diagnostic],
+      gateResult: 'NOT_EVALUABLE',
+      dependencyExecutionRecords: notAttemptedForAll(manifest, executionId, reasonCode),
+      transformationRecords: []
+    });
+  }
+
   const entryFor = (role) => manifest.dependencies.find((d) => d.dependencyRole === role);
 
-  // Phase 1A/1B/1C: engage Wagner, Margolis, Burden independently. The CKS
-  // permits concurrent engagement, but when Wagner/Burden fall back to their
-  // own interactive Questionnaire Logic capability (Section 3.1) they share
-  // one terminal/stdin with the user, so those two are engaged sequentially
-  // to avoid interleaved prompts; a failure in one branch does not cancel
-  // another safely invocable branch.
+  // Phase 1A/1B/1C: freshly engage all safely invocable constituent analyses.
+  // Collection, if needed, has already happened outside this closed core.
   const wagnerOutcome = await engageWagner({
-    askYesNoFn: options.wagnerAskYesNo,
+    questionnaireResponse: artifacts.wagner,
+    artifactLocator: request.wagner_response_artifact.artifact_locator,
     executionId,
     sequenceNumber: 1,
     expectedIri: entryFor('DEP-WAGNER') && entryFor('DEP-WAGNER').cksVersionIri
@@ -120,7 +143,8 @@ async function executeKnowledgeAssembly(request, options = {}) {
     expectedIri: entryFor('DEP-MARGOLIS') && entryFor('DEP-MARGOLIS').cksVersionIri
   });
   const burdenOutcome = await engageBurden({
-    askQuestionFn: options.burdenAskQuestion,
+    questionnaireResponse: artifacts.burden,
+    artifactLocator: request.burden_questionnaire_artifact.artifact_locator,
     executionId,
     sequenceNumber: 1,
     expectedIri: entryFor('DEP-BURDEN') && entryFor('DEP-BURDEN').cksVersionIri

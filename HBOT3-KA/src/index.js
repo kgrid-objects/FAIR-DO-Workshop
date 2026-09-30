@@ -1,6 +1,7 @@
 'use strict';
 
 const { executeKnowledgeAssembly } = require('./orchestrator');
+const { prepareKnowledgeAssemblyRequest, prepareAndExecuteKnowledgeAssembly } = require('./preparation');
 const { REASON_CODES, WARNING_CODES, DEPENDENCY_ROLES } = require('./errors');
 const { GATE_BY_NATIVE_RESULT, mapGate } = require('./gate-mapping');
 const {
@@ -15,6 +16,8 @@ const { loadManifest, verifyDependencyIdentity } = require('./dependency-manifes
 
 module.exports = {
   executeKnowledgeAssembly,
+  prepareKnowledgeAssemblyRequest,
+  prepareAndExecuteKnowledgeAssembly,
   REASON_CODES,
   WARNING_CODES,
   DEPENDENCY_ROLES,

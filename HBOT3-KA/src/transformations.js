@@ -63,7 +63,7 @@ function tx03FirstVisitToMargolisQuantities(assessment) {
     typeof q === 'object' &&
     typeof q.value === 'number' &&
     Number.isFinite(q.value) &&
-    allowedUnits.includes(q.ucum_code);
+    allowedUnits.includes(q.unit);
 
   if (
     !assessment ||
@@ -73,10 +73,10 @@ function tx03FirstVisitToMargolisQuantities(assessment) {
     return { ok: false };
   }
 
-  const woundArea = { value: assessment.wound_area.value, ucum_code: assessment.wound_area.ucum_code };
+  const woundArea = { value: assessment.wound_area.value, ucum_code: assessment.wound_area.unit };
   const woundDuration = {
     value: assessment.wound_duration.value,
-    ucum_code: assessment.wound_duration.ucum_code
+    ucum_code: assessment.wound_duration.unit
   };
 
   return {

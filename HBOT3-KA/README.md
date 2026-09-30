@@ -26,37 +26,41 @@ cd ../../HBOT3-KA && npm install           # optional: registers file: dependenc
 
 ## Usage
 
-The Wagner and Burden KOs each own an interactive Questionnaire Logic capability (Section 3.1), and this KA never accepts their questionnaire answers as request fields — `wagner_response_artifact` and `burden_questionnaire_artifact` are not part of the KA input contract at all, not even optionally. The KA always drives Wagner's `runQuestionnaire()` and Burden's `runBurdenQuestionnaire()` itself and prompts the user directly for those answers.
+The closed KA core requires both `wagner_response_artifact` and `burden_questionnaire_artifact` as Section 2.5 specifies. A separate preparation interface may accept either artifact as already supplied, or collect the missing response through its owning KO's Questionnaire Logic capability. A supplied artifact is never silently recollected. Both paths freshly invoke the constituent analysis; neither reuses a prior computed score or burden result.
 
 ```js
-const { executeKnowledgeAssembly } = require('@kgrid/hbot-treatment-target-ka');
+const { prepareAndExecuteKnowledgeAssembly } = require('@kgrid/hbot-treatment-target-ka');
 
-const result = await executeKnowledgeAssembly({
+const { result, preparation } = await prepareAndExecuteKnowledgeAssembly({
   request_id: 'req-001',
   requested_at: '2026-09-20T12:00:00Z',
   index_time: '2026-09-20T10:00:00Z',
   subject_binding: { /* subject_identifier, ulcer_identifier, care_episode_identifier, source_evidence */ },
   hbot_case_assertions: { /* dfu_confirmed, acute_surgical_intervention, not_healed_after_30_days */ },
   margolis_first_visit_assessment: { /* wound_area, wound_duration, first_visit_at, first_visit_attested */ }
-  // No wagner_response_artifact or burden_questionnaire_artifact field exists:
-  // the KA calls Wagner's runQuestionnaire() and Burden's runBurdenQuestionnaire()
-  // itself and prompts the user directly for those answers.
+  // Either or both Section 2.5 response artifacts may be supplied here.
+}, {
+  collectionMetadata: {
+    wagner: { /* artifact_locator, completed_at, source_evidence */ },
+    burden: { /* artifact_locator, confirmed_at, treatment_plan_identifier, source_evidence */ }
+  },
+  artifactPayloads: { /* supplied artifact locator -> response and subject/ulcer binding */ }
 });
 
 console.log(result.target_classification, result.reason_code);
 ```
 
-To automate a run (tests, batch reprocessing, or a caller with its own UI), pass `wagnerAskYesNo`/`burdenAskQuestion` callback overrides as the second `options` argument to `executeKnowledgeAssembly(request, options)`, matching the constituent KOs' own `runQuestionnaire(askYesNoFn)` / `runBurdenQuestionnaire(askQuestionFn)` signatures. Without overrides, the KOs' default prompters read from stdin/stdout.
+The preparation options may include `wagnerAskYesNo` and `burdenAskQuestion` callback overrides for missing artifacts. Without overrides, the KO-owned prompters use stdin/stdout. The caller must supply attributable `collectionMetadata` for every artifact it asks the KA to collect; the runtime will not invent provenance. A supplied descriptor needs a matching payload in `artifactPayloads` (or an explicit `resolveArtifact` callback); the KA never dereferences an IRI automatically. `preparation.source_modes` reports `supplied` or `collected` for each role. Applications that already possess a complete request can call `executeKnowledgeAssembly(request, { artifactPayloads })` directly.
 
 See Section 2.5 of the CKS for the complete closed input contract; `hbot_case_assertions` and `margolis_first_visit_assessment` remain required direct KA inputs because neither the HBOT Decision KO nor the Margolis KO owns an interactive collection capability — those values must already be attested clinical facts (Section 2.5/2.6), not something any KO can collect from the user.
 
 ## CLI
 
 ```bash
-npm run cli -- --file test/request.json
+npm run cli -- --file test/request.json --preparation path/to/preparation.json
 ```
 
-`test/request.json` is a ready-to-use sample envelope (subject binding, HBOT case assertions, and Margolis first-visit assessment). The request file never contains `wagner_response_artifact`/`burden_questionnaire_artifact`; the CLI always prompts interactively on stdin/stdout through the Wagner and Burden KOs' own questionnaire runners.
+`test/request.json` is a partial sample for the preparation interface, not a complete Section 2.5 core request. The preparation JSON supplies `collectionMetadata` for missing artifacts and/or `artifactPayloads` for supplied ones. The CLI only prompts for a missing questionnaire after the required provenance metadata is provided.
 
 ## Notebooks
 

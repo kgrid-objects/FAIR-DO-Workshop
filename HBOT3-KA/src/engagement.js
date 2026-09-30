@@ -3,11 +3,9 @@
 const crypto = require('node:crypto');
 const {
   wagnerScorer,
-  wagnerQuestionnaire,
   hbotDecision,
   burdenAnalysis,
   regimenRange,
-  questionnaireLogic,
   margolisPrognosis
 } = require('./dependency-packages');
 const { verifyDependencyIdentity } = require('./dependency-manifest-validation');
@@ -102,54 +100,15 @@ function identityGateOrNull(role, sequenceNumber, executionId, expectedIri) {
   return { identity, blocked: { record, diagnostics: [diagnostic] } };
 }
 
-async function engageWagner({ askYesNoFn, executionId, sequenceNumber, expectedIri }) {
+async function engageWagner({ questionnaireResponse, artifactLocator, executionId, sequenceNumber, expectedIri }) {
   const gate = identityGateOrNull('DEP-WAGNER', sequenceNumber, executionId, expectedIri);
   if (gate.blocked) return { ok: false, ...gate.blocked, native: null };
 
   const startedAt = nowIso();
-  let request;
-  try {
-    // Section 3.1: the KA controls interactive collection through Wagner's
-    // own Questionnaire Logic capability; the KA never receives pre-recorded
-    // answers.
-    const collected = await wagnerQuestionnaire.runQuestionnaire(askYesNoFn);
-    request = { question_ids: collected.question_ids, responses: collected.responses };
-  } catch (error) {
-    const record = {
-      dependency_role: 'DEP-WAGNER',
-      engagement_record_id: urnUuid(),
-      execution_id: executionId,
-      sequence_number: sequenceNumber,
-      engagement_mode: 'fresh_invocation',
-      expected_knowledge_object_iri: expectedIri,
-      realized_knowledge_object_iri: `npm:${gate.identity.entry.npmPackageIdentity}`,
-      representation_binding: 'javascript-function-call:runQuestionnaire',
-      package_evidence: gate.identity.packageEvidence,
-      state: 'invocation_failure',
-      started_at: startedAt,
-      ended_at: nowIso(),
-      input_artifact_locator: null,
-      input_fingerprint: null,
-      engagement_context_fingerprint: fingerprintJson({ executionId, role: 'DEP-WAGNER' }),
-      native_result_identifier: null,
-      native_result_artifact_locator: null,
-      native_result_fingerprint: null,
-      validation_status: 'invalid',
-      validation_evidence: baseValidationEvidence({ identity_check: 'pass', version_check: 'pass', package_check: 'pass' }),
-      input_lineage_indices: [],
-      transformation_indices: [],
-      routed_output_fields: [],
-      diagnostic_indices: [],
-      not_attempted_reason_code: null
-    };
-    const diagnostic = makeDiagnostic({
-      reasonCode: REASON_CODES.INVOCATION,
-      dependencyRole: 'DEP-WAGNER',
-      stage: 'wagner_interactive_collection',
-      message: `Wagner interactive collection raised an error: ${error.message}`
-    });
-    return { ok: false, record, diagnostics: [diagnostic], native: null };
-  }
+  const request = {
+    question_ids: questionnaireResponse.question_ids,
+    responses: questionnaireResponse.responses
+  };
 
   let native;
   try {
@@ -168,7 +127,7 @@ async function engageWagner({ askYesNoFn, executionId, sequenceNumber, expectedI
       state: 'invocation_failure',
       started_at: startedAt,
       ended_at: nowIso(),
-      input_artifact_locator: 'memory://wagner-request',
+      input_artifact_locator: artifactLocator,
       input_fingerprint: fingerprintJson(request),
       engagement_context_fingerprint: fingerprintJson({ executionId, role: 'DEP-WAGNER' }),
       native_result_identifier: null,
@@ -205,7 +164,7 @@ async function engageWagner({ askYesNoFn, executionId, sequenceNumber, expectedI
     state: usable ? 'completed_valid' : 'completed_invalid',
     started_at: startedAt,
     ended_at: nowIso(),
-    input_artifact_locator: 'memory://wagner-request',
+    input_artifact_locator: artifactLocator,
     input_fingerprint: fingerprintJson(request),
     engagement_context_fingerprint: fingerprintJson({ executionId, role: 'DEP-WAGNER' }),
     native_result_identifier: native.analysis_status,
@@ -351,7 +310,7 @@ function engageMargolis({ assessment, executionId, sequenceNumber, expectedIri }
   return { ok: usable, record, diagnostics, native, transformation: tx03.record };
 }
 
-async function engageBurden({ askQuestionFn, executionId, sequenceNumber, expectedIri }) {
+async function engageBurden({ questionnaireResponse, artifactLocator, executionId, sequenceNumber, expectedIri }) {
   const gate = identityGateOrNull('DEP-BURDEN', sequenceNumber, executionId, expectedIri);
   if (gate.blocked) return { ok: false, ...gate.blocked, native: null };
 
@@ -361,10 +320,6 @@ async function engageBurden({ askQuestionFn, executionId, sequenceNumber, expect
 
   let tx04;
   try {
-    // Section 3.1: the KA controls interactive collection through the
-    // Burden KO's own Questionnaire Logic capability; the KA never receives
-    // pre-recorded answers.
-    const questionnaireResponse = await questionnaireLogic.runBurdenQuestionnaire(askQuestionFn);
     tx04 = tx04FromQuestionnaireResponse(questionnaireResponse, fixedRegimenRangeResponse);
   } catch (error) {
     const record = notAttemptedRecord(
@@ -378,8 +333,8 @@ async function engageBurden({ askQuestionFn, executionId, sequenceNumber, expect
     const diagnostic = makeDiagnostic({
       reasonCode: REASON_CODES.INVOCATION,
       dependencyRole: 'DEP-BURDEN',
-      stage: 'burden_interactive_collection',
-      message: `Burden interactive collection raised an error: ${error.message}`
+      stage: 'burden_artifact_transformation',
+      message: `Burden artifact transformation raised an error: ${error.message}`
     });
     return { ok: false, record, diagnostics: [diagnostic], native: null };
   }
@@ -419,7 +374,7 @@ async function engageBurden({ askQuestionFn, executionId, sequenceNumber, expect
       state: 'invocation_failure',
       started_at: startedAt,
       ended_at: nowIso(),
-      input_artifact_locator: 'memory://burden-request',
+      input_artifact_locator: artifactLocator,
       input_fingerprint: fingerprintJson(tx04.request),
       engagement_context_fingerprint: fingerprintJson({ executionId, role: 'DEP-BURDEN' }),
       native_result_identifier: null,
@@ -456,7 +411,7 @@ async function engageBurden({ askQuestionFn, executionId, sequenceNumber, expect
     state: usable ? 'completed_valid' : 'native_failure',
     started_at: startedAt,
     ended_at: nowIso(),
-    input_artifact_locator: 'memory://burden-request',
+    input_artifact_locator: artifactLocator,
     input_fingerprint: fingerprintJson(tx04.request),
     engagement_context_fingerprint: fingerprintJson({ executionId, role: 'DEP-BURDEN' }),
     native_result_identifier: native.result_code || native.error && native.error.code || null,

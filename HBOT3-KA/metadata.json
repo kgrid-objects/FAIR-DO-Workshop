@@ -4,6 +4,7 @@
   "versionInfo": "2.1",
   "@type": "KnowledgeObject",
   "dc:title": "HBOT Treatment Target Knowledge Assembly",
+  "schema:category": "Knowledge Assembly",
   "dc:identifier": [
     "workshop-ka-1",
     "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA"
