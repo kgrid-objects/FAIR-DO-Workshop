@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dc:     <http://purl.org/dc/terms/> .
 
 <https://kgrid.org/kos/wagner/versions/ko-1.0>
     a schema:SoftwareSourceCode, prov:Entity ;
