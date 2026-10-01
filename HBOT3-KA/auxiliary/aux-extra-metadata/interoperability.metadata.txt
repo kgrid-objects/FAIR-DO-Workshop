@@ -1,0 +1,53 @@
+@prefix schema:  <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA>
+    a schema:SoftwareSourceCode ;
+
+    # 1. Semantics — What does this capability mean?
+    schema:object
+        <https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0#logical-input-contract> ;
+    schema:result
+        <https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0#hbot-treatment-target-classification> ;
+
+    # 2. Profiles — What complete objects does it exchange?
+    dcterms:conformsTo [
+        schema:name "HBOT Treatment Target KA request/result profile binding" ;
+        schema:object
+            <https://kgrid.org/cks/hbot-treatment-target-ka/schema-bundles/versions/1.0#/$defs/kaRequest> ;
+        schema:result
+            <https://kgrid.org/cks/hbot-treatment-target-ka/schema-bundles/versions/1.0#/$defs/kaResult>
+    ] ;
+
+    # 3. Interface — How is this capability invoked?
+    schema:potentialAction [
+        a schema:Action ;
+        schema:name "Execute HBOT Treatment Target Knowledge Assembly" ;
+        schema:target
+            <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/src/orchestrator.js#executeKnowledgeAssembly> ;
+        schema:object
+            <https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0#logical-input-contract> ;
+        schema:result
+            <https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0#hbot-treatment-target-classification>
+    ] ;
+
+    schema:identifier "workshop-ka-1" ;
+    schema:version "1.0" .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0#logical-input-contract>
+    schema:name "HBOT Treatment Target KA finalized logical input contract" .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0#hbot-treatment-target-classification>
+    schema:name "HBOT Treatment Target Classification" .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/schema-bundles/versions/1.0#/$defs/kaRequest>
+    schema:name "HBOT Treatment Target KA request object profile" .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/schema-bundles/versions/1.0#/$defs/kaResult>
+    schema:name "HBOT Treatment Target KA canonical result object profile" .
+
+# Minimal Interoperability Profile
+# Semantics: meanings of accepted input and produced output.
+# Profiles: complete input and output object profiles.
+# Interface: invocation mechanism and its bound input/output.
+# These conventions do not redefine the source vocabularies.

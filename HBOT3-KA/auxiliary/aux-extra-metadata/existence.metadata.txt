@@ -1,0 +1,52 @@
+@prefix koer: <https://example.org/koer/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# KO-SPECIFIC SCHEMA: This record describes one Knowledge Object and
+# accounts for the metadata components that belong to that KO.
+
+# TEMPORARY ID: replace this IRI when a permanent identifier is assigned.
+<urn:uuid:ff4a4450-55a3-4b9b-8354-59c87288f20c>
+    a koer:KnowledgeObjectExistenceRecord ;
+    koer:recordsKnowledgeObject
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA> .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA>
+    a koer:KnowledgeObject ;
+    dcterms:title "HBOT Treatment Target Knowledge Assembly" ;
+    koer:hasMetadataComponent
+        <#metadata-existence>,
+        <#metadata-findability>,
+        <#metadata-interoperability>,
+        <#metadata-koio>,
+        <#metadata-identity-governance>,
+        <#metadata-dependency-manifest> .
+
+<#metadata-existence>
+    a koer:MetadataComponent ;
+    koer:filePath "existence.metadata.txt" ;
+    dcterms:type "existence" .
+
+<#metadata-findability>
+    a koer:MetadataComponent ;
+    koer:filePath "findability.metadata.ttl" ;
+    dcterms:type "findability" .
+
+<#metadata-interoperability>
+    a koer:MetadataComponent ;
+    koer:filePath "interoperability.metadata.txt" ;
+    dcterms:type "interoperability" .
+
+<#metadata-koio>
+    a koer:MetadataComponent ;
+    koer:filePath "metadata.json" ;
+    dcterms:type "descriptive and technical" .
+
+<#metadata-identity-governance>
+    a koer:MetadataComponent ;
+    koer:filePath "specs/KA_Identity_and_Governance_Metadata.json" ;
+    dcterms:type "identity and governance" .
+
+<#metadata-dependency-manifest>
+    a koer:MetadataComponent ;
+    koer:filePath "specs/KA_Dependency_Manifest.json" ;
+    dcterms:type "dependency manifest" .

@@ -1,0 +1,78 @@
+@prefix schema: <https://schema.org/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA>
+    a schema:SoftwareSourceCode, prov:Entity ;
+
+    # 1. Purpose
+    schema:description
+        "Orchestrates four exact-version constituent Knowledge Objects, validates and joins their fresh results, applies the sole HBOT clinical-indication gate, and, for supported cases, applies the approved prognosis-by-burden synthesis matrix to produce one governed HBOT Treatment Target Classification." ;
+
+    # 2. Scope
+    schema:usageInfo
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA#scope> ;
+
+    # 3. License
+    schema:license
+        <https://spdx.org/licenses/MIT.html> ;
+
+    # 4. Provenance
+    prov:has_provenance
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA#provenance> ;
+
+    # 5. Tests
+    schema:hasPart
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/test/canonical-fixtures.test.js>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/test/cks-input-shape.test.js>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/test/orchestrator.test.js>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/test/teaching-cases.test.js>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/specs/HBOT_Treatment_Target_KA_Canonical_Fixtures_1_0/canonical-fixtures.json>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/specs/HBOT_Treatment_Target_KA_Canonical_Fixtures_1_0/TEST_REPORT.json> ;
+
+    # 6. Evidence
+    schema:citation
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/specs/HBOT_Treatment_Target_KA_CKS_Version_1_0.docx>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/specs/KA_Dependency_Manifest.json> ;
+
+    # 7. Identity and version
+    schema:identifier
+        "workshop-ka-1" ;
+
+    schema:version
+        "1.0" .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA#scope>
+    a schema:CreativeWork ;
+    schema:description
+        "Applies to one bound diabetes-related foot-ulcer case per invocation when the closed KA request, attributable source evidence, exact dependency versions, response artifacts, treatment-plan binding, and temporal and subject-coherence requirements are satisfied. It returns On Target, Near Target, Outer Target, Off Target, or an Indeterminate result with a controlled reason. It does not diagnose, calculate Wagner grade, decide HBOT indication, calculate treatment burden, calculate prognosis, predict HBOT efficacy or benefit, estimate treatment effect or utility, rank patients, recommend or authorize treatment, or replace clinical judgment, safety screening, shared decision-making, or production governance." .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA#provenance>
+    a prov:Entity ;
+    prov:wasAttributedTo <https://kgrid.org> ;
+    schema:datePublished "2026-09-23" ;
+    schema:description
+        "The knowledge-object metadata identifies the Knowledge Systems Lab at the University of Michigan Medical School as creator. The CKS Version 1.0 and its dependency manifest define the assembly-owned orchestration, gate mapping, prognosis and burden projections, target-classification synthesis, failure semantics, and exact constituent Knowledge Object bindings." .
+
+<https://kgrid.org>
+    a schema:Organization ;
+    schema:name "Knowledge Systems Lab" ;
+    schema:affiliation "Knowledge Systems Lab, University of Michigan Medical School" ;
+    schema:email "kgrid-developers@umich.edu" .
+
+
+# ============================================================
+# Minimal Reusability Profile
+#
+# schema:description   states the object's purpose.
+# schema:usageInfo     points to its scope statement.
+# schema:license       points to its governing license.
+# prov:has_provenance  points to its provenance record.
+# schema:hasPart       points to tests supplied with the object.
+# schema:citation      points to supporting evidence.
+#
+# The subject IRI, schema:identifier, and schema:version
+# identify the exact object version.
+#
+# These are profile conventions for this metadata pattern.
+# They do not redefine the source vocabularies.
+# ============================================================

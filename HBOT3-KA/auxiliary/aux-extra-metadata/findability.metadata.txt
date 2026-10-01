@@ -1,0 +1,159 @@
+@prefix schema: <https://schema.org/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA>
+    a schema:SoftwareSourceCode, prov:Entity ;
+
+    schema:name "HBOT Treatment Target Knowledge Assembly" ;
+
+    schema:identifier "workshop-ka-1" ;
+
+    schema:version "1.0" ;
+
+    schema:alternateName "HBOT Treatment Target KA" ;
+
+    schema:alternateName "HBOT3-KA" ;
+
+    schema:abstract "A JavaScript Knowledge Assembly that orchestrates four constituent Knowledge Objects, applies a sole HBOT indication gate, and uses an approved prognosis-by-burden matrix to produce a governed HBOT Treatment Target Classification." ;
+
+    schema:about <http://id.nlm.nih.gov/mesh/D017719> ;
+
+    schema:about <http://id.nlm.nih.gov/mesh/D016523> ;
+
+    schema:about <http://id.nlm.nih.gov/mesh/D006931> ;
+
+    schema:additionalType <https://kgrid.org/koio#KnowledgeObject> ;
+
+    schema:keywords "diabetes-related foot ulcer" ;
+
+    schema:keywords "diabetic foot ulcer" ;
+
+    schema:keywords "hyperbaric oxygen therapy" ;
+
+    schema:keywords "HBOT" ;
+
+    schema:keywords "knowledge assembly" ;
+
+    schema:keywords "clinical knowledge orchestration" ;
+
+    schema:keywords "target classification" ;
+
+    schema:keywords "prognosis-by-burden synthesis" ;
+
+    schema:additionalProperty [
+        a schema:PropertyValue ;
+        schema:name "Computational method" ;
+        schema:value "Deterministic four-KO orchestration with gate mapping and exact prognosis-by-burden matrix lookup"
+    ] ;
+
+    schema:additionalProperty [
+        a schema:PropertyValue ;
+        schema:name "Programming language" ;
+        schema:value "JavaScript"
+    ] ;
+
+    schema:additionalProperty [
+        a schema:PropertyValue ;
+        schema:name "Representation" ;
+        schema:value "CommonJS Node.js package"
+    ] ;
+
+    schema:additionalProperty [
+        a schema:PropertyValue ;
+        schema:name "Technical standard" ;
+        schema:value "Knowledge Object Implementation Ontology 2.1"
+    ] ;
+
+    schema:additionalProperty [
+        a schema:PropertyValue ;
+        schema:name "Technical standard" ;
+        schema:value "JSON Schema Draft 2020-12"
+    ] ;
+
+    schema:additionalProperty [
+        a schema:PropertyValue ;
+        schema:name "Interface style" ;
+        schema:value "Command-line interface and JavaScript library API"
+    ] ;
+
+    schema:additionalProperty [
+        a schema:PropertyValue ;
+        schema:name "Package name" ;
+        schema:value "@kgrid/hbot-treatment-target-ka"
+    ] ;
+
+    schema:additionalProperty [
+        a schema:PropertyValue ;
+        schema:name "Output classification" ;
+        schema:value "HBOT Treatment Target Classification" ;
+        schema:valueReference <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification>
+    ] .
+
+<http://id.nlm.nih.gov/mesh/D017719>
+    a schema:DefinedTerm ;
+    schema:name "Diabetic Foot" ;
+    schema:termCode "D017719" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D016523>
+    a schema:DefinedTerm ;
+    schema:name "Foot Ulcer" ;
+    schema:termCode "D016523" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<http://id.nlm.nih.gov/mesh/D006931>
+    a schema:DefinedTerm ;
+    schema:name "Hyperbaric Oxygenation" ;
+    schema:termCode "D006931" ;
+    schema:inDefinedTermSet <https://www.nlm.nih.gov/mesh/> .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification>
+    a schema:DefinedTermSet ;
+    schema:name "HBOT Treatment Target Classification" ;
+    schema:description "The closed target-classification vocabulary produced by HBOT Treatment Target Knowledge Assembly Version 1.0." ;
+    schema:hasDefinedTerm
+        <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/ON_TARGET>,
+        <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/NEAR_TARGET>,
+        <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/OUTER_TARGET>,
+        <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/OFF_TARGET>,
+        <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/INDETERMINATE> .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/ON_TARGET>
+    a schema:DefinedTerm ;
+    schema:name "On Target" ;
+    schema:termCode "ON_TARGET" ;
+    schema:description "A completed supported-gate classification assigned by an approved prognosis-by-burden synthesis rule to the On Target zone." ;
+    schema:inDefinedTermSet <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification> .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/NEAR_TARGET>
+    a schema:DefinedTerm ;
+    schema:name "Near Target" ;
+    schema:termCode "NEAR_TARGET" ;
+    schema:description "A completed supported-gate classification assigned by an approved prognosis-by-burden synthesis rule to the Near Target zone." ;
+    schema:inDefinedTermSet <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification> .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/OUTER_TARGET>
+    a schema:DefinedTerm ;
+    schema:name "Outer Target" ;
+    schema:termCode "OUTER_TARGET" ;
+    schema:description "A completed supported-gate classification assigned by an approved prognosis-by-burden synthesis rule to the Outer Target zone." ;
+    schema:inDefinedTermSet <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification> .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/OFF_TARGET>
+    a schema:DefinedTerm ;
+    schema:name "Off Target" ;
+    schema:termCode "OFF_TARGET" ;
+    schema:description "A completed classification returned after a validated HBOT Decision result maps to the Not Supported gate state." ;
+    schema:inDefinedTermSet <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification> .
+
+<https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification/INDETERMINATE>
+    a schema:DefinedTerm ;
+    schema:name "Indeterminate" ;
+    schema:termCode "INDETERMINATE" ;
+    schema:description "The required classification value when the assembly cannot produce a completed target classification and supplies a controlled reason code." ;
+    schema:inDefinedTermSet <https://kgrid.org/cks/hbot-treatment-target-ka/result-model/1.0/target-classification> .
+
+# Maximal Findability Profile
+# Identification, description, subject, type, technical characteristics, and indexing only.
+# Purpose, scope, inputs, outputs, access, licensing, provenance, tests, and evidence belong to other FAIR profiles.
+# These are profile conventions and do not redefine Schema.org or PROV-O.
