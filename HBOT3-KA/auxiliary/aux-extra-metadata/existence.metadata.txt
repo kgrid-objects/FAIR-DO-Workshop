@@ -1,5 +1,6 @@
 @prefix koer: <https://example.org/koer/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA> .
 
 # KO-SPECIFIC SCHEMA: This record describes one Knowledge Object and
 # accounts for the metadata components that belong to that KO.
@@ -15,31 +16,43 @@
     dcterms:title "HBOT Treatment Target Knowledge Assembly" ;
     koer:hasMetadataComponent
         <#metadata-existence>,
+        <#metadata-core>,
+        <#metadata-accessibility>,
         <#metadata-findability>,
         <#metadata-interoperability>,
-        <#metadata-koio>,
+        <#metadata-reusability>,
         <#metadata-identity-governance>,
         <#metadata-dependency-manifest> .
 
 <#metadata-existence>
     a koer:MetadataComponent ;
-    koer:filePath "existence.metadata.txt" ;
+    koer:filePath "auxiliary/aux-extra-metadata/existence.metadata.txt" ;
     dcterms:type "existence" .
+
+<#metadata-core>
+    a koer:MetadataComponent ;
+    koer:filePath "metadata.json" ;
+    dcterms:type "core" .
+
+<#metadata-accessibility>
+    a koer:MetadataComponent ;
+    koer:filePath "auxiliary/aux-extra-metadata/access.metadata.txt" ;
+    dcterms:type "accessibility" .
 
 <#metadata-findability>
     a koer:MetadataComponent ;
-    koer:filePath "findability.metadata.ttl" ;
+    koer:filePath "auxiliary/aux-extra-metadata/findability.metadata.txt" ;
     dcterms:type "findability" .
 
 <#metadata-interoperability>
     a koer:MetadataComponent ;
-    koer:filePath "interoperability.metadata.txt" ;
+    koer:filePath "auxiliary/aux-extra-metadata/interoperability.metadata.txt" ;
     dcterms:type "interoperability" .
 
-<#metadata-koio>
+<#metadata-reusability>
     a koer:MetadataComponent ;
-    koer:filePath "metadata.json" ;
-    dcterms:type "descriptive and technical" .
+    koer:filePath "auxiliary/aux-extra-metadata/reusability.metadata.txt" ;
+    dcterms:type "reusability" .
 
 <#metadata-identity-governance>
     a koer:MetadataComponent ;
