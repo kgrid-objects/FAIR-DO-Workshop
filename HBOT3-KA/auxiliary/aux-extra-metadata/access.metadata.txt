@@ -1,0 +1,38 @@
+@prefix schema: <https://schema.org/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA>
+    a schema:SoftwareSourceCode, prov:Entity ;
+
+    # Access instance 1 — Repository access
+    schema:potentialAction
+        [
+            a schema:ViewAction ;
+            schema:name "Open through HTTPS" ;
+            schema:target
+                [
+                    a schema:EntryPoint ;
+                    schema:urlTemplate
+                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/HBOT3-KA" ;
+                    schema:description
+                        "Access through the HBOT3-KA GitHub repository page." ;
+                    schema:name "HTTPS"
+                ]
+        ] ;
+
+    # Access instance 2 — Existence metadata
+    schema:potentialAction
+        [
+            a schema:ViewAction ;
+            schema:name "View existence metadata" ;
+            schema:target
+                [
+                    a schema:EntryPoint ;
+                    schema:urlTemplate
+                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/HBOT3-KA/auxiliary/aux-extra-metadata/existence.metadata.txt" ;
+                    schema:description
+                        "Access through the existence metadata file's GitHub page." ;
+                    schema:name "HTTPS" ;
+                    schema:contentType "text/turtle"
+                ]
+        ] .
