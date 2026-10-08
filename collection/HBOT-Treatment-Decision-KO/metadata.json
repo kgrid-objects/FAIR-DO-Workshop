@@ -37,6 +37,12 @@
             "dc:description": "Deterministic decision logic that validates diabetic foot ulcer case inputs and produces standardized recommendation, out-of-scope, or error outcomes for hyperbaric oxygen treatment decision.",
             "dc:purpose": "",
             "@type": "koio:Knowledge",
+            "koio:hasEvidentialBasis": [
+                {
+                    "@id": "https://pubmed.ncbi.nlm.nih.gov/26152105/",
+                    "dc:description": "Clinical practice guideline that informs the KO's hyperbaric oxygen treatment decision criteria for diabetic foot ulcers."
+                }
+            ],
             "implementedBy": {
                 "@id": "src/decision.js",
                 "@type": [

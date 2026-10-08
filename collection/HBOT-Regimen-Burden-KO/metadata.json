@@ -45,6 +45,18 @@
             "dc:description": "Return the governed Fixed Regimen Range Response containing the shorter and longer general scenarios",
             "dc:purpose": "Regimen Range provides the fixed, general 30-40-session HBOT planning scenarios that are used to calculate patient burden without selecting or personalizing a regimen for the patient.",
             "@type": "koio:Knowledge",
+            "koio:hasEvidentialBasis": [
+                {
+                    "@id": "https://doi.org/10.2337/dc09-1754",
+                    "dc:bibliographicCitation": "Löndahl M, Katzman P, Nilsson A, Hammarlund C. Hyperbaric oxygen therapy facilitates healing of chronic foot ulcers in patients with diabetes. Diabetes Care. 2010;33(5):998-1003. doi:10.2337/dc09-1754.",
+                    "dc:description": "HODFU trial protocol: the 40-session planning anchor, five sessions per week for eight weeks; not a patient-specific regimen."
+                },
+                {
+                    "@id": "https://doi.org/10.2337/dc15-2001",
+                    "dc:bibliographicCitation": "Fedorko L, Bowen JM, Jones W, et al. Hyperbaric oxygen therapy does not reduce indications for amputation in patients with diabetes with nonhealing ulcers of the lower limb: a prospective, double-blind, randomized controlled clinical trial. Diabetes Care. 2016;39(3):392-399. doi:10.2337/dc15-2001.",
+                    "dc:description": "Trial protocol: the 30-session planning anchor, five sessions per week for six weeks; not a patient-specific regimen."
+                }
+            ],
             "implementedBy": {
                 "@id": "src/regimen-range.js",
                 "@type": [
@@ -63,6 +75,13 @@
             "dc:description": "Burden Questionnaire Logic interactively collects and confirms the patient's selected treatment location, travel distance and time, and expected weekday-attendance difficulty.",
             "dc:purpose": "Its purpose is to produce one confirmed, standardized patient response that can be used by Burden Response Analysis to calculate execution burden.",
             "@type": "koio:Knowledge",
+            "koio:hasEvidentialBasis": [
+                {
+                    "@id": "https://www.uhms.org/images/Accredited-Facilities/2025/UHMS_Accredited_Facilities_June_2025.pdf",
+                    "dc:bibliographicCitation": "Undersea and Hyperbaric Medical Society. UHMS Accredited Hyperbaric Medicine Facilities. June 2025; list marked A/O 2025-06-30 on each page.",
+                    "dc:description": "Dated source of facility listings for the KO's versioned U.S. provider-roster snapshot; not evidence of HBOT treatment effectiveness or current facility availability."
+                }
+            ],
             "implementedBy": {
                 "@id": "src/questionnaire-logic.js",
                 "@type": [

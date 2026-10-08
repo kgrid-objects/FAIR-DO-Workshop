@@ -41,6 +41,12 @@
             "dc:description": "Lookup for determining the prognostic state of a diabetic foot ulcer based on initial clinical measurements.",
             "dc:purpose": "",
             "@type": "koio:Knowledge",
+            "koio:hasEvidentialBasis": [
+                {
+                    "@id": "https://onlinelibrary.wiley.com/doi/10.1111/wrr.13019",
+                    "dc:description": "The article's supplementary Table 3 supplies the categorical prognostic model used by this knowledge element."
+                }
+            ],
             "implementedBy": {
                 "@id": "src/prognosis.js",
                 "@type": [

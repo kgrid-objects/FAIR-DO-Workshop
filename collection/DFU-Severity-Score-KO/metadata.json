@@ -20,6 +20,16 @@
             "dc:bibliographicCitation": "Wagner Jr FW. The dysvascular foot: a system for diagnosis and treatment. Foot & ankle. 1981 Sep;2(2):64-122."
         }
     ],
+    "koio:hasEvidentialBasis": [
+        {
+            "@id": "https://journals.sagepub.com/doi/pdf/10.1177/107110078100200202?casa_token=h7WVAeQnTBYAAAAA:9311kCjKiHb-MryHmhbclBrXDccBeYSqnNasKmADww_bu_YSS1D9vSRQa6a-GnIsNqtVFTE_zG8q-g",
+            "dc:description": "Original description of the Wagner classification system used as the basis for the KO's lesion-severity scoring."
+        },
+        {
+            "@id": "https://iwgdfguidelines.org/wp-content/uploads/2021/01/Monteiro-Soares_et_al-2020-IWGDF-classification-guideline.pdf",
+            "dc:description": "IWGDF guidance on diabetic foot ulcer classification that provides clinical classification context for this KO."
+        }
+    ],
     "dc:isReferencedBy": [],
     "dc:description": "This knowledge object classifies one diabetic foot lesion or assessment site, at one assessment event, as Wagner score 0-5. It specifies classification-not treatment, prognosis, amputation risk, or hyperbaric-oxygen eligibility.",
     "schema:creator": [
