@@ -49,21 +49,46 @@
                 {
                     "@id": "https://doi.org/10.2337/dc09-1754",
                     "dc:bibliographicCitation": "Löndahl M, Katzman P, Nilsson A, Hammarlund C. Hyperbaric oxygen therapy facilitates healing of chronic foot ulcers in patients with diabetes. Diabetes Care. 2010;33(5):998-1003. doi:10.2337/dc09-1754.",
-                    "dc:description": "HODFU trial protocol: the 40-session planning anchor, five sessions per week for eight weeks; not a patient-specific regimen."
+                    "dc:description": "HODFU trial treatment schedule supplies the longer general planning scenario: up to 40 sessions, five sessions per week over eight weeks. It does not select a regimen for an individual patient or establish the burden-analysis calculation."
                 },
                 {
                     "@id": "https://doi.org/10.2337/dc15-2001",
                     "dc:bibliographicCitation": "Fedorko L, Bowen JM, Jones W, et al. Hyperbaric oxygen therapy does not reduce indications for amputation in patients with diabetes with nonhealing ulcers of the lower limb: a prospective, double-blind, randomized controlled clinical trial. Diabetes Care. 2016;39(3):392-399. doi:10.2337/dc15-2001.",
-                    "dc:description": "Trial protocol: the 30-session planning anchor, five sessions per week for six weeks; not a patient-specific regimen."
+                    "dc:description": "Fedorko trial treatment schedule supplies the shorter general planning scenario: 30 sessions, five sessions per week over six weeks. It does not select a regimen for an individual patient or establish the burden-analysis calculation."
                 }
             ],
+            "schema:subjectOf": {
+                "@context": "http://www.w3.org/ns/anno.jsonld",
+                "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#annotation-regimen-range-code",
+                "type": "Annotation",
+                "motivation": "linking",
+                "body": "Regimen_Range",
+                "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-regimen-range-scenarios"
+            },
             "implementedBy": {
                 "@id": "src/regimen-range.js",
                 "@type": [
                     "Implementation",
                     "Function",
-                    "JavaScript"
-                ]
+                    "JavaScript",
+                    "schema:MediaObject"
+                ],
+                "schema:sha256": "28118e82ec7ec725cb342224795b616dcdec17bd26bf371a8c879b127607ad15",
+                "schema:hasPart": {
+                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-regimen-range-scenarios",
+                    "@type": "http://www.w3.org/ns/oa#SpecificResource",
+                    "dc:title": "Regimen scenario implementation",
+                    "dc:description": "The shorter and longer general planning scenarios in showRegimenRange encode the 30- and 40-session anchors. This code passage is implementation, not additional clinical evidence.",
+                    "http://www.w3.org/ns/oa#hasSource": {
+                        "@id": "src/regimen-range.js"
+                    },
+                    "http://www.w3.org/ns/oa#hasSelector": {
+                        "@type": "http://www.w3.org/ns/oa#TextQuoteSelector",
+                        "http://www.w3.org/ns/oa#exact": "    shorter_regimen_scenario: {\n      episodes: 30,\n      sessions_per_week: 5,\n      course_weeks: 6.0\n    },\n    longer_regimen_scenario: {\n      episodes: 40,\n      sessions_per_week: 5,\n      course_weeks: 8.0\n    },",
+                        "http://www.w3.org/ns/oa#prefix": "    indication: 'diabetes_related_foot_ulcer',\n",
+                        "http://www.w3.org/ns/oa#suffix": "\n    combined_range: {"
+                    }
+                }
             }
         },
         {
@@ -79,16 +104,41 @@
                 {
                     "@id": "https://www.uhms.org/images/Accredited-Facilities/2025/UHMS_Accredited_Facilities_June_2025.pdf",
                     "dc:bibliographicCitation": "Undersea and Hyperbaric Medical Society. UHMS Accredited Hyperbaric Medicine Facilities. June 2025; list marked A/O 2025-06-30 on each page.",
-                    "dc:description": "Dated source of facility listings for the KO's versioned U.S. provider-roster snapshot; not evidence of HBOT treatment effectiveness or current facility availability."
+                    "dc:description": "Dated source for the facility choices represented in the KO's versioned U.S. provider-roster snapshot and collected by Burden Questionnaire Logic. It is not evidence of HBOT treatment effectiveness, current facility availability, or the burden-analysis calculation."
                 }
             ],
+            "schema:subjectOf": {
+                "@context": "http://www.w3.org/ns/anno.jsonld",
+                "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#annotation-questionnaire-code",
+                "type": "Annotation",
+                "motivation": "linking",
+                "body": "Burden_Questionnaire_Logic",
+                "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-questionnaire-response"
+            },
             "implementedBy": {
                 "@id": "src/questionnaire-logic.js",
                 "@type": [
                     "Implementation",
                     "Function",
-                    "JavaScript"
-                ]
+                    "JavaScript",
+                    "schema:MediaObject"
+                ],
+                "schema:sha256": "7e270efb44a97bb4d71e108d0d6f58789d0bad76fff50f969f6707e802c728af",
+                "schema:hasPart": {
+                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-questionnaire-response",
+                    "@type": "http://www.w3.org/ns/oa#SpecificResource",
+                    "dc:title": "Completed questionnaire response implementation",
+                    "dc:description": "The questionnaire implementation normalizes the selected facility and the three reported burden inputs into a completed response. The facility-list source supports the roster choices, not the patient's answers.",
+                    "http://www.w3.org/ns/oa#hasSource": {
+                        "@id": "src/questionnaire-logic.js"
+                    },
+                    "http://www.w3.org/ns/oa#hasSelector": {
+                        "@type": "http://www.w3.org/ns/oa#TextQuoteSelector",
+                        "http://www.w3.org/ns/oa#exact": "    const responseProjection = {\n      hyperbaric_oxygen_therapy_location: normalizeProviderIri(answers.Q01),\n      one_way_miles: normalizeNumber(answers.Q02, 0, 1000, 'Q02 one_way_miles'),\n      one_way_travel_minutes: normalizeNumber(answers.Q03, 0, 1440, 'Q03 one_way_travel_minutes'),\n      weekday_attendance_difficulty: normalizeDifficulty(answers.Q04)\n    };",
+                        "http://www.w3.org/ns/oa#prefix": "      answers[question.id] = raw;\n    }\n\n",
+                        "http://www.w3.org/ns/oa#suffix": "\n\n    return createCompletedQuestionnaireResponse(responseProjection);"
+                    }
+                }
             }
         },
         {
@@ -100,13 +150,38 @@
             "dc:description": "Burden Response Analysis computes the execution burden of a contemplated outpatient HBOT course by combining the fixed population-level regimen envelope with one selected facility, patient-reported travel, and reported weekday-attendance difficulty.",
             "dc:purpose": "Its purpose is to produce a standardized execution burden response that can be used to inform patient and clinician decision-making.",
             "@type": "koio:Knowledge",
+            "schema:subjectOf": {
+                "@context": "http://www.w3.org/ns/anno.jsonld",
+                "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#annotation-burden-analysis-code",
+                "type": "Annotation",
+                "motivation": "linking",
+                "body": "Burden_Response_Analysis",
+                "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-execution-burden-level"
+            },
             "implementedBy": {
                 "@id": "src/burden-response-analysis.js",
                 "@type": [
                     "Implementation",
                     "Function",
-                    "JavaScript"
-                ]
+                    "JavaScript",
+                    "schema:MediaObject"
+                ],
+                "schema:sha256": "e788cbd6a3e72d15de3adc261ac7f5be14d0e7eb774c90ce4f1860f1465d8cc4",
+                "schema:hasPart": {
+                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-execution-burden-level",
+                    "@type": "http://www.w3.org/ns/oa#SpecificResource",
+                    "dc:title": "Execution burden level implementation",
+                    "dc:description": "The analysis combines a travel band with reported weekday-attendance difficulty to determine a five-level execution-burden category. No separate evidential basis is declared for this analysis element.",
+                    "http://www.w3.org/ns/oa#hasSource": {
+                        "@id": "src/burden-response-analysis.js"
+                    },
+                    "http://www.w3.org/ns/oa#hasSelector": {
+                        "@type": "http://www.w3.org/ns/oa#TextQuoteSelector",
+                        "http://www.w3.org/ns/oa#exact": "function buildExecutionBurdenLevel(travelBand, attendanceDifficulty, oneWayMinutes) {\n  const travelScore = {\n    low: 1,\n    moderate: 2,\n    high: 3,\n    very_high: 4\n  }[travelBand];\n\n  let score;\n  if (attendanceDifficulty === 'none') {\n    score = travelScore;\n  } else if (attendanceDifficulty === 'some') {\n    score = Math.min(5, travelScore + 1);\n  } else {\n    score = travelScore >= 3 ? 5 : 4;\n  }",
+                        "http://www.w3.org/ns/oa#prefix": "  return String(roundTripHours).replace(/\\.0$/, '');\n}\n\n",
+                        "http://www.w3.org/ns/oa#suffix": "\n\n  const categoryByScore = {"
+                    }
+                }
             }
         }
     ],
