@@ -13,21 +13,25 @@
     "dc:source": [
         {
             "@id": "https://doi.org/10.1002/dmrr.3273",
+            "dc:title": "IWGDF diabetic-foot-ulcer classification guideline (2019)",
             "dc:bibliographicCitation": "Monteiro-Soares M, Russell D, Boyko EJ, et al. Guidelines on the classification of diabetic foot ulcers (IWGDF 2019). Diabetes Metab Res Rev. 2020;36(S1):e3273. doi:10.1002/dmrr.3273.",
             "schema:url": "https://iwgdfguidelines.org/wp-content/uploads/2021/01/Monteiro-Soares_et_al-2020-IWGDF-classification-guideline.pdf"
         },
         {
             "@id": "https://doi.org/10.1177/107110078100200202",
+            "dc:title": "Wagner dysvascular-foot classification (1981)",
             "dc:bibliographicCitation": "Wagner FW Jr. The dysvascular foot: a system for diagnosis and treatment. Foot Ankle. 1981;2(2):64-122. doi:10.1177/107110078100200202."
         }
     ],
     "koio:hasEvidentialBasis": [
         {
             "@id": "https://doi.org/10.1177/107110078100200202",
+            "dc:title": "Wagner dysvascular-foot classification (1981)",
             "dc:description": "Original published description of Wagner's dysvascular-foot classification. This source supports the KO's classification at KO level; this metadata does not assign it to an individual knowledge element."
         },
         {
             "@id": "https://doi.org/10.1002/dmrr.3273",
+            "dc:title": "IWGDF diabetic-foot-ulcer classification guideline (2019)",
             "dc:description": "IWGDF 2019 guidance on classifying diabetic foot ulcers, published in 2020. It provides clinical classification context for this KO at KO level; this metadata does not assign it to an individual knowledge element."
         }
     ],

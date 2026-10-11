@@ -13,14 +13,17 @@
     "dc:source": [
         {
             "@id": "specs/1E41C3D7-66F4-C168-3A91-D951BE77CBAF.pdf",
+            "dc:title": "Huang HBOT guideline (2015) — local PDF",
             "dc:bibliographicCitation": "Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. UHMS DFU guideline."
         },
         {
             "@id": "https://pubmed.ncbi.nlm.nih.gov/26152105/",
+            "dc:title": "Huang HBOT guideline (2015) — PubMed record",
             "dc:bibliographicCitation": "Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. UHMS DFU guideline."
         },
         {
             "@id": "https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-Guidelines-2023.pdf",
+            "dc:title": "IWGDF wound-healing guidelines (2023)",
             "dc:bibliographicCitation": "International Working Group on the Diabetic Foot. Guidelines on interventions to enhance healing of foot ulcers in people with diabetes: IWGDF 2023 update. Recommendation 12 and rationale."
         }
     ],
@@ -48,11 +51,13 @@
             "koio:hasEvidentialBasis": [
                 {
                     "@id": "https://doi.org/10.2337/dc09-1754",
+                    "dc:title": "Löndahl HODFU trial (2010)",
                     "dc:bibliographicCitation": "Löndahl M, Katzman P, Nilsson A, Hammarlund C. Hyperbaric oxygen therapy facilitates healing of chronic foot ulcers in patients with diabetes. Diabetes Care. 2010;33(5):998-1003. doi:10.2337/dc09-1754.",
                     "dc:description": "HODFU trial treatment schedule supplies the longer general planning scenario: up to 40 sessions, five sessions per week over eight weeks. It does not select a regimen for an individual patient or establish the burden-analysis calculation."
                 },
                 {
                     "@id": "https://doi.org/10.2337/dc15-2001",
+                    "dc:title": "Fedorko HBOT trial (2016)",
                     "dc:bibliographicCitation": "Fedorko L, Bowen JM, Jones W, et al. Hyperbaric oxygen therapy does not reduce indications for amputation in patients with diabetes with nonhealing ulcers of the lower limb: a prospective, double-blind, randomized controlled clinical trial. Diabetes Care. 2016;39(3):392-399. doi:10.2337/dc15-2001.",
                     "dc:description": "Fedorko trial treatment schedule supplies the shorter general planning scenario: 30 sessions, five sessions per week over six weeks. It does not select a regimen for an individual patient or establish the burden-analysis calculation."
                 }
@@ -103,6 +108,7 @@
             "koio:hasEvidentialBasis": [
                 {
                     "@id": "https://www.uhms.org/images/Accredited-Facilities/2025/UHMS_Accredited_Facilities_June_2025.pdf",
+                    "dc:title": "UHMS accredited hyperbaric facilities (June 2025)",
                     "dc:bibliographicCitation": "Undersea and Hyperbaric Medical Society. UHMS Accredited Hyperbaric Medicine Facilities. June 2025; list marked A/O 2025-06-30 on each page.",
                     "dc:description": "Dated source for the facility choices represented in the KO's versioned U.S. provider-roster snapshot and collected by Burden Questionnaire Logic. It is not evidence of HBOT treatment effectiveness, current facility availability, or the burden-analysis calculation."
                 }

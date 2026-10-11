@@ -13,6 +13,7 @@
     "dc:source": [
         {
             "@id": "https://pubmed.ncbi.nlm.nih.gov/26152105/",
+            "dc:title": "Huang HBOT guideline for diabetic foot ulcers (2015)",
             "dc:bibliographicCitation": "Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. Figure 6, 'Algorithm for the use of HBO2.'",
             "schema:hasPart": {
                 "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO#evidence-uhms-figure6",

@@ -13,6 +13,7 @@
     "dc:source": [
         {
             "@id": "https://onlinelibrary.wiley.com/doi/10.1111/wrr.13019",
+            "dc:title": "Margolis DFU prognosis article (2022)",
             "dc:bibliographicCitation": "WILEY-Margolis DJ, Mitra N, Malay DS, Mirza ZK, Lantis JC, Lev-Tov HA, Kirsner RS, Thom SR. Further evidence that wound size and duration are strong prognostic markers of diabetic foot ulcer healing. Wound Repair and Regeneration. 2022;30(4):487-490. doi:10.1111/wrr.13019.",
             "schema:hasPart": {
                 "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#evidence-margolis-table3"
@@ -20,6 +21,7 @@
         },
         {
             "@id": "https://pubmed.ncbi.nlm.nih.gov/35470507/",
+            "dc:title": "Margolis DFU prognosis article (2022) — PubMed record",
             "dc:bibliographicCitation": "PUBMED-Margolis DJ, Mitra N, Malay DS, Mirza ZK, Lantis JC, Lev-Tov HA, Kirsner RS, Thom SR. Further evidence that wound size and duration are strong prognostic markers of diabetic foot ulcer healing. Wound Repair and Regeneration. 2022;30(4):487-490. doi:10.1111/wrr.13019."
         }
     ],
