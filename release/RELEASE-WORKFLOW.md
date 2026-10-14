@@ -65,7 +65,7 @@ This workflow prepares five independently citable records: four constituent Know
 1. **Complete:** Created one local annotated Version 1.0 tag per object using the exact names in `release/objects.json`. All five annotated tag objects point to the DOI-complete content-freeze commit `e42624bfed0b28ba35a743690141ef4f566af250`; no tag was pushed. Evidence is in `release/PHASE-5-STEP-1-ANNOTATED-TAGS.md`.
 2. **Complete:** Independently verified all five references as unique annotated tag objects that peel to content-freeze commit `e42624bfed0b28ba35a743690141ef4f566af250`. Confirmed each tagged object directory exists as a Git tree, matches the frozen directory tree, maps to the intended registry entry, and produces the exact future operational GitHub tagged-directory URL. Evidence is in `release/PHASE-5-STEP-2-TAG-VERIFICATION.md`.
 3. **Complete:** Pushed the `prepare-v1.0-releases` branch and only the five explicitly named annotated Version 1.0 tags to GitHub. Independently queried the remote refs and confirmed the branch commit, all five annotated tag-object IDs, and all five peeled targets match locally; every tag peels to content-freeze commit `e42624bfed0b28ba35a743690141ef4f566af250`. Evidence is in `release/PHASE-5-STEP-3-REMOTE-TAGS.md`.
-4. Create one GitHub release per object and attach only that object's deterministic archive and checksum evidence.
+4. **Complete:** Created one public GitHub release from each existing verified annotated tag. Attached exactly three object-specific assets to each release: its deterministic archive, compressed-archive SHA-256 sidecar, and file-level content manifest. Verified all 15 assets are uploaded, their remote sizes match locally, and GitHub's archive digests match the Step 10 SHA-256 values. Evidence is in `release/PHASE-5-STEP-4-GITHUB-RELEASES.md`.
 5. Verify that every release-tag URL, raw metadata URL, notebook URL, and archive link resolves as intended.
 6. Do not move these tags after they become public.
 
@@ -110,4 +110,4 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Immediate next step
 
-Proceed with **Phase 5, Step 4**: create one GitHub release per object from its existing verified tag and attach only that object's deterministic archive and checksum evidence.
+Proceed with **Phase 5, Step 5**: verify that every operational tagged-directory URL, release-tagged raw metadata URL, notebook URL, GitHub release page, and uploaded archive link resolves to the intended object and version.
