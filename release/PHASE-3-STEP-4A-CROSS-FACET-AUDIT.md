@@ -54,4 +54,4 @@ Audit and correction completed on 2026-10-14 for the five Version 1.0 release ob
 
 ## Archive consequence
 
-These metadata corrections change all five object contents. The deterministic archives, archive checksums, byte sizes, uploaded Sandbox files, and KA dependency bindings must therefore be regenerated before Phase 3, Step 5.
+These metadata corrections changed all five object contents. The KA dependency manifest was regenerated, all five deterministic archives were built twice with identical SHA-256 values and byte sizes, and every earlier Sandbox file was replaced. Zenodo's MD5 for each replacement matches the corresponding local archive. Each unpublished draft again contains exactly one intended archive. The final digests and byte sizes are recorded in `release/zenodo-sandbox-drafts.json`.

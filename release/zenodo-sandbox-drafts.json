@@ -38,8 +38,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "dfu-severity-score-ko-v1.0.0.tar.gz",
-      "archiveSha256": "4399005593c5cf22a04e60a6c91128fe3f08e41fecc54abe4f213b34ec4715c9",
-      "archiveByteSize": 928435,
+      "archiveSha256": "2d51f3bb3c13ca0132d02d3e82cdae0aa912d1469bf992f30284825843b0b28f",
+      "archiveMd5": "26c2d34812bc4f6370e9603591c67436",
+      "archiveByteSize": 928338,
       "published": false
     },
     {
@@ -64,8 +65,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "hbot-treatment-decision-ko-v1.0.0.tar.gz",
-      "archiveSha256": "c6d1c9664268bf5d4e6336e29e159e744cd763706c5128791188a625f1e94ffd",
-      "archiveByteSize": 575184,
+      "archiveSha256": "a84ebf401c0d66485f11421ab95d098f22bc62a4b19f79b31386cbf3df84ce49",
+      "archiveMd5": "69b05bfe6e4a8c29b9d16d77911c7a09",
+      "archiveByteSize": 575145,
       "published": false
     },
     {
@@ -90,8 +92,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "hbot-regimen-burden-ko-v1.0.0.tar.gz",
-      "archiveSha256": "020e38834dad569727016aaa01c301ce6dc6a9843404f6f689bb6ae838532e9b",
-      "archiveByteSize": 909590,
+      "archiveSha256": "54a4bf84c6db81cda7c683eaebea609cac324c7ef2e71b1650612e9665cee12e",
+      "archiveMd5": "32638f8f3a59bc466cd43b84d2db2822",
+      "archiveByteSize": 909575,
       "published": false
     },
     {
@@ -116,8 +119,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "dfu-prognostic-indicator-ko-v1.0.0.tar.gz",
-      "archiveSha256": "3451e26758d0a297218093b019f57b8a1c324a3fdea21dce7d9efad928c5cde7",
-      "archiveByteSize": 492539,
+      "archiveSha256": "e2cabf704b584c4a8e8bdb42f658005a55f1a021f188ab9c4284e0999020e93a",
+      "archiveMd5": "26c5c5f57cfff4129bc509090b7e0a52",
+      "archiveByteSize": 492507,
       "published": false
     },
     {
@@ -160,8 +164,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "hbot-treatment-target-ka-v1.0.0.tar.gz",
-      "archiveSha256": "9ecf510f9e1115406ddff48dfa40d4da2426f159b6d6d2d8a702e84ef1d379ec",
-      "archiveByteSize": 478853,
+      "archiveSha256": "a4eeeb30ebdcfa593da67b667403aa23947a200501cdf46a5d381ff80a6e8a08",
+      "archiveMd5": "5df4498256f6ecd32d4cb5a56d5a86e9",
+      "archiveByteSize": 479054,
       "published": false
     }
   ]
