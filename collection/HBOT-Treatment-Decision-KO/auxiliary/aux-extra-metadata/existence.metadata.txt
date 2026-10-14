@@ -1,6 +1,6 @@
 @prefix koer: <https://example.org/koer/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO> .
+@base <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO> .
 
 # KO-SPECIFIC SCHEMA: This record describes one Knowledge Object and
 # accounts for the metadata components that belong to that KO.
@@ -9,9 +9,9 @@
 <urn:uuid:1275ad8b-3996-4052-b46f-a9b67619f1ec>
     a koer:KnowledgeObjectExistenceRecord ;
     koer:recordsKnowledgeObject
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO> .
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO>
     a koer:KnowledgeObject ;
     dcterms:title "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object" ;
     koer:hasMetadataComponent

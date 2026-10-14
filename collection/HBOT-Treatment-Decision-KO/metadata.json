@@ -1,12 +1,14 @@
 {
     "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO",
+    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO",
     "versionInfo": "2.1",
     "@type": "KnowledgeObject",
     "dc:title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object",
     "dc:identifier": [
         "workshop-ko-2",
-        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO"
+        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO",
+        "__SANDBOX_DOI_HBOT_TREATMENT_DECISION_KO__",
+        "__SWHID_HBOT_TREATMENT_DECISION_KO__"
     ],
     "dc:version": "1.0",
     "dc:date": "2026-08-05",
@@ -16,7 +18,7 @@
             "dc:title": "Huang HBOT guideline for diabetic foot ulcers (2015)",
             "dc:bibliographicCitation": "Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. Figure 6, 'Algorithm for the use of HBO2.'",
             "schema:hasPart": {
-                "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO#evidence-uhms-figure6",
+                "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO#evidence-uhms-figure6",
                 "@type": "http://www.w3.org/ns/oa#SpecificResource",
                 "dc:title": "Figure 6: Algorithm for the use of HBO2",
                 "dc:description": "The published guideline decision model, Figure 6 on printed page 230 of the UHMS article PDF. Its clinical branches inform this knowledge element; the CKS separately specifies validation and out-of-scope behavior.",
@@ -30,10 +32,10 @@
     "dc:description": "This knowledge object converts four supplied facts about one candidate diabetic foot ulcer into one guideline-branch result for adjunctive hyperbaric oxygen therapy (HBO2). It implements Figure 6 of the 2015 UHMS guideline; it does not diagnose a DFU, calculate Wagner grade, prescribe an HBO2 protocol, or determine coverage.",
     "schema:creator": [
         {
-            "@id": "https://kgrid.org",
+            "@id": "https://ror.org/00jmfr291",
             "@type": "schema:Organization",
             "schema:name": "Knowledge Systems Lab",
-            "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+            "schema:affiliation": "Department of Learning Health Sciences, University of Michigan Medical School",
             "schema:email": "kgrid-developers@umich.edu"
         }
     ],
@@ -49,7 +51,7 @@
             "@type": "koio:Knowledge",
             "koio:hasEvidentialBasis": [
                 {
-                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO#evidence-uhms-figure6",
+                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO#evidence-uhms-figure6",
                     "@type": "http://www.w3.org/ns/oa#SpecificResource",
                     "dc:title": "Figure 6: Algorithm for the use of HBO2",
                     "dc:description": "The published guideline decision model, Figure 6 on printed page 230 of the UHMS article PDF. Its clinical branches inform this knowledge element; the CKS separately specifies validation and out-of-scope behavior.",
@@ -61,19 +63,19 @@
             "schema:subjectOf": [
                 {
                     "@context": "http://www.w3.org/ns/anno.jsonld",
-                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO#annotation-uhms-figure6",
+                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO#annotation-uhms-figure6",
                     "type": "Annotation",
                     "motivation": "linking",
                     "body": "DFU_HBO2_Decision_Logic",
-                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO#evidence-uhms-figure6"
+                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO#evidence-uhms-figure6"
                 },
                 {
                     "@context": "http://www.w3.org/ns/anno.jsonld",
-                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO#annotation-cks-decision-table",
+                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO#annotation-cks-decision-table",
                     "type": "Annotation",
                     "motivation": "linking",
                     "body": "DFU_HBO2_Decision_Logic",
-                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO#cks-decision-table"
+                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO#cks-decision-table"
                 }
             ],
             "implementedBy": {
@@ -173,7 +175,7 @@
             "dc:description": "This demonstration-only CKS converts four supplied facts about one candidate diabetic foot ulcer into one guideline-branch result for adjunctive hyperbaric oxygen therapy (HBO2). It implements Figure 6 of the 2015 UHMS guideline; it does not diagnose a DFU, calculate Wagner grade, prescribe an HBO2 protocol, or determine coverage.",
             "schema:sha256": "dec49c8dcdc57b118075da5bade4e84af1d52b85111a99080ab1bff45692a955",
             "schema:hasPart": {
-                "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO#cks-decision-table",
+                "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO#cks-decision-table",
                 "@type": "http://www.w3.org/ns/oa#SpecificResource",
                 "dc:title": "CKS Section 4.3 Normative Decision Table",
                 "dc:description": "Section 4.3 states the ordered computable outcomes. Its ALG-01 out-of-scope result is an additional CKS specification decision, not a branch shown in the published Figure 6.",
@@ -260,7 +262,7 @@
               "schema:name": "Open in Scribbler",
               "schema:target": {
                 "@type": "schema:EntryPoint",
-                "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/HBOT-Treatment-Decision-KO/auxiliary/aux-notebook/dfu_hbo2_scribbler.jsnb"
+                "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO/auxiliary/aux-notebook/dfu_hbo2_scribbler.jsnb"
               }
             }
         },

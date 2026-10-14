@@ -1,12 +1,14 @@
 {
     "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO",
+    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO",
     "versionInfo": "2.1",
     "@type": "KnowledgeObject",
     "dc:title": "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object",
     "dc:identifier": [
         "workshop-ko-1",
-        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO"
+        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO",
+        "__SANDBOX_DOI_DFU_SEVERITY_SCORE_KO__",
+        "__SWHID_DFU_SEVERITY_SCORE_KO__"
     ],
     "dc:version": "1.0",
     "dc:date": "2026-08-03",
@@ -39,10 +41,10 @@
     "dc:description": "This knowledge object classifies one diabetic foot lesion or assessment site, at one assessment event, as Wagner score 0-5. It specifies classification-not treatment, prognosis, amputation risk, or hyperbaric-oxygen eligibility.",
     "schema:creator": [
         {
-            "@id": "https://kgrid.org",
+            "@id": "https://ror.org/00jmfr291",
             "@type": "schema:Organization",
             "schema:name": "Knowledge Systems Lab",
-            "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+            "schema:affiliation": "Department of Learning Health Sciences, University of Michigan Medical School",
             "schema:email": "kgrid-developers@umich.edu"
         }
     ],
@@ -236,7 +238,7 @@
                 "schema:name": "Open in Scribbler",
                 "schema:target": {
                    "@type": "schema:EntryPoint",
-                    "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/DFU-Severity-Score-KO/auxiliary/aux-notebook/wagner_scribbler.jsnb"
+                    "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO/auxiliary/aux-notebook/wagner_scribbler.jsnb"
              }
             }
         },

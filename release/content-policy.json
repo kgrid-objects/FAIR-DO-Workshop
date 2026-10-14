@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "archiveRule": "all Git-tracked files recursively below exactObjectRoot at the release tag",
+  "objects": [
+    {
+      "key": "dfu-severity-score-ko",
+      "exactObjectRoot": "collection/DFU-Severity-Score-KO"
+    },
+    {
+      "key": "hbot-treatment-decision-ko",
+      "exactObjectRoot": "collection/HBOT-Treatment-Decision-KO"
+    },
+    {
+      "key": "hbot-regimen-burden-ko",
+      "exactObjectRoot": "collection/HBOT-Regimen-Burden-KO"
+    },
+    {
+      "key": "dfu-prognostic-indicator-ko",
+      "exactObjectRoot": "collection/DFU-Prognostic-Indicator-KO"
+    },
+    {
+      "key": "hbot-treatment-target-ka",
+      "exactObjectRoot": "HBOT-Treatment-Target-KA"
+    }
+  ],
+  "alwaysExcluded": [
+    "node_modules/",
+    ".git/",
+    "__pycache__/",
+    ".ipynb_checkpoints/",
+    ".DS_Store",
+    "*.log",
+    "*.tmp",
+    "*.swp",
+    ".env",
+    "*.pem",
+    "*.key"
+  ],
+  "rightsExcluded": [
+    {
+      "path": "collection/HBOT-Regimen-Burden-KO/specs/1E41C3D7-66F4-C168-3A91-D951BE77CBAF.pdf",
+      "reason": "No documented redistribution permission",
+      "formerSha256": "2f725500223d8c612aeff9a9b4ac7374c5aef0abd75bc378682155031cee7f11"
+    }
+  ]
+}

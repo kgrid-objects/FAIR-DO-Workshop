@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "status": "release-candidate-placeholders",
+  "objects": [
+    {
+      "key": "dfu-severity-score-ko",
+      "gitTag": "dfu-severity-score-ko-v1.0.0",
+      "gitDirectoryUrl": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO",
+      "sandboxDoi": "__SANDBOX_DOI_DFU_SEVERITY_SCORE_KO__",
+      "directorySwhid": "__SWHID_DFU_SEVERITY_SCORE_KO__"
+    },
+    {
+      "key": "hbot-treatment-decision-ko",
+      "gitTag": "hbot-treatment-decision-ko-v1.0.0",
+      "gitDirectoryUrl": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO",
+      "sandboxDoi": "__SANDBOX_DOI_HBOT_TREATMENT_DECISION_KO__",
+      "directorySwhid": "__SWHID_HBOT_TREATMENT_DECISION_KO__"
+    },
+    {
+      "key": "hbot-regimen-burden-ko",
+      "gitTag": "hbot-regimen-burden-ko-v1.0.0",
+      "gitDirectoryUrl": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO",
+      "sandboxDoi": "__SANDBOX_DOI_HBOT_REGIMEN_BURDEN_KO__",
+      "directorySwhid": "__SWHID_HBOT_REGIMEN_BURDEN_KO__"
+    },
+    {
+      "key": "dfu-prognostic-indicator-ko",
+      "gitTag": "dfu-prognostic-indicator-ko-v1.0.0",
+      "gitDirectoryUrl": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO",
+      "sandboxDoi": "__SANDBOX_DOI_DFU_PROGNOSTIC_INDICATOR_KO__",
+      "directorySwhid": "__SWHID_DFU_PROGNOSTIC_INDICATOR_KO__"
+    },
+    {
+      "key": "hbot-treatment-target-ka",
+      "gitTag": "hbot-treatment-target-ka-v1.0.0",
+      "gitDirectoryUrl": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA",
+      "sandboxDoi": "__SANDBOX_DOI_HBOT_TREATMENT_TARGET_KA__",
+      "directorySwhid": "__SWHID_HBOT_TREATMENT_TARGET_KA__"
+    }
+  ]
+}

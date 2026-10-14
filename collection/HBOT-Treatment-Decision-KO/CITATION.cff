@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this knowledge object, please cite it using the metadata below."
+title: "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object"
+type: software
+version: 1.0.0
+date-released: 2026-08-05
+authors:
+  - name: "Knowledge Systems Lab"
+    affiliation: "Department of Learning Health Sciences, University of Michigan Medical School"
+    email: "kgrid-developers@umich.edu"
+    website: "https://ror.org/00jmfr291"
+repository-code: "https://github.com/kgrid-objects/FAIR-DO-Workshop"
+url: "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO"
+license: MIT
+abstract: >-
+  This knowledge object converts four supplied facts about one candidate diabetic foot ulcer into one guideline-branch result for adjunctive hyperbaric oxygen therapy (HBO2). It implements Figure 6 of the 2015 UHMS guideline; it does not diagnose a DFU, calculate Wagner grade, prescribe an HBO2 protocol, or determine coverage.
+keywords:
+  - FAIR Digital Object
+  - Knowledge Object
+  - clinical knowledge

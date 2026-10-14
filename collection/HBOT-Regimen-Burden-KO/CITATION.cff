@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this knowledge object, please cite it using the metadata below."
+title: "DFU HBOT Bounded Regimen and Execution Burden"
+type: software
+version: 1.0.0
+date-released: 2026-08-12
+authors:
+  - name: "Knowledge Systems Lab"
+    affiliation: "Department of Learning Health Sciences, University of Michigan Medical School"
+    email: "kgrid-developers@umich.edu"
+    website: "https://ror.org/00jmfr291"
+repository-code: "https://github.com/kgrid-objects/FAIR-DO-Workshop"
+url: "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO"
+license: MIT
+abstract: >-
+  This knowledge object estimates the execution burden of a contemplated outpatient HBOT course. It combines a fixed population-level regimen range with one selected facility, patient-reported travel distance and duration, and reported weekday-attendance difficulty.
+keywords:
+  - FAIR Digital Object
+  - Knowledge Object
+  - clinical knowledge

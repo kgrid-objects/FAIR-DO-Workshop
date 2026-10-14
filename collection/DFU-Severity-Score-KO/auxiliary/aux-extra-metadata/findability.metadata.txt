@@ -22,7 +22,7 @@
         "1.0" ;
 
     schema:url
-    <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO> ;
+    <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO> ;
 
     # 2. Description
     schema:abstract
@@ -93,10 +93,10 @@
 
     # 6. Indexing
     schema:isPartOf
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection> ;
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection> ;
 
     schema:subjectOf
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/DFU-Severity-Score-KO/metadata.json> .
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO/metadata.json> .
 
 
 # Controlled UMLS term descriptions

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "sourceCommit": "e2a074005470ecfaa2544ed7d5a25f3bc443b7ce",
+  "creator": {
+    "type": "Organization",
+    "name": "Knowledge Systems Lab",
+    "affiliation": "Department of Learning Health Sciences, University of Michigan Medical School",
+    "ror": "https://ror.org/00jmfr291",
+    "email": "kgrid-developers@umich.edu"
+  },
+  "objects": [
+    {
+      "key": "dfu-severity-score-ko",
+      "path": "collection/DFU-Severity-Score-KO",
+      "title": "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object",
+      "version": "1.0.0",
+      "tag": "dfu-severity-score-ko-v1.0.0",
+      "assembly": false
+    },
+    {
+      "key": "hbot-treatment-decision-ko",
+      "path": "collection/HBOT-Treatment-Decision-KO",
+      "title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object",
+      "version": "1.0.0",
+      "tag": "hbot-treatment-decision-ko-v1.0.0",
+      "assembly": false
+    },
+    {
+      "key": "hbot-regimen-burden-ko",
+      "path": "collection/HBOT-Regimen-Burden-KO",
+      "title": "DFU HBOT Bounded Regimen and Execution Burden",
+      "version": "1.0.0",
+      "tag": "hbot-regimen-burden-ko-v1.0.0",
+      "assembly": false
+    },
+    {
+      "key": "dfu-prognostic-indicator-ko",
+      "path": "collection/DFU-Prognostic-Indicator-KO",
+      "title": "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks",
+      "version": "1.0.0",
+      "tag": "dfu-prognostic-indicator-ko-v1.0.0",
+      "assembly": false
+    },
+    {
+      "key": "hbot-treatment-target-ka",
+      "path": "HBOT-Treatment-Target-KA",
+      "title": "HBOT Treatment Target KA",
+      "version": "1.0.0",
+      "tag": "hbot-treatment-target-ka-v1.0.0",
+      "assembly": true
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 @prefix koer: <https://example.org/koer/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO> .
+@base <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO> .
 
 # KO-SPECIFIC SCHEMA: This record describes one Knowledge Object and
 # accounts for the metadata components that belong to that KO.
@@ -9,9 +9,9 @@
 <urn:uuid:70abdfc9-d981-409c-948b-3d3eb6595e54>
     a koer:KnowledgeObjectExistenceRecord ;
     koer:recordsKnowledgeObject
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO> .
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO>
     a koer:KnowledgeObject ;
     dcterms:title "DFU HBOT Bounded Regimen and Execution Burden" ;
     koer:hasMetadataComponent

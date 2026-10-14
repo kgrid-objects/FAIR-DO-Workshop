@@ -1,0 +1,145 @@
+{
+  "manifestType": "HBOTTreatmentTargetKADependencyManifest",
+  "manifestVersion": "2.0-release-candidate",
+  "generatedAt": "2026-10-13",
+  "kaSpecificationIri": "https://kgrid.org/cks/hbot-treatment-target-ka/versions/cks-1.0",
+  "bindingPolicy": "release-tag-with-exact-directory-tree-and-canonical-archive-verification",
+  "repository": {
+    "url": "https://github.com/kgrid-objects/FAIR-DO-Workshop",
+    "releaseTag": "hbot-treatment-target-ka-v1.0.0",
+    "publishedReleaseLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0",
+    "commitEvidenceStatus": "pending release-candidate commit and annotated tag; record the resulting commit SHA outside this content-addressed manifest"
+  },
+  "packageChecksumMethod": "For each dependency, gitTreeOid is the Git tree object ID for the complete object directory in the prepared release tree. directorySwhid is swh:1:dir:<gitTreeOid> once the exact tree is ingested by Software Heritage. canonicalTarSha256 is SHA-256 over an uncompressed git archive of that directory tree, prefixed with <directoryName>/ and anchored by a deterministic synthetic commit with no parent, the fixed author/committer FAIR-DO release tooling <kgrid-developers@umich.edu>, timestamp 2000-01-01T00:00:00Z, and message Canonical dependency archive. The manifest does not embed the containing release commit SHA because content cannot contain its own content-derived commit identifier; commit/tag evidence is recorded after commit creation.",
+  "dependencies": [
+    {
+      "dependencyRole": "DEP-WAGNER",
+      "cksVersionIri": "https://kgrid.org/cks/meggitt-wagner/versions/cks-1.0",
+      "knowledgeObjectIdentifier": "workshop-ko-1",
+      "npmPackageIdentity": "@wagner/classification@1.0.0",
+      "knowledgeObjectVersion": "1.0",
+      "packagePath": "collection/DFU-Severity-Score-KO",
+      "publishedPackageLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO",
+      "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO/metadata.json",
+      "metadataSha256": "9938c3c50098960dad8a1512f78bf04f4d095f055ad96fa5fe1672523b2d4f16",
+      "packageJsonSha256": "cc9b8857a7250f1a44bd1ec0992e8b64418f386bd2756180ac04b959163bb14b",
+      "gitTreeOid": "8ea3bf476e8bf4462ae9ff58b86074ea0d27c7ff",
+      "canonicalTarSha256": "f04bbf0e0c6f9b77c094fded9cca685e4630bd0bbe296d40107d70d846c364e4",
+      "canonicalTarByteSize": 1259520,
+      "fileCount": 53,
+      "versionEvidence": [
+        "metadata.json dc:version = 1.0",
+        "package.json version = 1.0.0",
+        "knowledge entries dc:version = 1.0",
+        "specs/kgrid.org_Meggitt_Wagner_Questionnaire_CKS_Version_1_0.docx"
+      ],
+      "bindingStatus": "content-bound; persistent-identifiers-pending",
+      "directorySwhid": "__SWHID_DFU_SEVERITY_SCORE_KO__",
+      "sandboxDoi": "__SANDBOX_DOI_DFU_SEVERITY_SCORE_KO__"
+    },
+    {
+      "dependencyRole": "DEP-HBOT-DECISION",
+      "cksVersionIri": "https://kgrid.org/cks/dfu-hbo2-treatment-decision/versions/1.0",
+      "knowledgeObjectIdentifier": "workshop-ko-2",
+      "npmPackageIdentity": "@kgrid/dfu-hbo2-treatment-decision@1.0.0",
+      "knowledgeObjectVersion": "1.0",
+      "packagePath": "collection/HBOT-Treatment-Decision-KO",
+      "publishedPackageLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO",
+      "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO/metadata.json",
+      "metadataSha256": "35339aca29aef9aa879bd683ff27f10143fde013ef9d2b3561f8f05f1438517f",
+      "packageJsonSha256": "d53bf04f5767eef97e2180daaf83fe6c1a7f5ae7a4b0296dea4853dd16331a8a",
+      "gitTreeOid": "1f486b4cda1a268192573085d1f4cd683a4deca5",
+      "canonicalTarSha256": "ac777e3432f1d408843be94dfd2a57b7f243c828e64329200a246490414de7ff",
+      "canonicalTarByteSize": 839680,
+      "fileCount": 28,
+      "versionEvidence": [
+        "metadata.json dc:version = 1.0",
+        "package.json version = 1.0.0",
+        "knowledge entry dc:version = 1.0",
+        "specs/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx"
+      ],
+      "bindingStatus": "content-bound; persistent-identifiers-pending",
+      "directorySwhid": "__SWHID_HBOT_TREATMENT_DECISION_KO__",
+      "sandboxDoi": "__SANDBOX_DOI_HBOT_TREATMENT_DECISION_KO__"
+    },
+    {
+      "dependencyRole": "DEP-BURDEN",
+      "cksVersionIri": "https://kgrid.org/cks/dfu-hbot-burden/versions/cks-1.0",
+      "knowledgeObjectIdentifier": "workshop-ko-3",
+      "npmPackageIdentity": "@dfu-hbot/bounded-regimen-and-execution-burden@1.0.0",
+      "knowledgeObjectVersion": "1.0",
+      "packagePath": "collection/HBOT-Regimen-Burden-KO",
+      "publishedPackageLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO",
+      "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO/metadata.json",
+      "metadataSha256": "ef11bcf8ec8bec51f9b038a7e9b8d4a009d360fa116213aa6707540f3ca148d9",
+      "packageJsonSha256": "0cb02fd0de59ac5d1ae2b187fc736566802309e5cd1e77feb946b06894d2db66",
+      "gitTreeOid": "122966b5e1a545f5984b41e7f20c0f753edc1775",
+      "canonicalTarSha256": "5c8ece16241d0c7f77a1d96293eee71bf21b63f91c63719665a1cb9b95c8f11a",
+      "canonicalTarByteSize": 2570240,
+      "fileCount": 152,
+      "versionEvidence": [
+        "metadata.json dc:version = 1.0",
+        "package.json version = 1.0.0",
+        "three knowledge entries dc:version = 1.0",
+        "specs/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx"
+      ],
+      "bindingStatus": "content-bound; persistent-identifiers-pending",
+      "directorySwhid": "__SWHID_HBOT_REGIMEN_BURDEN_KO__",
+      "sandboxDoi": "__SANDBOX_DOI_HBOT_REGIMEN_BURDEN_KO__"
+    },
+    {
+      "dependencyRole": "DEP-MARGOLIS",
+      "cksVersionIri": "https://kgrid.org/cks/margolis-dfu-prognosis/versions/1.0",
+      "knowledgeObjectIdentifier": "workshop-ko-4",
+      "npmPackageIdentity": "@kgrid/margolis-dfu-prognostic@1.0.0",
+      "knowledgeObjectVersion": "1.0",
+      "packagePath": "collection/DFU-Prognostic-Indicator-KO",
+      "publishedPackageLocator": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO",
+      "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO/metadata.json",
+      "metadataSha256": "8769b89176a6f8be4f4c85200141f46eece73b1c5ad2b73cd3a2944cb1ea4872",
+      "packageJsonSha256": "d33a7305a8aa4bb40a0aaef20d9125c68b029e2813bcbf84688652a031c4ea57",
+      "gitTreeOid": "e8c9f7d88736704bdde17e45b3b3fb58915bdb57",
+      "canonicalTarSha256": "f66a3e0b2a60e14e813b93cc7264c1f076f1f8b1100ddf80e6ec1f3f356afe35",
+      "canonicalTarByteSize": 696320,
+      "fileCount": 28,
+      "versionEvidence": [
+        "metadata.json dc:version = 1.0",
+        "package.json version = 1.0.0",
+        "knowledge entry dc:version = 1.0",
+        "specs/Margolis_2022_DFU_Prognostic_CKS-1_0.docx"
+      ],
+      "bindingStatus": "content-bound; persistent-identifiers-pending",
+      "directorySwhid": "__SWHID_DFU_PROGNOSTIC_INDICATOR_KO__",
+      "sandboxDoi": "__SANDBOX_DOI_DFU_PROGNOSTIC_INDICATOR_KO__"
+    }
+  ],
+  "compatibilityGovernance": {
+    "decisionId": "DEC-VERS-16A",
+    "candidateDispositions": [
+      "compatible_no_ka_semantic_change",
+      "compatible_with_ka_revision",
+      "breaking_new_ka_version_required",
+      "not_admitted"
+    ],
+    "requiredEvidence": [
+      "immutable candidate package locator and checksums",
+      "CKS, metadata, knowledge-entry, package, and realization version evidence",
+      "file-level and semantic change report",
+      "interface, vocabulary, semantic, validation, failure, provenance, and conformance comparison",
+      "KA routing, transformation, synthesis, diagnostics, provenance, and authority-boundary impact assessment",
+      "anti-duplication and non-substitution evidence",
+      "complete regression and differential test report",
+      "reviewer identities, disposition, rationale, residual risks, and migration conditions"
+    ],
+    "approval": {
+      "requiredAuthority": "Knowledge Systems Lab, University of Michigan, through a specifically identified release approver",
+      "separationOfDuties": "technical compatibility reviewer may not be the sole release approver",
+      "clinicalCoreview": "required for changes to clinical meaning, thresholds, validation, output semantics, or interpretation",
+      "technicalCoreview": "required for changes to schemas, executable interfaces, security-relevant packaging, or provenance",
+      "currentConstraint": "No later version may be admitted without the evidence, separated review, explicit approval, manifest replacement, and regression gate required by DEC-VERS-16A."
+    },
+    "regressionPolicy": "All required constituent, end-to-end, synthesis-cell, failure, safeguard, output, provenance, determinism, and differential tests must pass. Failed, skipped, quarantined, or unexplained tests block admission.",
+    "publicationPolicy": "Admission requires an atomic publication of a newly versioned manifest, evidence and approval records, regression report, candidate bindings, effective date, superseded binding, and any required KA specification or result-model revision. Prior releases remain retrievable; rollback restores one complete approved release without mixing bindings."
+  },
+  "conformanceRule": "CKS Version 1.0 retrieves each dependency through its immutable release-tag locator and accepts it only when dependency role, CKS version IRI, package identity and version, package path, Git directory tree ID, and canonical package checksum match this manifest. DOI and directory SWHID bindings must replace their explicit placeholders before publication. Later versions, locally edited folders, mutable branch locators, and semantically similar packages do not satisfy the binding."
+}

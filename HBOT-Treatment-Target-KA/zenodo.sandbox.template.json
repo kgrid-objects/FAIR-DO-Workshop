@@ -1,0 +1,48 @@
+{
+  "title": "HBOT Treatment Target KA",
+  "upload_type": "software",
+  "description": "This Knowledge Assembly orchestrates four constituent Knowledge Objects (Meggitt-Wagner Classification, UHMS Figure 6 HBOT Decision, DFU HBOT Bounded Regimen and Execution Burden, and Margolis 2022 DFU Prognostic Model) to produce one governed HBOT Treatment Target Classification. It routes validated constituent outputs through declared transformations, applies the sole HBOT clinical-indication gate, and, when supported, applies an approved twelve-cell prognosis-by-burden synthesis matrix. It does not diagnose, calculate Wagner grade, decide HBOT indication, calculate burden, or calculate prognosis itself; those computations remain exclusively owned by the constituent KOs.",
+  "creators": [
+    {
+      "name": "Knowledge Systems Lab",
+      "affiliation": "Department of Learning Health Sciences, University of Michigan Medical School"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-09-23",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "FAIR Digital Object",
+    "Knowledge Object",
+    "clinical knowledge"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "__SANDBOX_DOI_DFU_SEVERITY_SCORE_KO__",
+      "relation": "requires",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "__SANDBOX_DOI_HBOT_TREATMENT_DECISION_KO__",
+      "relation": "requires",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "__SANDBOX_DOI_HBOT_REGIMEN_BURDEN_KO__",
+      "relation": "requires",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "__SANDBOX_DOI_DFU_PROGNOSTIC_INDICATOR_KO__",
+      "relation": "requires",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Organizational creator ROR: https://ror.org/00jmfr291. Contact: kgrid-developers@umich.edu. Replace or augment the GitHub relation with the immutable directory SWHID after Software Heritage ingestion."
+}

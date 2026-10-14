@@ -1,0 +1,65 @@
+@prefix koer: <https://example.org/koer/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA> .
+
+# KO-SPECIFIC SCHEMA: This record describes one Knowledge Object and
+# accounts for the metadata components that belong to that KO.
+
+# TEMPORARY ID: replace this IRI when a permanent identifier is assigned.
+<urn:uuid:ff4a4450-55a3-4b9b-8354-59c87288f20c>
+    a koer:KnowledgeObjectExistenceRecord ;
+    koer:recordsKnowledgeObject
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA> .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA>
+    a koer:KnowledgeObject ;
+    dcterms:title "HBOT Treatment Target KA" ;
+    koer:hasMetadataComponent
+        <#metadata-existence>,
+        <#metadata-core>,
+        <#metadata-accessibility>,
+        <#metadata-findability>,
+        <#metadata-interoperability>,
+        <#metadata-reusability>,
+        <#metadata-identity-governance>,
+        <#metadata-dependency-manifest> .
+
+<#metadata-existence>
+    a koer:MetadataComponent ;
+    koer:filePath "auxiliary/aux-extra-metadata/existence.metadata.txt" ;
+    dcterms:type "existence" .
+
+<#metadata-core>
+    a koer:MetadataComponent ;
+    koer:filePath "metadata.json" ;
+    dcterms:type "core" .
+
+<#metadata-accessibility>
+    a koer:MetadataComponent ;
+    koer:filePath "auxiliary/aux-extra-metadata/access.metadata.txt" ;
+    dcterms:type "accessibility" .
+
+<#metadata-findability>
+    a koer:MetadataComponent ;
+    koer:filePath "auxiliary/aux-extra-metadata/findability.metadata.txt" ;
+    dcterms:type "findability" .
+
+<#metadata-interoperability>
+    a koer:MetadataComponent ;
+    koer:filePath "auxiliary/aux-extra-metadata/interoperability.metadata.txt" ;
+    dcterms:type "interoperability" .
+
+<#metadata-reusability>
+    a koer:MetadataComponent ;
+    koer:filePath "auxiliary/aux-extra-metadata/reusability.metadata.txt" ;
+    dcterms:type "reusability" .
+
+<#metadata-identity-governance>
+    a koer:MetadataComponent ;
+    koer:filePath "specs/KA_Identity_and_Governance_Metadata.json" ;
+    dcterms:type "identity and governance" .
+
+<#metadata-dependency-manifest>
+    a koer:MetadataComponent ;
+    koer:filePath "specs/KA_Dependency_Manifest.json" ;
+    dcterms:type "dependency manifest" .

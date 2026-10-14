@@ -2,7 +2,7 @@
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix dc:     <http://purl.org/dc/terms/> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Treatment-Decision-KO>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     schema:name "HBOT Treatment Decision KO" ;
@@ -31,9 +31,9 @@
 
     schema:additionalType <https://kgrid.org/koio#KnowledgeObject> ;
 
-    schema:isPartOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection> ;
+    schema:isPartOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection> ;
 
-    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/HBOT-Treatment-Decision-KO/metadata.json> ;
+    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO/metadata.json> ;
 
     schema:keywords "diabetic foot ulcer" ;
 
