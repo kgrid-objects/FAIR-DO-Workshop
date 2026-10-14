@@ -32,8 +32,8 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Phase 3 — Zenodo Sandbox rehearsal
 
-1. **Complete:** Created four constituent KO drafts followed by one KA draft in Zenodo Sandbox. All five are unpublished, metadata-only software records with zero files. Draft IDs and URLs are recorded in `release/zenodo-sandbox-drafts.json`.
-2. Build deterministic per-object archives with `release/build-archives.sh` and upload the corresponding archive to each draft.
+1. **Complete:** Created four constituent KO drafts followed by one KA draft in Zenodo Sandbox. All five are unpublished software records. Draft IDs and URLs are recorded in `release/zenodo-sandbox-drafts.json`.
+2. **Complete:** Built the five per-object archives twice with `release/build-archives.sh` and confirmed identical SHA-256 values across both builds. Uploaded exactly one corresponding archive to each unpublished draft and verified each upload reached 100%. Filenames, SHA-256 values, byte sizes, draft IDs, and URLs are recorded in `release/zenodo-sandbox-drafts.json`. The generated `release/dist/` directory remains local and is excluded from Git.
 3. Reserve Sandbox DOIs and rehearse the relationships: the KA `Requires` each constituent KO, and each constituent KO `IsRequiredBy` the KA when supported.
 4. Validate titles, organization creator, affiliation, ROR evidence, version, license scope, related identifiers, archive SHA-256 values, and file lists.
 5. Export Sandbox metadata and record IDs to rehearsal evidence.
@@ -107,4 +107,4 @@ This phase requires explicit production-deposit authorization.
 
 ## Immediate next step
 
-Proceed with **Phase 3, Step 2**: build deterministic per-object archives and upload the corresponding archive to each unpublished Sandbox draft.
+Proceed with **Phase 3, Step 3**: reserve the five Sandbox DOIs and rehearse the relationships—the KA `Requires` each constituent KO, with reciprocal `IsRequiredBy` relationships when Zenodo supports them.
