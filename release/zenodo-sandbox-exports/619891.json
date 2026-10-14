@@ -1,0 +1,245 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "open"
+  },
+  "created": "2026-10-14T03:18:24.154540+00:00",
+  "custom_fields": {},
+  "expires_at": "2026-10-14 03:18:24.154528+00:00",
+  "files": {
+    "count": 1,
+    "enabled": true,
+    "entries": {
+      "hbot-treatment-target-ka-v1.0.0.tar.gz": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:e68f8a2167119be1820a2d6696d26249",
+        "ext": "gz",
+        "id": "f914da59-1a38-4fb3-babb-3aee67198a79",
+        "key": "hbot-treatment-target-ka-v1.0.0.tar.gz",
+        "metadata": {},
+        "mimetype": "application/gzip",
+        "size": 479150,
+        "storage_class": "L"
+      }
+    },
+    "order": [],
+    "total_bytes": 479150
+  },
+  "id": "619891",
+  "is_draft": true,
+  "is_published": false,
+  "links": {
+    "access": "https://sandbox.zenodo.org/api/records/619891/access",
+    "access_grants": "https://sandbox.zenodo.org/api/records/619891/access/grants",
+    "access_links": "https://sandbox.zenodo.org/api/records/619891/access/links",
+    "access_request": "https://sandbox.zenodo.org/api/records/619891/access/request",
+    "access_users": "https://sandbox.zenodo.org/api/records/619891/access/users",
+    "archive": "https://sandbox.zenodo.org/api/records/619891/draft/files-archive",
+    "archive_media": "https://sandbox.zenodo.org/api/records/619891/draft/media-files-archive",
+    "communities": "https://sandbox.zenodo.org/api/records/619891/communities",
+    "communities-suggestions": "https://sandbox.zenodo.org/api/records/619891/communities-suggestions",
+    "doi": "https://handle.test.datacite.org/10.5072/zenodo.619891",
+    "files": "https://sandbox.zenodo.org/api/records/619891/draft/files",
+    "media_files": "https://sandbox.zenodo.org/api/records/619891/draft/media-files",
+    "preview_html": "https://sandbox.zenodo.org/records/619891?preview=1",
+    "publish": "https://sandbox.zenodo.org/api/records/619891/draft/actions/publish",
+    "quota_increase": "https://sandbox.zenodo.org/api/records/619891/quota-increase",
+    "record": "https://sandbox.zenodo.org/api/records/619891",
+    "record_html": "https://sandbox.zenodo.org/records/619891",
+    "requests": "https://sandbox.zenodo.org/api/records/619891/requests",
+    "reserve_doi": "https://sandbox.zenodo.org/api/records/619891/draft/pids/doi",
+    "review": "https://sandbox.zenodo.org/api/records/619891/draft/review",
+    "self": "https://sandbox.zenodo.org/api/records/619891/draft",
+    "self_doi": "https://handle.test.datacite.org/10.5072/zenodo.619891",
+    "self_html": "https://sandbox.zenodo.org/uploads/619891",
+    "self_iiif_manifest": "https://sandbox.zenodo.org/api/iiif/draft:619891/manifest",
+    "self_iiif_sequence": "https://sandbox.zenodo.org/api/iiif/draft:619891/sequence/default",
+    "versions": "https://sandbox.zenodo.org/api/records/619891/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "creators": [
+      {
+        "affiliations": [
+          {
+            "name": "Department of Learning Health Sciences, University of Michigan Medical School"
+          }
+        ],
+        "person_or_org": {
+          "identifiers": [
+            {
+              "identifier": "00jmfr291",
+              "scheme": "ror"
+            }
+          ],
+          "name": "Knowledge Systems Lab",
+          "type": "organizational"
+        }
+      }
+    ],
+    "publication_date": "2026-10-14",
+    "publisher": "Zenodo",
+    "related_identifiers": [
+      {
+        "identifier": "10.5072/zenodo.619883",
+        "relation_type": {
+          "id": "requires",
+          "title": {
+            "de": "Setzt voraus",
+            "en": "Requires"
+          }
+        },
+        "resource_type": {
+          "id": "software",
+          "title": {
+            "de": "Software",
+            "en": "Software"
+          }
+        },
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5072/zenodo.619885",
+        "relation_type": {
+          "id": "requires",
+          "title": {
+            "de": "Setzt voraus",
+            "en": "Requires"
+          }
+        },
+        "resource_type": {
+          "id": "software",
+          "title": {
+            "de": "Software",
+            "en": "Software"
+          }
+        },
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5072/zenodo.619887",
+        "relation_type": {
+          "id": "requires",
+          "title": {
+            "de": "Setzt voraus",
+            "en": "Requires"
+          }
+        },
+        "resource_type": {
+          "id": "software",
+          "title": {
+            "de": "Software",
+            "en": "Software"
+          }
+        },
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5072/zenodo.619889",
+        "relation_type": {
+          "id": "requires",
+          "title": {
+            "de": "Setzt voraus",
+            "en": "Requires"
+          }
+        },
+        "resource_type": {
+          "id": "software",
+          "title": {
+            "de": "Software",
+            "en": "Software"
+          }
+        },
+        "scheme": "doi"
+      },
+      {
+        "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA",
+        "relation_type": {
+          "id": "issupplementto",
+          "title": {
+            "de": "Erg\u00e4nzt",
+            "en": "Is supplement to"
+          }
+        },
+        "resource_type": {
+          "id": "software",
+          "title": {
+            "de": "Software",
+            "en": "Software"
+          }
+        },
+        "scheme": "url"
+      }
+    ],
+    "resource_type": {
+      "id": "software",
+      "title": {
+        "de": "Software",
+        "en": "Software"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
+        },
+        "id": "mit",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        "title": {
+          "en": "MIT License"
+        }
+      }
+    ],
+    "title": "HBOT Treatment Target KA",
+    "version": "1.0.0"
+  },
+  "parent": {
+    "access": {
+      "grants": [],
+      "links": [],
+      "owned_by": {
+        "user": "62279"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {},
+    "id": "619890",
+    "pids": {}
+  },
+  "pids": {
+    "doi": {
+      "client": "datacite",
+      "identifier": "10.5072/zenodo.619891",
+      "provider": "datacite"
+    }
+  },
+  "revision_id": 35,
+  "status": "draft",
+  "updated": "2026-10-14T11:59:03.365391+00:00",
+  "versions": {
+    "index": 1,
+    "is_latest": false,
+    "is_latest_draft": true
+  }
+}

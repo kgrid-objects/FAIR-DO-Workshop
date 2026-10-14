@@ -2,16 +2,20 @@
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix dc:     <http://purl.org/dc/terms/> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     schema:name "HBOT Regimen Burden KO" ;
 
     dc:title "DFU HBOT Bounded Regimen and Execution Burden" ;
 
-    schema:identifier "workshop-ko-3" ;
+    schema:identifier
+        "workshop-ko-3",
+        <https://doi.org/10.5281/zenodo.23367111> ;
 
     schema:version "1.0" ;
+
+    schema:url <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO> ;
 
     schema:abstract "A knowledge object that estimates the execution burden of a contemplated outpatient hyperbaric oxygen therapy course by combining a fixed population-level regimen range with a selected facility, patient-reported travel, and reported weekday-attendance difficulty." ;
 
@@ -27,9 +31,9 @@
 
     schema:additionalType <https://kgrid.org/koio#KnowledgeObject> ;
 
-    schema:isPartOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection> ;
+    schema:isPartOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection> ;
 
-    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/HBOT-Regimen-Burden-KO/metadata.json> ;
+    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO/metadata.json> ;
 
     schema:keywords "diabetic foot ulcer" ;
 

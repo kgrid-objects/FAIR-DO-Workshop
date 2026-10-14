@@ -1,0 +1,28 @@
+{
+  "title": "DFU HBOT Bounded Regimen and Execution Burden",
+  "upload_type": "software",
+  "description": "This knowledge object estimates the execution burden of a contemplated outpatient HBOT course. It combines a fixed population-level regimen range with one selected facility, patient-reported travel distance and duration, and reported weekday-attendance difficulty.",
+  "creators": [
+    {
+      "name": "Knowledge Systems Lab",
+      "affiliation": "Department of Learning Health Sciences, University of Michigan Medical School"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "__PUBLICATION_DATE__",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "FAIR Digital Object",
+    "Knowledge Object",
+    "clinical knowledge"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Organizational creator ROR: https://ror.org/00jmfr291. Contact: kgrid-developers@umich.edu. Replace or augment the GitHub relation with the immutable directory SWHID after Software Heritage ingestion."
+}

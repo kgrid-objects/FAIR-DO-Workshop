@@ -1,19 +1,21 @@
 {
     "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO",
+    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO",
     "versionInfo": "2.1",
     "@type": "KnowledgeObject",
     "dc:title": "DFU HBOT Bounded Regimen and Execution Burden",
     "dc:identifier": [
         "workshop-ko-3",
-        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO"
+        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO",
+        "https://doi.org/10.5281/zenodo.23367111",
+        "__SWHID_HBOT_REGIMEN_BURDEN_KO__"
     ],
     "dc:version": "1.0",
     "dc:date": "2026-08-12",
     "dc:source": [
         {
-            "@id": "specs/1E41C3D7-66F4-C168-3A91-D951BE77CBAF.pdf",
-            "dc:title": "Huang HBOT guideline (2015) — local PDF",
+            "@id": "https://uhms.org/images/CPG/UHM_42-3_CPG_for_DFU.pdf",
+            "dc:title": "Huang HBOT guideline (2015) — publisher-hosted PDF",
             "dc:bibliographicCitation": "Huang ET, Mansouri J, Murad MH, Joseph WS, Strauss MB, Tettelbach W, Worth ER. A clinical practice guideline for the use of hyperbaric oxygen therapy in the treatment of diabetic foot ulcers. Undersea & Hyperbaric Medicine. 2015;42(3):205-247. UHMS DFU guideline."
         },
         {
@@ -31,10 +33,10 @@
     "dc:description": "This knowledge object estimates the execution burden of a contemplated outpatient HBOT course. It combines a fixed population-level regimen range with one selected facility, patient-reported travel distance and duration, and reported weekday-attendance difficulty.",
     "schema:creator": [
         {
-            "@id": "https://kgrid.org",
+            "@id": "https://ror.org/00jmfr291",
             "@type": "schema:Organization",
             "schema:name": "Knowledge Systems Lab",
-            "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+            "schema:affiliation": "Department of Learning Health Sciences, University of Michigan Medical School",
             "schema:email": "kgrid-developers@umich.edu"
         }
     ],
@@ -64,11 +66,11 @@
             ],
             "schema:subjectOf": {
                 "@context": "http://www.w3.org/ns/anno.jsonld",
-                "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#annotation-regimen-range-code",
+                "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#annotation-regimen-range-code",
                 "type": "Annotation",
                 "motivation": "linking",
                 "body": "Regimen_Range",
-                "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-regimen-range-scenarios"
+                "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#implementation-regimen-range-scenarios"
             },
             "implementedBy": {
                 "@id": "src/regimen-range.js",
@@ -80,7 +82,7 @@
                 ],
                 "schema:sha256": "28118e82ec7ec725cb342224795b616dcdec17bd26bf371a8c879b127607ad15",
                 "schema:hasPart": {
-                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-regimen-range-scenarios",
+                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#implementation-regimen-range-scenarios",
                     "@type": "http://www.w3.org/ns/oa#SpecificResource",
                     "dc:title": "Regimen scenario implementation",
                     "dc:description": "The shorter and longer general planning scenarios in showRegimenRange encode the 30- and 40-session anchors. This code passage is implementation, not additional clinical evidence.",
@@ -115,11 +117,11 @@
             ],
             "schema:subjectOf": {
                 "@context": "http://www.w3.org/ns/anno.jsonld",
-                "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#annotation-questionnaire-code",
+                "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#annotation-questionnaire-code",
                 "type": "Annotation",
                 "motivation": "linking",
                 "body": "Burden_Questionnaire_Logic",
-                "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-questionnaire-response"
+                "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#implementation-questionnaire-response"
             },
             "implementedBy": {
                 "@id": "src/questionnaire-logic.js",
@@ -131,7 +133,7 @@
                 ],
                 "schema:sha256": "7e270efb44a97bb4d71e108d0d6f58789d0bad76fff50f969f6707e802c728af",
                 "schema:hasPart": {
-                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-questionnaire-response",
+                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#implementation-questionnaire-response",
                     "@type": "http://www.w3.org/ns/oa#SpecificResource",
                     "dc:title": "Completed questionnaire response implementation",
                     "dc:description": "The questionnaire implementation normalizes the selected facility and the three reported burden inputs into a completed response. The facility-list source supports the roster choices, not the patient's answers.",
@@ -158,11 +160,11 @@
             "@type": "koio:Knowledge",
             "schema:subjectOf": {
                 "@context": "http://www.w3.org/ns/anno.jsonld",
-                "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#annotation-burden-analysis-code",
+                "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#annotation-burden-analysis-code",
                 "type": "Annotation",
                 "motivation": "linking",
                 "body": "Burden_Response_Analysis",
-                "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-execution-burden-level"
+                "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#implementation-execution-burden-level"
             },
             "implementedBy": {
                 "@id": "src/burden-response-analysis.js",
@@ -174,7 +176,7 @@
                 ],
                 "schema:sha256": "e788cbd6a3e72d15de3adc261ac7f5be14d0e7eb774c90ce4f1860f1465d8cc4",
                 "schema:hasPart": {
-                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/HBOT-Regimen-Burden-KO#implementation-execution-burden-level",
+                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#implementation-execution-burden-level",
                     "@type": "http://www.w3.org/ns/oa#SpecificResource",
                     "dc:title": "Execution burden level implementation",
                     "dc:description": "The analysis combines a travel band with reported weekday-attendance difficulty to determine a five-level execution-burden category. No separate evidential basis is declared for this analysis element.",
@@ -374,7 +376,7 @@
               "schema:name": "Open in Scribbler",
               "schema:target": {
                 "@type": "schema:EntryPoint",
-                "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/HBOT-Regimen-Burden-KO/auxiliary/aux-notebook/dfu-hbot_scribbler.jsnb"
+                "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO/auxiliary/aux-notebook/dfu-hbot_scribbler.jsnb"
               }
             }
         },

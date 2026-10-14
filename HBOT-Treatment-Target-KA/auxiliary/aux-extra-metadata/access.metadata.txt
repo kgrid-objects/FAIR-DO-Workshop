@@ -1,0 +1,33 @@
+@prefix schema: <https://schema.org/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA>
+    a schema:SoftwareSourceCode, prov:Entity ;
+    schema:potentialAction
+        [
+            a schema:ViewAction ;
+            schema:name "Open tagged repository directory through HTTPS" ;
+            schema:target
+                [
+                    a schema:EntryPoint ;
+                    schema:urlTemplate "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA" ;
+                    schema:description
+                        "View the object's release-pinned directory in the FAIR-DO-Workshop GitHub repository." ;
+                    schema:name "HTTPS"
+                ]
+        ] ;
+    schema:potentialAction
+        [
+            a schema:ViewAction ;
+            schema:name "View existence metadata through HTTPS" ;
+            schema:target
+                [
+                    a schema:EntryPoint ;
+                    schema:urlTemplate
+                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA/auxiliary/aux-extra-metadata/existence.metadata.txt" ;
+                    schema:description
+                        "View the object's release-pinned existence metadata file on GitHub." ;
+                    schema:name "HTTPS" ;
+                    schema:contentType "text/turtle"
+                ]
+        ] .

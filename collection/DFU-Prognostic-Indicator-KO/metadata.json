@@ -1,12 +1,14 @@
 {
     "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO",
+    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO",
     "versionInfo": "2.1",
     "@type": "KnowledgeObject",
     "dc:title": "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks",
     "dc:identifier": [
         "workshop-ko-4",
-        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO"
+        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO",
+        "https://doi.org/10.5281/zenodo.23367115",
+        "__SWHID_DFU_PROGNOSTIC_INDICATOR_KO__"
     ],
     "dc:version": "1.0",
     "dc:date": "2026-08-18",
@@ -16,7 +18,7 @@
             "dc:title": "Margolis DFU prognosis article (2022)",
             "dc:bibliographicCitation": "WILEY-Margolis DJ, Mitra N, Malay DS, Mirza ZK, Lantis JC, Lev-Tov HA, Kirsner RS, Thom SR. Further evidence that wound size and duration are strong prognostic markers of diabetic foot ulcer healing. Wound Repair and Regeneration. 2022;30(4):487-490. doi:10.1111/wrr.13019.",
             "schema:hasPart": {
-                "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#evidence-margolis-table3"
+                "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#evidence-margolis-table3"
             }
         },
         {
@@ -29,10 +31,10 @@
     "dc:description": "This knowledge object estimates the model-based probability that one diabetic foot ulcer will heal by 16 weeks, using only wound area and wound duration measured at the first clinical visit. It is a categorical pretreatment prognosis; not a continuous individualized risk equation, treatment-effect estimate, HBOT eligibility decision, or treatment recommendation.",
     "schema:creator": [
         {
-            "@id": "https://kgrid.org",
+            "@id": "https://ror.org/00jmfr291",
             "@type": "schema:Organization",
             "schema:name": "Knowledge Systems Lab",
-            "schema:affiliation": "Knowledge Systems Lab, University of Michigan Medical School",
+            "schema:affiliation": "Department of Learning Health Sciences, University of Michigan Medical School",
             "schema:email": "kgrid-developers@umich.edu"
         }
     ],
@@ -48,7 +50,7 @@
             "@type": "koio:Knowledge",
             "koio:hasEvidentialBasis": [
                 {
-                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#evidence-margolis-table3",
+                    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#evidence-margolis-table3",
                     "@type": "http://www.w3.org/ns/oa#SpecificResource",
                     "dc:title": "Supplementary Table 3",
                     "dc:description": "The Margolis article's supplementary Table 3 supplies the categorical prognostic model used by this knowledge element.",
@@ -60,35 +62,35 @@
             "schema:subjectOf": [
                 {
                     "@context": "http://www.w3.org/ns/anno.jsonld",
-                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#annotation-margolis-table3",
+                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#annotation-margolis-table3",
                     "type": "Annotation",
                     "motivation": "linking",
                     "body": "margolis_dfu_prognostic_Lookup",
-                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#evidence-margolis-table3"
+                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#evidence-margolis-table3"
                 },
                 {
                     "@context": "http://www.w3.org/ns/anno.jsonld",
-                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#annotation-cks-decision-table",
+                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#annotation-cks-decision-table",
                     "type": "Annotation",
                     "motivation": "linking",
                     "body": "margolis_dfu_prognostic_Lookup",
-                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#cks-decision-table"
+                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#cks-decision-table"
                 },
                 {
                     "@context": "http://www.w3.org/ns/anno.jsonld",
-                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#annotation-prognosis-rule-mapping",
+                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#annotation-prognosis-rule-mapping",
                     "type": "Annotation",
                     "motivation": "linking",
                     "body": "margolis_dfu_prognostic_Lookup",
-                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#implementation-prognosis-rule-mapping"
+                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#implementation-prognosis-rule-mapping"
                 },
                 {
                     "@context": "http://www.w3.org/ns/anno.jsonld",
-                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#annotation-prognosis-rule-selection",
+                    "id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#annotation-prognosis-rule-selection",
                     "type": "Annotation",
                     "motivation": "linking",
                     "body": "margolis_dfu_prognostic_Lookup",
-                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#implementation-prognosis-rule-selection"
+                    "target": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#implementation-prognosis-rule-selection"
                 }
             ],
             "implementedBy": {
@@ -102,7 +104,7 @@
                 "schema:sha256": "b8947fb9ae3d06a9a3ea392692598ab18f5840a3a14bb03e81f1aa96f0114951",
                 "schema:hasPart": [
                     {
-                        "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#implementation-prognosis-rule-mapping",
+                        "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#implementation-prognosis-rule-mapping",
                         "@type": "http://www.w3.org/ns/oa#SpecificResource",
                         "dc:title": "Prognosis rule mapping implementation",
                         "dc:description": "The four ALG-01 through ALG-04 result mappings in prognosis.js implement the CKS Section 5.3 decision table.",
@@ -117,7 +119,7 @@
                         }
                     },
                     {
-                        "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#implementation-prognosis-rule-selection",
+                        "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#implementation-prognosis-rule-selection",
                         "@type": "http://www.w3.org/ns/oa#SpecificResource",
                         "dc:title": "Prognosis rule selection implementation",
                         "dc:description": "The evaluator normalizes wound area and duration, applies the CKS threshold-equality decision when assigning categories, and selects one of the four mapped results. The equality decision is not attributed to Margolis supplementary Table 3.",
@@ -203,7 +205,7 @@
             "dc:version": "1.0",
             "schema:sha256": "9976b06fd9d786b0f0c16c8229f58e4161fa8d10509a87ace1788d44fe6b7c02",
             "schema:hasPart": {
-                "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO#cks-decision-table",
+                "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#cks-decision-table",
                 "@type": "http://www.w3.org/ns/oa#SpecificResource",
                 "dc:title": "CKS Section 5.3 Normative Decision Table",
                 "dc:description": "Section 5.3 specifies the four computable prognostic rules. The threshold-equality handling in Section 4.2 is a CKS specification decision, not a rule supplied by Margolis supplementary Table 3.",
@@ -270,7 +272,7 @@
               "schema:name": "Open in Scribbler",
               "schema:target": {
                 "@type": "schema:EntryPoint",
-                "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/HEAD/collection/DFU-Prognostic-Indicator-KO/auxiliary/aux-notebook/margolis_dfu_prognostic_scribbler.jsnb"
+                "schema:urlTemplate": "https://app.scribbler.live/?jsnb=https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO/auxiliary/aux-notebook/margolis_dfu_prognostic_scribbler.jsnb"
               }
             }
         },

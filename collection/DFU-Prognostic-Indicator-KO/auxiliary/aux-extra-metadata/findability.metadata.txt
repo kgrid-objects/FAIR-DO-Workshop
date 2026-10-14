@@ -1,14 +1,18 @@
 @prefix schema: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Prognostic-Indicator-KO>
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO>
     a schema:SoftwareSourceCode, prov:Entity ;
 
     schema:name "DFU Prognostic Indicator KO" ;
 
-    schema:identifier "workshop-ko-4" ;
+    schema:identifier
+        "workshop-ko-4",
+        <https://doi.org/10.5281/zenodo.23367115> ;
 
     schema:version "1.0" ;
+
+    schema:url <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO> ;
 
     schema:abstract "A categorical pretreatment prognostic knowledge object that estimates the model-based probability that one diabetic foot ulcer will heal by 16 weeks from wound area and wound duration measured at the first clinical visit." ;
 
@@ -24,9 +28,9 @@
 
     schema:additionalType <https://kgrid.org/koio#KnowledgeObject> ;
 
-    schema:isPartOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection> ;
+    schema:isPartOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection> ;
 
-    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/main/collection/DFU-Prognostic-Indicator-KO/metadata.json> ;
+    schema:subjectOf <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO/metadata.json> ;
 
     schema:keywords "diabetic foot ulcer" ;
 

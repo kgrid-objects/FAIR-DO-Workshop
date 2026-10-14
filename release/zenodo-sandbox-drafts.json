@@ -1,0 +1,191 @@
+{
+  "schemaVersion": "1.0",
+  "environment": "Zenodo Sandbox",
+  "baseUrl": "https://sandbox.zenodo.org",
+  "recordedLocalDate": "2026-10-13",
+  "zenodoDisplayedUploadDate": "2026-10-14",
+  "lastValidatedLocalDate": "2026-10-14",
+  "metadataExportDate": "2026-10-14",
+  "metadataExportFormat": "Zenodo JSON",
+  "metadataExportDirectory": "release/zenodo-sandbox-exports",
+  "state": "validated unpublished drafts with reserved Sandbox DOIs, one archive each, and rehearsed relationships",
+  "validatedCommonMetadata": {
+    "resourceType": "Software",
+    "version": "1.0.0",
+    "license": "MIT",
+    "creatorType": "Organization",
+    "creatorName": "Knowledge Systems Lab",
+    "creatorAffiliation": "Department of Learning Health Sciences, University of Michigan Medical School",
+    "creatorRor": "https://ror.org/00jmfr291"
+  },
+  "records": [
+    {
+      "key": "dfu-severity-score-ko",
+      "title": "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object",
+      "draftId": "619883",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619883",
+      "parentRecordId": "619882",
+      "metadataExportFile": "release/zenodo-sandbox-exports/619883.json",
+      "metadataExportSha256": "600e863de440355764d337724126d99ae8e94b6c426149aaaf66930880b6ef2a",
+      "reservedDoi": "10.5072/zenodo.619883",
+      "relatedIdentifiers": [
+        {
+          "relation": "IsSupplementTo",
+          "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO",
+          "scheme": "URL",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "IsRequiredBy",
+          "identifier": "10.5072/zenodo.619891",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
+      "fileCount": 1,
+      "archiveFilename": "dfu-severity-score-ko-v1.0.0.tar.gz",
+      "archiveSha256": "c05ec41597a950e11c52d1c4f64582ab10aa3e6ee9e08d6bb595bff13878e827",
+      "archiveMd5": "c04b16d4a79f511d9e68e0b4fbd55dc3",
+      "archiveByteSize": 928425,
+      "published": false
+    },
+    {
+      "key": "hbot-treatment-decision-ko",
+      "title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object",
+      "draftId": "619885",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619885",
+      "parentRecordId": "619884",
+      "metadataExportFile": "release/zenodo-sandbox-exports/619885.json",
+      "metadataExportSha256": "26398c4508a16e7f89edaef42a2a24540ad46a7cddb3b29f95f3ce150b37c2c2",
+      "reservedDoi": "10.5072/zenodo.619885",
+      "relatedIdentifiers": [
+        {
+          "relation": "IsSupplementTo",
+          "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO",
+          "scheme": "URL",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "IsRequiredBy",
+          "identifier": "10.5072/zenodo.619891",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
+      "fileCount": 1,
+      "archiveFilename": "hbot-treatment-decision-ko-v1.0.0.tar.gz",
+      "archiveSha256": "6de82822a2153bee8090cc30cd958fbe38e31e6e473cf5e24cd8dd8f4d0a6546",
+      "archiveMd5": "7323b486c0929eddaad666a587f7c4b9",
+      "archiveByteSize": 575190,
+      "published": false
+    },
+    {
+      "key": "hbot-regimen-burden-ko",
+      "title": "DFU HBOT Bounded Regimen and Execution Burden",
+      "draftId": "619887",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619887",
+      "parentRecordId": "619886",
+      "metadataExportFile": "release/zenodo-sandbox-exports/619887.json",
+      "metadataExportSha256": "93c92aec4345fbdb047343184887aaedced069ee53b86a1e316c3c4146bc3f55",
+      "reservedDoi": "10.5072/zenodo.619887",
+      "relatedIdentifiers": [
+        {
+          "relation": "IsSupplementTo",
+          "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO",
+          "scheme": "URL",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "IsRequiredBy",
+          "identifier": "10.5072/zenodo.619891",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
+      "fileCount": 1,
+      "archiveFilename": "hbot-regimen-burden-ko-v1.0.0.tar.gz",
+      "archiveSha256": "367021b1e44de04351d1ce3667fd76b8182f8f3cf5e1ec4176f943bc6072f343",
+      "archiveMd5": "ae5513c031e5cdc83f2d8cb4e0cc116b",
+      "archiveByteSize": 909696,
+      "published": false
+    },
+    {
+      "key": "dfu-prognostic-indicator-ko",
+      "title": "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks",
+      "draftId": "619889",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619889",
+      "parentRecordId": "619888",
+      "metadataExportFile": "release/zenodo-sandbox-exports/619889.json",
+      "metadataExportSha256": "c1fc818547f4dec3547d10ec35ae53eda8d49ab69796addde4dc2368b72d89e8",
+      "reservedDoi": "10.5072/zenodo.619889",
+      "relatedIdentifiers": [
+        {
+          "relation": "IsSupplementTo",
+          "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO",
+          "scheme": "URL",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "IsRequiredBy",
+          "identifier": "10.5072/zenodo.619891",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
+      "fileCount": 1,
+      "archiveFilename": "dfu-prognostic-indicator-ko-v1.0.0.tar.gz",
+      "archiveSha256": "fef25b18ee227975357eb26e0943efdc2723713aa680ef852fee5df78773e096",
+      "archiveMd5": "fd33611a72a192c17988193391e35f54",
+      "archiveByteSize": 492574,
+      "published": false
+    },
+    {
+      "key": "hbot-treatment-target-ka",
+      "title": "HBOT Treatment Target KA",
+      "draftId": "619891",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619891",
+      "parentRecordId": "619890",
+      "metadataExportFile": "release/zenodo-sandbox-exports/619891.json",
+      "metadataExportSha256": "ecf06f9de31e4e3f8e64bf317712881d93df1466ff11ee615280d25667a0fd67",
+      "reservedDoi": "10.5072/zenodo.619891",
+      "relatedIdentifiers": [
+        {
+          "relation": "IsSupplementTo",
+          "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA",
+          "scheme": "URL",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "Requires",
+          "identifier": "10.5072/zenodo.619883",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "Requires",
+          "identifier": "10.5072/zenodo.619885",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "Requires",
+          "identifier": "10.5072/zenodo.619887",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "Requires",
+          "identifier": "10.5072/zenodo.619889",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
+      "fileCount": 1,
+      "archiveFilename": "hbot-treatment-target-ka-v1.0.0.tar.gz",
+      "archiveSha256": "56dd9a0129e457c085386f8f9f7806b285273497bdb9ec4470b003993589c1f0",
+      "archiveMd5": "e68f8a2167119be1820a2d6696d26249",
+      "archiveByteSize": 479150,
+      "published": false
+    }
+  ]
+}

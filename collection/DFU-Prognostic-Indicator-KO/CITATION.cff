@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this knowledge object, please cite it using the metadata below."
+title: "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks"
+type: software
+version: 1.0.0
+doi: 10.5281/zenodo.23367115
+authors:
+  - name: "Knowledge Systems Lab"
+    affiliation: "Department of Learning Health Sciences, University of Michigan Medical School"
+    email: "kgrid-developers@umich.edu"
+    website: "https://ror.org/00jmfr291"
+repository-code: "https://github.com/kgrid-objects/FAIR-DO-Workshop"
+url: "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO"
+license: MIT
+abstract: >-
+  This knowledge object estimates the model-based probability that one diabetic foot ulcer will heal by 16 weeks, using only wound area and wound duration measured at the first clinical visit. It is a categorical pretreatment prognosis; not a continuous individualized risk equation, treatment-effect estimate, HBOT eligibility decision, or treatment recommendation.
+keywords:
+  - FAIR Digital Object
+  - Knowledge Object
+  - clinical knowledge

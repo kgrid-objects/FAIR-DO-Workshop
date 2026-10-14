@@ -1,0 +1,191 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "open"
+  },
+  "created": "2026-10-14T03:18:17.765125+00:00",
+  "custom_fields": {},
+  "expires_at": "2026-10-14 03:18:17.765109+00:00",
+  "files": {
+    "count": 1,
+    "enabled": true,
+    "entries": {
+      "hbot-regimen-burden-ko-v1.0.0.tar.gz": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:ae5513c031e5cdc83f2d8cb4e0cc116b",
+        "ext": "gz",
+        "id": "b5daa65e-c956-4af3-9091-782019369689",
+        "key": "hbot-regimen-burden-ko-v1.0.0.tar.gz",
+        "metadata": {},
+        "mimetype": "application/gzip",
+        "size": 909696,
+        "storage_class": "L"
+      }
+    },
+    "order": [],
+    "total_bytes": 909696
+  },
+  "id": "619887",
+  "is_draft": true,
+  "is_published": false,
+  "links": {
+    "access": "https://sandbox.zenodo.org/api/records/619887/access",
+    "access_grants": "https://sandbox.zenodo.org/api/records/619887/access/grants",
+    "access_links": "https://sandbox.zenodo.org/api/records/619887/access/links",
+    "access_request": "https://sandbox.zenodo.org/api/records/619887/access/request",
+    "access_users": "https://sandbox.zenodo.org/api/records/619887/access/users",
+    "archive": "https://sandbox.zenodo.org/api/records/619887/draft/files-archive",
+    "archive_media": "https://sandbox.zenodo.org/api/records/619887/draft/media-files-archive",
+    "communities": "https://sandbox.zenodo.org/api/records/619887/communities",
+    "communities-suggestions": "https://sandbox.zenodo.org/api/records/619887/communities-suggestions",
+    "doi": "https://handle.test.datacite.org/10.5072/zenodo.619887",
+    "files": "https://sandbox.zenodo.org/api/records/619887/draft/files",
+    "media_files": "https://sandbox.zenodo.org/api/records/619887/draft/media-files",
+    "preview_html": "https://sandbox.zenodo.org/records/619887?preview=1",
+    "publish": "https://sandbox.zenodo.org/api/records/619887/draft/actions/publish",
+    "quota_increase": "https://sandbox.zenodo.org/api/records/619887/quota-increase",
+    "record": "https://sandbox.zenodo.org/api/records/619887",
+    "record_html": "https://sandbox.zenodo.org/records/619887",
+    "requests": "https://sandbox.zenodo.org/api/records/619887/requests",
+    "reserve_doi": "https://sandbox.zenodo.org/api/records/619887/draft/pids/doi",
+    "review": "https://sandbox.zenodo.org/api/records/619887/draft/review",
+    "self": "https://sandbox.zenodo.org/api/records/619887/draft",
+    "self_doi": "https://handle.test.datacite.org/10.5072/zenodo.619887",
+    "self_html": "https://sandbox.zenodo.org/uploads/619887",
+    "self_iiif_manifest": "https://sandbox.zenodo.org/api/iiif/draft:619887/manifest",
+    "self_iiif_sequence": "https://sandbox.zenodo.org/api/iiif/draft:619887/sequence/default",
+    "versions": "https://sandbox.zenodo.org/api/records/619887/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "creators": [
+      {
+        "affiliations": [
+          {
+            "name": "Department of Learning Health Sciences, University of Michigan Medical School"
+          }
+        ],
+        "person_or_org": {
+          "identifiers": [
+            {
+              "identifier": "00jmfr291",
+              "scheme": "ror"
+            }
+          ],
+          "name": "Knowledge Systems Lab",
+          "type": "organizational"
+        }
+      }
+    ],
+    "publication_date": "2026-10-14",
+    "publisher": "Zenodo",
+    "related_identifiers": [
+      {
+        "identifier": "10.5072/zenodo.619891",
+        "relation_type": {
+          "id": "isrequiredby",
+          "title": {
+            "de": "Wird gefordert von",
+            "en": "Is required by"
+          }
+        },
+        "resource_type": {
+          "id": "software",
+          "title": {
+            "de": "Software",
+            "en": "Software"
+          }
+        },
+        "scheme": "doi"
+      },
+      {
+        "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO",
+        "relation_type": {
+          "id": "issupplementto",
+          "title": {
+            "de": "Erg\u00e4nzt",
+            "en": "Is supplement to"
+          }
+        },
+        "resource_type": {
+          "id": "software",
+          "title": {
+            "de": "Software",
+            "en": "Software"
+          }
+        },
+        "scheme": "url"
+      }
+    ],
+    "resource_type": {
+      "id": "software",
+      "title": {
+        "de": "Software",
+        "en": "Software"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
+        },
+        "id": "mit",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        "title": {
+          "en": "MIT License"
+        }
+      }
+    ],
+    "title": "DFU HBOT Bounded Regimen and Execution Burden",
+    "version": "1.0.0"
+  },
+  "parent": {
+    "access": {
+      "grants": [],
+      "links": [],
+      "owned_by": {
+        "user": "62279"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {},
+    "id": "619886",
+    "pids": {}
+  },
+  "pids": {
+    "doi": {
+      "client": "datacite",
+      "identifier": "10.5072/zenodo.619887",
+      "provider": "datacite"
+    }
+  },
+  "revision_id": 29,
+  "status": "draft",
+  "updated": "2026-10-14T11:58:51.471001+00:00",
+  "versions": {
+    "index": 1,
+    "is_latest": false,
+    "is_latest_draft": true
+  }
+}

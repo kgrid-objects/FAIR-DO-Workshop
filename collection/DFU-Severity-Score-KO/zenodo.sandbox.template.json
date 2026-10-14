@@ -1,0 +1,28 @@
+{
+  "title": "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object",
+  "upload_type": "software",
+  "description": "This knowledge object classifies one diabetic foot lesion or assessment site, at one assessment event, as Wagner score 0-5. It specifies classification-not treatment, prognosis, amputation risk, or hyperbaric-oxygen eligibility.",
+  "creators": [
+    {
+      "name": "Knowledge Systems Lab",
+      "affiliation": "Department of Learning Health Sciences, University of Michigan Medical School"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "__PUBLICATION_DATE__",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "FAIR Digital Object",
+    "Knowledge Object",
+    "clinical knowledge"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Organizational creator ROR: https://ror.org/00jmfr291. Contact: kgrid-developers@umich.edu. Replace or augment the GitHub relation with the immutable directory SWHID after Software Heritage ingestion."
+}

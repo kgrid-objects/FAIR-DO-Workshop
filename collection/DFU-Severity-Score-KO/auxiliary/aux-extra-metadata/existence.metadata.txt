@@ -1,6 +1,6 @@
 @prefix koer: <https://example.org/koer/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO> .
+@base <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO> .
 
 # KO-SPECIFIC SCHEMA: This record describes one Knowledge Object and
 # accounts for the metadata components that belong to that KO.
@@ -9,9 +9,9 @@
 <urn:uuid:4be7dcb2-66f3-4dab-878c-a186578cabe0>
     a koer:KnowledgeObjectExistenceRecord ;
     koer:recordsKnowledgeObject
-        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO> .
+        <https://kgrid.org/kos/wagner/versions/ko-1.0> .
 
-<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/main/collection/DFU-Severity-Score-KO>
+<https://kgrid.org/kos/wagner/versions/ko-1.0>
     a koer:KnowledgeObject ;
     dcterms:title "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object" ;
     koer:hasMetadataComponent
@@ -20,7 +20,10 @@
         <#metadata-accessibility>,
         <#metadata-findability>,
         <#metadata-interoperability>,
-        <#metadata-reusability> .
+        <#metadata-reusability>,
+        <#metadata-citation>,
+        <#metadata-zenodo-template>,
+        <#metadata-package-manifest> .
 
 <#metadata-existence>
     a koer:MetadataComponent ;
@@ -51,3 +54,18 @@
     a koer:MetadataComponent ;
     koer:filePath "auxiliary/aux-extra-metadata/reusability.metadata.txt" ;
     dcterms:type "reusability" .
+
+<#metadata-citation>
+    a koer:MetadataComponent ;
+    koer:filePath "CITATION.cff" ;
+    dcterms:type "citation metadata" .
+
+<#metadata-zenodo-template>
+    a koer:MetadataComponent ;
+    koer:filePath "zenodo.sandbox.template.json" ;
+    dcterms:type "repository deposit metadata template" .
+
+<#metadata-package-manifest>
+    a koer:MetadataComponent ;
+    koer:filePath "package.json" ;
+    dcterms:type "software package metadata" .
