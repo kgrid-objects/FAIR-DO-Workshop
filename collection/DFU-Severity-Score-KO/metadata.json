@@ -1,6 +1,6 @@
 {
     "@context": "https://kgrid.org/koio/2.1/context.jsonld",
-    "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO",
+    "@id": "https://kgrid.org/kos/wagner/versions/ko-1.0",
     "versionInfo": "2.1",
     "@type": "KnowledgeObject",
     "dc:title": "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object",

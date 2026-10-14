@@ -48,15 +48,14 @@
 
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA#provenance>
     a prov:Entity ;
-    prov:wasAttributedTo <https://kgrid.org> ;
-    schema:datePublished "2026-09-23" ;
+    prov:wasAttributedTo <https://ror.org/00jmfr291> ;
     schema:description
         "The knowledge-object metadata identifies the Knowledge Systems Lab at the University of Michigan Medical School as creator. The CKS Version 1.0 and its dependency manifest define the assembly-owned orchestration, gate mapping, prognosis and burden projections, target-classification synthesis, failure semantics, and exact constituent Knowledge Object bindings." .
 
-<https://kgrid.org>
+<https://ror.org/00jmfr291>
     a schema:Organization ;
     schema:name "Knowledge Systems Lab" ;
-    schema:affiliation "Knowledge Systems Lab, University of Michigan Medical School" ;
+    schema:affiliation "Department of Learning Health Sciences, University of Michigan Medical School" ;
     schema:email "kgrid-developers@umich.edu" .
 
 

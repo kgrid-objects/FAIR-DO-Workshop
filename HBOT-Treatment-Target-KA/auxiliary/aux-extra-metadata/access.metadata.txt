@@ -3,35 +3,30 @@
 
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA>
     a schema:SoftwareSourceCode, prov:Entity ;
-
-    # Access instance 1 — Repository access
     schema:potentialAction
         [
             a schema:ViewAction ;
-            schema:name "Open through HTTPS" ;
+            schema:name "Open tagged repository directory through HTTPS" ;
             schema:target
                 [
                     a schema:EntryPoint ;
-                    schema:urlTemplate
-                        "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA" ;
+                    schema:urlTemplate "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA" ;
                     schema:description
-                        "Access through the HBOT-Treatment-Target-KA GitHub repository page." ;
+                        "View the object's release-pinned directory in the FAIR-DO-Workshop GitHub repository." ;
                     schema:name "HTTPS"
                 ]
         ] ;
-
-    # Access instance 2 — Existence metadata
     schema:potentialAction
         [
             a schema:ViewAction ;
-            schema:name "View existence metadata" ;
+            schema:name "View existence metadata through HTTPS" ;
             schema:target
                 [
                     a schema:EntryPoint ;
                     schema:urlTemplate
                         "https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA/auxiliary/aux-extra-metadata/existence.metadata.txt" ;
                     schema:description
-                        "Access through the existence metadata file's GitHub page." ;
+                        "View the object's release-pinned existence metadata file on GitHub." ;
                     schema:name "HTTPS" ;
                     schema:contentType "text/turtle"
                 ]

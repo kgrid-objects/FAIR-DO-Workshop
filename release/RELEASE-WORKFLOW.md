@@ -36,6 +36,7 @@ This workflow prepares five independently citable records: four constituent Know
 2. **Complete:** Built the five per-object archives twice with `release/build-archives.sh` and confirmed identical SHA-256 values across both builds. Uploaded exactly one corresponding archive to each unpublished draft and verified each upload reached 100%. Filenames, SHA-256 values, byte sizes, draft IDs, and URLs are recorded in `release/zenodo-sandbox-drafts.json`. The generated `release/dist/` directory remains local and is excluded from Git.
 3. **Complete:** Reserved all five Sandbox DOIs. Added four `Requires` relationships from the KA to the constituent KOs and one reciprocal `IsRequiredBy` relationship from each KO to the KA. Zenodo Sandbox supports both relation types. All relationships use the DOI scheme and Software resource type; all records remain unpublished drafts. The DOI and relationship evidence is recorded in `release/zenodo-sandbox-drafts.json`.
 4. **Complete:** Validated and corrected all five Sandbox drafts. Titles, Software resource type, organization name, approved affiliation, ROR, versions, MIT license, Sandbox DOIs, release-pinned GitHub `IsSupplementTo` links, DOI dependency relationships, file lists, upload completion, and archive bytes now pass. Full evidence is in `release/PHASE-3-STEP-4-VALIDATION.md`.
+4A. **Complete:** Audited and corrected all FAIR metadata facets across the five objects before final rehearsal evidence export. Removed unsupported FDO Bench access claims, expanded existence inventories, corrected reusability provenance and premature publication dates, aligned the Severity KO's supported canonical identity, and deferred production DOI/SWHID access claims until they exist. Regenerated the KA dependency manifest. Full evidence is in `release/PHASE-3-STEP-4A-CROSS-FACET-AUDIT.md`.
 5. Export Sandbox metadata and record IDs to rehearsal evidence.
 6. Rebuild from a clean checkout and confirm identical archive digests.
 7. Do not copy Sandbox DOIs into production `findability.metadata.txt`, `metadata.json`, or `CITATION.cff`. Sandbox identifiers are rehearsal evidence, not the permanent production identity.
@@ -107,4 +108,4 @@ This phase requires explicit production-deposit authorization.
 
 ## Immediate next step
 
-Proceed with **Phase 3, Step 5**: export the five Sandbox metadata records and record IDs to rehearsal evidence.
+Rebuild the five deterministic archives and replace the corresponding files in the unpublished Sandbox drafts because Step 4A changed object content. Revalidate the uploaded bytes, then proceed with **Phase 3, Step 5**.

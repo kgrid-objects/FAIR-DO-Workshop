@@ -47,15 +47,14 @@
 
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#provenance>
     a prov:Entity ;
-    prov:wasAttributedTo <https://kgrid.org> ;
-    schema:datePublished "2026-08-12" ;
+    prov:wasAttributedTo <https://ror.org/00jmfr291> ;
     schema:description
         "The knowledge object metadata identifies the Knowledge Systems Lab at the University of Michigan Medical School as creator. The specification states that its regimen knowledge uses the 2015 UHMS guideline, controlled-trial protocols, IWGDF 2023 guidance, CMS policy context, and institutional patient guidance, with questionnaire structure informed by an earlier Meggitt-Wagner CKS." .
 
-<https://kgrid.org>
+<https://ror.org/00jmfr291>
     a schema:Organization ;
     schema:name "Knowledge Systems Lab" ;
-    schema:affiliation "Knowledge Systems Lab, University of Michigan Medical School" ;
+    schema:affiliation "Department of Learning Health Sciences, University of Michigan Medical School" ;
     schema:email "kgrid-developers@umich.edu" .
 
 

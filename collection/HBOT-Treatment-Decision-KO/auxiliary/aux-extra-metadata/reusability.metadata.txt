@@ -44,15 +44,14 @@
 
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO#provenance>
     a prov:Entity ;
-    prov:wasAttributedTo <https://kgrid.org> ;
-    schema:datePublished "2026-08-05" ;
+    prov:wasAttributedTo <https://ror.org/00jmfr291> ;
     schema:description
         "The knowledge object metadata identifies the Knowledge Systems Lab at the University of Michigan Medical School as creator and identifies Figure 6 of the 2015 UHMS guideline as the clinical knowledge source." .
 
-<https://kgrid.org>
+<https://ror.org/00jmfr291>
     a schema:Organization ;
     schema:name "Knowledge Systems Lab" ;
-    schema:affiliation "Knowledge Systems Lab, University of Michigan Medical School" ;
+    schema:affiliation "Department of Learning Health Sciences, University of Michigan Medical School" ;
     schema:email "kgrid-developers@umich.edu" .
 
 

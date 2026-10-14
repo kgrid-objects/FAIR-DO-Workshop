@@ -45,16 +45,15 @@
 
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO#provenance>
     a prov:Entity ;
-    prov:wasAttributedTo <https://kgrid.org> ;
+    prov:wasAttributedTo <https://ror.org/00jmfr291> ;
     prov:wasDerivedFrom <https://doi.org/10.1111/wrr.13019> ;
-    schema:datePublished "2026-08-18" ;
     schema:description
         "The knowledge object metadata identifies the Knowledge Systems Lab at the University of Michigan Medical School as creator. The Version 1.0 specification translates the categorical prognostic model in supplementary Table 3 of Margolis et al. (2022) into an implementation-neutral, testable lookup; the article and supplement are identified as the authoritative clinical knowledge sources." .
 
-<https://kgrid.org>
+<https://ror.org/00jmfr291>
     a schema:Organization ;
     schema:name "Knowledge Systems Lab" ;
-    schema:affiliation "Knowledge Systems Lab, University of Michigan Medical School" ;
+    schema:affiliation "Department of Learning Health Sciences, University of Michigan Medical School" ;
     schema:email "kgrid-developers@umich.edu" .
 
 
