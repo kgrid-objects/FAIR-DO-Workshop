@@ -24,7 +24,7 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Phase 2 — Governance approval and GitHub review
 
-1. Obtain an authorized organizational release approver and confirm the copyright and license statements.
+1. **Complete:** Allen Flynn, Faculty Lab Member, approved the copyright statement, MIT licensing for all five objects, and proceeding with release review on 2026-10-13. The approval and its authorization boundary are recorded in `release/RELEASE-APPROVAL.md`.
 2. Obtain explicit authorization to begin external activity.
 3. Push only the review branch to GitHub. Do not create Version 1.0 tags or releases yet.
 4. Review the branch and verify titles, object boundaries, creator information, license scope, third-party notices, dependency relationships, and proposed tag names.
@@ -107,4 +107,4 @@ This phase requires explicit production-deposit authorization.
 
 ## Immediate next step
 
-Proceed with **Phase 2, Step 1**: obtain and record organizational release approval and confirmation of the copyright and license statements.
+Proceed with **Phase 2, Step 2**: obtain explicit authorization to begin external activity.
