@@ -4,7 +4,7 @@ Validation was performed on 2026-10-13 against the five unpublished Zenodo Sandb
 
 ## Result
 
-**Corrections required.** No record was published during validation.
+**Passed after correction and revalidation on 2026-10-14.** No record was published during correction or validation.
 
 ## Checks that passed for all five drafts
 
@@ -20,12 +20,20 @@ Validation was performed on 2026-10-13 against the five unpublished Zenodo Sandb
 - Each constituent KO has one reciprocal DOI-scheme `Is required by` relationship to the KA.
 - All five records remain unpublished drafts.
 
-## Corrections required for all five drafts
+## Initial defects found in all five drafts
 
 1. **License:** Zenodo contains its default Creative Commons Attribution 4.0 International license. The approved software license and each object's template require MIT.
 2. **Creator affiliation:** The organization creator lacks `Department of Learning Health Sciences, University of Michigan Medical School`.
 3. **Creator ROR:** The organization creator lacks the approved ROR identifier `https://ror.org/00jmfr291`.
 4. **Tagged GitHub relationship:** The template's release-pinned GitHub URL with relation `IsSupplementTo` is absent. The DOI dependency relationships are correct but do not replace this source relationship.
+
+## Corrections completed on 2026-10-14
+
+- Replaced Creative Commons Attribution 4.0 International with MIT on all five drafts.
+- Added `Department of Learning Health Sciences, University of Michigan Medical School` to the organization creator on all five drafts.
+- Added the ROR identifier `https://ror.org/00jmfr291`; Zenodo normalizes and displays the saved identifier as `00jmfr291` in its creator editor.
+- Added each object's release-pinned GitHub URL with relation `Is supplement to`, URL scheme, and Software resource type.
+- Saved and reopened every draft. Revalidation confirmed the four corrections, preserved DOI dependency relationships, exact file boundaries, and unpublished-draft state.
 
 ## Archive byte verification
 
@@ -39,4 +47,4 @@ Validation was performed on 2026-10-13 against the five unpublished Zenodo Sandb
 
 ## Disposition
 
-Correct the four repeated metadata defects on all five unpublished drafts, then rerun Phase 3, Step 4. Phase 3, Step 5 must not begin until this validation passes.
+Phase 3, Step 4 passes. Proceed to Phase 3, Step 5.
