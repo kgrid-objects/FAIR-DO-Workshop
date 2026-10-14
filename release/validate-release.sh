@@ -14,6 +14,11 @@ if rg -n '__(SANDBOX_DOI|SWHID)_' HBOT-Treatment-Target-KA collection release/id
   status=1
 fi
 
+if rg -n '__PUBLICATION_DATE__' HBOT-Treatment-Target-KA/zenodo.sandbox.template.json collection/*/zenodo.sandbox.template.json; then
+  echo "BLOCKED: publication-date placeholders remain (replace them with the supported deposit date)." >&2
+  status=1
+fi
+
 if rg -n '(github\.com/kgrid-objects/FAIR-DO-Workshop|raw\.githubusercontent\.com/kgrid-objects/FAIR-DO-Workshop).*(/main/|/HEAD/|/HEAD\?|/tree/main|/tree/HEAD|/blob/main|/blob/HEAD)' HBOT-Treatment-Target-KA collection --glob 'metadata.json' --glob '*.json' --glob '*.md' --glob '*.ipynb' --glob '*.txt' --glob '*.html' --glob '*.jsnb'; then
   echo "BLOCKED: mutable main/HEAD locators remain in release-significant files." >&2
   status=1

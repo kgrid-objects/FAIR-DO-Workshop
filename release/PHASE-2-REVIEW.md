@@ -46,7 +46,7 @@ The following tag names are internally consistent, object-specific, and unused i
 - `dfu-prognostic-indicator-ko-v1.0.0`
 - `hbot-treatment-target-ka-v1.0.0`
 
-## Required resolution before deposits
+## Date-field resolution — complete
 
 The five `CITATION.cff` and Zenodo template records contain different release/publication dates:
 
@@ -56,9 +56,11 @@ The five `CITATION.cff` and Zenodo template records contain different release/pu
 - DFU Prognostic Indicator KO: 2026-08-18
 - HBOT Treatment Target KA: 2026-09-23
 
-No corresponding Version 1.0 GitHub tags currently exist. Before Sandbox or production deposits, either:
+No corresponding Version 1.0 GitHub tags existed at review time, and no evidence established those dates as prior public release dates. The following disposition was applied on 2026-10-13:
 
-1. confirm that these dates are supported original release dates and retain them with evidence; or
-2. replace them with the actual Version 1.0 publication date when that date is known.
+1. Remove `date-released` from each `CITATION.cff` because the actual Version 1.0 release date is not yet known.
+2. Replace each Zenodo template's unsupported date with the explicit `__PUBLICATION_DATE__` template field.
+3. Insert the actual deposit publication date during Sandbox rehearsal and the actual production publication date before the production content freeze.
+4. Add `date-released` to each production `CITATION.cff` only when that date is known and supported.
 
-Do not invent or silently normalize the dates. This resolution belongs to Phase 2, Step 5.
+This avoids inventing or silently normalizing release dates while keeping the deposit templates operationally explicit.

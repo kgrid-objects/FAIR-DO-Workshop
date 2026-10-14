@@ -23,8 +23,8 @@
       "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO/metadata.json",
       "metadataSha256": "9938c3c50098960dad8a1512f78bf04f4d095f055ad96fa5fe1672523b2d4f16",
       "packageJsonSha256": "cc9b8857a7250f1a44bd1ec0992e8b64418f386bd2756180ac04b959163bb14b",
-      "gitTreeOid": "8ea3bf476e8bf4462ae9ff58b86074ea0d27c7ff",
-      "canonicalTarSha256": "f04bbf0e0c6f9b77c094fded9cca685e4630bd0bbe296d40107d70d846c364e4",
+      "gitTreeOid": "14ad708144e320a568a539fe4f6fa34b3b8072c0",
+      "canonicalTarSha256": "1ae4adddfd7fe3fe2974bb4ad7e7f6dd09b4f531eba4ee4c82ade331b1d5bf98",
       "canonicalTarByteSize": 1259520,
       "fileCount": 53,
       "versionEvidence": [
@@ -48,8 +48,8 @@
       "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO/metadata.json",
       "metadataSha256": "35339aca29aef9aa879bd683ff27f10143fde013ef9d2b3561f8f05f1438517f",
       "packageJsonSha256": "d53bf04f5767eef97e2180daaf83fe6c1a7f5ae7a4b0296dea4853dd16331a8a",
-      "gitTreeOid": "1f486b4cda1a268192573085d1f4cd683a4deca5",
-      "canonicalTarSha256": "ac777e3432f1d408843be94dfd2a57b7f243c828e64329200a246490414de7ff",
+      "gitTreeOid": "771bd968306fb5ada07c9a76bd271fb0df61f49a",
+      "canonicalTarSha256": "2ff297c5125f34e2ffce1482fd32833d3acf090434badecc828646c55d840041",
       "canonicalTarByteSize": 839680,
       "fileCount": 28,
       "versionEvidence": [
@@ -73,8 +73,8 @@
       "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO/metadata.json",
       "metadataSha256": "ef11bcf8ec8bec51f9b038a7e9b8d4a009d360fa116213aa6707540f3ca148d9",
       "packageJsonSha256": "0cb02fd0de59ac5d1ae2b187fc736566802309e5cd1e77feb946b06894d2db66",
-      "gitTreeOid": "122966b5e1a545f5984b41e7f20c0f753edc1775",
-      "canonicalTarSha256": "5c8ece16241d0c7f77a1d96293eee71bf21b63f91c63719665a1cb9b95c8f11a",
+      "gitTreeOid": "b4024ec7fc186248abc8502b9f6551d31aabdeac",
+      "canonicalTarSha256": "d7b6ba4fd0f805fe9b841a05804d9b59e26e9ea1095e84447e0adce15af69706",
       "canonicalTarByteSize": 2570240,
       "fileCount": 152,
       "versionEvidence": [
@@ -98,8 +98,8 @@
       "publishedMetadataLocator": "https://raw.githubusercontent.com/kgrid-objects/FAIR-DO-Workshop/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO/metadata.json",
       "metadataSha256": "8769b89176a6f8be4f4c85200141f46eece73b1c5ad2b73cd3a2944cb1ea4872",
       "packageJsonSha256": "d33a7305a8aa4bb40a0aaef20d9125c68b029e2813bcbf84688652a031c4ea57",
-      "gitTreeOid": "e8c9f7d88736704bdde17e45b3b3fb58915bdb57",
-      "canonicalTarSha256": "f66a3e0b2a60e14e813b93cc7264c1f076f1f8b1100ddf80e6ec1f3f356afe35",
+      "gitTreeOid": "b92e1f15d7d5ca5fe48a556eb48bdd8f9f0ec704",
+      "canonicalTarSha256": "1ca881d98540b336d4b92253c45f25420c3eb16b82c2ad9c49bea872db8fcbcb",
       "canonicalTarByteSize": 696320,
       "fileCount": 28,
       "versionEvidence": [

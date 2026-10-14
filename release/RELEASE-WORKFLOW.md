@@ -28,7 +28,7 @@ This workflow prepares five independently citable records: four constituent Know
 2. **Complete:** Allen Flynn, Faculty Lab Member, explicitly authorized external activity under this staged workflow on 2026-10-13. Later actions remain limited by their individual workflow steps and publication gates; see `release/RELEASE-APPROVAL.md`.
 3. **Complete:** Pushed only `prepare-v1.0-releases` to GitHub at commit `af803dc8e54d59dba5429babfb88011ec5f23446`. No Version 1.0 tags or releases were created.
 4. **Complete:** Reviewed titles, object boundaries, creator information, license scope, third-party notices, dependency relationships, and proposed tag names. The review passed with one required date-field resolution recorded in `release/PHASE-2-REVIEW.md`.
-5. Record approval and all required corrections. Apply corrections before reserving production identifiers.
+5. **Complete:** Resolved the unsupported release dates by removing them from `CITATION.cff` and replacing Zenodo template dates with `__PUBLICATION_DATE__`. The actual supported date will be inserted for each deposit and added to production citation metadata before content freeze. The disposition is recorded in `release/PHASE-2-REVIEW.md`.
 
 ## Phase 3 — Zenodo Sandbox rehearsal
 
@@ -107,4 +107,4 @@ This phase requires explicit production-deposit authorization.
 
 ## Immediate next step
 
-Proceed with **Phase 2, Step 5**: resolve the unsupported or ambiguous release-date fields, record the disposition, and apply any required correction before reserving identifiers.
+Proceed with **Phase 3, Step 1**: create four constituent KO drafts and one KA draft in Zenodo Sandbox.
