@@ -26,8 +26,8 @@ This workflow prepares five independently citable records: four constituent Know
 
 1. **Complete:** Allen Flynn, Faculty Lab Member, approved the copyright statement, MIT licensing for all five objects, and proceeding with release review on 2026-10-13. The approval and its authorization boundary are recorded in `release/RELEASE-APPROVAL.md`.
 2. **Complete:** Allen Flynn, Faculty Lab Member, explicitly authorized external activity under this staged workflow on 2026-10-13. Later actions remain limited by their individual workflow steps and publication gates; see `release/RELEASE-APPROVAL.md`.
-3. Push only the review branch to GitHub. Do not create Version 1.0 tags or releases yet.
-4. Review the branch and verify titles, object boundaries, creator information, license scope, third-party notices, dependency relationships, and proposed tag names.
+3. **Complete:** Pushed only `prepare-v1.0-releases` to GitHub at commit `af803dc8e54d59dba5429babfb88011ec5f23446`. No Version 1.0 tags or releases were created.
+4. **Complete:** Reviewed titles, object boundaries, creator information, license scope, third-party notices, dependency relationships, and proposed tag names. The review passed with one required date-field resolution recorded in `release/PHASE-2-REVIEW.md`.
 5. Record approval and all required corrections. Apply corrections before reserving production identifiers.
 
 ## Phase 3 — Zenodo Sandbox rehearsal
@@ -107,4 +107,4 @@ This phase requires explicit production-deposit authorization.
 
 ## Immediate next step
 
-Proceed with **Phase 2, Step 3**: push only the review branch to GitHub. Do not create Version 1.0 tags or releases.
+Proceed with **Phase 2, Step 5**: resolve the unsupported or ambiguous release-date fields, record the disposition, and apply any required correction before reserving identifiers.
