@@ -67,7 +67,7 @@ This workflow prepares five independently citable records: four constituent Know
 3. **Complete:** Pushed the `prepare-v1.0-releases` branch and only the five explicitly named annotated Version 1.0 tags to GitHub. Independently queried the remote refs and confirmed the branch commit, all five annotated tag-object IDs, and all five peeled targets match locally; every tag peels to content-freeze commit `e42624bfed0b28ba35a743690141ef4f566af250`. Evidence is in `release/PHASE-5-STEP-3-REMOTE-TAGS.md`.
 4. **Complete:** Created one public GitHub release from each existing verified annotated tag. Attached exactly three object-specific assets to each release: its deterministic archive, compressed-archive SHA-256 sidecar, and file-level content manifest. Verified all 15 assets are uploaded, their remote sizes match locally, and GitHub's archive digests match the Step 10 SHA-256 values. Evidence is in `release/PHASE-5-STEP-4-GITHUB-RELEASES.md`.
 5. **Complete:** Verified all five operational tagged-directory URLs, release pages, and release-tagged raw metadata routes; all 14 tagged notebook files through both GitHub and raw-content routes; all 14 published Binder, Colab, and Scribbler launch routes; and all 15 release-asset download links. Content-bearing downloads were compared with the immutable tag or frozen local outputs, and every comparison matched. Evidence is in `release/PHASE-5-STEP-5-LIVE-URL-VERIFICATION.md`.
-6. Do not move these tags after they become public.
+6. **Complete:** Recorded the five Version 1.0 refs as permanent identifiers and established the correction/withdrawal rule: preserve Version 1.0.0 and issue a new semantic version. Created active GitHub tag ruleset `25109217`, targeting exactly the five tags with update, deletion, and non-fast-forward restrictions and no bypass actors. Reverified all tag-object IDs and peeled targets before enabling protection. The policy is in `release/TAG-IMMUTABILITY-POLICY.md`; execution evidence is in `release/PHASE-5-STEP-6-TAG-IMMUTABILITY.md`.
 
 ## Phase 6 — Software Heritage archival and SWHID registration
 
@@ -110,4 +110,4 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Immediate next step
 
-Proceed with **Phase 5, Step 6**: record and enforce the governance rule that the five public Version 1.0 tags must never be moved or replaced.
+Phase 5 is complete. Do not proceed beyond **Phase 6** without a separate authorization decision, and do not publish any Zenodo record because publication permission has not been granted. The next available step is **Phase 6, Step 1**: request Software Heritage archival of the tagged public repository state.
