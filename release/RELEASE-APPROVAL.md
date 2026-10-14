@@ -23,4 +23,14 @@ The approver confirms:
 
 ## Authorization boundary
 
-This record completes Phase 2, Step 1 of `RELEASE-WORKFLOW.md`. It does not by itself authorize pushing the branch, creating external deposits, creating tags or releases, or publishing records. Explicit authorization for external activity is recorded separately under Phase 2, Step 2.
+The approval above completes Phase 2, Step 1 of `RELEASE-WORKFLOW.md`.
+
+## External-activity authorization
+
+- Authorized by: Allen Flynn
+- Organizational role: Faculty Lab Member
+- Decision: Authorizes external activity under the staged release workflow
+- Recorded date: 2026-10-13
+- Recorded from: Direct instruction to perform Phase 2, Step 2 in the release-preparation conversation
+
+This authorization completes Phase 2, Step 2. External actions remain limited to the action named in each subsequent workflow step. It does not collapse later review gates or authorize production publication in advance. Phase 2, Step 3 is limited to pushing the review branch; it does not authorize Version 1.0 tags, GitHub releases, Zenodo deposits, Software Heritage requests, or publication.
