@@ -39,7 +39,7 @@ This workflow prepares five independently citable records: four constituent Know
 4A. **Complete:** Audited and corrected all FAIR metadata facets across the five objects before final rehearsal evidence export. Removed unsupported FDO Bench access claims, expanded existence inventories, corrected reusability provenance and premature publication dates, aligned the Severity KO's supported canonical identity, and deferred production DOI/SWHID access claims until they exist. Regenerated the KA dependency manifest, built all five archives twice with identical results, replaced every Sandbox file, and verified Zenodo/local MD5 agreement. Full evidence is in `release/PHASE-3-STEP-4A-CROSS-FACET-AUDIT.md` and `release/zenodo-sandbox-drafts.json`.
 5. **Complete:** Exported Zenodo's native JSON metadata for all five corrected unpublished drafts. Recorded draft IDs, parent record IDs, reserved Sandbox DOIs, exact export files, export SHA-256 values, file metadata, and relationship validation in `release/zenodo-sandbox-exports/`, `release/zenodo-sandbox-drafts.json`, and `release/PHASE-3-STEP-5-EXPORT.md`.
 6. **Complete:** Rebuilt all five archives in an isolated detached clean checkout. The initial test exposed commit-ID and build-time coupling in the archive builder; corrected it by anchoring each exact object tree to a deterministic synthetic commit. The clean rebuild is now byte-for-byte identical for all five archives. Replaced the Sandbox files with the final archives and refreshed the native JSON exports. Evidence is in `release/PHASE-3-STEP-6-CLEAN-REBUILD.md`.
-7. Do not copy Sandbox DOIs into production `findability.metadata.txt`, `metadata.json`, or `CITATION.cff`. Sandbox identifiers are rehearsal evidence, not the permanent production identity.
+7. **Complete:** Confirmed that real Sandbox DOIs, URLs, draft IDs, and parent record IDs remain confined to rehearsal evidence under `release/` and have not entered any release-object directory or production-facing `findability.metadata.txt`, `metadata.json`, or `CITATION.cff` record. Intentional unresolved tokens remain placeholders rather than issued identifiers. Evidence is in `release/PHASE-3-STEP-7-SANDBOX-IDENTIFIER-AUDIT.md`.
 
 ## Phase 4 — Reserve production DOIs and freeze findability metadata
 
@@ -108,4 +108,4 @@ This phase requires explicit production-deposit authorization.
 
 ## Immediate next step
 
-Proceed with **Phase 3, Step 7**: confirm that Sandbox identifiers remain confined to rehearsal evidence and have not entered production `findability.metadata.txt`, `metadata.json`, or `CITATION.cff` records.
+Obtain explicit production-deposit authorization before beginning **Phase 4, Step 1**: create five unpublished production Zenodo drafts, with the four constituent KOs first and the KA last. Do not publish any record.
