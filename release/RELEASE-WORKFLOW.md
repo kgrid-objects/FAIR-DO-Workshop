@@ -66,7 +66,7 @@ This workflow prepares five independently citable records: four constituent Know
 2. **Complete:** Independently verified all five references as unique annotated tag objects that peel to content-freeze commit `e42624bfed0b28ba35a743690141ef4f566af250`. Confirmed each tagged object directory exists as a Git tree, matches the frozen directory tree, maps to the intended registry entry, and produces the exact future operational GitHub tagged-directory URL. Evidence is in `release/PHASE-5-STEP-2-TAG-VERIFICATION.md`.
 3. **Complete:** Pushed the `prepare-v1.0-releases` branch and only the five explicitly named annotated Version 1.0 tags to GitHub. Independently queried the remote refs and confirmed the branch commit, all five annotated tag-object IDs, and all five peeled targets match locally; every tag peels to content-freeze commit `e42624bfed0b28ba35a743690141ef4f566af250`. Evidence is in `release/PHASE-5-STEP-3-REMOTE-TAGS.md`.
 4. **Complete:** Created one public GitHub release from each existing verified annotated tag. Attached exactly three object-specific assets to each release: its deterministic archive, compressed-archive SHA-256 sidecar, and file-level content manifest. Verified all 15 assets are uploaded, their remote sizes match locally, and GitHub's archive digests match the Step 10 SHA-256 values. Evidence is in `release/PHASE-5-STEP-4-GITHUB-RELEASES.md`.
-5. Verify that every release-tag URL, raw metadata URL, notebook URL, and archive link resolves as intended.
+5. **Complete:** Verified all five operational tagged-directory URLs, release pages, and release-tagged raw metadata routes; all 14 tagged notebook files through both GitHub and raw-content routes; all 14 published Binder, Colab, and Scribbler launch routes; and all 15 release-asset download links. Content-bearing downloads were compared with the immutable tag or frozen local outputs, and every comparison matched. Evidence is in `release/PHASE-5-STEP-5-LIVE-URL-VERIFICATION.md`.
 6. Do not move these tags after they become public.
 
 ## Phase 6 — Software Heritage archival and SWHID registration
@@ -110,4 +110,4 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Immediate next step
 
-Proceed with **Phase 5, Step 5**: verify that every operational tagged-directory URL, release-tagged raw metadata URL, notebook URL, GitHub release page, and uploaded archive link resolves to the intended object and version.
+Proceed with **Phase 5, Step 6**: record and enforce the governance rule that the five public Version 1.0 tags must never be moved or replaced.
