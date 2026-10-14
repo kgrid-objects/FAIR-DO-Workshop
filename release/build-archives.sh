@@ -15,7 +15,15 @@ fi
 node -e 'const x=require(process.argv[1]); for (const o of x.objects) console.log(`${o.key}\t${o.path}`)' "$repo_root/release/objects.json" |
 while IFS=$'\t' read -r key object_path; do
   tmp_tar="$out_dir/$key-v1.0.0.tar"
-  git -C "$repo_root" archive --format=tar --prefix="$key-v1.0.0/" HEAD:"$object_path" > "$tmp_tar"
+  object_tree="$(git -C "$repo_root" rev-parse "HEAD:$object_path")"
+  if [[ "$(git -C "$repo_root" cat-file -t "$object_tree")" != "tree" ]]; then
+    echo "BLOCKED: $object_path does not resolve to a Git tree at HEAD." >&2
+    exit 2
+  fi
+  # Archive the directory tree itself. Archiving HEAD:<path> causes Git to
+  # embed the containing commit ID, changing the archive after evidence-only
+  # commits even when the object's directory tree is unchanged.
+  git -C "$repo_root" archive --format=tar --prefix="$key-v1.0.0/" "$object_tree" > "$tmp_tar"
   gzip -n -9 -f "$tmp_tar"
 done
 
