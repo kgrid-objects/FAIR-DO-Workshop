@@ -12,6 +12,8 @@
 
     schema:version "1.0" ;
 
+    schema:url <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO> ;
+
     schema:abstract "A categorical pretreatment prognostic knowledge object that estimates the model-based probability that one diabetic foot ulcer will heal by 16 weeks from wound area and wound duration measured at the first clinical visit." ;
 
     schema:alternateName "Margolis DFU Prognostic Model" ;

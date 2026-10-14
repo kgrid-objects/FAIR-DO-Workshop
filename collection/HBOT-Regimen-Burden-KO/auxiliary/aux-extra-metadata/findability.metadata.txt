@@ -15,6 +15,8 @@
 
     schema:version "1.0" ;
 
+    schema:url <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO> ;
+
     schema:abstract "A knowledge object that estimates the execution burden of a contemplated outpatient hyperbaric oxygen therapy course by combining a fixed population-level regimen range with a selected facility, patient-reported travel, and reported weekday-attendance difficulty." ;
 
     schema:about <http://id.nlm.nih.gov/mesh/D017719> ;

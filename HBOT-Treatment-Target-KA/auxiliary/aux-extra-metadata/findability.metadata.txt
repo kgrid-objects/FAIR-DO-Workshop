@@ -12,6 +12,8 @@
 
     schema:version "1.0" ;
 
+    schema:url <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA> ;
+
     schema:alternateName "HBOT Treatment Target KA" ;
 
     schema:alternateName "HBOT-Treatment-Target-KA" ;
