@@ -34,7 +34,7 @@ This workflow prepares five independently citable records: four constituent Know
 
 1. **Complete:** Created four constituent KO drafts followed by one KA draft in Zenodo Sandbox. All five are unpublished software records. Draft IDs and URLs are recorded in `release/zenodo-sandbox-drafts.json`.
 2. **Complete:** Built the five per-object archives twice with `release/build-archives.sh` and confirmed identical SHA-256 values across both builds. Uploaded exactly one corresponding archive to each unpublished draft and verified each upload reached 100%. Filenames, SHA-256 values, byte sizes, draft IDs, and URLs are recorded in `release/zenodo-sandbox-drafts.json`. The generated `release/dist/` directory remains local and is excluded from Git.
-3. Reserve Sandbox DOIs and rehearse the relationships: the KA `Requires` each constituent KO, and each constituent KO `IsRequiredBy` the KA when supported.
+3. **Complete:** Reserved all five Sandbox DOIs. Added four `Requires` relationships from the KA to the constituent KOs and one reciprocal `IsRequiredBy` relationship from each KO to the KA. Zenodo Sandbox supports both relation types. All relationships use the DOI scheme and Software resource type; all records remain unpublished drafts. The DOI and relationship evidence is recorded in `release/zenodo-sandbox-drafts.json`.
 4. Validate titles, organization creator, affiliation, ROR evidence, version, license scope, related identifiers, archive SHA-256 values, and file lists.
 5. Export Sandbox metadata and record IDs to rehearsal evidence.
 6. Rebuild from a clean checkout and confirm identical archive digests.
@@ -107,4 +107,4 @@ This phase requires explicit production-deposit authorization.
 
 ## Immediate next step
 
-Proceed with **Phase 3, Step 3**: reserve the five Sandbox DOIs and rehearse the relationships—the KA `Requires` each constituent KO, with reciprocal `IsRequiredBy` relationships when Zenodo supports them.
+Proceed with **Phase 3, Step 4**: validate titles, organization creator, affiliation, ROR evidence, version, license scope, related identifiers, archive SHA-256 values, and file lists across all five Sandbox drafts.

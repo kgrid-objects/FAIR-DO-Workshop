@@ -4,13 +4,22 @@
   "baseUrl": "https://sandbox.zenodo.org",
   "recordedLocalDate": "2026-10-13",
   "zenodoDisplayedUploadDate": "2026-10-14",
-  "state": "unpublished drafts with one archive each",
+  "state": "unpublished drafts with reserved Sandbox DOIs, one archive each, and rehearsed relationships",
   "records": [
     {
       "key": "dfu-severity-score-ko",
       "title": "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object",
       "draftId": "619883",
       "draftUrl": "https://sandbox.zenodo.org/uploads/619883",
+      "reservedDoi": "10.5072/zenodo.619883",
+      "relatedIdentifiers": [
+        {
+          "relation": "IsRequiredBy",
+          "identifier": "10.5072/zenodo.619891",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
       "fileCount": 1,
       "archiveFilename": "dfu-severity-score-ko-v1.0.0.tar.gz",
       "archiveSha256": "4399005593c5cf22a04e60a6c91128fe3f08e41fecc54abe4f213b34ec4715c9",
@@ -22,6 +31,15 @@
       "title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object",
       "draftId": "619885",
       "draftUrl": "https://sandbox.zenodo.org/uploads/619885",
+      "reservedDoi": "10.5072/zenodo.619885",
+      "relatedIdentifiers": [
+        {
+          "relation": "IsRequiredBy",
+          "identifier": "10.5072/zenodo.619891",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
       "fileCount": 1,
       "archiveFilename": "hbot-treatment-decision-ko-v1.0.0.tar.gz",
       "archiveSha256": "c6d1c9664268bf5d4e6336e29e159e744cd763706c5128791188a625f1e94ffd",
@@ -33,6 +51,15 @@
       "title": "DFU HBOT Bounded Regimen and Execution Burden",
       "draftId": "619887",
       "draftUrl": "https://sandbox.zenodo.org/uploads/619887",
+      "reservedDoi": "10.5072/zenodo.619887",
+      "relatedIdentifiers": [
+        {
+          "relation": "IsRequiredBy",
+          "identifier": "10.5072/zenodo.619891",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
       "fileCount": 1,
       "archiveFilename": "hbot-regimen-burden-ko-v1.0.0.tar.gz",
       "archiveSha256": "020e38834dad569727016aaa01c301ce6dc6a9843404f6f689bb6ae838532e9b",
@@ -44,6 +71,15 @@
       "title": "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks",
       "draftId": "619889",
       "draftUrl": "https://sandbox.zenodo.org/uploads/619889",
+      "reservedDoi": "10.5072/zenodo.619889",
+      "relatedIdentifiers": [
+        {
+          "relation": "IsRequiredBy",
+          "identifier": "10.5072/zenodo.619891",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
       "fileCount": 1,
       "archiveFilename": "dfu-prognostic-indicator-ko-v1.0.0.tar.gz",
       "archiveSha256": "3451e26758d0a297218093b019f57b8a1c324a3fdea21dce7d9efad928c5cde7",
@@ -55,6 +91,33 @@
       "title": "HBOT Treatment Target KA",
       "draftId": "619891",
       "draftUrl": "https://sandbox.zenodo.org/uploads/619891",
+      "reservedDoi": "10.5072/zenodo.619891",
+      "relatedIdentifiers": [
+        {
+          "relation": "Requires",
+          "identifier": "10.5072/zenodo.619883",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "Requires",
+          "identifier": "10.5072/zenodo.619885",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "Requires",
+          "identifier": "10.5072/zenodo.619887",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        },
+        {
+          "relation": "Requires",
+          "identifier": "10.5072/zenodo.619889",
+          "scheme": "DOI",
+          "resourceType": "Software"
+        }
+      ],
       "fileCount": 1,
       "archiveFilename": "hbot-treatment-target-ka-v1.0.0.tar.gz",
       "archiveSha256": "9ecf510f9e1115406ddff48dfa40d4da2426f159b6d6d2d8a702e84ef1d379ec",
