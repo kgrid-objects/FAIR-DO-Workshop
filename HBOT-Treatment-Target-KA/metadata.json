@@ -13,9 +13,22 @@
   ],
   "dc:version": "1.0",
   "dc:date": "2026-09-23",
-  "dc:source": [
+  "dc:requires": [
     {
-      
+      "@id": "https://doi.org/10.5281/zenodo.23367043",
+      "@type": "koio:KnowledgeObject"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.23367087",
+      "@type": "koio:KnowledgeObject"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.23367111",
+      "@type": "koio:KnowledgeObject"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.23367115",
+      "@type": "koio:KnowledgeObject"
     }
   ],
   "dc:isReferencedBy": [],
@@ -46,19 +59,23 @@
     },
     {
       "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO",
-      "@type": "koio:KnowledgeObject"
+      "@type": "koio:KnowledgeObject",
+      "dc:identifier": "https://doi.org/10.5281/zenodo.23367043"
     },
     {
       "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO",
-      "@type": "koio:KnowledgeObject"
+      "@type": "koio:KnowledgeObject",
+      "dc:identifier": "https://doi.org/10.5281/zenodo.23367087"
     },
     {
       "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO",
-      "@type": "koio:KnowledgeObject"
+      "@type": "koio:KnowledgeObject",
+      "dc:identifier": "https://doi.org/10.5281/zenodo.23367111"
     },
     {
       "@id": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO",
-      "@type": "koio:KnowledgeObject"
+      "@type": "koio:KnowledgeObject",
+      "dc:identifier": "https://doi.org/10.5281/zenodo.23367115"
     }
   ],
   "koio:hasService": [

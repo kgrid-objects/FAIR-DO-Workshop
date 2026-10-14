@@ -33,9 +33,9 @@
         "knowledge entries dc:version = 1.0",
         "specs/kgrid.org_Meggitt_Wagner_Questionnaire_CKS_Version_1_0.docx"
       ],
-      "bindingStatus": "content-bound; persistent-identifiers-pending",
+      "bindingStatus": "content-bound; production-doi-bound; directory-swhid-pending",
       "directorySwhid": "__SWHID_DFU_SEVERITY_SCORE_KO__",
-      "sandboxDoi": "__SANDBOX_DOI_DFU_SEVERITY_SCORE_KO__"
+      "doi": "10.5281/zenodo.23367043"
     },
     {
       "dependencyRole": "DEP-HBOT-DECISION",
@@ -58,9 +58,9 @@
         "knowledge entry dc:version = 1.0",
         "specs/UHMS_Figure_6_DFU_HBO2_Algorithm_CKS_Version_1_0.docx"
       ],
-      "bindingStatus": "content-bound; persistent-identifiers-pending",
+      "bindingStatus": "content-bound; production-doi-bound; directory-swhid-pending",
       "directorySwhid": "__SWHID_HBOT_TREATMENT_DECISION_KO__",
-      "sandboxDoi": "__SANDBOX_DOI_HBOT_TREATMENT_DECISION_KO__"
+      "doi": "10.5281/zenodo.23367087"
     },
     {
       "dependencyRole": "DEP-BURDEN",
@@ -83,9 +83,9 @@
         "three knowledge entries dc:version = 1.0",
         "specs/DFU_HBOT_Bounded_Regimen_and_Execution_Burden_CKS_Version_1_0.docx"
       ],
-      "bindingStatus": "content-bound; persistent-identifiers-pending",
+      "bindingStatus": "content-bound; production-doi-bound; directory-swhid-pending",
       "directorySwhid": "__SWHID_HBOT_REGIMEN_BURDEN_KO__",
-      "sandboxDoi": "__SANDBOX_DOI_HBOT_REGIMEN_BURDEN_KO__"
+      "doi": "10.5281/zenodo.23367111"
     },
     {
       "dependencyRole": "DEP-MARGOLIS",
@@ -108,9 +108,9 @@
         "knowledge entry dc:version = 1.0",
         "specs/Margolis_2022_DFU_Prognostic_CKS-1_0.docx"
       ],
-      "bindingStatus": "content-bound; persistent-identifiers-pending",
+      "bindingStatus": "content-bound; production-doi-bound; directory-swhid-pending",
       "directorySwhid": "__SWHID_DFU_PROGNOSTIC_INDICATOR_KO__",
-      "sandboxDoi": "__SANDBOX_DOI_DFU_PROGNOSTIC_INDICATOR_KO__"
+      "doi": "10.5281/zenodo.23367115"
     }
   ],
   "compatibilityGovernance": {
@@ -141,5 +141,5 @@
     "regressionPolicy": "All required constituent, end-to-end, synthesis-cell, failure, safeguard, output, provenance, determinism, and differential tests must pass. Failed, skipped, quarantined, or unexplained tests block admission.",
     "publicationPolicy": "Admission requires an atomic publication of a newly versioned manifest, evidence and approval records, regression report, candidate bindings, effective date, superseded binding, and any required KA specification or result-model revision. Prior releases remain retrievable; rollback restores one complete approved release without mixing bindings."
   },
-  "conformanceRule": "CKS Version 1.0 retrieves each dependency through its immutable release-tag locator and accepts it only when dependency role, CKS version IRI, package identity and version, package path, Git directory tree ID, and canonical package checksum match this manifest. DOI and directory SWHID bindings must replace their explicit placeholders before publication. Later versions, locally edited folders, mutable branch locators, and semantically similar packages do not satisfy the binding."
+  "conformanceRule": "CKS Version 1.0 retrieves each dependency through its immutable release-tag locator and accepts it only when dependency role, CKS version IRI, package identity and version, production DOI, package path, Git directory tree ID, and canonical package checksum match this manifest. Production DOI bindings are fixed; directory SWHID bindings must replace their explicit placeholders before publication. Later versions, locally edited folders, mutable branch locators, and semantically similar packages do not satisfy the binding."
 }

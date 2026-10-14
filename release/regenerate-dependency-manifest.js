@@ -67,11 +67,12 @@ for (const dep of manifest.dependencies) {
   dep.packageJsonSha256 = sha256(packageJson);
   dep.gitTreeOid = match[1];
   dep.directorySwhid = identifiers.directorySwhid;
-  dep.sandboxDoi = identifiers.sandboxDoi;
+  dep.doi = identifiers.doi;
+  delete dep.sandboxDoi;
   dep.canonicalTarSha256 = sha256(archive);
   dep.canonicalTarByteSize = archive.length;
   dep.fileCount = names ? names.split('\n').length : 0;
-  dep.bindingStatus = 'content-bound; persistent-identifiers-pending';
+  dep.bindingStatus = 'content-bound; production-doi-bound; directory-swhid-pending';
 }
 
 manifest.manifestVersion = '2.0-release-candidate';
@@ -85,7 +86,7 @@ manifest.repository = {
 };
 delete manifest.suppliedBundleEvidence;
 manifest.packageChecksumMethod = 'For each dependency, gitTreeOid is the Git tree object ID for the complete object directory in the prepared release tree. directorySwhid is swh:1:dir:<gitTreeOid> once the exact tree is ingested by Software Heritage. canonicalTarSha256 is SHA-256 over an uncompressed git archive of that directory tree, prefixed with <directoryName>/ and anchored by a deterministic synthetic commit with no parent, the fixed author/committer FAIR-DO release tooling <kgrid-developers@umich.edu>, timestamp 2000-01-01T00:00:00Z, and message Canonical dependency archive. The manifest does not embed the containing release commit SHA because content cannot contain its own content-derived commit identifier; commit/tag evidence is recorded after commit creation.';
-manifest.conformanceRule = 'CKS Version 1.0 retrieves each dependency through its immutable release-tag locator and accepts it only when dependency role, CKS version IRI, package identity and version, package path, Git directory tree ID, and canonical package checksum match this manifest. DOI and directory SWHID bindings must replace their explicit placeholders before publication. Later versions, locally edited folders, mutable branch locators, and semantically similar packages do not satisfy the binding.';
+manifest.conformanceRule = 'CKS Version 1.0 retrieves each dependency through its immutable release-tag locator and accepts it only when dependency role, CKS version IRI, package identity and version, production DOI, package path, Git directory tree ID, and canonical package checksum match this manifest. Production DOI bindings are fixed; directory SWHID bindings must replace their explicit placeholders before publication. Later versions, locally edited folders, mutable branch locators, and semantically similar packages do not satisfy the binding.';
 
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
 fs.unlinkSync(indexPath);
