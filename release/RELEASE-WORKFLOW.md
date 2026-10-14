@@ -54,7 +54,7 @@ This workflow prepares five independently citable records: four constituent Know
 7. **Complete:** Verified the release-pinned GitHub `schema:isPartOf` catalog link and `schema:subjectOf` metadata-record link for all five objects. The four constituent records were already correct; added the two missing release-pinned indexing statements to the KA. Deliberately did not add authenticated Zenodo draft URLs or not-yet-existing public record URLs as indexed records. Evidence and the aggregate gap report are in `release/PHASE-4-STEP-7-FINDABILITY-INDEXING.md`.
 8. **Complete:** Parsed all five findability records as RDF/Turtle and cross-checked each subject, local identifier, production DOI, human-facing URL, containing-catalog link, and indexed metadata-record link against the object registry, core metadata, identifier registry, and Zenodo reservation evidence. No Turtle placeholder or `schema:sameAs` assertion occurs, and no correction was required. Evidence is in `release/PHASE-4-STEP-8-TURTLE-VALIDATION.md`.
 9. **Complete:** Regenerated the KA dependency manifest from the current release-candidate tree after the constituent DOI metadata changes. Recomputed and independently verified all four metadata checksums, package checksums, directory tree IDs, canonical archive digests and byte sizes, file counts, release locators, production DOI bindings, and pending directory-SWHID states. A second regeneration was byte-stable. Evidence is in `release/PHASE-4-STEP-9-DEPENDENCY-MANIFEST.md`.
-10. Regenerate all content manifests, checksums, file counts, and deterministic archives.
+10. **Complete:** Regenerated all five file-level content manifests and deterministic release archives from the DOI-complete candidate. Recomputed archive checksums, byte sizes, and file counts; verified every extracted file against its content manifest; and reproduced every output byte-for-byte in an isolated detached clean checkout. Evidence is in `release/PHASE-4-STEP-10-ARCHIVE-REBUILD.md`, with file manifests under `release/manifests/` and local build outputs under the intentionally ignored `release/dist/` directory.
 11. Run the complete release validator and all tests. The DOI placeholders should now be resolved; SWHID template fields remain pending by design.
 12. Commit the DOI-complete release candidate. This commit is the intended Version 1.0 content freeze.
 
@@ -108,4 +108,4 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Immediate next step
 
-Proceed with **Phase 4, Step 10**: regenerate all five content manifests, checksums, file counts, and deterministic release archives from the DOI-complete candidate.
+Proceed with **Phase 4, Step 11**: run the complete release validator and all five test suites, confirm production DOI placeholders are resolved, and verify that only the intentionally pending SWHID template fields remain.
