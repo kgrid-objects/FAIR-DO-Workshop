@@ -16,7 +16,8 @@
         "Wagner Classification" ;
 
     schema:identifier
-        "workshop-ko-1" ;
+        "workshop-ko-1",
+        <https://doi.org/10.5281/zenodo.23367043> ;
 
     schema:version
         "1.0" ;

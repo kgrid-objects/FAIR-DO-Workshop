@@ -9,7 +9,9 @@
 
     dc:title "DFU HBOT Bounded Regimen and Execution Burden" ;
 
-    schema:identifier "workshop-ko-3" ;
+    schema:identifier
+        "workshop-ko-3",
+        <https://doi.org/10.5281/zenodo.23367111> ;
 
     schema:version "1.0" ;
 

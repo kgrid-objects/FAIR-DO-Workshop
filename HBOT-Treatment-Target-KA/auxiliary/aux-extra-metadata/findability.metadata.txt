@@ -6,7 +6,9 @@
 
     schema:name "HBOT Treatment Target KA" ;
 
-    schema:identifier "workshop-ka-1" ;
+    schema:identifier
+        "workshop-ka-1",
+        <https://doi.org/10.5281/zenodo.23367129> ;
 
     schema:version "1.0" ;
 

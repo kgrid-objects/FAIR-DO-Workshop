@@ -6,7 +6,9 @@
 
     schema:name "DFU Prognostic Indicator KO" ;
 
-    schema:identifier "workshop-ko-4" ;
+    schema:identifier
+        "workshop-ko-4",
+        <https://doi.org/10.5281/zenodo.23367115> ;
 
     schema:version "1.0" ;
 

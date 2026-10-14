@@ -9,7 +9,9 @@
 
     dc:title "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object" ;
 
-    schema:identifier "workshop-ko-2" ;
+    schema:identifier
+        "workshop-ko-2",
+        <https://doi.org/10.5281/zenodo.23367087> ;
 
     schema:version "1.0" ;
 

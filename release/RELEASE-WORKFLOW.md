@@ -47,7 +47,7 @@ This workflow prepares five independently citable records: four constituent Know
 
 1. **Complete:** Created five unpublished production Zenodo software drafts in the required order: four constituent KOs first, followed by the KA. No files were uploaded and no production DOI was reserved. Draft IDs and URLs are recorded in `release/zenodo-production-drafts.json`; full evidence is in `release/PHASE-4-STEP-1-PRODUCTION-DRAFTS.md`.
 2. **Complete:** Reserved one production DOI for each of the five unpublished drafts and saved every reservation without publishing a record. The DOI-to-object mapping is recorded in `release/zenodo-production-drafts.json`; evidence is in `release/PHASE-4-STEP-2-PRODUCTION-DOIS.md`.
-3. Add each object's reserved DOI to its `findability.metadata.txt` as a supported `schema:identifier` IRI while preserving its existing local identifier.
+3. **Complete:** Added each reserved production DOI to the corresponding `findability.metadata.txt` as an IRI-valued `schema:identifier` while preserving the existing local identifier. All five records parse as Turtle, and no Sandbox identifier or `schema:sameAs` assertion was introduced. Evidence and the aggregate gap report are in `release/PHASE-4-STEP-3-FINDABILITY-DOIS.md`.
 4. Set or verify `schema:url` as the supported human-facing landing page and retain the exact release-tag source URL as a distinct, release-pinned access or catalog location. Do not replace the canonical object-version IRI merely because a DOI now exists.
 5. Add the reserved DOI to the same object's `metadata.json`, `CITATION.cff`, and Zenodo metadata.
 6. Add the four constituent DOI relationships to the KA Zenodo metadata, KA metadata, and KA dependency manifest. Add reciprocal relations to the constituent drafts when supported.
@@ -108,4 +108,4 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Immediate next step
 
-Proceed with **Phase 4, Step 3**: add each object's reserved production DOI to its `findability.metadata.txt` as a supported `schema:identifier` IRI while preserving the existing local identifier.
+Proceed with **Phase 4, Step 4**: verify `schema:url` as the supported human-facing landing page and retain the exact release-tag source URL as a distinct, release-pinned access or catalog location without replacing the canonical object-version IRI.
