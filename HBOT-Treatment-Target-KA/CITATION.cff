@@ -3,6 +3,7 @@ message: "If you use this knowledge object, please cite it using the metadata be
 title: "HBOT Treatment Target KA"
 type: software
 version: 1.0.0
+doi: 10.5281/zenodo.23367129
 authors:
   - name: "Knowledge Systems Lab"
     affiliation: "Department of Learning Health Sciences, University of Michigan Medical School"

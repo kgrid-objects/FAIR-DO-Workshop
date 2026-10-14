@@ -3,6 +3,7 @@ message: "If you use this knowledge object, please cite it using the metadata be
 title: "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks"
 type: software
 version: 1.0.0
+doi: 10.5281/zenodo.23367115
 authors:
   - name: "Knowledge Systems Lab"
     affiliation: "Department of Learning Health Sciences, University of Michigan Medical School"

@@ -8,7 +8,7 @@
   "dc:identifier": [
     "workshop-ka-1",
     "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA",
-    "__SANDBOX_DOI_HBOT_TREATMENT_TARGET_KA__",
+    "https://doi.org/10.5281/zenodo.23367129",
     "__SWHID_HBOT_TREATMENT_TARGET_KA__"
   ],
   "dc:version": "1.0",

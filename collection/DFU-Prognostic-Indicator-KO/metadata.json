@@ -7,7 +7,7 @@
     "dc:identifier": [
         "workshop-ko-4",
         "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO",
-        "__SANDBOX_DOI_DFU_PROGNOSTIC_INDICATOR_KO__",
+        "https://doi.org/10.5281/zenodo.23367115",
         "__SWHID_DFU_PROGNOSTIC_INDICATOR_KO__"
     ],
     "dc:version": "1.0",

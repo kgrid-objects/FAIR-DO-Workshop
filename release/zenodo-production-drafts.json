@@ -4,7 +4,18 @@
   "baseUrl": "https://zenodo.org",
   "recordedLocalDate": "2026-10-14",
   "doiReservationDate": "2026-10-14",
-  "state": "five unpublished software drafts with reserved production DOIs; no files uploaded",
+  "metadataIntegrationDate": "2026-10-14",
+  "state": "five unpublished software drafts with reserved production DOIs and aligned core metadata; no files uploaded",
+  "validatedCommonMetadata": {
+    "resourceType": "Software",
+    "version": "1.0.0",
+    "license": "MIT",
+    "creatorType": "Organization",
+    "creatorName": "Knowledge Systems Lab",
+    "creatorAffiliation": "Department of Learning Health Sciences, University of Michigan Medical School",
+    "creatorRor": "https://ror.org/00jmfr291",
+    "repositoryUrl": "https://github.com/kgrid-objects/FAIR-DO-Workshop"
+  },
   "records": [
     {
       "key": "dfu-severity-score-ko",
@@ -12,6 +23,12 @@
       "draftId": "23367043",
       "draftUrl": "https://zenodo.org/uploads/23367043",
       "reservedDoi": "10.5281/zenodo.23367043",
+      "sourceRelation": {
+        "relation": "IsSupplementTo",
+        "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO",
+        "scheme": "URL",
+        "resourceType": "Software"
+      },
       "fileCount": 0,
       "published": false
     },
@@ -21,6 +38,12 @@
       "draftId": "23367087",
       "draftUrl": "https://zenodo.org/uploads/23367087",
       "reservedDoi": "10.5281/zenodo.23367087",
+      "sourceRelation": {
+        "relation": "IsSupplementTo",
+        "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO",
+        "scheme": "URL",
+        "resourceType": "Software"
+      },
       "fileCount": 0,
       "published": false
     },
@@ -30,6 +53,12 @@
       "draftId": "23367111",
       "draftUrl": "https://zenodo.org/uploads/23367111",
       "reservedDoi": "10.5281/zenodo.23367111",
+      "sourceRelation": {
+        "relation": "IsSupplementTo",
+        "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO",
+        "scheme": "URL",
+        "resourceType": "Software"
+      },
       "fileCount": 0,
       "published": false
     },
@@ -39,6 +68,12 @@
       "draftId": "23367115",
       "draftUrl": "https://zenodo.org/uploads/23367115",
       "reservedDoi": "10.5281/zenodo.23367115",
+      "sourceRelation": {
+        "relation": "IsSupplementTo",
+        "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-prognostic-indicator-ko-v1.0.0/collection/DFU-Prognostic-Indicator-KO",
+        "scheme": "URL",
+        "resourceType": "Software"
+      },
       "fileCount": 0,
       "published": false
     },
@@ -48,6 +83,12 @@
       "draftId": "23367129",
       "draftUrl": "https://zenodo.org/uploads/23367129",
       "reservedDoi": "10.5281/zenodo.23367129",
+      "sourceRelation": {
+        "relation": "IsSupplementTo",
+        "identifier": "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-target-ka-v1.0.0/HBOT-Treatment-Target-KA",
+        "scheme": "URL",
+        "resourceType": "Software"
+      },
       "fileCount": 0,
       "published": false
     }

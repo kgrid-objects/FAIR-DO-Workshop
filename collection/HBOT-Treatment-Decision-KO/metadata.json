@@ -7,7 +7,7 @@
     "dc:identifier": [
         "workshop-ko-2",
         "https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO",
-        "__SANDBOX_DOI_HBOT_TREATMENT_DECISION_KO__",
+        "https://doi.org/10.5281/zenodo.23367087",
         "__SWHID_HBOT_TREATMENT_DECISION_KO__"
     ],
     "dc:version": "1.0",
