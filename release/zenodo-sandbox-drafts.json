@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "environment": "Zenodo Sandbox",
+  "baseUrl": "https://sandbox.zenodo.org",
+  "recordedLocalDate": "2026-10-13",
+  "zenodoDisplayedUploadDate": "2026-10-14",
+  "state": "unpublished metadata-only drafts",
+  "records": [
+    {
+      "key": "dfu-severity-score-ko",
+      "title": "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object",
+      "draftId": "619883",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619883",
+      "fileCount": 0,
+      "published": false
+    },
+    {
+      "key": "hbot-treatment-decision-ko",
+      "title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object",
+      "draftId": "619885",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619885",
+      "fileCount": 0,
+      "published": false
+    },
+    {
+      "key": "hbot-regimen-burden-ko",
+      "title": "DFU HBOT Bounded Regimen and Execution Burden",
+      "draftId": "619887",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619887",
+      "fileCount": 0,
+      "published": false
+    },
+    {
+      "key": "dfu-prognostic-indicator-ko",
+      "title": "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks",
+      "draftId": "619889",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619889",
+      "fileCount": 0,
+      "published": false
+    },
+    {
+      "key": "hbot-treatment-target-ka",
+      "title": "HBOT Treatment Target KA",
+      "draftId": "619891",
+      "draftUrl": "https://sandbox.zenodo.org/uploads/619891",
+      "fileCount": 0,
+      "published": false
+    }
+  ]
+}

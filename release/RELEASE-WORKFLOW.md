@@ -32,7 +32,7 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Phase 3 — Zenodo Sandbox rehearsal
 
-1. Create four constituent KO drafts and one KA draft in Zenodo Sandbox.
+1. **Complete:** Created four constituent KO drafts followed by one KA draft in Zenodo Sandbox. All five are unpublished, metadata-only software records with zero files. Draft IDs and URLs are recorded in `release/zenodo-sandbox-drafts.json`.
 2. Build deterministic per-object archives with `release/build-archives.sh` and upload the corresponding archive to each draft.
 3. Reserve Sandbox DOIs and rehearse the relationships: the KA `Requires` each constituent KO, and each constituent KO `IsRequiredBy` the KA when supported.
 4. Validate titles, organization creator, affiliation, ROR evidence, version, license scope, related identifiers, archive SHA-256 values, and file lists.
@@ -107,4 +107,4 @@ This phase requires explicit production-deposit authorization.
 
 ## Immediate next step
 
-Proceed with **Phase 3, Step 1**: create four constituent KO drafts and one KA draft in Zenodo Sandbox.
+Proceed with **Phase 3, Step 2**: build deterministic per-object archives and upload the corresponding archive to each unpublished Sandbox draft.
