@@ -55,7 +55,7 @@ This workflow prepares five independently citable records: four constituent Know
 8. **Complete:** Parsed all five findability records as RDF/Turtle and cross-checked each subject, local identifier, production DOI, human-facing URL, containing-catalog link, and indexed metadata-record link against the object registry, core metadata, identifier registry, and Zenodo reservation evidence. No Turtle placeholder or `schema:sameAs` assertion occurs, and no correction was required. Evidence is in `release/PHASE-4-STEP-8-TURTLE-VALIDATION.md`.
 9. **Complete:** Regenerated the KA dependency manifest from the current release-candidate tree after the constituent DOI metadata changes. Recomputed and independently verified all four metadata checksums, package checksums, directory tree IDs, canonical archive digests and byte sizes, file counts, release locators, production DOI bindings, and pending directory-SWHID states. A second regeneration was byte-stable. Evidence is in `release/PHASE-4-STEP-9-DEPENDENCY-MANIFEST.md`.
 10. **Complete:** Regenerated all five file-level content manifests and deterministic release archives from the DOI-complete candidate. Recomputed archive checksums, byte sizes, and file counts; verified every extracted file against its content manifest; and reproduced every output byte-for-byte in an isolated detached clean checkout. Evidence is in `release/PHASE-4-STEP-10-ARCHIVE-REBUILD.md`, with file manifests under `release/manifests/` and local build outputs under the intentionally ignored `release/dist/` directory.
-11. Run the complete release validator and all tests. The DOI placeholders should now be resolved; SWHID template fields remain pending by design.
+11. **Complete:** Ran the complete release validator and all five object test suites. Corrected the validator's obsolete placeholder rule so it rejects Sandbox DOI or publication-date tokens outside Sandbox-only templates, verifies complete production DOI bindings, and validates the exact intentionally pending SWHID fields against the identifier registry and KA dependency manifest. Final result: validator exit 0, 227 tests passed, zero failed. Evidence is in `release/PHASE-4-STEP-11-RELEASE-VALIDATION.md`.
 12. Commit the DOI-complete release candidate. This commit is the intended Version 1.0 content freeze.
 
 ## Phase 5 — Create and expose the immutable GitHub release identity
@@ -108,4 +108,4 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Immediate next step
 
-Proceed with **Phase 4, Step 11**: run the complete release validator and all five test suites, confirm production DOI placeholders are resolved, and verify that only the intentionally pending SWHID template fields remain.
+Proceed with **Phase 4, Step 12**: commit the DOI-complete release candidate as the intended Version 1.0 content freeze, without creating or pushing tags and without publishing any Zenodo record.
