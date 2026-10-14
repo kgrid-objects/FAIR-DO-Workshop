@@ -63,7 +63,7 @@ This workflow prepares five independently citable records: four constituent Know
 **Authorized:** Allen Flynn, Faculty Lab Member, explicitly authorized Phase 5 on 2026-10-14. Phase 5 establishes the five GitHub tagged directory URLs as the operational version-specific KO and KA identifiers. It does not authorize Zenodo publication or Software Heritage archival. See `release/RELEASE-APPROVAL.md`.
 
 1. **Complete:** Created one local annotated Version 1.0 tag per object using the exact names in `release/objects.json`. All five annotated tag objects point to the DOI-complete content-freeze commit `e42624bfed0b28ba35a743690141ef4f566af250`; no tag was pushed. Evidence is in `release/PHASE-5-STEP-1-ANNOTATED-TAGS.md`.
-2. Verify every tag points to the DOI-complete content-freeze commit.
+2. **Complete:** Independently verified all five references as unique annotated tag objects that peel to content-freeze commit `e42624bfed0b28ba35a743690141ef4f566af250`. Confirmed each tagged object directory exists as a Git tree, matches the frozen directory tree, maps to the intended registry entry, and produces the exact future operational GitHub tagged-directory URL. Evidence is in `release/PHASE-5-STEP-2-TAG-VERIFICATION.md`.
 3. Push the final commit and the five annotated tags to GitHub.
 4. Create one GitHub release per object and attach only that object's deterministic archive and checksum evidence.
 5. Verify that every release-tag URL, raw metadata URL, notebook URL, and archive link resolves as intended.
@@ -110,4 +110,4 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Immediate next step
 
-Proceed with **Phase 5, Step 2**: independently verify that every annotated tag resolves to the DOI-complete content-freeze commit and that each tag name maps to the intended object directory and operational GitHub identifier.
+Proceed with **Phase 5, Step 3**: push the current `prepare-v1.0-releases` branch and all five verified annotated tags to GitHub, then confirm the remote references match the local commit and tag objects.
