@@ -60,7 +60,9 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Phase 5 — Create and expose the immutable GitHub release identity
 
-1. Create one annotated Version 1.0 tag per object using the names in `release/objects.json`. The tags may point to the same monorepo commit, but each object remains an independent release unit.
+**Authorized:** Allen Flynn, Faculty Lab Member, explicitly authorized Phase 5 on 2026-10-14. Phase 5 establishes the five GitHub tagged directory URLs as the operational version-specific KO and KA identifiers. It does not authorize Zenodo publication or Software Heritage archival. See `release/RELEASE-APPROVAL.md`.
+
+1. **Complete:** Created one local annotated Version 1.0 tag per object using the exact names in `release/objects.json`. All five annotated tag objects point to the DOI-complete content-freeze commit `e42624bfed0b28ba35a743690141ef4f566af250`; no tag was pushed. Evidence is in `release/PHASE-5-STEP-1-ANNOTATED-TAGS.md`.
 2. Verify every tag points to the DOI-complete content-freeze commit.
 3. Push the final commit and the five annotated tags to GitHub.
 4. Create one GitHub release per object and attach only that object's deterministic archive and checksum evidence.
@@ -108,4 +110,4 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Immediate next step
 
-**Pause at the Phase 4 boundary.** Phase 4 is complete. Obtain and record separate authorization before Phase 5, Step 1 creates the five annotated Version 1.0 tags at the content-freeze commit. The existing Phase 4 authorization does not permit tag creation, tag pushing, GitHub releases, archive uploads, Zenodo publication, or Software Heritage actions.
+Proceed with **Phase 5, Step 2**: independently verify that every annotated tag resolves to the DOI-complete content-freeze commit and that each tag name maps to the intended object directory and operational GitHub identifier.
