@@ -20,10 +20,21 @@ while IFS=$'\t' read -r key object_path; do
     echo "BLOCKED: $object_path does not resolve to a Git tree at HEAD." >&2
     exit 2
   fi
-  # Archive the directory tree itself. Archiving HEAD:<path> causes Git to
-  # embed the containing commit ID, changing the archive after evidence-only
-  # commits even when the object's directory tree is unchanged.
-  git -C "$repo_root" archive --format=tar --prefix="$key-v1.0.0/" "$object_tree" > "$tmp_tar"
+  # A bare tree archive uses the build time in tar headers, while HEAD:<path>
+  # embeds the containing commit ID. Anchor the tree to a deterministic
+  # synthetic commit so both the embedded commit ID and tar times are stable.
+  object_commit="$(
+    printf '%s\n' 'Deterministic release archive' |
+      env \
+        GIT_AUTHOR_NAME='FAIR-DO release tooling' \
+        GIT_AUTHOR_EMAIL='kgrid-developers@umich.edu' \
+        GIT_AUTHOR_DATE='2000-01-01T00:00:00Z' \
+        GIT_COMMITTER_NAME='FAIR-DO release tooling' \
+        GIT_COMMITTER_EMAIL='kgrid-developers@umich.edu' \
+        GIT_COMMITTER_DATE='2000-01-01T00:00:00Z' \
+        git -C "$repo_root" commit-tree "$object_tree"
+  )"
+  git -C "$repo_root" archive --format=tar --prefix="$key-v1.0.0/" "$object_commit" > "$tmp_tar"
   gzip -n -9 -f "$tmp_tar"
 done
 
