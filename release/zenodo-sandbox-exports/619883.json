@@ -19,18 +19,18 @@
         "access": {
           "hidden": false
         },
-        "checksum": "md5:26c2d34812bc4f6370e9603591c67436",
+        "checksum": "md5:c04b16d4a79f511d9e68e0b4fbd55dc3",
         "ext": "gz",
-        "id": "7656c22c-5ae3-4ed3-bd45-ab8e68024924",
+        "id": "2ab3d520-a18e-48a0-84aa-dcad6860b6fe",
         "key": "dfu-severity-score-ko-v1.0.0.tar.gz",
         "metadata": {},
         "mimetype": "application/gzip",
-        "size": 928338,
+        "size": 928425,
         "storage_class": "L"
       }
     },
     "order": [],
-    "total_bytes": 928338
+    "total_bytes": 928425
   },
   "id": "619883",
   "is_draft": true,
@@ -180,9 +180,9 @@
       "provider": "datacite"
     }
   },
-  "revision_id": 23,
+  "revision_id": 29,
   "status": "draft",
-  "updated": "2026-10-14T11:53:32.978582+00:00",
+  "updated": "2026-10-14T11:58:40.132565+00:00",
   "versions": {
     "index": 1,
     "is_latest": false,

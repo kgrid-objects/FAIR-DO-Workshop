@@ -19,18 +19,18 @@
         "access": {
           "hidden": false
         },
-        "checksum": "md5:26c5c5f57cfff4129bc509090b7e0a52",
+        "checksum": "md5:fd33611a72a192c17988193391e35f54",
         "ext": "gz",
-        "id": "861b5292-2912-4ca1-b2d6-d6728b5204a3",
+        "id": "43f1149b-4e86-4c3c-965b-7376e720e706",
         "key": "dfu-prognostic-indicator-ko-v1.0.0.tar.gz",
         "metadata": {},
         "mimetype": "application/gzip",
-        "size": 492507,
+        "size": 492574,
         "storage_class": "L"
       }
     },
     "order": [],
-    "total_bytes": 492507
+    "total_bytes": 492574
   },
   "id": "619889",
   "is_draft": true,
@@ -180,9 +180,9 @@
       "provider": "datacite"
     }
   },
-  "revision_id": 23,
+  "revision_id": 29,
   "status": "draft",
-  "updated": "2026-10-14T11:54:30.946715+00:00",
+  "updated": "2026-10-14T11:58:57.383940+00:00",
   "versions": {
     "index": 1,
     "is_latest": false,

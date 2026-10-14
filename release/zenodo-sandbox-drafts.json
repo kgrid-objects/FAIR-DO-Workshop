@@ -26,7 +26,7 @@
       "draftUrl": "https://sandbox.zenodo.org/uploads/619883",
       "parentRecordId": "619882",
       "metadataExportFile": "release/zenodo-sandbox-exports/619883.json",
-      "metadataExportSha256": "5597f081b041848b4938dfcfb924c17b3e3425e8910abffadb9d41cfde6add63",
+      "metadataExportSha256": "600e863de440355764d337724126d99ae8e94b6c426149aaaf66930880b6ef2a",
       "reservedDoi": "10.5072/zenodo.619883",
       "relatedIdentifiers": [
         {
@@ -44,9 +44,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "dfu-severity-score-ko-v1.0.0.tar.gz",
-      "archiveSha256": "2d51f3bb3c13ca0132d02d3e82cdae0aa912d1469bf992f30284825843b0b28f",
-      "archiveMd5": "26c2d34812bc4f6370e9603591c67436",
-      "archiveByteSize": 928338,
+      "archiveSha256": "c05ec41597a950e11c52d1c4f64582ab10aa3e6ee9e08d6bb595bff13878e827",
+      "archiveMd5": "c04b16d4a79f511d9e68e0b4fbd55dc3",
+      "archiveByteSize": 928425,
       "published": false
     },
     {
@@ -56,7 +56,7 @@
       "draftUrl": "https://sandbox.zenodo.org/uploads/619885",
       "parentRecordId": "619884",
       "metadataExportFile": "release/zenodo-sandbox-exports/619885.json",
-      "metadataExportSha256": "3ed0fa9e0c632733a95a598637570ce0eb006186e46e53fe7d56e5dedfeea56b",
+      "metadataExportSha256": "26398c4508a16e7f89edaef42a2a24540ad46a7cddb3b29f95f3ce150b37c2c2",
       "reservedDoi": "10.5072/zenodo.619885",
       "relatedIdentifiers": [
         {
@@ -74,9 +74,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "hbot-treatment-decision-ko-v1.0.0.tar.gz",
-      "archiveSha256": "a84ebf401c0d66485f11421ab95d098f22bc62a4b19f79b31386cbf3df84ce49",
-      "archiveMd5": "69b05bfe6e4a8c29b9d16d77911c7a09",
-      "archiveByteSize": 575145,
+      "archiveSha256": "6de82822a2153bee8090cc30cd958fbe38e31e6e473cf5e24cd8dd8f4d0a6546",
+      "archiveMd5": "7323b486c0929eddaad666a587f7c4b9",
+      "archiveByteSize": 575190,
       "published": false
     },
     {
@@ -86,7 +86,7 @@
       "draftUrl": "https://sandbox.zenodo.org/uploads/619887",
       "parentRecordId": "619886",
       "metadataExportFile": "release/zenodo-sandbox-exports/619887.json",
-      "metadataExportSha256": "6d4397dd7171a8848563e52ce45171dbf7834421cf1f10cd92c314ccad5cb93e",
+      "metadataExportSha256": "93c92aec4345fbdb047343184887aaedced069ee53b86a1e316c3c4146bc3f55",
       "reservedDoi": "10.5072/zenodo.619887",
       "relatedIdentifiers": [
         {
@@ -104,9 +104,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "hbot-regimen-burden-ko-v1.0.0.tar.gz",
-      "archiveSha256": "54a4bf84c6db81cda7c683eaebea609cac324c7ef2e71b1650612e9665cee12e",
-      "archiveMd5": "32638f8f3a59bc466cd43b84d2db2822",
-      "archiveByteSize": 909575,
+      "archiveSha256": "367021b1e44de04351d1ce3667fd76b8182f8f3cf5e1ec4176f943bc6072f343",
+      "archiveMd5": "ae5513c031e5cdc83f2d8cb4e0cc116b",
+      "archiveByteSize": 909696,
       "published": false
     },
     {
@@ -116,7 +116,7 @@
       "draftUrl": "https://sandbox.zenodo.org/uploads/619889",
       "parentRecordId": "619888",
       "metadataExportFile": "release/zenodo-sandbox-exports/619889.json",
-      "metadataExportSha256": "b9cc7f91fd19b2828d041317dbf896596a7b3be505e440609e6fd03a421c7d83",
+      "metadataExportSha256": "c1fc818547f4dec3547d10ec35ae53eda8d49ab69796addde4dc2368b72d89e8",
       "reservedDoi": "10.5072/zenodo.619889",
       "relatedIdentifiers": [
         {
@@ -134,9 +134,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "dfu-prognostic-indicator-ko-v1.0.0.tar.gz",
-      "archiveSha256": "e2cabf704b584c4a8e8bdb42f658005a55f1a021f188ab9c4284e0999020e93a",
-      "archiveMd5": "26c5c5f57cfff4129bc509090b7e0a52",
-      "archiveByteSize": 492507,
+      "archiveSha256": "fef25b18ee227975357eb26e0943efdc2723713aa680ef852fee5df78773e096",
+      "archiveMd5": "fd33611a72a192c17988193391e35f54",
+      "archiveByteSize": 492574,
       "published": false
     },
     {
@@ -146,7 +146,7 @@
       "draftUrl": "https://sandbox.zenodo.org/uploads/619891",
       "parentRecordId": "619890",
       "metadataExportFile": "release/zenodo-sandbox-exports/619891.json",
-      "metadataExportSha256": "16d974aca15e8016a3e001f005c683846815bafc4c6976d879149de9c31de18c",
+      "metadataExportSha256": "ecf06f9de31e4e3f8e64bf317712881d93df1466ff11ee615280d25667a0fd67",
       "reservedDoi": "10.5072/zenodo.619891",
       "relatedIdentifiers": [
         {
@@ -182,9 +182,9 @@
       ],
       "fileCount": 1,
       "archiveFilename": "hbot-treatment-target-ka-v1.0.0.tar.gz",
-      "archiveSha256": "a4eeeb30ebdcfa593da67b667403aa23947a200501cdf46a5d381ff80a6e8a08",
-      "archiveMd5": "5df4498256f6ecd32d4cb5a56d5a86e9",
-      "archiveByteSize": 479054,
+      "archiveSha256": "56dd9a0129e457c085386f8f9f7806b285273497bdb9ec4470b003993589c1f0",
+      "archiveMd5": "e68f8a2167119be1820a2d6696d26249",
+      "archiveByteSize": 479150,
       "published": false
     }
   ]

@@ -19,18 +19,18 @@
         "access": {
           "hidden": false
         },
-        "checksum": "md5:32638f8f3a59bc466cd43b84d2db2822",
+        "checksum": "md5:ae5513c031e5cdc83f2d8cb4e0cc116b",
         "ext": "gz",
-        "id": "42ca47e7-616f-42ca-a2a8-bef98d41349f",
+        "id": "b5daa65e-c956-4af3-9091-782019369689",
         "key": "hbot-regimen-burden-ko-v1.0.0.tar.gz",
         "metadata": {},
         "mimetype": "application/gzip",
-        "size": 909575,
+        "size": 909696,
         "storage_class": "L"
       }
     },
     "order": [],
-    "total_bytes": 909575
+    "total_bytes": 909696
   },
   "id": "619887",
   "is_draft": true,
@@ -180,9 +180,9 @@
       "provider": "datacite"
     }
   },
-  "revision_id": 23,
+  "revision_id": 29,
   "status": "draft",
-  "updated": "2026-10-14T11:54:24.997869+00:00",
+  "updated": "2026-10-14T11:58:51.471001+00:00",
   "versions": {
     "index": 1,
     "is_latest": false,

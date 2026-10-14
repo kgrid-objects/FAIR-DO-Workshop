@@ -31,10 +31,12 @@ Every exported record was checked against `release/objects.json`, `release/zenod
 
 | Export | SHA-256 |
 |---|---|
-| `619883.json` | `5597f081b041848b4938dfcfb924c17b3e3425e8910abffadb9d41cfde6add63` |
-| `619885.json` | `3ed0fa9e0c632733a95a598637570ce0eb006186e46e53fe7d56e5dedfeea56b` |
-| `619887.json` | `6d4397dd7171a8848563e52ce45171dbf7834421cf1f10cd92c314ccad5cb93e` |
-| `619889.json` | `b9cc7f91fd19b2828d041317dbf896596a7b3be505e440609e6fd03a421c7d83` |
-| `619891.json` | `16d974aca15e8016a3e001f005c683846815bafc4c6976d879149de9c31de18c` |
+| `619883.json` | `600e863de440355764d337724126d99ae8e94b6c426149aaaf66930880b6ef2a` |
+| `619885.json` | `26398c4508a16e7f89edaef42a2a24540ad46a7cddb3b29f95f3ce150b37c2c2` |
+| `619887.json` | `93c92aec4345fbdb047343184887aaedced069ee53b86a1e316c3c4146bc3f55` |
+| `619889.json` | `c1fc818547f4dec3547d10ec35ae53eda8d49ab69796addde4dc2368b72d89e8` |
+| `619891.json` | `ecf06f9de31e4e3f8e64bf317712881d93df1466ff11ee615280d25667a0fd67` |
+
+The exports were refreshed after Phase 3, Step 6 corrected the archive builder and replaced the five Sandbox files with the final reproducible archives.
 
 Sandbox DOIs and parent record IDs remain rehearsal evidence only. They must not be copied into production metadata.

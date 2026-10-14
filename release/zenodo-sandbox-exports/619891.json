@@ -19,18 +19,18 @@
         "access": {
           "hidden": false
         },
-        "checksum": "md5:5df4498256f6ecd32d4cb5a56d5a86e9",
+        "checksum": "md5:e68f8a2167119be1820a2d6696d26249",
         "ext": "gz",
-        "id": "387a71d5-3a6b-44db-b049-05d7e6e2206e",
+        "id": "f914da59-1a38-4fb3-babb-3aee67198a79",
         "key": "hbot-treatment-target-ka-v1.0.0.tar.gz",
         "metadata": {},
         "mimetype": "application/gzip",
-        "size": 479054,
+        "size": 479150,
         "storage_class": "L"
       }
     },
     "order": [],
-    "total_bytes": 479054
+    "total_bytes": 479150
   },
   "id": "619891",
   "is_draft": true,
@@ -234,9 +234,9 @@
       "provider": "datacite"
     }
   },
-  "revision_id": 29,
+  "revision_id": 35,
   "status": "draft",
-  "updated": "2026-10-14T11:54:36.882989+00:00",
+  "updated": "2026-10-14T11:59:03.365391+00:00",
   "versions": {
     "index": 1,
     "is_latest": false,

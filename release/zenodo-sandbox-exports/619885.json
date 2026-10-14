@@ -19,18 +19,18 @@
         "access": {
           "hidden": false
         },
-        "checksum": "md5:69b05bfe6e4a8c29b9d16d77911c7a09",
+        "checksum": "md5:7323b486c0929eddaad666a587f7c4b9",
         "ext": "gz",
-        "id": "7fe83cf5-3606-408c-ba4c-978d0506b1b3",
+        "id": "4b6ef614-8a13-4f84-95b6-8effae463699",
         "key": "hbot-treatment-decision-ko-v1.0.0.tar.gz",
         "metadata": {},
         "mimetype": "application/gzip",
-        "size": 575145,
+        "size": 575190,
         "storage_class": "L"
       }
     },
     "order": [],
-    "total_bytes": 575145
+    "total_bytes": 575190
   },
   "id": "619885",
   "is_draft": true,
@@ -180,9 +180,9 @@
       "provider": "datacite"
     }
   },
-  "revision_id": 23,
+  "revision_id": 29,
   "status": "draft",
-  "updated": "2026-10-14T11:54:19.495248+00:00",
+  "updated": "2026-10-14T11:58:45.884363+00:00",
   "versions": {
     "index": 1,
     "is_latest": false,
