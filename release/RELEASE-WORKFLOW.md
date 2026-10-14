@@ -46,7 +46,7 @@ This workflow prepares five independently citable records: four constituent Know
 **Authorized:** Allen Flynn, Faculty Lab Member, explicitly authorized Phase 4 production-deposit preparation on 2026-10-14. The authorization is limited to unpublished production drafts, DOI integration, validation, and content freeze; it does not authorize publication or later-phase external actions. See `release/RELEASE-APPROVAL.md`.
 
 1. **Complete:** Created five unpublished production Zenodo software drafts in the required order: four constituent KOs first, followed by the KA. No files were uploaded and no production DOI was reserved. Draft IDs and URLs are recorded in `release/zenodo-production-drafts.json`; full evidence is in `release/PHASE-4-STEP-1-PRODUCTION-DRAFTS.md`.
-2. Reserve one production DOI for each draft without publishing any record.
+2. **Complete:** Reserved one production DOI for each of the five unpublished drafts and saved every reservation without publishing a record. The DOI-to-object mapping is recorded in `release/zenodo-production-drafts.json`; evidence is in `release/PHASE-4-STEP-2-PRODUCTION-DOIS.md`.
 3. Add each object's reserved DOI to its `findability.metadata.txt` as a supported `schema:identifier` IRI while preserving its existing local identifier.
 4. Set or verify `schema:url` as the supported human-facing landing page and retain the exact release-tag source URL as a distinct, release-pinned access or catalog location. Do not replace the canonical object-version IRI merely because a DOI now exists.
 5. Add the reserved DOI to the same object's `metadata.json`, `CITATION.cff`, and Zenodo metadata.
@@ -108,4 +108,4 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Immediate next step
 
-Proceed with **Phase 4, Step 2**: reserve one production DOI for each of the five unpublished drafts without publishing any record, then record the DOI-to-object mapping in `release/zenodo-production-drafts.json`.
+Proceed with **Phase 4, Step 3**: add each object's reserved production DOI to its `findability.metadata.txt` as a supported `schema:identifier` IRI while preserving the existing local identifier.

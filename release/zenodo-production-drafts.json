@@ -3,14 +3,15 @@
   "environment": "Zenodo production",
   "baseUrl": "https://zenodo.org",
   "recordedLocalDate": "2026-10-14",
-  "state": "five unpublished software drafts; production DOIs not yet reserved; no files uploaded",
+  "doiReservationDate": "2026-10-14",
+  "state": "five unpublished software drafts with reserved production DOIs; no files uploaded",
   "records": [
     {
       "key": "dfu-severity-score-ko",
       "title": "Meggitt-Wagner Classification of Diabetic Foot Lesions Knowledge Object",
       "draftId": "23367043",
       "draftUrl": "https://zenodo.org/uploads/23367043",
-      "reservedDoi": null,
+      "reservedDoi": "10.5281/zenodo.23367043",
       "fileCount": 0,
       "published": false
     },
@@ -19,7 +20,7 @@
       "title": "Clinical Practice Guideline Algorithm for Hyperbaric Oxygen Therapy in Diabetic Foot Ulcers Knowledge Object",
       "draftId": "23367087",
       "draftUrl": "https://zenodo.org/uploads/23367087",
-      "reservedDoi": null,
+      "reservedDoi": "10.5281/zenodo.23367087",
       "fileCount": 0,
       "published": false
     },
@@ -28,7 +29,7 @@
       "title": "DFU HBOT Bounded Regimen and Execution Burden",
       "draftId": "23367111",
       "draftUrl": "https://zenodo.org/uploads/23367111",
-      "reservedDoi": null,
+      "reservedDoi": "10.5281/zenodo.23367111",
       "fileCount": 0,
       "published": false
     },
@@ -37,7 +38,7 @@
       "title": "Two-Factor Prognostic Model for Diabetic Foot Ulcer Healing by 16 Weeks",
       "draftId": "23367115",
       "draftUrl": "https://zenodo.org/uploads/23367115",
-      "reservedDoi": null,
+      "reservedDoi": "10.5281/zenodo.23367115",
       "fileCount": 0,
       "published": false
     },
@@ -46,7 +47,7 @@
       "title": "HBOT Treatment Target KA",
       "draftId": "23367129",
       "draftUrl": "https://zenodo.org/uploads/23367129",
-      "reservedDoi": null,
+      "reservedDoi": "10.5281/zenodo.23367129",
       "fileCount": 0,
       "published": false
     }
