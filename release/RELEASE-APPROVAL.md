@@ -34,3 +34,13 @@ The approval above completes Phase 2, Step 1 of `RELEASE-WORKFLOW.md`.
 - Recorded from: Direct instruction to perform Phase 2, Step 2 in the release-preparation conversation
 
 This authorization completes Phase 2, Step 2. External actions remain limited to the action named in each subsequent workflow step. It does not collapse later review gates or authorize production publication in advance. Phase 2, Step 3 is limited to pushing the review branch; it does not authorize Version 1.0 tags, GitHub releases, Zenodo deposits, Software Heritage requests, or publication.
+
+## Production-deposit authorization
+
+- Authorized by: Allen Flynn
+- Organizational role: Faculty Lab Member
+- Decision: Authorizes Phase 4 production-deposit preparation
+- Recorded date: 2026-10-14
+- Recorded from: Direct statement, “Phase 4 is Authorized,” in the release-preparation conversation
+
+This authorization opens Phase 4 of `RELEASE-WORKFLOW.md`. It permits creation and preparation of five **unpublished** production Zenodo drafts, reservation and integration of their production DOIs, and the local validation and content-freeze work specified in Phase 4. It does not authorize publishing a Zenodo record, creating or publishing a GitHub release, creating or pushing Version 1.0 tags, or initiating the Software Heritage archival phase.

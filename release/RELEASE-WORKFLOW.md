@@ -43,7 +43,7 @@ This workflow prepares five independently citable records: four constituent Know
 
 ## Phase 4 — Reserve production DOIs and freeze findability metadata
 
-This phase requires explicit production-deposit authorization.
+**Authorized:** Allen Flynn, Faculty Lab Member, explicitly authorized Phase 4 production-deposit preparation on 2026-10-14. The authorization is limited to unpublished production drafts, DOI integration, validation, and content freeze; it does not authorize publication or later-phase external actions. See `release/RELEASE-APPROVAL.md`.
 
 1. Create five unpublished production Zenodo drafts: four constituent KOs first, followed by the KA.
 2. Reserve one production DOI for each draft without publishing any record.
@@ -108,4 +108,4 @@ This phase requires explicit production-deposit authorization.
 
 ## Immediate next step
 
-Obtain explicit production-deposit authorization before beginning **Phase 4, Step 1**: create five unpublished production Zenodo drafts, with the four constituent KOs first and the KA last. Do not publish any record.
+Proceed with **Phase 4, Step 1**: create five unpublished production Zenodo drafts, with the four constituent KOs first and the KA last. Do not publish any record.
