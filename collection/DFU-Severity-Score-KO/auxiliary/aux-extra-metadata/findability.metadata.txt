@@ -17,7 +17,8 @@
 
     schema:identifier
         "workshop-ko-1",
-        <https://doi.org/10.5281/zenodo.23367043> ;
+        <https://doi.org/10.5281/zenodo.23367043>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/dfu-severity-score-ko-v1.0.0/collection/DFU-Severity-Score-KO> ;
 
     schema:version
         "1.0" ;

@@ -11,7 +11,8 @@
 
     schema:identifier
         "workshop-ko-3",
-        <https://doi.org/10.5281/zenodo.23367111> ;
+        <https://doi.org/10.5281/zenodo.23367111>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO> ;
 
     schema:version "1.0" ;
 

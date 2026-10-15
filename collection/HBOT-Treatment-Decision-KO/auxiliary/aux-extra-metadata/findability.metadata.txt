@@ -11,7 +11,8 @@
 
     schema:identifier
         "workshop-ko-2",
-        <https://doi.org/10.5281/zenodo.23367087> ;
+        <https://doi.org/10.5281/zenodo.23367087>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-treatment-decision-ko-v1.0.0/collection/HBOT-Treatment-Decision-KO> ;
 
     schema:version "1.0" ;
 
