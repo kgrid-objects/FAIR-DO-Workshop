@@ -30,4 +30,23 @@
                     schema:name "HTTPS" ;
                     schema:contentType "text/turtle"
                 ]
+        ] ;
+    schema:potentialAction
+        [
+            a schema:DownloadAction ;
+            schema:name "Download from FDO Bench" ;
+            schema:target
+                [
+                    a schema:EntryPoint ;
+                    schema:identifier "HBOT-Regimen-Burden-KO" ;
+                    schema:name "FDO Bench KO Access API 1.0" ;
+                    schema:description
+                        "Retrieve the embedded knowledge object as a ZIP from the Bench; a password prompt is required." ;
+                    schema:contentType "application/zip" ;
+                    schema:actionApplication
+                        [
+                            a schema:SoftwareApplication ;
+                            schema:name "FAIR Knowledge Object Bench"
+                        ]
+                ]
         ] .
