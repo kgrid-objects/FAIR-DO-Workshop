@@ -26,19 +26,35 @@
         <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO/test/conformance.test.js>,
         <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO/test/spec-audit.js> ;
 
-    # 6. Evidence
+    # 6. Executable package and its direct software requirements
+    schema:hasPart
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#executable-package> ;
+
+    # 7. Evidence
     schema:citation
         <https://pubmed.ncbi.nlm.nih.gov/26152105/>,
         <https://doi.org/10.2337/dc09-1754>,
         <https://doi.org/10.2337/dc15-2001>,
         <https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-Guidelines-2023.pdf> ;
 
-    # 7. Identity and version
+    # 8. Identity and version
     schema:identifier
         "workshop-ko-3" ;
 
     schema:version
         "1.0" .
+
+<https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#executable-package>
+    a schema:SoftwareApplication ;
+    schema:name "HBOT Regimen Burden executable package" ;
+    schema:softwareRequirements
+        "ajv ^8.17.1",
+        "ajv-formats ^3.0.1" ;
+    schema:subjectOf
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO/package.json>,
+        <https://github.com/kgrid-objects/FAIR-DO-Workshop/blob/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO/package-lock.json> ;
+    schema:description
+        "The direct runtime package requirements are declared in package.json. package-lock.json records the resolved dependency tree; its versions do not replace the declared requirement ranges." .
 
 <https://github.com/kgrid-objects/FAIR-DO-Workshop/tree/hbot-regimen-burden-ko-v1.0.0/collection/HBOT-Regimen-Burden-KO#scope>
     a schema:CreativeWork ;
@@ -66,6 +82,9 @@
 # schema:license       points to its governing license.
 # prov:has_provenance  points to its provenance record.
 # schema:hasPart       points to tests supplied with the object.
+# schema:hasPart       also identifies the executable package described separately.
+# schema:softwareRequirements states that package's direct runtime requirements.
+# schema:subjectOf     points to the package manifest and lockfile.
 # schema:citation      points to supporting evidence.
 #
 # The subject IRI, schema:identifier, and schema:version
